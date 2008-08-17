@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://openplans.org/deliverance">
+    <replace theme="/html/head/title" content="/html/head/title"/>
+    
+    <copy theme='//*[@id="main-nav"]' content='//*[@id="portal-globalnav"]/li' />
+    
+</rules>

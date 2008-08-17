@@ -1,0 +1,560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>plone.org redesign prototype</title>
+	<style type="text/css" media="screen">
+		@import url("/static/plone.css");
+	</style>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.2/jquery-ui.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    $("#topics").accordion({header:'h3', selectedClass:'selected'});
+	  	});
+	</script>
+</head>
+<body>
+	
+<div id="outer-wrapper"><div id="inner-wrapper">
+
+
+<div id="nav">		
+
+	<div id="search">
+		<input type="search" value="Search Documentation…" />
+	</div>
+	
+	<div id="user">
+		<a href="">Bruce Wayne ▼</a>
+	</div>
+
+	<ul id="main-nav" class="navigation">
+		<li><a href=".">Home</a></li
+		><li><a href="downloads.html">Downloads</a></li
+		><li><a href="documentation.html" class="selected">Documentation</a></li
+		><li><a href="developers.html">Developers</a></li
+		><li><a href="foundation.html">Plone&nbsp;Foundation</a></li
+		><li><a href="support.html">Support</a></li>
+	</ul>
+
+	<ul id="sub-nav" class="navigation">
+		<li><a href="">Getting Started</a></li
+		><li><a href="">Books</a></li
+		><li><a href="">Get Help</a></li>
+	</ul>
+
+</div>
+
+<div id="content-wrapper">
+
+	<div id="splash-pullout" class="pullout">
+		<h2>Get help</h2>
+
+		<p>Join our <a href="">chat room</a>, <a href="">forums</a> and more.
+
+		<ul>
+			<li><a href="">How to ask for help</a></li>
+			<li><a href="">Find training courses</a></li>
+			<li><a href="">Commercial support options</a></li>
+		</ul>
+		<ul>
+			<li><a href="">Frequently Asked Questions</a></li>
+			<li><a href="">Error Message Reference</a></li>
+		</ul>
+	</div>
+
+	<div id="splash" class="sub-splash">
+
+		<h1>New to Plone? Start here!</h1>
+
+		<p>
+			Requirements, helpful hints, demos, tutorials and more.
+		</p>
+
+	</div>
+
+	<div id="sector-sidebar">
+		<h2>Books on Plone</h2>
+
+		<ol>
+			<li>
+				<img class="book-cover" src="/static/images/book.png" alt="" />
+				<a href="">Professional Plone Development		</a>
+				The most recent Plone book. Covers building robust, content-centric web applications with Plone 3.
+			</li>
+			<li>
+				<img class="book-cover" src="/static/images/book.png" alt="" />
+				<a href="">Content Management with Plone: Handbook for Authors and Editors</a>
+				End-user guide for Plone, recently updated for Plone 3.
+			</li>
+			<li>
+				<img class="book-cover" src="/static/images/book.png" alt="" />
+				<a href="">Web Component Development with Zope 3</a>
+				Zope 3 development. Gives a lucid introduction to the Zope 3 technologies available to Plone.
+			</li>
+			<li>
+				<img class="book-cover" src="/static/images/book.png" alt="" />
+				<a href="">Plone Live							</a>
+				A thorough reference to the inner workings of Plone, covers Plone 2.5.
+			</li>
+			<li>
+				<img class="book-cover" src="/static/images/book.png" alt="" />
+				<a href="">The Definitive Guide to Plone		</a>
+				The first Plone book. Slightly outdated, but an excellent jumpstart guide for Plone.
+			</li>
+			<li>
+				<img class="book-cover" src="/static/images/book.png" alt="" />
+				<a href="" >Dive into Python					</a>
+				The de facto standard for learning Python development.
+			</li>
+		</ol>
+
+	</div>
+
+
+	<div class="pane">
+
+
+		<div class="pagesearch">
+			<input type="search" value="Search Documentation…" size="25" />
+			&nbsp;
+			<a href="">Advanced search</a>
+		</div>
+
+		<h1>Documentation <a href="" class="versions">for Plone 3 ▼</a></h1>
+
+		<div class="" id="topics">
+			<h2>Find documentation by topic</h2>
+	
+			<h3><a href="">Basic Use (29)</a></h3>
+			<ul class="topic">
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">What documentation should I read?</a></h4>
+				<p>This how-to is intended as a brief overview of what documentation you should read—and when—to get you started.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Working with CSS</a></h4>
+				<p>A basic primer on working with base_properties and stylesheets.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Creating links to content</a></h4>
+				<p>How to link to resources located inside and outside the site.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">How to use this resource</a></h4>
+				<p>A brief description of how you use and contribute to the Help Center.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			</ul>
+	
+			<h3><a href="">Installation (23)</a></h3>
+			<ul class="topic">
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">What documentation should I read?</a></h4>
+				<p>This how-to is intended as a brief overview of what documentation you should read—and when—to get you started.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Working with CSS</a></h4>
+				<p>A basic primer on working with base_properties and stylesheets.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Creating links to content</a></h4>
+				<p>How to link to resources located inside and outside the site.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">How to use this resource</a></h4>
+				<p>A brief description of how you use and contribute to the Help Center.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			</ul>
+
+			<h3><a href="">Configuration and Setup</a></h3>
+			<ul class="topic">
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">What documentation should I read?</a></h4>
+				<p>This how-to is intended as a brief overview of what documentation you should read—and when—to get you started.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Working with CSS</a></h4>
+				<p>A basic primer on working with base_properties and stylesheets.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Creating links to content</a></h4>
+				<p>How to link to resources located inside and outside the site.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">How to use this resource</a></h4>
+				<p>A brief description of how you use and contribute to the Help Center.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			</ul>
+
+			<h3><a href="">Managing Content (45)</a></h3>
+			<ul class="topic">
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">What documentation should I read?</a></h4>
+				<p>This how-to is intended as a brief overview of what documentation you should read—and when—to get you started.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Working with CSS</a></h4>
+				<p>A basic primer on working with base_properties and stylesheets.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Creating links to content</a></h4>
+				<p>How to link to resources located inside and outside the site.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">How to use this resource</a></h4>
+				<p>A brief description of how you use and contribute to the Help Center.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			</ul>
+	
+			<h3><a href="">Developing for Plone (85)</a></h3>
+			<ul class="topic">
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">What documentation should I read?</a></h4>
+				<p>This how-to is intended as a brief overview of what documentation you should read—and when—to get you started.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Working with CSS</a></h4>
+				<p>A basic primer on working with base_properties and stylesheets.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Creating links to content</a></h4>
+				<p>How to link to resources located inside and outside the site.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">How to use this resource</a></h4>
+				<p>A brief description of how you use and contribute to the Help Center.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			</ul>
+	
+			<h3><a href="">Visual Design (79)</a></h3>
+			<ul class="topic">
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">What documentation should I read?</a></h4>
+				<p>This how-to is intended as a brief overview of what documentation you should read—and when—to get you started.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Working with CSS</a></h4>
+				<p>A basic primer on working with base_properties and stylesheets.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Creating links to content</a></h4>
+				<p>How to link to resources located inside and outside the site.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">How to use this resource</a></h4>
+				<p>A brief description of how you use and contribute to the Help Center.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			</ul>
+	
+			<h3><a href="">Users, Authentication and Permissions (63)</a></h3>
+			<ul class="topic">
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">What documentation should I read?</a></h4>
+				<p>This how-to is intended as a brief overview of what documentation you should read—and when—to get you started.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Working with CSS</a></h4>
+				<p>A basic primer on working with base_properties and stylesheets.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Creating links to content</a></h4>
+				<p>How to link to resources located inside and outside the site.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">How to use this resource</a></h4>
+				<p>A brief description of how you use and contribute to the Help Center.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			</ul>
+	
+			<h3><a href="">Internationalization and Localization (7)</a></h3>
+			<ul class="topic">
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">What documentation should I read?</a></h4>
+				<p>This how-to is intended as a brief overview of what documentation you should read—and when—to get you started.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Working with CSS</a></h4>
+				<p>A basic primer on working with base_properties and stylesheets.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Creating links to content</a></h4>
+				<p>How to link to resources located inside and outside the site.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">How to use this resource</a></h4>
+				<p>A brief description of how you use and contribute to the Help Center.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			</ul>
+	
+			<h3><a href="">Upgrading and Moving (3)</a></h3>
+			<ul class="topic">
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">What documentation should I read?</a></h4>
+				<p>This how-to is intended as a brief overview of what documentation you should read—and when—to get you started.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Working with CSS</a></h4>
+				<p>A basic primer on working with base_properties and stylesheets.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Creating links to content</a></h4>
+				<p>How to link to resources located inside and outside the site.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">How to use this resource</a></h4>
+				<p>A brief description of how you use and contribute to the Help Center.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			</ul>
+	
+			<h3><a href="">Navigation (19)</a></h3>
+			<ul class="topic">
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">What documentation should I read?</a></h4>
+				<p>This how-to is intended as a brief overview of what documentation you should read—and when—to get you started.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Working with CSS</a></h4>
+				<p>A basic primer on working with base_properties and stylesheets.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Creating links to content</a></h4>
+				<p>How to link to resources located inside and outside the site.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">How to use this resource</a></h4>
+				<p>A brief description of how you use and contribute to the Help Center.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			</ul>
+	
+			<h3><a href="">Contributing to plone.org</a></h3>
+			<ul class="topic">
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">What documentation should I read?</a></h4>
+				<p>This how-to is intended as a brief overview of what documentation you should read—and when—to get you started.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Working with CSS</a></h4>
+				<p>A basic primer on working with base_properties and stylesheets.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Creating links to content</a></h4>
+				<p>How to link to resources located inside and outside the site.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">How to use this resource</a></h4>
+				<p>A brief description of how you use and contribute to the Help Center.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Using Add-on Products</a></h4>
+				<p>There are many third-party add-on Products for Plone that can give you additional functionality, often at the click of a button. However, not all Products are created equal. Knowing how to install, test, evaluate and extend them is important.</p>
+			  </li>
+			  <li>
+			    <h4><a href="">Asking for help</a></h4>
+				<p>How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+			  </li>
+			  <li>
+			</ul>
+		</div>
+
+	</div>
+
+	<div id="footer">
+		<a id="footer-logo"
+		   href="http://plone.org" 
+		   title="Plone CMS, the open source content management system">
+			<img alt="" src="/static/images/footer-logo.png" />
+		</a>
+		<div id="footer-text">
+			<p>The Plone<sup>®</sup> CMS — Open Source Content Management System is Copyright © 2000-2008 by the Plone Foundation et al.</p>
+			<p>Plone<sup>®</sup> and the Plone logo are registered trademarks of the Plone Foundation. Distributed under the GNU GPL license.</p>
+		</div>
+	</div>	
+
+</div>
+
+</div></div>
+</body>
+</html>

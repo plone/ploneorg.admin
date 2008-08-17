@@ -1,0 +1,692 @@
+/* @group Neutralize! */
+
+a {
+	outline: none;
+}
+
+/* Remove implicit browser styles to have a neutral starting point:
+   - No elements should have implicit margin/padding
+   - No underline by default on links (we add it explicitly in the body text)
+   - When we want markers on lists, we will be explicit about it, and they render inline by default
+   - Browsers are inconsistent about hX/pre/code, reset
+   - Linked images should not have borders
+   */
+* { margin: 0; padding: 0; }
+* :link,:visited { text-decoration:none }
+* ul,ol { list-style:none; }
+* li { display: inline; }
+* h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; }
+* a img,:link img,:visited img { border:none } 
+
+/* @end */
+
+/* @group Wrappers */
+
+body { 
+	font-family: Arial;
+	padding-top: 11px;
+background-color: #329fd7;
+}
+
+a, a:visited {
+	color: #329fd7;	
+}
+
+a:hover {
+	color: #75ad0a;
+}
+
+#outer-wrapper {
+	background: left 0px url("images/nav-gradient.png") repeat-x;
+background-color: white;
+}
+#inner-wrapper {
+	border-top: 2px solid white;
+	background: url(images/footer-gradient.png) repeat-x;
+	background-position: bottom left;
+}
+
+#content-wrapper {
+	width: 937px;
+	margin: 0 auto;
+}
+
+
+/* @end */
+
+/* @group Navigation/search */
+
+#nav {
+/* Should be named header, but conflicts with the accordion.js for now */
+	width: 937px;
+	margin: 0 auto;
+	font-family: "Helvetica Neue", Arial;
+}
+
+#main-nav {
+	font-size: 14px;
+	line-height: 28px;
+}
+
+#sub-nav {
+	font-size: 13px;
+	line-height: 30px;
+	border-top: 1px solid #dcdcdc;
+}
+
+#sub-nav li a {
+	border-right: none;
+}
+
+ul.navigation li a {
+	padding: 6px 9px;
+	color: black;
+	font-weight: bold;
+	border-right: 1px solid #dcdcdc;
+}
+
+ul.navigation li a:hover {
+	color: #75ad0a;
+}
+
+ul.navigation li a.selected,
+ul.navigation li a.active {
+	color: #75ad0a;
+	border-bottom: 1px solid white;
+}
+
+
+#search {
+	float: right;
+	background: url(images/search-wrapper.png) no-repeat;
+	height: 20px;
+	padding: 10px 25px;
+	margin-top: -2px;
+}
+
+#search input {
+	color: #666;
+}
+
+#user {
+	font-size: 14px;
+	width: 145px;
+	height: 14px;
+	overflow: hidden;
+	float: right;
+	padding: 5px 4px;
+}
+
+#user a {
+	color: #666;
+	font-weight: bold;
+	padding: 2px;
+}
+
+#user a:hover {
+	background-color: #666;
+	color: White;
+}
+
+/* @end */
+
+#logo {
+	margin: 25px 22px;
+}
+
+/* @group Splash pages */
+
+#splash {
+	width: 671px;
+	font-family: "Helvetica Neue", Arial;
+	background-color: #205c90;
+}
+
+#splash a {
+	color: White;
+	float: right;
+	line-height: 16px;
+	margin-right: 32px;
+	padding-right: 16px;
+	background: right top url(images/arrow-white.png) no-repeat;
+	display: block;
+}
+
+#splash h1 {
+	font-size: 24px;
+	padding: 20px 18px;
+}
+
+#splash h2 {
+	font-size: 24px;
+	padding: 0 0 0 387px;
+}
+
+#splash p {
+	padding: 20px 0 0 387px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+div.sub-splash {
+	width: 671px;
+	min-height: 212px;
+	color: White;
+	margin-bottom: 13px;
+}
+
+div.sub-splash h1 {
+	padding: 1em 0.5em 0 270px !important;
+}
+
+div.sub-splash p {
+	padding: 1em 1em 0 270px !important;
+}
+
+
+#splash-pullout {
+	float: right;
+	background: #dcdcdc top right url(images/splash-pullout.png) no-repeat;
+	width: 236px;
+	min-height: 162px;
+	padding: 25px 15px;
+}
+
+#splash-pullout h2 {
+	font-size: 24px;
+	margin-bottom: 0.5em;
+}
+
+#splash-pullout p,
+#splash-pullout ul,
+#splash-pullout ol {
+	font-size: 12px;
+	margin-bottom: 1em;
+}
+
+#splash-pullout li {
+	display: block;
+}
+
+#splash-pullout li a:before {
+	content: "→ ";
+}
+
+/* @group Page-specific splash styles */
+
+div.splash-frontpage {
+	min-height: 284px;
+	color: White;
+	background: #205c90 url(images/splash-bg.jpg) no-repeat;
+	margin-bottom: 13px;
+}
+
+div.splash-enterprise {
+	background: #205c90 url(images/splash-enterprise.jpg) no-repeat;
+}
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group Sidebar */
+
+#sector-sidebar {
+	width: 245px;
+	float: right;
+	margin-top: 10px;
+}
+
+
+#sector-sidebar ul li a {
+	line-height: 35px;
+	font-size: 18px;
+	display: block;
+	border-top: 1px solid #eee;
+	font-weight: bold;
+	background: left 9px url(images/arrow-blue.png) no-repeat;
+	padding-left: 16px;
+}
+
+#sector-sidebar ol li {
+	line-height: 18px;
+	font-size: 11px;
+	display: block;
+	border-top: 1px solid #eee;
+	margin-bottom: 0.5em;
+	padding-top: 0.5em;
+	clear: both;
+}
+
+#sector-sidebar ol li a {
+	font-weight: bold;
+	display: block;
+}
+
+img.book-cover {
+	float: left;
+	display: block;
+	padding: 2px;
+	border: 1px solid #ddd;
+	margin: 5px 15px 10px 0;
+}
+
+/* @end */
+
+/* @group Listings */
+
+/* @group Documentation pane */
+
+div.pane {
+	background-color: #eee;
+	width: 651px;
+	padding: 10px;
+}
+
+div.pane h1 {
+	padding-bottom: 0.5em;
+	padding-left: 10px;
+}
+
+a.versions {
+	font-size: 12px;
+	color: #555;
+	padding: 2px;
+}
+
+a.versions:hover {
+	background-color: #666;
+	color: White;
+}
+
+div.pagesearch {
+	float: right;
+	font-size: 11px;
+	padding-right: 10px;
+}
+
+div.pagesearch input {
+	color: #666;
+}
+
+#topics {
+	background-color: white;
+	padding: 10px;
+}
+
+#topics h3 {
+	border-top: 1px solid #ccc;
+	font-size: 14px;
+}
+
+#topics h3 a {
+	display: block;
+	padding: 0.5em 0 0.5em 0;
+}
+
+#topics h3.selected a {
+	padding-left: 1.25em;
+	color: black;
+	cursor: default;
+}
+
+#topics h3 a:before {
+	content: "▶ ";
+}
+
+#topics h3.selected a:before {
+	/*content: "▼ ";*/
+	content: "";
+}
+
+
+#topics p {
+	font-size: 11px;	
+}
+
+ul.topic {
+	font-size: 12px;
+}
+
+ul.topic li {
+	display: inline-block !important;	
+	vertical-align: top;
+	width: 29.5%;
+	margin: 0 0 1em 1.5em;
+	text-align: justify;
+}
+
+
+
+/* @end */
+
+#current {
+	background: 150px 130px url(images/cogs.png) no-repeat;	
+	clear: right;
+	}
+
+div.box {
+	width: 200px;
+	height: 35em;
+	float: left;
+	border: 1px solid #e1e1e1;
+	padding: 9px 12px;
+	margin-left: -1px;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+div.box h1 {
+	font-family: "Helvetica Neue", Arial;
+	margin: -9px -12px;
+	padding: 0 12px;
+	line-height: 2em;
+	background: #eee url(images/box-gradient.png) repeat-x;
+	font-size: 14px;
+	vertical-align: 1em;
+}
+
+div.box p {
+	margin: 0 -12px;
+	padding: 10px 12px;
+}
+
+div.box li {	
+	display: block;
+	margin: 0 -12px;
+	padding: 20px 12px;
+	height: 54px;
+}
+
+
+div.box li.even {
+	background-color: #eef3f6;
+}
+
+div.box a {
+	display: block;
+	padding: 20px 12px 10px 12px;
+	margin: -20px -12px;
+}
+
+div.box .date {
+	color: black;
+	display: block;
+	text-align: right;
+	margin-top: 10px;
+	height: 28px;
+}
+
+/* @end */
+
+/* @group Accordion menu */
+
+#accordion {
+	width: 245px;
+	border: 1px solid #eee;
+	float: right;
+	background-color: #f6f6f6;
+	height: 27.5em;
+}
+#accordion h2 {
+	font-family: "Helvetica Neue", Arial;
+	background: #75ad0a url(images/accordion-gradient.png) repeat-x;
+	line-height: 2em;
+	padding: 0 6px;
+	margin: -1px -1px 0 -1px;
+	color: White;
+	cursor: pointer;
+	font-weight: bold;
+
+}
+
+#accordion h2.selected {
+	cursor: inherit;
+	padding-left: 1.6em;
+}
+
+#accordion h2.selected:before {
+	/*content: "▼ ";*/
+	content: " ";
+}
+
+#accordion h2:before {
+	content: "▶ ";
+}
+
+
+#accordion div {
+	margin: 10px;
+	font-size: 12px;
+}
+
+#accordion div li {	
+	display: block;
+	margin-top: 0.25em;
+}
+
+#accordion li a:before {
+	content: "→ ";
+}
+
+
+#accordion dl {
+	margin-top: 0;
+	margin-bottom: 1em;
+	line-height: 1.5em;
+}
+
+#accordion dt {
+	font-weight: bold;
+}
+#accordion dd {
+	margin-left: 1em;
+}
+
+#plone-boxed {
+	display: block;
+	margin: 2em auto 1em auto;
+}
+
+#download-link {
+	display: block;
+	width: 163px;
+	height: 47px;
+	background: url(images/download-box.png) no-repeat;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 8px 14px;
+	margin: 1em 30px 0 30px;
+}
+
+/* @end */
+
+/* @group Footer */
+
+#footer {
+	position: relative;
+	top: 8em;
+	padding: 0 0 0px 111px;
+	color: White;
+	font-size: 11px;
+	font-weight: bold;
+	clear: both;
+background-color: #329fd7;
+}
+
+#footer-logo {
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+#footer-logo img {
+	border-right: 1px solid white;
+}
+
+#footer-text {
+	padding: 5px 0 30px 0;	
+}
+
+/* @end */
+
+/* @group Content Area */
+
+/* Taken from NuPlone and modified slightly */
+
+#content {
+	line-height: 1.5em;
+}
+
+#content h1,
+#archetypes-fieldname-title input {
+	font-family: "Helvetica Neue", Arial;
+	margin-bottom: 10px;
+	color: black;
+	clear: left;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+#content h1 {
+	font-family: "Helvetica Neue", Arial;
+	font-weight: normal;
+	font-style: normal;
+}
+
+#content h1.documentFirstHeading {
+	margin-top: 1em;
+}
+
+#content h2 {
+	color: #666;
+	padding: 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 0.5em 0 0.4em;
+	font: normal 18px/20px Arial,Helvetica,Geneva,sans-serif;
+}
+
+#content h2 a,h2 a,#content h2 a:hover  {
+	display: block;
+	text-decoration: none;
+	margin-bottom: 8px;
+	border-style: none;
+}
+
+#content h3 a:hover {
+	text-decoration: none;
+}
+
+#content p,
+#content ul,
+#content ol,
+#content table,
+#content dl {
+	margin-top: 0;
+	margin-bottom: 1em;
+	line-height: 1.5em;
+	color: black;
+	font-size: 13px;
+}
+
+
+
+#content a {
+	color: #205c90;
+	border-bottom: 1px solid #ccc;
+}
+
+#content a:hover {
+	color: #75ad0a;
+}
+
+#content a:visited {
+	color: #427597;
+}
+#content a:visited:hover {
+	color: Black;
+}
+#content a:target {
+	background-color: #fd7 !important;
+}
+
+#content img {
+	max-width: 100%;
+}
+
+#content ul {
+	list-style-type: disc;
+	margin-left: 2em;
+}
+
+#content ol {
+	list-style-type: decimal;
+	margin-left: 2em;
+}
+
+#content li {
+	margin-bottom: 0.25em;
+	line-height: 1.5em;
+	display: list-item;
+}
+
+#content dl dt {
+	font-weight: bold;
+}
+
+#content div.documentByLine {
+	border-top: 1px solid gray;
+	margin-bottom: 10px;
+	font-size: 11px;
+	display: block;
+	margin-top: -0.5em;
+	color: gray;
+}
+
+#content .discreet {
+	color: #666;
+	font-size: 11px;
+}
+
+#content .visualHighlight {
+    background-color: #ffc;
+}
+
+#content .pullquote {
+    padding: 0 1em 0 1em;
+    margin: 0 0 1em 1em;
+    font-weight: bold;
+    float: right;
+    width: 35%;
+    clear: right;
+    border-left: 1px solid #888;
+	color: #888;
+}
+#content .callout {
+	font-variant:  small-caps;
+    color: #888;
+    padding: 1em;
+	border: 1px solid #888;
+	border-style: solid none;
+	clear:  both;
+}
+
+
+#content table {
+	width: 100%;
+	text-align: left;
+}
+
+#content p.documentDescription {
+	font-weight: bold;
+	color: gray;
+	font-size: 1em;
+}
+
+/* @end */
