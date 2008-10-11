@@ -235,7 +235,7 @@ div.sidebar {
 	width: 245px;
 	float: right;
 	margin-top: 10px;
-	margin-left: 16px;
+/*    margin-left: 16px;*/ /* IE6 as usually doesn't like margins and calculates them in a weird way */
 }
 
 

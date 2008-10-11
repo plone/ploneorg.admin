@@ -19,3 +19,8 @@ ul.navigation li a.active {
 * html .pullout {
     height: 196px;
 }
+
+* html .ui-accordion,
+* html .ui-accordion-header {
+    height: 1%
+}
