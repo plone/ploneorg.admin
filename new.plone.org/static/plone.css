@@ -36,7 +36,7 @@ body {
 background-color: #329fd7;
 }
 
-a, a:visited {
+a:link, a:visited {
 	color: #329fd7;	
 }
 
@@ -87,9 +87,10 @@ background-color: white;
 	border-right: none;
 }
 
-ul.navigation li a {
+ul.navigation li a,
+ul.navigation li a:visited {
 	padding: 6px 9px;
-	color: black;
+	color: Black;
 	font-weight: bold;
 	border-right: 1px solid #dcdcdc;
 }
@@ -161,7 +162,7 @@ div.splash {
 	z-index: 1;
 
 	/*min-height: 212px;*/
-	min-height: 196px;
+    min-height: 196px;
 }
 
 div.splash h1 {

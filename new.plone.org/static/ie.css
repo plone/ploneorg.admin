@@ -1,3 +1,21 @@
 #footer {
     height: 1%;
 }
+
+ul.navigation li a {
+    letter-spacing: -1px
+}
+
+#sub-nav li a {
+    letter-spacing: 0
+}
+
+ul.navigation li a.selected, 
+ul.navigation li a.active {
+    position: relative
+}
+
+* html .splash,
+* html .pullout {
+    height: 196px;
+}
