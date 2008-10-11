@@ -109,6 +109,7 @@ ul.navigation li a.active {
 
 #search {
 	float: right;
+	position: relative;
 	background: url(images/search-wrapper.png) no-repeat;
 	height: 20px;
 	padding: 10px 25px;
