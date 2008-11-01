@@ -397,6 +397,188 @@ ul.topic li {
 
 /* @end */
 
+/* @group Downloads pane */
+
+#plone-box {
+	background-image:url(images/plone-box.png);
+	background-repeat:no-repeat;
+	height:150px;
+	width:115px;
+	float:left;
+	margin: 62px 10px 0px 90px;
+}
+
+#download-plone {
+	background-image:url(images/download-plone.png);
+	background-repeat:no-repeat;
+	height:58px;
+	width:300px;
+	margin:10px 0px 10px 260px;
+}	
+
+div.downloadssearch {
+	float: right;
+	font-size: 11px;
+	padding-right: 10px;
+}
+
+div.downloadssearch input {
+	color: #666;
+}
+
+.rss-icon {
+	float:right;
+	padding:10px;
+	display:block;
+	margin-top:-40px;
+}
+
+.next-previous {
+	float:right;
+	width:25%;
+	margin-top:-15px;
+	display:block;
+	font-size:.8em;
+}
+
+.next-previous .next-previous-item a {
+	color:#ccc;
+}
+
+#download-footer-links {
+	font-size:.8em;
+	color:#999;
+	width:100%;
+	display: block;
+	padding:5px 0px;
+	margin-top:20px;
+}
+
+#sort-by {
+	margin-left:10px;
+	font-size:.7em;
+}
+
+.sort {
+	margin:0px 10px 0px 0px;
+	color:#999
+	font-weight:bold;
+}
+
+#sort-by a.plain {
+	margin-right:10px;
+	color:#000;
+}
+
+#sortby a.selected {
+	font-size:.9em;
+}
+
+
+#numreleases {
+	font-size:.8em;
+	border-bottom:1px solid #ccc;
+	width:100%;
+	display: block;
+	padding:5px 0px;
+}
+
+ul.downloads li {
+	border-bottom:1px solid #ccc;
+}
+
+#product-details {
+	display:block;
+	font-size:.8em;
+	color:#999;
+}
+
+#product-details p {
+	display:block;
+	font-size:1em;
+	color:#000;
+}
+
+.product-leadin {
+	display:block;
+	padding:0px 0px 10px 0px;
+}
+
+.product-date {
+	font-size:.9em;
+}
+
+.product-description {
+	font-size:.8em;
+}
+
+.company-logo {
+	float:right;
+	padding:10px;
+}
+
+.new-in-this-release {
+	color:#000;
+	display:block;
+	font-weight:bold;
+	margin-top:10px;
+}
+
+.new-details {
+	display:block;
+	border-bottom:1px solid #ccc;
+	padding:5px 0px;
+}
+
+#categories {
+	background-color: white;
+	padding: 10px;
+	margin-top: 12px; /* compensate for corners */
+	margin-bottom: 8px;
+}
+
+.advice {
+	display:block;
+	font-size:.7em;
+	font-weight:bold;
+	margin:10px 0px;
+	width:90%;
+}
+
+.downloads h3 {
+	margin-top:10px;
+}
+
+h2.add-on-categories-hdr {
+	font-size:1.2em;
+}
+
+div.sidebar ol#add-on-categories {
+	padding:10px 0px;
+}
+
+div.sidebar ol#add-on-categories li {
+	border-bottom:none;
+	border-top:none;
+	font-weight:bold;
+	line-height:6px;
+	font-size:.8em;
+}
+
+.list-your-addon {
+	height:19px;
+	width:209px;
+}
+
+.down-arrow {
+	display:block;
+	padding:5px 0px 0px 5px;
+	border-bottom:1px solid #ccc;
+}
+
+/* @end */
+
+
 #current {
 	background: 150px 130px url(images/cogs.png) no-repeat;	
 	clear: left;

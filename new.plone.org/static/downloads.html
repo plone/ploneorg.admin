@@ -11,15 +11,36 @@
 	<!--[if IE]>
         <style type="text/css" media="all">@import url(ie.css);</style>
     <![endif]-->	
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.2/jquery-ui.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    $("#topics").accordion({header:'h3', selectedClass:'selected'});
+	  	});
+	</script>
+
+	<script src="jquery.curvycorners.source.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('div.splash').corner();
+			$('div.pullout').corner({ tl: false, bl: false });
+			// These cause the accordion to stop working at the moment
+			// $('div.pane').corner();
+			// $('#topics').corner();
+		});
+	</script>
 </head>
 <body>
+	
 <div id="outer-wrapper"><div id="inner-wrapper">
 
 
-<div id="nav">		
+<div id="nav">
 
 	<div id="search">
-		<input type="search" value="Search Downloads…" />
+		<input type="search" value="Search…" />
 	</div>
 	
 	<div id="user">
@@ -35,25 +56,114 @@
 		><li><a href="support.html">Support</a></li>
 	</ul>
 
-	<ul id="sub-nav" class="navigation">
-		<li><a href="" class="selected">Plone</a></li
-		><li><a href="">Development</a></li
-		><li><a href="">Commerce</a></li
-		><li><a href="">Layout</a></li
-		><li><a href="">Themes</a></li
-		><li><a href="">Examples</a></li
-		><li><a href="">Weblogs</a></li
-		><li><a href="">I18n</a></li
-		><li><a href="" style="color: #666">Submit New +</a></li
-		>
-	</ul>
-
 </div>
 
 <div id="content-wrapper">
 
+	<div class="splash" id="splash-documentation">
+		
+		<div id="plone-box"></div>
+
+		<h1>Get Plone for Your Platform</h1>
+
+		<p>Latest release: Plone 3.1.6 (October 2008)</p>
+		<div id="download-plone">
+			<div id="download-plone-hdr"></div>
+		</div>
+	</div>
+
+	<div class="pullout">
+		<h2>Plone Add Ons!</h2>
+		<p>Add-on products available for Plone - currently listing 850 projects with 2218 releases</p>
+		<h3>Submit your add-ons</h3>
+		<span class="list-your-addon"><img alt="" src="images/list-your-addon.png" /></span>
+	</div>
 
 
+	<div class="sidebar">
+		<h2 class="add-on-categories-hdr">Add On Categories</h2>
+		<span class="down-arrow">&darr;</span>
+
+		<ol id="add-on-categories">
+			<li>All categories</li>
+			<li><a href="">Plone releases</a></li>
+			<li><a href="">Themes</a></li>
+			<li><a href="">Theming Tools</a></li>
+			<li>...etc. </li>
+		</ol>
+
+	</div>
+
+
+	<div class="pane">
+
+ 		<h1>Add on Product Releases <a href="" class="versions">for Plone 3 ▼</a></h1>
+
+		<div class="downloadssearch">
+			<input type="search" value="Search Downloads…" size="25" />
+			&nbsp;
+			<a href="">Advanced search</a>
+		</div>
+		
+		<div id="sort-by"><span class="sort">Sort by:</span><a href="" class="plain">Most recent</span>&nbsp;<a href="" class="selected">Most popular</a></div>
+
+		<div class="" id="categories">		
+			
+			<span class="advice">Make sure you have Plone installed before downloading the add-ons and ensure you are using add-ons that have been certified for use with your particular version.</span>
+			<span class="rss-icon"><img alt="" src="images/rss-icon.png" /></span>
+			
+			<h2>All Categories</h2>
+			
+			<div id="numreleases">809 releases matching your criteria, sorted with most recent releases first
+			<span class="next-previous">
+					<a href="previous" class="next-previous-item">previous</a>&nbsp;|&nbsp;
+					<a href="page01" class="next-previous-item">1</a>&nbsp;|&nbsp;
+					<a href="page02" class="next-previous-item">2</a>&nbsp;|&nbsp;
+					<a href="page03" class="next-previous-item">3</a>&nbsp;|&nbsp;
+					<a href="page04" class="next-previous-item">4</a>&nbsp;|&nbsp;
+					<a href="" class="next-previous-item">next</a>
+			</span>
+			</div>
+			
+			<ul class="downloads">
+			  <li>
+			    <h3><a href="">Product One</a></h3>
+				<div id="product-details">
+					<span class="product-leadin">
+						<span class="product-date">Sept. 3, 2008</span> in <span class="product-category">Development Tools, Versioning, Staging and Deployment</span>
+					</span>
+				<span class="company-logo"><img alt="" src="images/company-logo.png" /></span>
+				<p class="product-description">How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+				<p class="new-in-this-release">New in this release: </p>
+				<p class="new-details">New messages to users. Now compatible with any editor.</p>
+			  </li>
+			  <li>
+			    <h3><a href="">Product Two</a></h3>
+				<div id="product-details">
+					<span class="product-leadin">
+						<span class="product-date">Sept. 3, 2008</span> in <span class="product-category">Development Tools, Versioning, Staging and Deployment</span>
+					</span>
+				<span class="company-logo"><img alt="" src="images/company-logo.png" /></span>
+				<p class="product-description">How to ask for help when you have a problem. Following these simple steps will make everything easier both for yourself and us.</p>
+				<p class="new-in-this-release">New in this release: </p>
+				<p class="new-details">New messages to users. Now compatible with any editor.</p>
+			  </li>
+
+			</ul>
+<div id="download-footer-links">			
+			<span class="next-previous">
+					<a href="previous" class="next-previous-item">previous</a>&nbsp;|&nbsp;
+					<a href="page01" class="next-previous-item">1</a>&nbsp;|&nbsp;
+					<a href="page02" class="next-previous-item">2</a>&nbsp;|&nbsp;
+					<a href="page03" class="next-previous-item">3</a>&nbsp;|&nbsp;
+					<a href="page04" class="next-previous-item">4</a>&nbsp;|&nbsp;
+					<a href="" class="next-previous-item">next</a>
+			</span>			
+</div>	
+
+		</div>
+
+	</div>
 
 	<div id="footer">
 		<a id="footer-logo"
