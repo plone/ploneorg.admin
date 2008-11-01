@@ -2,9 +2,13 @@
 <rules xmlns="http://openplans.org/deliverance">
     <replace content="/html/head/title" theme="/html/head/title" />
     
-    <copy	content='//*[@id="portal-globalnav"]/li'	theme='//*[@id="main-nav"]' />
-    <copy	content='/html/body/div/table/tbody/tr/td/div/div/dl/dd/ul/li' theme='//*[@id="sub-nav"]' />
-    <copy	content='//*[@id="user-name"]/span' 		theme='//*[@id="user"]/a' />
+    <copy content='//*[@id="portal-globalnav"]/li'	theme='//*[@id="main-nav"]' />
+    <copy content='//*[@id="user-name"]/span' 		theme='//*[@id="user"]/a' />
+    <copy content='//*[@id="content-views"]'			theme='//*[@id="edit-menu"]' />
+    <copy content='//*[@id="contentActionMenus"]'	theme='//*[@id="action-menu"]' />
+
+    <!-- <copy content='/html/body/div/table/tbody/tr/td/div/div/dl/dd/ul/li' theme='//*[@id="sub-nav"]' /> -->
+
     
 </rules>
 

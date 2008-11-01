@@ -143,9 +143,15 @@ ul.navigation li a.active {
 
 /* @end */
 
+#logo-wrapper {
+	width: 937px;
+	margin: 0 auto;
+}
+
 #logo {
 	margin: 25px 22px;
 }
+
 
 /* @group Splash pages */
 
@@ -588,7 +594,6 @@ background-color: #329fd7;
 	color: #444;
 	padding: 0;
 	letter-spacing: -1px;
-
 	font: bold 22px/28px "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -710,3 +715,128 @@ background-color: #329fd7;
 }
 
 /* @end */
+
+
+
+
+#edit-bar { 
+	width: 937px;
+	margin: 0 auto;
+}
+
+#edit-bar a { 
+	color: White;
+	font-weight: bold;
+	padding: 2px;
+}
+
+#edit-bar a:hover { 
+	color: #329fd7;
+	background-color: White;
+}
+
+#action-menu {
+	float:right;
+}
+
+/*
+** begin ECMAScript Content Action Menus
+*/
+.contentActions {
+}
+.contentActions li {
+}
+.contentActions a {
+	color: White;
+	font-weight: bold;
+	padding: 2px;
+    cursor: pointer;
+}
+.contentActions a:hover {
+	color: #329fd7;
+	background-color: White;
+}
+.contentActions span.subMenuTitle {
+    padding: 0em 0.5em;
+    position: relative;
+    white-space: nowrap;
+    display: inline;
+}
+.contentActions a span.subMenuTitle {
+    padding: 0px;
+    display: inline;
+}
+dl.actionMenu {
+    position: relative;
+}
+dl.actionMenu dt.actionMenuHeader {
+	display: inline;
+}
+dl.actionMenu.activated dt.actionMenuHeader {
+    position: relative;
+    z-index: 10;
+}
+dl.actionMenu dt.actionMenuHeader a {
+    cursor: pointer;
+
+}
+.arrowDownAlternative {
+    font-size: 0.85em;
+}
+dl.actionMenu dd.actionMenuContent {
+    display: inline;
+    z-index: 5;
+    position: absolute;
+    top: 1.6em;
+    right: -1px;
+    height: auto;
+}
+dl.actionMenu.activated dd.actionMenuContent {
+/*    display: block !important;
+*/}
+dl.actionMenu.activated dd.actionMenuContent {
+    /* this one will be ignored by IE, it is here to fix the cut-off error in
+       Firefox */
+    display: table !important;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+dl.actionMenu.deactivated dd.actionMenuContent {
+    display: none !important;
+}
+dl.actionMenu dd.actionMenuContent ul {
+/*    display: block;*/
+    margin: -2px 0 0 0;
+    padding: 0;
+}
+dl.actionMenu dd.actionMenuContent li {
+    float: none;
+    background-color: transparent;
+    display: inline;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+dl.actionMenu dd.actionMenuContent li a {
+/*    display: block;*/
+    white-space: nowrap;
+    margin: 0.2em 0;
+}
+dl.actionMenu dd.actionMenuContent .selected {
+/*    display: block;*/
+    white-space: nowrap;
+    padding: 0 0.5em;
+    margin: 0.2em 0;
+}
+dl.actionMenu dd.actionMenuContent li a:hover {
+    color: White;
+}
+dl.actionMenu dd.actionMenuContent .actionSeparator a {
+    padding-top: 0.2em;
+}
+#templateMenu li a {
+    padding-left: 16px;
+}
+/*
+** end ECMAScript Content Action Menus
+*/

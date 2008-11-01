@@ -21,6 +21,16 @@
 	  	});
 	</script>
 
+	<script type="text/javascript">
+        function hideAllMenus(){$('dl.actionMenu').removeClass('activated').addClass('deactivated')};
+        function toggleMenuHandler(event){$(this).parents('.actionMenu:first').toggleClass('deactivated').toggleClass('activated');return false};
+        function actionMenuDocumentMouseDown(event){if($(event.target).parents('.actionMenu:first').length)
+        return true;hideAllMenus()};
+        function actionMenuMouseOver(event){var menu_id=$(this).parents('.actionMenu:first').attr('id');if(!menu_id) return true;var switch_menu=$('dl.actionMenu.activated').length>0;$('dl.actionMenu').removeClass('activated').addClass('deactivated');if(switch_menu)
+        $('#'+menu_id).removeClass('deactivated').addClass('activated')};
+        function initializeMenus(){$(document).mousedown(actionMenuDocumentMouseDown);hideAllMenus();$('dl.actionMenu dt.actionMenuHeader a').click(toggleMenuHandler).mouseover(actionMenuMouseOver);$('dl.actionMenu > dd.actionMenuContent').click(hideAllMenus)};$(initializeMenus);
+    </script>
+
 	<!-- The front page image can't be rounded
 	<script src="jquery.curvycorners.source.js" type="text/javascript"></script>
 	<script type="text/javascript">
@@ -31,7 +41,14 @@
 	-->
 </head>
 <body>
+
+<div id="edit-bar">
+    <div id="action-menu" />
+    <div id="edit-menu" />
+</div>
+
 <div id="outer-wrapper"><div id="inner-wrapper">
+
 
 
 <div id="nav">
@@ -53,7 +70,10 @@
 		><li><a href="support.html">Support</a></li>
 	</ul>
 
-	<img alt="Plone" id="logo" height="56" width="216" src="images/plone-logo-56.png" />
+</div>
+
+<div id="logo-wrapper">
+    <a href="."><img alt="Plone" id="logo" height="56" width="216" src="images/plone-logo-56.png" /></a>
 </div>
 
 <div id="content-wrapper">
