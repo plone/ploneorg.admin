@@ -848,7 +848,6 @@ background-color: #329fd7;
 }
 
 #content div.documentByLine {
-	border-top: 1px solid gray;
 	margin-bottom: 10px;
 	font-size: 11px;
 	display: block;
@@ -904,17 +903,32 @@ background-color: #329fd7;
 #edit-bar { 
 	width: 937px;
 	margin: 0 auto;
+	background-color: #75ad0a;
+	margin-bottom: 0.5em;
+	clear: both;
+	margin-top: 1em;
 }
 
-#edit-bar a { 
+#edit-bar li a { 
+	color: White;
+}
+#edit-bar li { 
 	color: White;
 	font-weight: bold;
-	padding: 2px;
+	padding: 0.5em;
+	line-height: 2em;
 }
 
-#edit-bar a:hover { 
-	color: #329fd7;
+#edit-bar li:hover, 
+#edit-bar li.selected { 
+	color: #75ad0a;
 	background-color: White;
+	border-top: 2px solid #75ad0a;
+}
+
+#edit-bar li:hover a, 
+#edit-bar li.selected a { 
+	color: #75ad0a;
 }
 
 #action-menu {
@@ -928,35 +942,13 @@ background-color: #329fd7;
 }
 .contentActions li {
 }
-.contentActions a {
-	color: White;
-	font-weight: bold;
-	padding: 2px;
-    cursor: pointer;
-}
-.contentActions a:hover {
-	color: #329fd7;
-	background-color: White;
-}
-.contentActions span.subMenuTitle {
-    padding: 0em 0.5em;
-    position: relative;
-    white-space: nowrap;
-    display: inline;
-}
-.contentActions a span.subMenuTitle {
-    padding: 0px;
-    display: inline;
-}
 dl.actionMenu {
-    position: relative;
+	float: right;
+	margin: 0 0.5em;
 }
 dl.actionMenu dt.actionMenuHeader {
-	display: inline;
 }
 dl.actionMenu.activated dt.actionMenuHeader {
-    position: relative;
-    z-index: 10;
 }
 dl.actionMenu dt.actionMenuHeader a {
     cursor: pointer;
@@ -965,6 +957,13 @@ dl.actionMenu dt.actionMenuHeader a {
 .arrowDownAlternative {
     font-size: 0.85em;
 }
+
+dl.actionMenu.deactivated dd.actionMenuContent {
+    display: none !important;
+}
+
+
+/*
 dl.actionMenu dd.actionMenuContent {
     display: inline;
     z-index: 5;
@@ -974,20 +973,13 @@ dl.actionMenu dd.actionMenuContent {
     height: auto;
 }
 dl.actionMenu.activated dd.actionMenuContent {
-/*    display: block !important;
-*/}
+}
 dl.actionMenu.activated dd.actionMenuContent {
-    /* this one will be ignored by IE, it is here to fix the cut-off error in
-       Firefox */
     display: table !important;
     border-collapse: collapse;
     border-spacing: 0;
 }
-dl.actionMenu.deactivated dd.actionMenuContent {
-    display: none !important;
-}
 dl.actionMenu dd.actionMenuContent ul {
-/*    display: block;*/
     margin: -2px 0 0 0;
     padding: 0;
 }
@@ -1000,12 +992,10 @@ dl.actionMenu dd.actionMenuContent li {
     border: 0;
 }
 dl.actionMenu dd.actionMenuContent li a {
-/*    display: block;*/
     white-space: nowrap;
     margin: 0.2em 0;
 }
 dl.actionMenu dd.actionMenuContent .selected {
-/*    display: block;*/
     white-space: nowrap;
     padding: 0 0.5em;
     margin: 0.2em 0;
@@ -1019,6 +1009,7 @@ dl.actionMenu dd.actionMenuContent .actionSeparator a {
 #templateMenu li a {
     padding-left: 16px;
 }
+*/
 /*
 ** end ECMAScript Content Action Menus
 */
