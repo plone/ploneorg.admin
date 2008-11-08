@@ -52,13 +52,13 @@ background-color: white;
 	border-top: 2px solid white;
 	background: url(images/footer-gradient.png) repeat-x;
 	background-position: bottom left;
+	padding-bottom: 2em;
 }
 
 #content-wrapper {
 	width: 937px;
 	margin: 0 auto;
 }
-
 
 /* @end */
 
@@ -730,7 +730,7 @@ div.box .date {
 	font-size: 11px;
 	font-weight: bold;
 	clear: both;
-background-color: #329fd7;
+	background-color: #329fd7;
 }
 
 #footer-logo {
@@ -938,7 +938,7 @@ background-color: #329fd7;
 /*
 ** begin ECMAScript Content Action Menus
 */
-.contentActions {
+/*.contentActions {
 }
 .contentActions li {
 }
@@ -961,55 +961,54 @@ dl.actionMenu dt.actionMenuHeader a {
 dl.actionMenu.deactivated dd.actionMenuContent {
     display: none !important;
 }
+*/
+/* Status messages */
 
-
-/*
-dl.actionMenu dd.actionMenuContent {
-    display: inline;
-    z-index: 5;
-    position: absolute;
-    top: 1.6em;
-    right: -1px;
-    height: auto;
+dl.portalMessage {
+    font-size: &dtml-fontSmallSize;;
+    background-color: #ffffe3; 
+    border: 1px solid #996;    
 }
-dl.actionMenu.activated dd.actionMenuContent {
+dl.portalMessage a {
+    color: black;
+    border: none;
+    text-decoration: underline;
 }
-dl.actionMenu.activated dd.actionMenuContent {
-    display: table !important;
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-dl.actionMenu dd.actionMenuContent ul {
-    margin: -2px 0 0 0;
-    padding: 0;
-}
-dl.actionMenu dd.actionMenuContent li {
-    float: none;
-    background-color: transparent;
-    display: inline;
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-dl.actionMenu dd.actionMenuContent li a {
-    white-space: nowrap;
-    margin: 0.2em 0;
-}
-dl.actionMenu dd.actionMenuContent .selected {
-    white-space: nowrap;
-    padding: 0 0.5em;
-    margin: 0.2em 0;
-}
-dl.actionMenu dd.actionMenuContent li a:hover {
+dl.portalMessage dt {
+    background-color: #996; 
+    font-weight: bold;
+    float: left;
+    margin: 0 0.5em 0 0;
+    padding: 0.5em 0.75em;
     color: White;
+    line-height: 1.25em;
 }
-dl.actionMenu dd.actionMenuContent .actionSeparator a {
-    padding-top: 0.2em;
+dl.portalMessage dd {
+    padding: 0.5em 0.5em; 
+    margin: 0;
+    line-height: 1.25em;
 }
-#templateMenu li a {
-    padding-left: 16px;
+dl.warning {
+    border-color: #d80;
 }
-*/
-/*
-** end ECMAScript Content Action Menus
-*/
+dl.warning dt {
+    background-color: #d80;
+}
+dl.error {
+    border-color: #d00;    
+}
+dl.error dt {
+    background-color: #d00; 
+}
+dl.warning {
+    border-color: #d80;    
+}
+dl.warning dd {
+    background-color: #fd7; 
+}
+dl.error {
+    border-color: #d80;    
+}
+dl.error dd {
+    background-color: #fd7; 
+}
