@@ -33,7 +33,7 @@ a {
 body { 
 	font-family: Arial;
 	padding-top: 11px;
-background-color: #329fd7;
+	background-color: #329fd7;
 }
 
 a:link, a:visited {
@@ -46,13 +46,14 @@ a:hover {
 
 #outer-wrapper {
 	background: left 0px url("images/nav-gradient.png") repeat-x;
-background-color: white;
+	background-color: white;
 }
 #inner-wrapper {
 	border-top: 2px solid white;
 	background: url(images/footer-gradient.png) repeat-x;
 	background-position: bottom left;
 	padding-bottom: 2em;
+	clear:both;
 }
 
 #content-wrapper {
@@ -724,13 +725,14 @@ div.box .date {
 
 #footer {
 	position: relative;
-	top: 8em;
 	padding: 0 0 0px 111px;
 	color: White;
 	font-size: 11px;
 	font-weight: bold;
 	clear: both;
 	background-color: #329fd7;
+	width: 937px;
+	margin: 0 auto;
 }
 
 #footer-logo {
