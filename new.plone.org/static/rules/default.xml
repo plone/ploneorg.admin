@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rules xmlns="http://openplans.org/deliverance">
-    <replace content='/html/head/title' theme='/html/head/title' />
-    <append content='/html/head/script' theme='/html/head' />
-    <append content='/html/head/style' theme='/html/head' />
+	<replace content='/html/head/title' theme='/html/head/title' />
+	<append  content='/html/head/script' theme='/html/head' />
+	<append  content='/html/head/style' theme='/html/head' />
 
 
-    
-    <copy content='//*[@id="portal-globalnav"]/li'		theme='//*[@id="main-nav"]' />
-    <copy content='//*[@id="user-name"]/span' 			theme='//*[@id="user"]/a' />
-    <copy content='//*[@id="content-views"]'			theme='//*[@id="edit-menu"]' />
-    <!-- <copy content='//*[@id="contentActionMenus"]'		theme='//*[@id="action-menu"]' /> -->
-    <copy content='//*[@id="portal-column-content"]'	theme='//*[@id="content"]' />
+	<copy content='//*[@id="portal-globalnav"]/li'		theme='//*[@id="main-nav"]' />
+	<copy content='//*[@id="user-name"]/span' 			theme='//*[@id="user"]/a' />
+	<copy content='//*[@id="content-views"]'			theme='//*[@id="edit-menu"]' />
+	<!-- <copy content='//*[@id="contentActionMenus"]'		theme='//*[@id="action-menu"]' /> -->
+	<copy content='//*[@id="portal-column-content"]'	theme='//*[@id="content"]' />
 
-    <!-- <copy content='/html/body/div/table/tbody/tr/td/div/div/dl/dd/ul/li' theme='//*[@id="sub-nav"]' /> -->
+	<!-- <copy content='/html/body/div/table/tbody/tr/td/div/div/dl/dd/ul/li' theme='//*[@id="sub-nav"]' /> -->
 
     
 </rules>
