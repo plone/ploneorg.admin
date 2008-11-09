@@ -4,7 +4,8 @@
 	
 	<append  content='/html/head/script' theme='/html/head' />
 	<append  content='/html/head/style' theme='/html/head' />
-
+	<prepend theme="/html/body" content="/html/body/@class" />
+	<prepend theme="/html/body" content="/html/body/@id" />
 
 	<!-- Copy the main navigation -->
 	<copy content='//*[@id="portal-globalnav"]/li'		theme='//*[@id="main-nav"]' />
