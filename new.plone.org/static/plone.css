@@ -1338,7 +1338,6 @@ dl.collapsedBlockCollapsible dt.collapsibleHeader {
     margin: 0;
     padding: 0 0 0 22px;
     line-height: 1em;
-    background: transparent url(treeCollapsed.png) no-repeat 6px 50%;
     cursor: pointer;
 }
 dl.collapsedInlineCollapsible dd.collapsibleContent,
@@ -1357,7 +1356,6 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
     margin: 0;
     padding: 0 0 0 22px;
     line-height: 1em;
-    background: transparent url(treeCollapsed.png) no-repeat 6px 50%;
     cursor: pointer;
     display: inline;
 }
