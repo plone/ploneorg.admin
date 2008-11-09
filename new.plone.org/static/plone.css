@@ -754,8 +754,6 @@ div.box .date {
 
 /* @group Content Area */
 
-/* Taken from NuPlone and modified slightly */
-
 #content {
 	line-height: 1.5em;
 }
@@ -893,10 +891,10 @@ div.box .date {
 	text-align: left;
 }
 
-#content p.documentDescription {
-	font-weight: bold;
+#content p.documentDescription,
+#description {
 	color: gray;
-	font-size: 1em;
+	font: bold 1em "Helvetica Neue", Arial, sans-serif !important;
 }
 
 /* @end */
@@ -1411,15 +1409,19 @@ dl.searchResults .highlightedSearchTerm {
     font-weight: normal;
 }
 
+
+/* @end */
+
 /* @group Tabbed form fieldsets */
 
 ul.formTabs {
     position: relative;
     display: block;
-    margin: 0 0 -2em 0;
-    padding: 0;
     list-style-type: none;
     text-align: center;
+	background-color: #329fd7;
+	border-top: 3px solid #329fd7;
+	margin-left: 0 !important;
 }
 li.formTab {
     display: inline !important;
@@ -1431,28 +1433,23 @@ li.formTab a {
     display: inline-block;
 }
 li.formTab a {
-    border-top: 1px solid #8cacbb;
-    border-bottom: 1px solid #8cacbb;
-    border-left: 1px dotted #8cacbb;
-    background: White;
-    margin: 0;
+	background-color: #329fd7;
+    color: White !important;
     padding: 0.125em 0.75em;
     text-decoration: none;
+	border: none !important;
+	font-weight: bold;
 }
 li.formTab a:visited {
-    color: #436976;    
 }
 li.firstFormTab a {
-    border-left: 1px solid #8cacbb;
 }
 li.lastFormTab a {
-    border-right: 1px solid #8cacbb;
 }
-li.formTab a.selected {
-    background: #dee7ec;
-}
+li.formTab a.selected,
 li.formTab a:hover {
-    background: #dee7ec;
+    background: White;
+    color: #329fd7 !important;
 }
 li.formTab a.notify {
     background-color: #ffce7b;
@@ -1468,8 +1465,9 @@ li.formTab a.notify:hover {
     background-color: #ffa500;
 }
 .formPanel {
-    padding: 1em 1em 1em 1em; 
+	margin-top: -1.5em;
     border: 1px solid #8cacbb;
+    padding-top: 1em;
 }
 .formPanel.hidden {
     display: none;
@@ -1480,72 +1478,22 @@ div.formControls input.hidden {
 
 /* @end */
 
-
-/* @end */
-
 /* @group Forms */
-textarea {
+div.formControls {
+	margin-top: 1em;
+}
+#content textarea {
 font: 100% Monaco, "Courier New", Courier, monospace;
-border: 1px solid #ddd;
-border-color:#666 #ddd #ddd #666;
-color: Black;
-background: White url(http://localhost:8080/demo/input_background.gif) repeat-x;
 width: 100%;
 }
-input {
-font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
-visibility: visible;
-border: 1px solid #ddd;
-border-color:#666 #ddd #ddd #666;
-color: Black;
-vertical-align: middle;
-background: White url(http://localhost:8080/demo/input_background.gif) repeat-x;
-font-size: 1em;
-}
-/* */
-.noborder,
-.documentEditable * .noborder {
-border: none;
-margin: 0;
-background: none;
-background-color: transparent;
-}
-input[type=checkbox] {
-border: none;
-margin: 0;
-background: none;
-background-color: transparent;
-}
-#searchGadget {
-border: 1px solid #8cacbb;
-}
-button {
-font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
-visibility: visible;
-border: 1px solid #8cacbb;
-color: Black;
-vertical-align: middle;
-background-color: #dee7ec;
-padding: 1px;
-cursor: pointer;
-font-size: 90%;
-text-transform: none;
-}
-select {
+#content select {
 vertical-align: top;
 }
-form {
-border: none;
-margin: 0;
+#content fieldset {
+border: 1px solid #329fd7;
+border-style: solid none none none;
 }
-fieldset {
-border: 1px solid #8cacbb;
-margin: 1em 0em 1em 0em;
-padding: 0em 1em 1em 1em;
-line-height: 1.5em;
-width: auto;
-}
-legend {
+#content legend {
 background: White;
 padding: 0.5em;
 font-size: 90%;
@@ -1553,16 +1501,16 @@ font-size: 90%;
 label {
 font-weight: bold;
 }
-optgroup {
+#content optgroup {
 font-style: normal;
 font-weight: bold;
 color: #999;
 padding-left: 0.25em;
 }
-option {
+#content option {
 color: black;
 }
-optgroup > option {
+#content optgroup > option {
 padding: 0 0.25em 0 1em;
 }
 dl.enableFormTabbing dd {
@@ -1589,39 +1537,7 @@ float: right;
 width: 35%;
 margin: 0 1em;
 }
-.standalone,
-.documentEditable * .standalone {
-background: #dee7ec url(http://localhost:8080/demo/linkOpaque.gif) 9px 1px no-repeat;
-color: Black;
-cursor: pointer;
-font-size: 90%;
-padding: 1px 1px 1px 15px;
-text-transform: none;
-border: 1px solid #8cacbb;
-}
-.context,
-.formControls .actionButtons .button,
-.documentEditable * .context {
-background: transparent url(http://localhost:8080/demo/linkTransparent.gif) 9px 1px no-repeat;
-color: Black;
-cursor: pointer;
-font-size: 90%;
-padding: 1px 1px 1px 15px;
-text-transform: none;
-border: 1px solid #8cacbb;
-}
-.destructive,
-.documentEditable * .destructive {
-background: #ffce7b url(http://localhost:8080/demo/linkTransparent.gif) 9px 1px no-repeat;
-border: 1px solid #ffa500;
-color: Black;
-cursor: pointer;
-font-size: 90%;
-padding: 1px 1px 1px 15px;
-text-transform: none;
-border: 1px solid #8cacbb;
-}
-input.searchButton {
+#content input.searchButton {
 margin-bottom: 1px ! important;
 color: Black;
 font-size: 90%;
@@ -1638,15 +1554,12 @@ margin-top: 0.25em;
 .searchSection label:hover {
 color: Black;
 }
-/* */
 .field {
-top: 0;
-left: 0;
-margin: 0 1em 1em 0;
 clear: both;
+margin-top: 1em;
 }
-.field .field {
-margin: 0;
+.field input {
+	width: 100%;
 }
 .fieldRequired {
 background: url(http://localhost:8080/demo/required.gif) center left no-repeat;
@@ -1682,17 +1595,6 @@ width: 95%;
 .error .fieldRequired {
 color: #d00;
 }
-/* */
-#archetypes-fieldname-title input, input#form\.title {
-font-size: 160%;
-font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
-font-weight: normal;
-width: 99%;
-}
-#archetypes-fieldname-description textarea, textarea#form\.description {
-font: 100% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
-font-weight: bold;
-}
 input.inputLabelActive {
 color: #76797c;
 }
@@ -1703,6 +1605,15 @@ width: 99%;
 tr.selected {
 background-color: #ffa;
 }
+
+/* @end */
+
+/* @group Visual editor */
+
+.kupu {
+	background-color: White;
+}
+
 .kupu-save-message {
 color: white;
 font-weight: bold;
@@ -1712,6 +1623,17 @@ position: fixed;
 top: 0;
 right: 0;
 z-index: 999;
+}
+
+#toolbar {
+    background-color: White;
+    width: auto;
+}
+#toolbar button {
+	border-color: White;
+}
+#kupu-editor-iframe-text {
+	border-color: #75ad0a;
 }
 
 /* @end */

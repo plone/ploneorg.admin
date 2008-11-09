@@ -2,8 +2,12 @@
 <rules xmlns="http://openplans.org/deliverance">
 	<replace content='/html/head/title' theme='/html/head/title' />
 	
+	<!-- Add in the Plone-created CSS and JS in addition to the static ones -->
 	<append  content='/html/head/script' theme='/html/head' />
 	<append  content='/html/head/style' theme='/html/head' />
+
+	<!-- Copy over the id/class attributes on the body tag, this is important
+	     for Kupu and per-section styling -->
 	<prepend theme="/html/body" content="/html/body/@class" />
 	<prepend theme="/html/body" content="/html/body/@id" />
 
