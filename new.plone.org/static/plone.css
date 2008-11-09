@@ -910,7 +910,7 @@ div.box .date {
 	background-color: #75ad0a;
 	clear: both;
 	border-top: 4px solid #87BA26;
-	background: #75ad0a url(images/accordion-gradient.png) repeat-x;
+	background: #75ad0a 0 -2px url(images/accordion-gradient.png) repeat-x;
 }
 
 #edit-bar ul { 
