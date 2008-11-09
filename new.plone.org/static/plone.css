@@ -1636,5 +1636,9 @@ z-index: 999;
 #kupu-editor-iframe-text {
 	border: 1px solid Black;
 }
+#kupu-colorchooser {
+	display: none;
+}
+
 
 /* @end */
