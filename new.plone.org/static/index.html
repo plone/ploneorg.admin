@@ -22,7 +22,8 @@
 	  	});
 	</script>
 
-	<script type="text/javascript">
+<!--
+	 <script type="text/javascript">
         function hideAllMenus(){$('dl.actionMenu').removeClass('activated').addClass('deactivated')};
         function toggleMenuHandler(event){$(this).parents('.actionMenu:first').toggleClass('deactivated').toggleClass('activated');return false};
         function actionMenuDocumentMouseDown(event){if($(event.target).parents('.actionMenu:first').length)
@@ -31,15 +32,8 @@
         $('#'+menu_id).removeClass('deactivated').addClass('activated')};
         function initializeMenus(){$(document).mousedown(actionMenuDocumentMouseDown);hideAllMenus();$('dl.actionMenu dt.actionMenuHeader a').click(toggleMenuHandler).mouseover(actionMenuMouseOver);$('dl.actionMenu > dd.actionMenuContent').click(hideAllMenus)};$(initializeMenus);
     </script>
+ -->
 
-	<!-- The front page image can't be rounded
-	<script src="jquery.curvycorners.source.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		$(function(){
-			$('div.splash').corner();
-		});
-	</script> 
-	-->
 </head>
 <body>
 
