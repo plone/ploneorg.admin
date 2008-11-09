@@ -1628,12 +1628,13 @@ z-index: 999;
 #toolbar {
     background-color: White;
     width: auto;
+    border: none;
 }
 #toolbar button {
 	border-color: White;
 }
 #kupu-editor-iframe-text {
-	border-color: #75ad0a;
+	border: 1px solid Black;
 }
 
 /* @end */
