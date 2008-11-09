@@ -18,7 +18,7 @@
 	<copy content='//*[@id="contentActionMenus"]'		theme='//*[@id="action-menu"]' />
 
 	<!-- Copy over the contents of the page body -->
-	<copy content='//*[@id="portal-column-content"]'	theme='//*[@id="content"]' />
+	<copy content='//*[@id="content"]'	theme='//*[@id="content"]' />
 
 	<!-- <copy content='/html/body/div/table/tbody/tr/td/div/div/dl/dd/ul/li' theme='//*[@id="sub-nav"]' /> -->
 
