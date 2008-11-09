@@ -317,6 +317,9 @@ div.pane {
 	width: 656px;
 	padding: 10px;
 	clear: left;
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
 }
 
 div.pane h1 {
@@ -349,7 +352,10 @@ div.pagesearch input {
 	background-color: white;
 	padding: 10px;
 	/*margin-top: 8px; compensate for corners*/ 
-	margin-bottom: 8px
+	margin-bottom: 8px;
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
 }
 
 #topics h3 {
