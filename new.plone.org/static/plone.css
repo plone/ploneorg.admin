@@ -8,10 +8,6 @@
 
 /* @group Neutralize! */
 
-a {
-	outline: none;
-}
-
 /* Remove implicit browser styles to have a neutral starting point:
    - No elements should have implicit margin/padding
    - No underline by default on links (we add it explicitly in the body text)
@@ -19,6 +15,10 @@ a {
    - Browsers are inconsistent about hX/pre/code, reset
    - Linked images should not have borders
    */
+
+a {
+	outline: none;
+}
 * { margin: 0; padding: 0; }
 * :link,:visited { text-decoration:none }
 * ul,ol { list-style:none; }
@@ -901,8 +901,7 @@ div.box .date {
 
 /* @end */
 
-
-
+/* @group Edit bar */
 
 #edit-bar { 
 	width: 937px;
@@ -943,16 +942,21 @@ div.box .date {
 	clear: right;
 }
 
-/* Status messages */
+
+
+/* @end */
+
+/* @group Status messages */
 
 dl.portalMessage {
     font-size: &dtml-fontSmallSize;;
     background-color: #ffffe3; 
     border: 1px solid #996;    
 }
+
 dl.portalMessage a {
-    color: black;
-    border: none;
+    color: black !important;
+    border: none !important;
     text-decoration: underline;
 }
 dl.portalMessage dt {
@@ -993,3 +997,721 @@ dl.error {
 dl.error dd {
     background-color: #fd7; 
 }
+
+
+
+/* @end */
+
+/* @group Editing */
+
+/* @group Pulldown menus */
+
+.contentActions {
+    background-color: white;
+    text-align: right;
+    padding: 0 0 0 1em;
+    z-index: 2;
+    position:relative;
+    height: 1.6em;
+}
+.contentActions ul,
+.contentActions li {
+    margin: 0;
+    list-style: none;
+    list-style-image: none;
+    color: Black;
+    text-align: left;
+    line-height: 1.6em;
+}
+.contentActions li {
+    float: right;
+    z-index: 4;
+    border-left: 1px solid #74ae0b;
+}
+.contentActions a {
+    text-decoration: none;
+    color: White;
+    padding: 0 0.5em;
+    cursor: pointer;
+}
+.contentActions span.subMenuTitle {
+    padding: 0em 0.5em;
+    position: relative;
+    white-space: nowrap;
+    display: inline;
+}
+.contentActions a span.subMenuTitle {
+    padding: 0px;
+    display: inline;
+}
+.actionMenu {
+    /*  The spec says we can't put this on an element with a float (although
+        Opera is the only one that cares) and we need it in order to catch
+        the position:absolute bubbling up */
+
+    position: relative;
+    margin: 0;
+    padding: 0;
+	font-weight: bold;
+}
+.actionMenu .actionMenuHeader {
+    margin: 0;
+    padding: 0;
+}
+.actionMenu.activated .actionMenuHeader {
+    position: relative;
+    z-index: 10;
+}
+.actionMenu .actionMenuHeader a {
+    display: block;
+	color: White;
+	padding: 0.5em 0.5em;
+}
+.arrowDownAlternative {
+    font-size: 0.85em;
+}
+.actionMenu .actionMenuContent {
+    display: none;
+    z-index: 5;
+    position: absolute;
+    top: 1.5em;
+    right: 0;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+.actionMenu.activated .actionMenuContent {
+    display: block !important;
+}
+.actionMenu.activated .actionMenuContent {
+    /* this one will be ignored by IE, it is here to fix the cut-off error in
+       Firefox */
+    display: table !important;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.actionMenu.deactivated .actionMenuContent {
+    display: none !important;
+}
+.actionMenu .actionMenuContent ul {
+    display: block;
+    background: #75ad0a;
+	color: White;
+    margin: 0.5em 0 0 0;
+	border: 3px solid #74ae0b;
+}
+.actionMenu .actionMenuContent li {
+    float: none;
+    display: inline;
+}
+.actionMenu .actionMenuContent li a {
+    display: block;
+    white-space: nowrap;
+	background-color: #74ae0b;
+	color: White;
+	padding: 0.5em;
+}
+.actionMenu .actionMenuContent .selected {
+    display: block;
+    white-space: nowrap;
+    padding: 0 0.5em;
+    margin: 0.2em 0;
+}
+.actionMenu .actionMenuContent li a:hover {
+    background-color: White;
+    color: #75ad0a;
+}
+.actionMenu .actionMenuContent .actionSeparator a {
+    padding-top: 0.2em;
+    border-top: 1px solid #74ae0b;
+}
+#templateMenu li a {
+    padding-left: 16px;
+}
+
+dl.actionMenu {
+	float:right;
+}
+
+
+
+/* @end */
+
+/* @group Control panel */
+
+ul.configlets {
+    margin: 1em 0;
+    list-style-image: none;
+    list-style: none;
+}
+
+.configlet .contentViews {
+    font-size: 90%;
+}
+
+ul.configlets li {
+    margin-bottom: 1em;
+}
+ul.configlets li a {
+    text-decoration: none;
+    border: none;
+}
+ul.configlets li a:visited {
+    color: #436976;
+    background-color: transparent;
+}
+ul.configlets li a:active {
+    color: #436976;
+    background-color: transparent;
+}
+ul.configlets li label {
+    font-weight: bold;
+}
+ul.configletDetails {
+    margin: 0em 1em 1em 4em;
+    list-style-image: none;
+    list-style: none;
+}
+ul.configletDetails li {
+    margin-bottom: 1em;
+    display: inline;
+}
+ul.configletDetails li a {
+	text-decoration: none;
+}
+ul.configletDetails li label {
+    font-weight: bold;
+}
+ul.configletDetails li.configletDescription {
+    display: block;
+    color: #76797c;
+    font-size: 90%;
+    margin: 0;
+}
+.inlineDisplay {
+display:inline
+}
+table.controlpanel-listing {
+width:100%;
+}
+table.controlpanel-listing td, table.controlpanel-listing th {
+font-size:120%;
+}
+table.controlpanel-listing dl {
+margin-top:0;
+}
+table.controlpanel-listing dd {
+margin-left: 1em;
+}
+table.controlpanel-listing dl dt a .trigger{
+font-weight:normal;
+}
+table .controlpanel-listing td {
+vertical-align:top;
+}
+table.controlpanel-listing td.checker{
+text-align:center;
+}
+table.controlpanel-listing th.smallcolumn {
+width:1.5em;
+}
+.chooser-right {
+float:right;
+margin-right:0 !important;
+margin-bottom:0 !important;
+}
+.rule-element {
+background-color:#EEF3F5;
+margin:0.5em 0pt 0.5em;
+padding:0.3em 1em 0.3em 1em;
+width:auto;
+}
+.rule-element dl {
+}
+.rule-element dl dd {
+margin-left:1em;
+}
+.rule-updown, .rule-operations {
+float:right;
+padding-top:0.8em;
+}
+/* @end */
+/* Additional STX workaround classes */
+.stx table p {
+    margin: 0;
+    padding: 0;
+}
+.stx table {
+    border: 1px solid #8cacbb ! important;
+}
+.stx table td {
+    border-bottom: 1px solid #8cacbb;
+}
+
+.reviewHistory,
+.contentHistory {
+    display: inline;
+    font-size: 110% !important; 
+    color: Black;
+}
+
+/* @group Comments */
+
+.comment {
+    background: #eef3f5; 
+    border: 1px solid #8cacbb; 
+    padding: 0.25em 1em 0.5em 1em;
+    margin-bottom: 1em;
+}
+.comment h1,
+.comment h2,
+.comment h3,
+.comment h4, 
+.comment h5,
+.comment h6 {
+    border-bottom: 1px solid #76797c;
+    font-weight: normal;
+}
+.comment h3 a {
+    background-image: url(http://localhost:8080/demo/discussionitem_icon.png);
+    background-repeat: no-repeat;
+    padding-left: 18px;
+    margin-left: -1px;
+    margin-bottom: 1px;
+    min-height: 1.6em;
+    height: auto;
+    line-height: 1.6em;	
+}
+.commentBody {
+    margin: 0 1em 1em 1em;
+}
+
+/* @end */
+.spacer {
+    margin: 1em;
+}
+
+/* @group Collapsible */
+dl.collapsible {
+    border: 1px solid #8cacbb !important;
+    margin: 1em 0 0 0;
+    padding: 0;
+}
+dl.collapsible dt.collapsibleHeader {
+    display: block;
+    float: left;
+    background: White;
+    line-height: 1.2em;
+    vertical-align: middle;
+    font-size: 90%;
+    position: relative;
+    top: -0.6em;
+    width: auto;
+    margin: 0 0 -0.6em 1em;
+    padding: 0 0.5em;
+}
+dl.collapsible dd.collapsibleContent {
+    margin: 0;
+    padding: 0 1em;
+    clear: left;
+}
+
+/* for IE the following isn't needed, that's why the css2 selector is used */
+dl.collapsible dd.collapsibleContent > dl {
+    margin: 0;
+    padding: 0;
+}
+
+dl.expandedInlineCollapsible dt.collapsibleHeader,
+dl.expandedBlockCollapsible dt.collapsibleHeader {
+    padding: 0 6px 0 22px;
+    background: White url(treeExpanded.png) no-repeat 6px 50%;
+    cursor: pointer;
+}
+
+dl.collapsedBlockCollapsible {
+    border: none !important;
+    height: 1em;
+    width: auto;
+}
+dl.collapsedBlockCollapsible dt.collapsibleHeader {
+    float: none;
+    position: static;
+    margin: 0;
+    padding: 0 0 0 22px;
+    line-height: 1em;
+    background: transparent url(treeCollapsed.png) no-repeat 6px 50%;
+    cursor: pointer;
+}
+dl.collapsedInlineCollapsible dd.collapsibleContent,
+dl.collapsedBlockCollapsible dd.collapsibleContent {
+    display: none;
+}
+dl.collapsedInlineCollapsible {
+    border: none !important;
+    height: 1em;
+    width: auto;
+    display: inline;
+}
+dl.collapsedInlineCollapsible dt.collapsibleHeader {
+    position: static;
+    float: none;
+    margin: 0;
+    padding: 0 0 0 22px;
+    line-height: 1em;
+    background: transparent url(treeCollapsed.png) no-repeat 6px 50%;
+    cursor: pointer;
+    display: inline;
+}
+
+/* @end */
+
+.label {
+    font-weight: bold;
+    display: inline;
+    padding-right: 0.5em;
+}
+.optionsToggle {
+    border: 1px solid #8cacbb;
+    color: Black;
+    background-color: #dee7ec;
+    font-weight: normal !important;
+    font-size: 90%;
+} 
+
+#portal-column-content fieldset > * input:focus,
+#portal-column-content fieldset > * textarea:focus {
+    border-color: #ffa500;
+    border-width: 1px;
+}
+
+/* for highlighting of search terms */
+.highlightedSearchTerm {
+   background-color: #ffa;
+}
+
+dl.searchResults .highlightedSearchTerm {
+    background-color: transparent;
+    font-weight: bold;
+}
+/* for greying out inherited roles */
+.noInheritedRoles {
+    color: #a0a0a0;
+}
+/* for highlighting current items, like the language or today in the calendar */
+.currentItem {
+    border-collapse: collapse;
+    border: 2px solid #ffa500;
+    padding: 1px;
+}
+.managePortletsLink {
+    display:  block;
+    color: #76797c;
+    font-size: 90%;
+    font-weight: normal;
+}
+
+/* @group Tabbed form fieldsets */
+
+ul.formTabs {
+    position: relative;
+    display: block;
+    margin: 0 0 -2em 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+li.formTab {
+    display: inline !important;
+    margin: 0;
+    padding: 0;
+}
+li.formTab a {
+    /* this isn't supported by all browsers, so we keep it in a separate rule */
+    display: inline-block;
+}
+li.formTab a {
+    border-top: 1px solid #8cacbb;
+    border-bottom: 1px solid #8cacbb;
+    border-left: 1px dotted #8cacbb;
+    background: White;
+    margin: 0;
+    padding: 0.125em 0.75em;
+    text-decoration: none;
+}
+li.formTab a:visited {
+    color: #436976;    
+}
+li.firstFormTab a {
+    border-left: 1px solid #8cacbb;
+}
+li.lastFormTab a {
+    border-right: 1px solid #8cacbb;
+}
+li.formTab a.selected {
+    background: #dee7ec;
+}
+li.formTab a:hover {
+    background: #dee7ec;
+}
+li.formTab a.notify {
+    background-color: #ffce7b;
+    color: Black;
+}
+li.formTab a.required span {
+    background-image: url(http://localhost:8080/demo/required.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding-right: 8px;
+}
+li.formTab a.notify:hover {
+    background-color: #ffa500;
+}
+.formPanel {
+    padding: 1em 1em 1em 1em; 
+    border: 1px solid #8cacbb;
+}
+.formPanel.hidden {
+    display: none;
+}
+div.formControls input.hidden {
+    display: none;
+}
+
+/* @end */
+
+
+/* @end */
+
+/* @group Forms */
+textarea {
+font: 100% Monaco, "Courier New", Courier, monospace;
+border: 1px solid #ddd;
+border-color:#666 #ddd #ddd #666;
+color: Black;
+background: White url(http://localhost:8080/demo/input_background.gif) repeat-x;
+width: 100%;
+}
+input {
+font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+visibility: visible;
+border: 1px solid #ddd;
+border-color:#666 #ddd #ddd #666;
+color: Black;
+vertical-align: middle;
+background: White url(http://localhost:8080/demo/input_background.gif) repeat-x;
+font-size: 1em;
+}
+/* */
+.noborder,
+.documentEditable * .noborder {
+border: none;
+margin: 0;
+background: none;
+background-color: transparent;
+}
+input[type=checkbox] {
+border: none;
+margin: 0;
+background: none;
+background-color: transparent;
+}
+#searchGadget {
+border: 1px solid #8cacbb;
+}
+button {
+font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+visibility: visible;
+border: 1px solid #8cacbb;
+color: Black;
+vertical-align: middle;
+background-color: #dee7ec;
+padding: 1px;
+cursor: pointer;
+font-size: 90%;
+text-transform: none;
+}
+select {
+vertical-align: top;
+}
+form {
+border: none;
+margin: 0;
+}
+fieldset {
+border: 1px solid #8cacbb;
+margin: 1em 0em 1em 0em;
+padding: 0em 1em 1em 1em;
+line-height: 1.5em;
+width: auto;
+}
+legend {
+background: White;
+padding: 0.5em;
+font-size: 90%;
+}
+label {
+font-weight: bold;
+}
+optgroup {
+font-style: normal;
+font-weight: bold;
+color: #999;
+padding-left: 0.25em;
+}
+option {
+color: black;
+}
+optgroup > option {
+padding: 0 0.25em 0 1em;
+}
+dl.enableFormTabbing dd {
+margin-left: 0;
+padding-top: 2em;
+}
+#login-form {
+width: 30em;
+margin: 0 auto;
+}
+#login-form .field {
+clear: none;
+}
+#login-form input {
+font-size: 150%;
+}
+#login-form input.context {
+padding: 1px 10px 1px 20px;
+background-position: 9px 5px;
+margin-bottom: 1em;
+}
+#forgotten-password {
+float: right;
+width: 35%;
+margin: 0 1em;
+}
+.standalone,
+.documentEditable * .standalone {
+background: #dee7ec url(http://localhost:8080/demo/linkOpaque.gif) 9px 1px no-repeat;
+color: Black;
+cursor: pointer;
+font-size: 90%;
+padding: 1px 1px 1px 15px;
+text-transform: none;
+border: 1px solid #8cacbb;
+}
+.context,
+.formControls .actionButtons .button,
+.documentEditable * .context {
+background: transparent url(http://localhost:8080/demo/linkTransparent.gif) 9px 1px no-repeat;
+color: Black;
+cursor: pointer;
+font-size: 90%;
+padding: 1px 1px 1px 15px;
+text-transform: none;
+border: 1px solid #8cacbb;
+}
+.destructive,
+.documentEditable * .destructive {
+background: #ffce7b url(http://localhost:8080/demo/linkTransparent.gif) 9px 1px no-repeat;
+border: 1px solid #ffa500;
+color: Black;
+cursor: pointer;
+font-size: 90%;
+padding: 1px 1px 1px 15px;
+text-transform: none;
+border: 1px solid #8cacbb;
+}
+input.searchButton {
+margin-bottom: 1px ! important;
+color: Black;
+font-size: 90%;
+background: White url(http://localhost:8080/demo/search_icon.gif) 2px 1px no-repeat;
+cursor: pointer;
+padding: 1px 1px 1px 19px;
+text-transform: none;
+border: 1px solid #8cacbb;
+}
+.searchSection {
+color: #76797c;
+margin-top: 0.25em;
+}
+.searchSection label:hover {
+color: Black;
+}
+/* */
+.field {
+top: 0;
+left: 0;
+margin: 0 1em 1em 0;
+clear: both;
+}
+.field .field {
+margin: 0;
+}
+.fieldRequired {
+background: url(http://localhost:8080/demo/required.gif) center left no-repeat;
+padding: 0 0 0 8px;
+color: White;
+}
+.fieldUploadFile {
+text-align: right;
+margin-right: 0.75em;
+display: none;
+}
+.fieldTextFormat {
+text-align: right;
+margin-right: 0.75em
+}
+.formHelp {
+font-size: 90%;
+color: #76797c;
+margin: 0 0 0.2em 0;
+}
+.formHelp:hover {
+color: Black;
+cursor: default;
+}
+div.error {
+/* */
+background-color: #fdc;
+border: 1px solid #d00;
+padding: 0.5em;
+margin: 0 0 1em 0;
+width: 95%;
+}
+.error .fieldRequired {
+color: #d00;
+}
+/* */
+#archetypes-fieldname-title input, input#form\.title {
+font-size: 160%;
+font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-weight: normal;
+width: 99%;
+}
+#archetypes-fieldname-description textarea, textarea#form\.description {
+font: 100% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-weight: bold;
+}
+input.inputLabelActive {
+color: #76797c;
+}
+textarea#form\.description {
+height: 6em;
+width: 99%;
+}
+tr.selected {
+background-color: #ffa;
+}
+.kupu-save-message {
+color: white;
+font-weight: bold;
+background-color: red;
+padding: 0.3em;
+position: fixed;
+top: 0;
+right: 0;
+z-index: 999;
+}
+
+/* @end */

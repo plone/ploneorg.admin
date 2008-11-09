@@ -7,7 +7,6 @@
 	<title>plone.org redesign prototype</title>
 	<style type="text/css" media="screen">
 		@import url("plone.css");
-		@import url("authoring.css");
 	</style>
 	<!--[if IE]>
         <style type="text/css" media="all">@import url(ie.css);</style>
@@ -21,18 +20,6 @@
 		    $("#accordion").accordion({header:'h2', selectedClass:'selected'});
 	  	});
 	</script>
-
-<!--
-	 <script type="text/javascript">
-        function hideAllMenus(){$('dl.actionMenu').removeClass('activated').addClass('deactivated')};
-        function toggleMenuHandler(event){$(this).parents('.actionMenu:first').toggleClass('deactivated').toggleClass('activated');return false};
-        function actionMenuDocumentMouseDown(event){if($(event.target).parents('.actionMenu:first').length)
-        return true;hideAllMenus()};
-        function actionMenuMouseOver(event){var menu_id=$(this).parents('.actionMenu:first').attr('id');if(!menu_id) return true;var switch_menu=$('dl.actionMenu.activated').length>0;$('dl.actionMenu').removeClass('activated').addClass('deactivated');if(switch_menu)
-        $('#'+menu_id).removeClass('deactivated').addClass('activated')};
-        function initializeMenus(){$(document).mousedown(actionMenuDocumentMouseDown);hideAllMenus();$('dl.actionMenu dt.actionMenuHeader a').click(toggleMenuHandler).mouseover(actionMenuMouseOver);$('dl.actionMenu > dd.actionMenuContent').click(hideAllMenus)};$(initializeMenus);
-    </script>
- -->
 
 </head>
 <body>
