@@ -913,11 +913,11 @@ div.box .date {
 	background: #75ad0a 0 -2px url(images/accordion-gradient.png) repeat-x;
 }
 
-#edit-bar ul { 
+#edit-menu ul { 
 	margin-left: 0.5em;
 }
 
-#edit-bar li a { 
+#edit-menu li a { 
 	color: White;
 	font-weight: bold;
 	padding: 0.5em;
@@ -925,50 +925,24 @@ div.box .date {
 }
 
 
-#edit-bar li a:hover, 
-#edit-bar li.selected a { 
+#edit-menu li a:hover, 
+#edit-menu li.selected a { 
 	color: #75ad0a;
 	background-color: White;
 	border-top: 1px solid #75ad0a;
 	line-height: 2em;
 }
 
-#edit-bar li:hover a, 
-#edit-bar li.selected a { 
+#edit-menu li:hover a, 
+#edit-menu li.selected a { 
 	color: #75ad0a;
 }
 
 #action-menu {
 	float:right;
+	clear: right;
 }
 
-/*
-** begin ECMAScript Content Action Menus
-*/
-/*.contentActions {
-}
-.contentActions li {
-}
-dl.actionMenu {
-	float: right;
-	margin: 0 0.5em;
-}
-dl.actionMenu dt.actionMenuHeader {
-}
-dl.actionMenu.activated dt.actionMenuHeader {
-}
-dl.actionMenu dt.actionMenuHeader a {
-    cursor: pointer;
-
-}
-.arrowDownAlternative {
-    font-size: 0.85em;
-}
-
-dl.actionMenu.deactivated dd.actionMenuContent {
-    display: none !important;
-}
-*/
 /* Status messages */
 
 dl.portalMessage {
