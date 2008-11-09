@@ -909,12 +909,12 @@ div.box .date {
 	margin: 1em auto 0.5em auto;
 	background-color: #75ad0a;
 	clear: both;
-	border-top: 4px solid #87BA26;
-	background: #75ad0a 0 -2px url(images/accordion-gradient.png) repeat-x;
 }
 
 #edit-menu ul { 
-	margin-left: 0.5em;
+	padding-left: 0.5em;
+	border-top: 4px solid #87BA26;
+	background: #75ad0a 0 -2px url(images/accordion-gradient.png) repeat-x;
 }
 
 #edit-menu li a { 
