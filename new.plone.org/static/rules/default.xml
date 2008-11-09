@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rules xmlns="http://openplans.org/deliverance">
 	<replace content='/html/head/title' theme='/html/head/title' />
+	
 	<append  content='/html/head/script' theme='/html/head' />
 	<append  content='/html/head/style' theme='/html/head' />
 

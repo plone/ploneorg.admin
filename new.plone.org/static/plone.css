@@ -90,10 +90,11 @@ a:hover {
 
 ul.navigation li a,
 ul.navigation li a:visited {
-	padding: 6px 9px;
+	padding: 6px 8px;
 	color: Black;
 	font-weight: bold;
 	border-right: 1px solid #dcdcdc;
+	border-left: 1px solid white;
 }
 
 ul.navigation li a:hover {
@@ -286,10 +287,10 @@ img.book-cover {
 
 #splash-frontpage {
 	min-height: 284px !important;
-	background: #205c90 url(images/splash-bg.jpg) no-repeat;
+/*	background: #205c90 url(images/splash-bg.jpg) no-repeat;*/
 	margin-top: 0;
 	margin-bottom: 13px;
-	width: 671px;
+	width: 676px;
 }
 
 #splash-frontpage h1 {
@@ -905,28 +906,31 @@ div.box .date {
 
 #edit-bar { 
 	width: 937px;
-	margin: 0 auto;
+	margin: 1em auto 0.5em auto;
 	background-color: #75ad0a;
-	margin-bottom: 0.5em;
 	clear: both;
-	margin-top: 1em;
+	border-top: 4px solid #87BA26;
+	background: #75ad0a url(images/accordion-gradient.png) repeat-x;
+}
+
+#edit-bar ul { 
+	margin-left: 0.5em;
 }
 
 #edit-bar li a { 
-	color: White;
-}
-#edit-bar li { 
 	color: White;
 	font-weight: bold;
 	padding: 0.5em;
 	line-height: 2em;
 }
 
-#edit-bar li:hover, 
-#edit-bar li.selected { 
+
+#edit-bar li a:hover, 
+#edit-bar li.selected a { 
 	color: #75ad0a;
 	background-color: White;
-	border-top: 2px solid #75ad0a;
+	border-top: 1px solid #75ad0a;
+	line-height: 2em;
 }
 
 #edit-bar li:hover a, 
