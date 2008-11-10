@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rules xmlns="http://openplans.org/deliverance">
 	<replace content='/html/head/title' theme='/html/head/title' />
+
+	<copy content='//*[@id="mainnav"]'	theme='//*[@id="sub-nav"]' />
 	
 	<!-- Copy over the contents of the page body -->
 	<copy content='//*[@id="content"]'	theme='//*[@id="content"]' />
+
 
     
 </rules>
