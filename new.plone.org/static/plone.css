@@ -1637,3 +1637,19 @@ z-index: 999;
 
 
 /* @end */
+
+/* @group Trac */
+
+#prefs {
+	float: right;	
+	width: 14em;
+	border: 1px solid #329fd7;
+	padding: 1em;
+}
+
+#prefs fieldset label {
+	display: block;
+}
+
+
+/* @end */
