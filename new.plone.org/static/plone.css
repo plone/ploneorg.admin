@@ -726,14 +726,11 @@ div.box .date {
 /* @group Footer */
 
 #footer {
-	position: relative;
-	padding: 0 0 0px 111px;
 	color: White;
 	font-size: 11px;
 	font-weight: bold;
-	clear: both;
 	background-color: #329fd7;
-	width: 937px;
+	width: 780px;
 	margin: 1em auto 0 auto;
 }
 
