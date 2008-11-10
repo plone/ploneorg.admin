@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>plone.org redesign prototype</title>
+	<style type="text/css" media="screen">
+		@import url("plone.css");
+	</style>
+	<!--[if IE]>
+        <style type="text/css" media="all">@import url(ie.css);</style>
+    <![endif]-->	
+
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script> -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.2/jquery-ui.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    $("#accordion").accordion({header:'h2', selectedClass:'selected'});
+	  	});
+	</script>
+
+</head>
+<body>
+
+<div id="outer-wrapper"><div id="inner-wrapper">
+
+<div id="nav">
+
+	<div id="search">
+		<input type="search" value="Search this site…" />
+	</div>
+	
+	<div id="user">
+		<a href="">Bruce Wayne ▼</a>
+	</div>
+	
+	<ul id="main-nav" class="navigation">
+		<li><a href=".">Home</a></li
+		><li><a href="downloads.html">Downloads</a></li
+		><li><a href="documentation.html">Documentation</a></li
+		><li><a href="developers.html">Developers</a></li
+		><li><a href="foundation.html">Plone&nbsp;Foundation</a></li
+		><li><a href="support.html">Support</a></li>
+	</ul>
+
+</div>
+
+
+
+<div id="edit-bar">
+	<div id="action-menu" />
+    <div id="edit-menu" />
+</div>
+
+
+
+<div id="content-wrapper">
+    <div id="content">
+
+    	<h1>Content goes here</h1>
+
+    	<p>Lorem ipsum…</p>
+
+    </div>
+</div>
+
+</div></div> <!-- end inner/outer-wrapper -->
+
+<div id="footer">
+	<a id="footer-logo"
+	   href="http://plone.org" 
+	   title="Plone CMS, the open source content management system">
+		<img alt="" src="images/footer-logo.png" />
+	</a>
+	<div id="footer-text">
+		<p>The Plone<sup>®</sup> CMS — Open Source Content Management System is Copyright © 2000-2008 by the Plone Foundation et al.</p>
+		<p>Plone<sup>®</sup> and the Plone logo are registered trademarks of the Plone Foundation. Distributed under the GNU GPL license.</p>
+	</div>
+</div>
+
+</body>
+</html>

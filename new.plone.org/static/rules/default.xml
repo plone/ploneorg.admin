@@ -24,7 +24,6 @@
 	<!-- …but get rid of the content type icons. -->
 	<drop content='//*[@id="plone-contentmenu-factories"]/dd/ul/li/a/img' /> 
 
-
 	<!-- Copy over the contents of the page body -->
 	<copy content='//*[@id="region-content"]'	theme='//*[@id="content"]' />
 
