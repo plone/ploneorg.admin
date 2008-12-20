@@ -941,6 +941,54 @@ div.box .date {
 
 /* @end */
 
+
+
+/* @group Tables and listings */
+
+table.listing {
+	width: 100%;
+}
+
+table.listing td, 
+table.listing th {
+	padding: 0.5em;
+}
+
+table.listing td.listingCheckbox, 
+table.listing th.listingCheckbox {
+	text-align: center;
+}
+
+table.listing thead th {
+	text-align: left;
+	color: #666;
+	border-bottom: 1px solid #e7e7e7;
+	padding-left: 0;
+}
+table.listing tbody th {
+	font-weight: bold;
+}
+table.listingtbody tr {
+	text-align:left;
+}
+table.listing tbody tr.odd {
+	background: #f9f9f9;
+}
+table.listing tbody tr td { 
+	background: #FFF;
+}
+table.listing tbody tr.odd td { 
+	background: #f9f9f9;
+}
+table.listing a { 
+	border: none !important;
+}
+table.listing a:hover { 
+	border-bottom: 1px solid black !important;
+}
+
+/* @end */
+
 /* @group Status messages */
 
 dl.portalMessage {
