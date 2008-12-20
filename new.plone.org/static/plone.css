@@ -845,6 +845,9 @@ div.box .date {
 #content dl dt {
 	font-weight: bold;
 }
+#content dl dd {
+	margin: 0 0 0.5em 1em;
+}
 
 #content div.documentByLine {
 	margin-bottom: 10px;
