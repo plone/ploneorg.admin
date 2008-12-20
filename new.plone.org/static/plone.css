@@ -209,13 +209,13 @@ div.splash a {
 
 div.pullout {
 	float: left;
-	background-color: #eee;
+	background-color: #87B829;
+	color: White;
 	width: 220px;
 	min-height: 172px;
 	padding: 25px 15px 0 25px;
 	margin-top: 8px;
 	margin-bottom: 24px;
-
 	border-radius: 0.5em;
 	-webkit-border-radius: 0.5em;
 	-moz-border-radius: 0.5em;
@@ -235,6 +235,11 @@ div.pullout ol {
 
 div.pullout li {
 	display: block;
+}
+
+div.pullout a {
+	color: White;
+	/*border-bottom: 1px solid White !important;*/
 }
 
 div.pullout li a:before {
@@ -583,7 +588,7 @@ div.sidebar ol#add-on-categories li {
 
 
 #current {
-	background: 150px 130px url(images/cogs.png) no-repeat;	
+	background: 150px 360px url(images/cogs.png) no-repeat;	
 	clear: left;
 	}
 
@@ -623,6 +628,17 @@ div.box li {
 
 div.box li.even {
 	background-color: #eef3f6;
+}
+
+div.box li.spotlight {
+	color: #666;
+	letter-spacing: -1px;
+	font: bold 18px/24px 'Helvetica Neue', Arial, sans-serif !important;
+	text-align: justify;
+}
+
+div.box li.spotlight strong {
+	color: black;
 }
 
 div.box a {
@@ -977,7 +993,7 @@ h2 a:link,
 
 
 
-/* @group Tables and listings */
+/* @group Data tables */
 
 table.listing {
 	width: 100%;
