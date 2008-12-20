@@ -40,7 +40,7 @@ a:link, a:visited {
 	color: #329fd7;	
 }
 
-a:hover {
+a:link:hover {
 	color: #75ad0a;
 }
 
@@ -757,6 +757,7 @@ div.box .date {
 
 #content h1,
 #archetypes-fieldname-title input {
+	margin-top: 0.5em;
 	font-family: "Helvetica Neue", Arial, sans-serif;
 	color: black;
 	clear: left;
@@ -768,24 +769,36 @@ div.box .date {
 
 
 #content h1.documentFirstHeading {
-	margin-top: 1em;
+	margin-top: 0.5em;
 }
 
 #content h2 {
+	margin-top: 0.5em;
 	color: #444;
 	padding: 0;
 	letter-spacing: -1px;
 	font: bold 22px/28px "Helvetica Neue", Arial, sans-serif;
 }
 
-#content h2 a,h2 a,#content h2 a:hover  {
+#content h3 {
+	margin-top: 0.5em;
+	color: #444;
+	padding: 0;
+	letter-spacing: -1px;
+	font: bold 18px/24px "Helvetica Neue", Arial, sans-serif;
+}
+
+
+#content h2 a:link,
+h2 a:link,
+#content h2 a:link:hover  {
 	display: block;
 	text-decoration: none;
 	margin-bottom: 8px;
 	border-style: none;
 }
 
-#content h3 a:hover {
+#content h3 a:link:hover {
 	text-decoration: none;
 }
 
@@ -794,32 +807,34 @@ div.box .date {
 #content ol,
 #content table,
 #content dl {
-	margin-top: 0;
-	margin-bottom: 1em;
+	margin: 0 350px 1em 0;
 	line-height: 1.5em;
 	color: black;
 	font-size: 13px;
+	text-align: justify;
 }
 
 
 
-#content a {
+#content a:link {
 	color: #205c90;
 	border-bottom: 1px solid #ccc;
 }
 
-#content a:hover {
+#content a:link:hover {
 	color: #75ad0a;
+	border-bottom: 1px solid #ccc;
 }
 
 #content a:visited {
 	color: #427597;
+	border-bottom: 1px solid #ccc;
 }
 #content a:visited:hover {
 	color: Black;
 }
 #content a:target {
-	background-color: #fd7 !important;
+	background-color: #ffb !important;
 }
 
 #content img {
@@ -849,6 +864,22 @@ div.box .date {
 	margin: 0 0 0.5em 1em;
 }
 
+#content pre {
+	background-color: #222;
+	color: White;
+	font-family: Monaco, Consolas, "Courier New", monospace;
+	padding: 10px;
+	font-weight: bold;
+	overflow-x: auto;
+	font-size: 90%;
+}
+
+#content code {
+	font-family: "American Typewriter", Consolas, "Courier New", monospace;
+	padding: 0.25em 0.5em;
+	background-color: #eee;
+}
+
 #content div.documentByLine {
 	margin-bottom: 10px;
 	font-size: 11px;
@@ -863,7 +894,7 @@ div.box .date {
 }
 
 #content .visualHighlight {
-    background-color: #ffc;
+    background-color: #ffb;
 }
 
 #content .pullquote {
@@ -877,10 +908,9 @@ div.box .date {
 	color: #888;
 }
 #content .callout {
-	font-variant:  small-caps;
-    color: #888;
+    color: #666;
     padding: 1em;
-	border: 1px solid #888;
+	border: 1px solid #666;
 	border-style: solid none;
 	clear:  both;
 }
@@ -895,6 +925,7 @@ div.box .date {
 #description {
 	color: gray;
 	font: bold 1em "Helvetica Neue", Arial, sans-serif !important;
+	margin-left: 0;
 }
 
 /* @end */
