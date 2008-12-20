@@ -892,6 +892,7 @@ div.box .date {
 }
 
 #content p.documentDescription,
+#content div.documentDescription,
 #description {
 	color: gray;
 	font: bold 1em "Helvetica Neue", Arial, sans-serif !important;
