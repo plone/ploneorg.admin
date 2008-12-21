@@ -823,13 +823,17 @@ h2 a:link,
 #content ol,
 #content table,
 #content dl {
-	margin: 0 350px 1em 0;
+	margin: 0 0 1em 0;
 	line-height: 1.5em;
 	color: black;
 	font-size: 13px;
 	text-align: justify;
 }
 
+#content p {
+	/*Temporary*/
+	margin-right: 350px;
+}
 
 
 #content a:link {
