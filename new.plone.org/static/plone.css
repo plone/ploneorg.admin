@@ -28,6 +28,62 @@ a {
 
 /* @end */
 
+/* @group Grid */
+
+/* Grid classes, these can also be nested */
+.grid-row {
+  float: left;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.grid-cell {
+  position: relative;
+  float: left;
+  left: 100%;
+}
+
+/* Widths, these are abstracted out so that pixel-based layouts or other
+   similar approaches can be retrofitted without changing the markup,
+   or if you want to apply rules like the Golden Ratio to your layouts */
+.width-half {
+	width: 50%;
+}
+.width-quarter {
+	width: 25%;
+}
+.width-three-quarters {
+	width: 75%;
+}
+.width-third {
+	width: 33.33%;
+}
+.width-two-thirds {
+	width: 66.67%;
+}
+
+/* Positioning classes, these are subtracting from a rightmost position */
+.position-leftmost {
+	margin-left: -100%;
+}
+.position-third {
+	margin-left: -66.67%;
+}
+.position-two-thirds {
+	margin-left: -33.33%;
+}
+.position-quarter {
+	margin-left: -75%;
+}
+.position-half {
+	margin-left: -50%;
+}
+.position-three-quarters {
+	margin-left: -25%;
+}
+
+/* @end */
+
 /* @group Wrappers */
 
 body { 
@@ -158,20 +214,14 @@ ul.navigation li a.active {
 /* @group Splash pages */
 
 div.splash {
-	float: left;
 	font-family: "Helvetica Neue", Arial, sans-serif;
 	background-color: #205c90;
-	width: 676px;
-	margin-top: 8px;
-	margin-bottom: 24px;
 	color: White;
-	clear: right;
 	min-height: 196px;
 
 	border-radius: 0.5em;
 	-webkit-border-radius: 0.5em;
 	-moz-border-radius: 0.5em;
-
 }
 
 div.splash h1 {
@@ -208,14 +258,13 @@ div.splash a {
 }
 
 div.pullout {
-	float: left;
 	background-color: #87B829;
 	color: White;
-	width: 220px;
 	min-height: 172px;
-	padding: 25px 15px 0 25px;
-	margin-top: 8px;
+	padding: 1.5em 15px 0 3em;
 	margin-bottom: 24px;
+	margin-left: -1em;
+
 	border-radius: 0.5em;
 	-webkit-border-radius: 0.5em;
 	-moz-border-radius: 0.5em;
@@ -239,7 +288,6 @@ div.pullout li {
 
 div.pullout a {
 	color: White;
-	/*border-bottom: 1px solid White !important;*/
 }
 
 div.pullout li a:before {
@@ -247,10 +295,8 @@ div.pullout li a:before {
 }
 
 div.sidebar {
-	width: 245px;
-	float: right;
-	margin-top: 10px;
-/*    margin-left: 16px;*/ /* IE6 as usually doesn't like margins and calculates them in a weird way */
+	padding-top: 0.5em;
+	margin-left: 1em;
 }
 
 
@@ -292,12 +338,11 @@ img.book-cover {
 
 #splash-frontpage {
 	min-height: 284px !important;
+	margin: 0 1em 1em 0;
 /*	background: #205c90 url(images/splash-bg.jpg) no-repeat;*/
-	margin-top: 0;
-	margin-bottom: 13px;
-	width: 676px;
+	/*margin-top: 0;*/
+	/*width: 676px;*/
 }
-
 #splash-frontpage h1 {
 	padding: 20px 18px !important;
 }
@@ -306,7 +351,13 @@ img.book-cover {
 	padding: 20px 0 0 387px;
 }
 
-div.splash-enterprise {
+#splash-downloads {
+	background-image:url(images/plone-box.png);
+	background-repeat:no-repeat;
+	background-position: 5em 2em;
+}
+
+#splash-enterprise {
 	background: #205c90 url(images/splash-enterprise.jpg) no-repeat;
 }
 
@@ -318,11 +369,10 @@ div.splash-enterprise {
 
 /* @group Listings */
 
-/* @group Documentation pane */
+/* @group Documentation tile */
 
 div.pane {
 	background-color: #eee;
-	width: 656px;
 	padding: 10px;
 	clear: left;
 	border-radius: 0.5em;
@@ -411,16 +461,7 @@ ul.topic li {
 
 /* @end */
 
-/* @group Downloads pane */
-
-#plone-box {
-	background-image:url(images/plone-box.png);
-	background-repeat:no-repeat;
-	height:150px;
-	width:115px;
-	float:left;
-	margin: 62px 10px 0px 90px;
-}
+/* @group Downloads tile */
 
 #download-plone {
 	background-image:url(images/download-plone.png);
@@ -587,15 +628,8 @@ div.sidebar ol#add-on-categories li {
 /* @end */
 
 
-#current {
-	background: 150px 360px url(images/cogs.png) no-repeat;	
-	clear: left;
-	}
-
 div.box {
-	width: 200px;
-	height: 35em;
-	float: left;
+	height: 38em;
 	border: 1px solid #e1e1e1;
 	padding: 9px 12px;
 	margin-left: -1px;
@@ -621,13 +655,21 @@ div.box p {
 div.box li {	
 	display: block;
 	margin: 0 -12px;
-	padding: 20px 12px;
-	height: 54px;
+	padding: 1em;
+	height: 6em;
 }
 
 
 div.box li.even {
 	background-color: #eef3f6;
+}
+
+#events {
+	margin-right: 1.4em;
+}
+
+#current {
+	background: 150px 380px url(images/cogs.png) no-repeat;	
 }
 
 div.box li.spotlight {
@@ -660,11 +702,9 @@ div.box .date {
 /* @group Accordion menu */
 
 #accordion {
-	width: 245px;
 	border: 1px solid #eee;
-	float: right;
 	background-color: #f6f6f6;
-	height: 27.4em;
+	height: 29.7em;
 }
 #accordion h2 {
 	font-family: "Helvetica Neue", Arial;
@@ -769,6 +809,7 @@ div.box .date {
 
 #content {
 	line-height: 1.5em;
+	clear: both;
 }
 
 #content h1,
@@ -828,11 +869,6 @@ h2 a:link,
 	color: black;
 	font-size: 13px;
 	text-align: justify;
-}
-
-#content p {
-	/*Temporary*/
-	margin-right: 350px;
 }
 
 

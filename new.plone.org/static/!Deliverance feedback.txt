@@ -1,6 +1,5 @@
 Deliverance bugs:
 
-- inserts xmlns="" on every node
 - Escapes comment tags, example:
 
 <style type="text/css" media="screen">
