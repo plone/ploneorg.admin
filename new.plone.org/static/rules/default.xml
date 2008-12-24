@@ -27,6 +27,10 @@
 	<!-- Copy over the contents of the page body -->
 	<copy content='//*[@id="region-content"]'	theme='//*[@id="content"]' />
 
+	<!-- Bring the portlet columns over  to the sidebar -->
+	<append content='//*[@id="portal-column-one"]'	theme='//*[@id="sidebar"]' />
+	<append content='//*[@id="portal-column-two"]'	theme='//*[@id="sidebar"]' />
+
 	<!-- <copy content='/html/body/div/table/tbody/tr/td/div/div/dl/dd/ul/li' theme='//*[@id="sub-nav"]' /> -->
 
     

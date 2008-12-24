@@ -864,7 +864,7 @@ h2 a:link,
 #content ol,
 #content table,
 #content dl {
-	margin: 0 0 1em 0;
+	margin: 0 1em 1em 0;
 	line-height: 1.5em;
 	color: black;
 	font-size: 13px;
@@ -1076,6 +1076,32 @@ table.listing a {
 table.listing a:hover { 
 	border-bottom: 1px solid black !important;
 }
+
+div.listingBar {
+	
+}
+
+div.listingBar a {
+
+}
+
+div.listingBar a:hover {
+	color: White !important;
+	background-color: #75ad0a;
+}
+
+div.listingBar a.listingNext {
+	display: block;
+	width: 50%;
+	float: right;
+	text-align: right;
+}
+
+div.listingBar a.listingPrevious {
+	display: block;
+	width: 50%;
+}
+
 
 /* @end */
 
@@ -1738,6 +1764,419 @@ width: 99%;
 tr.selected {
 background-color: #ffa;
 }
+
+/* @end */
+
+
+
+/* @group Portlets */
+
+/* @group General portlet layout */
+
+dl.portlet {
+	margin-top: 3em;
+	margin-left: 1em;
+}
+dl.portlet dt {
+	background-color: #666;
+	color: white;
+	padding: 10px 15px;
+}
+dl.portlet dt a {
+	text-decoration: none;
+	display: block;
+	padding: 0.75em 1.1em;
+	margin: -0.75em -1.1em;
+	background-color: #5a9bc6;
+	color: white;
+}
+
+dl.portlet dt a:hover {
+	background-color: #666;
+}
+
+dl.portlet dd {
+	font-size: 12px;
+	line-height: 15px;
+}
+
+dl.portlet dd a {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+dl.portlet dt.portletHeader {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 14px;
+	margin: 0 0 10px 0;
+	clear: both;
+}
+
+dl.portlet dd a img {
+	vertical-align: middle;
+}
+
+dl.portlet dd.portletFooter {
+	text-align: right;
+	margin: 6px 0 ;
+}
+
+dl.portlet dd.portletFooter a {
+	padding: 0 8px 8px 0 ;
+}
+
+div.managePortletsLink {
+	clear: both;
+    text-align: center;
+	font-size: 11px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+}
+
+div.managePortletsLink a {
+	-moz-border-radius: 1.1em;
+	-webkit-border-radius: 1.1em;
+	background-color: #e5e5e5;
+	color: #909090;
+	font-size: 9px;
+	padding: 3px 1.7em;
+	border: 1px solid #e5e5e5;
+}
+
+div.managePortletsLink a:hover {
+	background-color: #5a9bc6;
+	color: white;
+	border: 1px outset #e5e5e5;
+}
+
+/* @end */
+
+/* @group Navigation portlet */
+
+dl.portletNavigationTree dd a {
+	color: #666;
+	text-decoration: none;
+	display: block;
+	padding: 0;
+}
+
+dl.portletNavigationTree dd li li a {
+	padding-left: 35px;
+}
+
+dl.portletNavigationTree dd a:hover {
+	color: White !important;
+	background-color: #7dabcf !important;
+}
+
+dl.portletNavigationTree li {
+	display: block;
+}
+
+dl.portletNavigationTree li a {
+	width: auto;
+	line-height: 15px;
+}
+
+dl.portletNavigationTree li a span {
+	display: block;
+	padding: 4px 6px 4px 0;
+	background: url(edgeColour.gif) repeat-y right;
+}
+
+dl.portletNavigationTree li a img {
+	margin-top: 2px;
+	margin-left: -19px;
+	float: left;
+}
+dl.portletNavigationTree .navTreeCurrentItem {
+	background-color: #bfbfbf;
+	display: block;
+}
+
+dl.portletNavigationTree li.navTreeItemInPath {
+	background-color: #ebebeb;
+	display: block;
+}
+
+dl.portletNavigationTree li a.navTreeCurrentItem span {
+	background: url(currentNav.gif) no-repeat right center !important;
+	color: black !important;
+}
+
+/*li.navTreeItemInPath a.navTreeFolderish {
+	background: url(twistie-open-gray.gif) no-repeat 10px 6px;
+}*/
+
+a.navTreeFolderish {
+	background: url(twistie-closed-gray.gif) no-repeat 10px 6px;
+	display: block;
+}
+
+a.navTreeItemInPath.navTreeFolderish,
+a.navTreeCurrentItem.navTreeFolderish,
+a.navTreeCurrentNode.navTreeFolderish {
+	background-image: url(twistie-open-gray.gif) ;
+	background-repeat: no-repeat;
+}
+
+ul.portletNavigationTree li ul {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+	margin-top: 0;
+}
+
+.navTreeLevel0 li a {
+	padding-left: 43px !important;
+}
+
+.navTreeLevel1 li a {
+	padding-left: 60px !important;
+	background-position: 27px 6px;
+}
+
+.navTreeLevel2 li a {
+	padding-left: 78px !important;
+	background-position: 46px 6px;
+}
+
+.navTreeLevel3 a {
+	padding-left: 88px !important;
+	
+}
+
+.navTreeLevel4 a {
+	padding-left: 98px !important;
+	
+}
+
+.navTreeLevel5 {
+	padding-left: 108px !important;
+	
+}
+
+.navTreeLevel6 {
+	
+}
+
+.navTreeLevel7 {
+	
+}
+
+.navTreeLevel8 {
+	
+}
+
+.navTreeLevel9 {
+	
+}
+
+.navTreeLevel10 {
+	
+}
+
+/* @end */
+
+/* @group Search portlet */
+
+dl.portletSearch {
+    position:relative;
+    z-index:5;
+	margin-bottom: 5px !important;
+}
+
+input.searchField {
+	width: 173px;
+	background: url(searchField.png) no-repeat right center;
+	color: #999;
+	border: 1px solid #666;
+	font-size: 11px;
+	padding: 4px 20px 4px 5px;
+	font-weight: bold;
+}
+
+input.searchField:focus {
+	color: black;
+}
+
+dl.portletSearch input.searchButton {
+	display: none;
+}
+
+dl.portletSearch dt.portletHeader,
+dl.portletSearch dd.portletFooter {
+	display: none;
+}
+
+/* @end */
+
+/* @group Calendar */
+
+/* @group Previous/Next (Column 1) */
+
+
+
+/* @end */
+
+/* @group Previous/Next (Column 2) */
+
+dl.portletCalendar dt a.calendarPrevious {
+	width: 16px !important;
+	height: 0;
+	overflow: hidden;
+	float: right;
+	position: absolute;
+	background: transparent url(buttonBack.png) no-repeat 0 0 !important;
+	top: 10px;
+	padding: 20px 0 0 !important;
+	color: #666;
+	right: 29px;
+	margin: 0 !important;
+}
+
+dl.portletCalendar dt a.calendarNext {
+	width: 16px !important;
+	height: 0;
+	overflow: hidden;
+	float: right;
+	position: absolute;
+	background: transparent url(buttonForward.png) no-repeat 0 0 !important;
+	top: 10px;
+	padding: 20px 0 0 !important;
+	color: #666;
+	right: 10px;
+	margin: 0 !important;
+}
+
+.narrow dl.portletCalendar dt a.calendarPrevious {
+	right: 16px;
+	top: 4px;
+}
+
+.narrow dl.portletCalendar dt a.calendarNext {
+	right: -3px;
+	top: 4px;
+}
+
+dl.portletCalendar dt a.calendarPrevious:hover {
+	background-position: -16px 0 !important;
+}
+
+dl.portletCalendar dt a.calendarNext:hover {
+	background-position: -16px 0 !important;
+}
+
+dl.portletCalendar dd {
+	min-height: 170px;
+	margin-right: 3px !important;
+	margin-left: 3px !important;
+}
+
+
+/* @end */
+dl.portletCalendar dt {
+	position: relative;	
+	text-decoration: none;
+	display: block;
+}
+
+dl.portletCalendar table {
+	width: 100%;
+	font-size: 0.9em;
+}
+
+.narrow dl.portletCalendar table {
+	width: 216px;
+	position: relative;
+	left: -8px;
+}
+
+dl.portletCalendar table td {
+	margin: 0;
+	border-style: none;
+	letter-spacing: 0;
+	text-align: center;
+	padding: 5px 0;
+}
+
+dl.portletCalendar table thead tr.weekdays td {
+	padding-top: 0;
+}
+
+dl.portletCalendar table thead th {
+	color: black;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 5px;
+}
+
+dl.portletCalendar table a {
+	display: block;
+}
+
+/* @end */
+
+/* @group Login portlet */
+
+dl.portletLogin div.field input {
+	width: 175px;
+	border: 1px solid #666;
+	font-size: 10px;
+	padding: 3px 20px 3px 3px;
+	margin-bottom: 5px;
+}
+
+dl.portletLogin label {
+	font-size: 10px;
+}
+
+dl.portletLogin div.formControls {
+	border-style: none;
+	text-align: left;
+}
+
+dl.portletLogin dd a {
+	color: #5a9bc6;
+	width: 150px;
+	margin-top: 10px;
+}
+
+/* @end */
+
+/* @group Prefs portlet */
+#portlet-prefs strong {
+	margin-left: 2em;
+}
+
+
+/* @end */
+
+/* @group Table of Contents */
+/* Table of Contents styling - essentially a portlet with smaller fonts and aligned right + limited in width */
+dl.toc {
+	float: right;
+    width: 35%;
+	font-size: 11px !important;
+    margin: 0 0 0.5em 1.5em;
+	border-left: 1px solid #666;
+}
+dl.toc dt {
+	margin-left: 3em;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+dl.toc dd {
+	margin-bottom: 0 !important;
+}
+dl.toc dd ol {
+	margin-left: 1.5em !important;
+}
+
+/* @end */
 
 /* @end */
 
