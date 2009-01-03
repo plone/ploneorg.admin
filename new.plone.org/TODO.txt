@@ -1,0 +1,3 @@
+[ ] Make the inputLabel JS in Plone capable of inserting type="search" on search boxes, so we can keep valid HTML
+
+[ ] Saves don't seem to trigger at the moment, may be Kupu-related.

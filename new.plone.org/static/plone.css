@@ -1,0 +1,2439 @@
+/* @group Temporary workarounds for stupid HTML in current Plone */
+
+#sub-nav li.navTreeItem div { /* Why is there a stray div in the navtree list item? */
+	display: inline !important;
+}
+
+/* @end */
+
+/* @group Neutralize! */
+
+/* Remove implicit browser styles to have a neutral starting point:
+   - No elements should have implicit margin/padding
+   - No underline by default on links (we add it explicitly in the body text)
+   - When we want markers on lists, we will be explicit about it, and they render inline by default
+   - Browsers are inconsistent about hX/pre/code, reset
+   - Linked images should not have borders
+   */
+
+a {
+	outline: none;
+}
+* { margin: 0; padding: 0; }
+* :link,:visited { text-decoration:none }
+* ul,ol { list-style:none; }
+* li { display: inline; }
+* h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; }
+* a img,:link img,:visited img { border:none } 
+table { border-spacing: 0; }
+
+}
+
+/* @end */
+
+/* @group Grid */
+
+/* Grid classes, these can also be nested */
+.grid-row {
+  float: left;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.grid-cell {
+  position: relative;
+  float: left;
+  left: 100%;
+}
+
+/* Widths, these are abstracted out so that pixel-based layouts or other
+   similar approaches can be retrofitted without changing the markup,
+   or if you want to apply rules like the Golden Ratio to your layouts */
+.width-half {
+	width: 50%;
+}
+.width-quarter {
+	width: 25%;
+}
+.width-three-quarters {
+	width: 75%;
+}
+.width-third {
+	width: 33.33%;
+}
+.width-two-thirds {
+	width: 66.67%;
+}
+
+/* Positioning classes, these are subtracting from a rightmost position */
+.position-leftmost {
+	margin-left: -100%;
+}
+.position-third {
+	margin-left: -66.67%;
+}
+.position-two-thirds {
+	margin-left: -33.33%;
+}
+.position-quarter {
+	margin-left: -75%;
+}
+.position-half {
+	margin-left: -50%;
+}
+.position-three-quarters {
+	margin-left: -25%;
+}
+
+/* @end */
+
+/* @group Wrappers */
+
+body { 
+	font-family: Arial;
+	padding-top: 11px;
+}
+
+#main {
+	background-color: #329fd7;
+}
+
+a:link, a:visited {
+	color: #205c90;
+}
+
+a:link:hover {
+	color: #75ad0a;
+}
+
+#outer-wrapper {
+	background: left 0px url("images/nav-gradient.png") repeat-x;
+	background-color: white;
+}
+#inner-wrapper {
+	border-top: 2px solid white;
+	background: url(images/footer-gradient.png) repeat-x;
+	background-position: bottom left;
+	padding-bottom: 2em;
+	clear:both;
+}
+
+#content-wrapper {
+	width: 937px;
+	margin: 0 auto 0 auto;
+}
+
+/* @end */
+
+/* @group Navigation/search */
+
+#nav {
+/* Should be named header, but conflicts with the accordion.js for now */
+	width: 937px;
+	margin: 0 auto;
+	font-family: "Helvetica Neue", Arial;
+}
+
+#main-nav {
+	font-size: 14px;
+	line-height: 28px;
+}
+
+#main-nav li:first-child a {
+	/*XXX TODO: mini-logo goes here*/
+	/*color: transparent;*/
+}
+
+#main-nav li:first-child a {
+	border-left: none;
+	/*padding-left: 0;*/
+}
+
+#sub-nav {
+	font-size: 13px;
+	line-height: 30px;
+	border-top: 1px solid #dcdcdc;
+	margin-right: 210px;
+}
+
+#sub-nav li a {
+	border-right: none;
+}
+
+ul.navigation li a,
+ul.navigation li a:visited {
+	padding: 6px 8px;
+	color: Black;
+	font-weight: bold;
+	border-right: 1px solid #dcdcdc;
+	border-left: 1px solid white;
+}
+
+ul.navigation li a:hover {
+	color: #75ad0a;
+}
+
+ul.navigation li.selected a,
+ul.navigation li.active a {
+	color: #75ad0a;
+	padding: 6px 8px 5px 8px;
+	border-bottom: 2px solid white;
+	border-left: 1px solid white;
+}
+
+
+#search {
+	float: right;
+	position: relative;
+	background: url(images/search-wrapper.png) no-repeat;
+	height: 20px;
+	padding: 10px 25px;
+	margin-top: -2px;
+}
+
+#user {
+	font-size: 14px;
+	width: 145px;
+	height: 14px;
+	overflow: hidden;
+	float: right;
+	padding: 5px 4px;
+}
+
+#user a {
+	color: #666;
+	font-weight: bold;
+	padding: 2px;
+}
+
+#user a:hover {
+	background-color: #666;
+	color: White;
+}
+
+/* @end */
+
+#logo-wrapper {
+	width: 937px;
+	margin: 0 auto;
+}
+
+#logo {
+	margin: 25px 22px;
+}
+
+
+/* @group Splash pages */
+
+div.splash {
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	background-color: #205c90;
+	color: White;
+	min-height: 196px;
+
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+}
+
+div.splash h1 {
+	padding: 1em 0.5em 0 260px !important;
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 32px;
+	letter-spacing: -1px;
+
+}
+
+div.splash h2 {
+	padding: 0 0 0 387px;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 28px;
+	letter-spacing: -1px;
+}
+
+div.splash p {
+	padding: 20px 0 0 260px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+div.splash a {
+	color: White;
+	float: right;
+	line-height: 16px;
+	margin-right: 32px;
+	padding-right: 16px;
+	background: right top url(images/arrow-white.png) no-repeat;
+	display: block;
+}
+
+div.pullout {
+	background-color: #87B829;
+	color: White;
+	min-height: 172px;
+	padding: 1.5em 15px 0 3em;
+	margin-bottom: 24px;
+	margin-left: -1em;
+
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+}
+
+div.pullout h2 {
+	font-size: 24px;
+	margin-bottom: 0.5em;
+}
+
+div.pullout p,
+div.pullout ul,
+div.pullout ol {
+	font-size: 12px;
+	margin-bottom: 1em;
+}
+
+div.pullout li {
+	display: block;
+}
+
+div.pullout a {
+	color: White;
+}
+
+div.pullout li a:before {
+	content: "→ ";
+}
+
+/*TODO: #sidebar & .sidebar need to be consolidated*/
+#sidebar {
+	padding-top: 2em;
+}
+
+div.sidebar {
+	padding-top: 0.5em;
+	margin-left: 1em;
+}
+
+
+div.sidebar ul li a {
+	line-height: 36px;
+	font-size: 18px;
+	display: block;
+	border-top: 1px solid #eee;
+	font-weight: bold;
+	background: left 9px url(images/arrow-blue.png) no-repeat;
+	padding-left: 16px;
+	letter-spacing: -1px;
+}
+
+div.sidebar ol li {
+	line-height: 18px;
+	font-size: 11px;
+	display: block;
+	border-top: 1px solid #eee;
+	margin-bottom: 0.5em;
+	padding-top: 0.5em;
+	clear: both;
+}
+
+div.sidebar ol li a {
+	font-weight: bold;
+	display: block;
+}
+
+img.book-cover {
+	float: left;
+	display: block;
+	padding: 2px;
+	border: 1px solid #ddd;
+	margin: 5px 15px 10px 0;
+}
+
+/* @group Page-specific splash styles */
+
+#splash-frontpage {
+	min-height: 284px !important;
+	margin: 0 1em 1em 0;
+/*	background: #205c90 url(images/splash-bg.jpg) no-repeat;*/
+	/*margin-top: 0;*/
+	/*width: 676px;*/
+}
+#splash-frontpage h1 {
+	padding: 20px 18px !important;
+}
+
+#splash-frontpage p {
+	padding: 20px 0 0 387px;
+}
+
+#splash-downloads {
+	background-image:url(images/plone-box.png);
+	background-repeat:no-repeat;
+	background-position: 5em 2em;
+}
+
+#splash-enterprise {
+	background: #205c90 url(images/splash-enterprise.jpg) no-repeat;
+}
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group Listings */
+
+/* @group Documentation tile */
+
+div.pane {
+	background-color: #eee;
+	padding: 10px;
+	clear: left;
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+}
+
+div.pane h1 {
+	padding-bottom: 0.5em;
+	padding-left: 10px;
+}
+
+a.versions {
+	font-size: 12px;
+	color: #555;
+	padding: 2px;
+}
+
+a.versions:hover {
+	background-color: #666;
+	color: White;
+}
+
+div.pagesearch {
+	float: right;
+	font-size: 11px;
+	padding-right: 10px;
+}
+
+div.pagesearch input {
+	color: #666;
+}
+
+#categories {
+	background-color: white;
+	padding: 10px;
+	/*margin-top: 8px; compensate for corners*/ 
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+}
+
+#categories h3 {
+	border-top: 1px solid #ccc;
+	font-size: 14px;
+}
+
+#categories h3 a {
+	display: block;
+	padding: 0.5em 0 0.5em 0;
+}
+
+#categories h3.selected a {
+	/*padding-left: 1.25em;*/
+	color: black;
+	cursor: default;
+}
+
+#categories h3 a:before {
+	content: "▶ ";
+}
+
+#categories h3.selected a:before {
+	content: "▼ ";
+	/*content: "";*/
+}
+
+
+#categories p {
+	font-size: 11px;	
+}
+
+ul.topic {
+	font-size: 12px;
+}
+
+ul.topic li {
+	display: inline-block !important;	
+	vertical-align: top;
+	width: 29.5%;
+	margin: 0 0 1em 1.5em;
+	text-align: justify;
+}
+
+
+
+/* @end */
+
+/* @group Downloads tile */
+
+/* Refactor these */
+
+#download-plone {
+	background-image:url(images/download-plone.png);
+	background-repeat:no-repeat;
+	height:58px;
+	width:300px;
+	margin:10px 0px 10px 260px;
+}	
+
+div.downloadssearch {
+	float: right;
+	font-size: 11px;
+	padding-right: 10px;
+}
+
+div.downloadssearch input {
+	color: #666;
+}
+
+.rss-icon {
+	float:right;
+	padding:10px;
+	display:block;
+	margin-top:-40px;
+}
+
+.next-previous {
+	float:right;
+	width:25%;
+	margin-top:-15px;
+	display:block;
+	font-size:.8em;
+}
+
+.next-previous .next-previous-item a {
+	color:#ccc;
+}
+
+#download-footer-links {
+	font-size:.8em;
+	color:#999;
+	width:100%;
+	display: block;
+	padding:5px 0px;
+	margin-top:20px;
+}
+
+#sort-by {
+	margin-left:10px;
+	font-size:.7em;
+	line-height: 2em;
+}
+
+.sort {
+	margin:0px 10px 0px 0px;
+	color:#999
+	font-weight:bold;
+}
+
+#sort-by a.plain {
+	margin-right:10px;
+	color:#000;
+}
+
+#sortby a.selected {
+	font-size:.9em;
+}
+
+
+#numreleases {
+	font-size:.8em;
+	border-bottom:1px solid #ccc;
+	width:100%;
+	display: block;
+	padding:5px 0px;
+}
+
+ul.downloads li {
+	border-bottom:1px solid #ccc;
+}
+
+#product-details {
+	display:block;
+	font-size:.8em;
+	color:#999;
+}
+
+#product-details p {
+	display:block;
+	font-size:1em;
+	color:#000;
+}
+
+.product-leadin {
+	display:block;
+	padding:0px 0px 10px 0px;
+}
+
+.product-date {
+	font-size:.9em;
+}
+
+.product-description {
+	font-size:.8em;
+}
+
+.company-logo {
+	float:right;
+	padding:10px;
+}
+
+.new-in-this-release {
+	color:#000;
+	display:block;
+	font-weight:bold;
+	margin-top:10px;
+}
+
+.new-details {
+	display:block;
+	border-bottom:1px solid #ccc;
+	padding:5px 0px;
+}
+
+.advice {
+	display:block;
+	font-size:.7em;
+	font-weight:bold;
+	margin:10px 0px;
+	width:90%;
+}
+
+.downloads h3 {
+	margin-top:10px;
+}
+
+h2.add-on-categories-hdr {
+	font-size:1.2em;
+}
+
+div.sidebar ol#add-on-categories {
+	padding:10px 0px;
+}
+
+div.sidebar ol#add-on-categories li {
+	border-bottom:none;
+	border-top:none;
+	font-weight:bold;
+	line-height:6px;
+	font-size:.8em;
+}
+
+.list-your-addon {
+	height:19px;
+	width:209px;
+}
+
+.down-arrow {
+	display:block;
+	padding:5px 0px 0px 5px;
+	border-bottom:1px solid #ccc;
+}
+
+/* @end */
+
+
+div.box {
+	height: 38em;
+	border: 1px solid #e1e1e1;
+	padding: 9px 12px;
+	margin-left: -1px;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+div.box h1 {
+	font-family: "Helvetica Neue", Arial;
+	margin: -9px -12px;
+	padding: 0 12px;
+	line-height: 2em;
+	background: #eee url(images/box-gradient.png) repeat-x;
+	font-size: 14px;
+	vertical-align: 1em;
+}
+
+div.box p {
+	margin: 0 -12px;
+	padding: 10px 12px;
+}
+
+div.box li {	
+	display: block;
+	margin: 0 -12px;
+	padding: 1em;
+	height: 6em;
+}
+
+
+div.box li.even {
+	background-color: #eef3f6;
+}
+
+#events {
+	margin-right: 1.4em;
+}
+
+#current {
+	background: 150px 380px url(images/cogs.png) no-repeat;	
+}
+
+div.box li.spotlight {
+	color: #666;
+	letter-spacing: -1px;
+	font: bold 18px/24px 'Helvetica Neue', Arial, sans-serif !important;
+	text-align: justify;
+}
+
+div.box li.spotlight strong {
+	color: black;
+}
+
+div.box a {
+	display: block;
+	padding: 20px 12px 10px 12px;
+	margin: -20px -12px;
+}
+
+div.box .date {
+	color: black;
+	display: block;
+	text-align: right;
+	margin-top: 10px;
+	height: 28px;
+}
+
+a.link-parent {
+	font-size: 11px;
+}
+
+/* @end */
+
+/* @group Accordion menu */
+
+#accordion,
+dl.portlet {
+	border: 1px solid #eee;
+	background-color: #f6f6f6;
+}
+
+#accordion {
+	height: 29.7em;	
+}
+
+
+#accordion h2,
+dl.portlet dt {
+	font-family: "Helvetica Neue", Arial;
+	background: #75ad0a url(images/accordion-gradient.png) repeat-x;
+	line-height: 2em;
+	padding: 0 6px;
+	margin: -1px -1px 0 -1px;
+	color: White;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+dl.portlet {
+	margin: 0 0 1em 1em;
+}
+
+dl.portlet dt {
+	padding-left: 1em;
+}
+
+dl.portlet dt a:link,
+dl.portlet dt a:visited,
+dl.portlet dt a:hover {
+	color: White !important;
+	border: none !important;
+}
+
+dl.portlet dd {
+	font-size: 13px;	
+	padding: 1em;
+}
+
+
+#accordion h2.selected {
+	cursor: inherit;
+	/*padding-left: 1.6em;*/
+}
+
+#accordion h2.selected:before {
+	content: "▼ ";
+	/*content: " ";*/
+}
+
+#accordion h2:before {
+	content: "▶ ";
+}
+
+
+#accordion div {
+	margin: 10px;
+	font-size: 12px;
+}
+
+#accordion div li {	
+	display: block;
+	margin-top: 0.25em;
+}
+
+#accordion li a:before {
+	content: "→ ";
+}
+
+
+#accordion dl {
+	margin-top: 0;
+	margin-bottom: 1em;
+	line-height: 1.5em;
+}
+
+#accordion dt {
+	font-weight: bold;
+}
+#accordion dd {
+	margin-left: 1em;
+}
+
+#plone-boxed {
+	display: block;
+	margin: 0 auto;
+}
+
+#download-link {
+	display: block;
+	width: 163px;
+	height: 43px;
+	background: url(images/download-box.png) no-repeat;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 8px 14px;
+	margin: 0 30px;
+}
+
+/* @end */
+
+/* @group Footer */
+
+#footer {
+	color: White;
+	font-family: "Lucida Grande", Verdana;
+	font-size: 10px;
+	background-color: #329fd7;
+	width: 800px;
+	margin: 1em auto 0 auto;
+}
+
+#footer-logo {
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+#footer-logo img {
+	border-right: 1px solid white;
+}
+
+#footer-text {
+	padding: 5px 0 30px 0;	
+}
+
+/* @end */
+
+/* @group Site map */
+
+#sitemap {
+	margin-bottom: 3em;
+}
+
+#sitemap dl {
+	color: White;
+	display: inline-block;
+	vertical-align: top;
+	/*width: 16.3%;*/
+	width: 19.7%;
+	font-family: "Lucida Grande", Verdana;
+}
+#sitemap dl a {
+	font-size: 10px;
+	color: White;
+	text-decoration: none;
+	display: block;
+	padding: 0.25em 6px;
+}
+#sitemap dl a:hover {
+	color: #329fd7;
+	background-color: White;
+}
+
+#sitemap dl dt {
+	font-weight: bold;
+}
+#sitemap dl dt a {
+	color: White;
+	font-size: 12px !important;
+}
+#sitemap dl dd {
+	margin:0;
+	font-weight: normal;
+}
+
+/* @end */
+
+/* @group Content Area */
+
+#content {
+	line-height: 1.5em;
+	clear: both;
+}
+
+#content h1,
+#archetypes-fieldname-title input {
+	margin-top: 0.5em;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	color: black;
+	clear: left;
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 32px;
+	letter-spacing: -1px;
+}
+
+
+#content h1.documentFirstHeading {
+	margin-top: 0;
+}
+
+#content h2 {
+	margin-top: 0.5em;
+	color: #444;
+	padding: 0;
+	letter-spacing: -1px;
+	font: bold 22px/28px "Helvetica Neue", Arial, sans-serif;
+}
+
+#content h3 {
+	margin-top: 0.5em;
+	color: #444;
+	padding: 0;
+	letter-spacing: -1px;
+	font: bold 18px/24px "Helvetica Neue", Arial, sans-serif;
+}
+#content h4 {
+	margin-top: 0.5em;
+	color: #444;
+	padding: 0;
+	letter-spacing: -1px;
+}
+
+#content h2 a:link,
+h2 a:link,
+#content h2 a:link:hover  {
+	display: block;
+	text-decoration: none;
+	margin-bottom: 8px;
+	border-style: none;
+}
+
+#content h3 a:link:hover {
+	text-decoration: none;
+}
+
+#content p,
+#content ul,
+#content ol,
+#content table,
+#content dl,
+#content dt,
+#content dd,
+dl.portlet p,
+dl.portlet ul {
+	margin-right: 1em;
+	margin-bottom: 1em;
+	line-height: 1.5em;
+	color: black;
+	font-size: 13px;
+}
+
+#content p {
+	text-align: justify;	
+}
+
+
+#content a:link,
+dl.portlet a:link {
+	color: #205c90;
+	border-bottom: 1px solid #ccc;
+}
+
+#content a:link:hover,
+dl.portlet a:link:hover {
+	color: #75ad0a;
+	border-bottom: 1px solid #ccc;
+}
+
+#content a:visited {
+	color: #427597;
+	border-bottom: 1px solid #ccc;
+}
+#content a:visited:hover {
+	color: Black;
+}
+#content a:target {
+	background-color: #ffb !important;
+}
+
+#content img {
+	max-width: 100%;
+}
+
+#content ul,
+dl.portlet ul {
+	list-style-type: disc;
+	margin-left: 2em;
+}
+
+#content ol,
+dl.portlet ol {
+	list-style-type: decimal;
+	margin-left: 2em;
+}
+
+#content li,
+dl.portlet li {
+	margin-bottom: 0.25em;
+	line-height: 1.5em;
+	display: list-item;
+}
+
+#content dt {
+	font-weight: bold;
+	margin-bottom: 0;
+}
+#content dd {
+	margin: 0 0 1em 1em;
+}
+
+#content pre {
+	background-color: #222;
+	color: White;
+	font-family: Monaco, Consolas, "Courier New", monospace;
+	padding: 10px;
+	overflow-x: auto;
+	font-size: 80%;
+	margin-bottom: 1em;
+}
+
+#content code {
+	font-family: "American Typewriter", Consolas, "Courier New", monospace;
+	padding: 0 0.25em;
+	background-color: #eee;
+}
+
+#content div.documentByLine {
+	margin-bottom: 10px;
+	font-size: 11px;
+	display: block;
+	margin-top: -0.5em;
+	color: gray;
+}
+
+#content .discreet {
+	color: #666;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+#content .visualHighlight {
+    background-color: #ffb;
+}
+
+#content .pullquote {
+    padding: 0 1em 0 1em;
+    margin: 0 0 1em 1em;
+    font-weight: bold;
+    float: right;
+    width: 35%;
+    clear: right;
+    border-left: 1px solid #888;
+	color: #888;
+}
+#content .callout {
+    color: #666;
+    padding: 1em;
+	border: 1px solid #666;
+	border-style: solid none;
+	clear:  both;
+}
+
+
+#content table {
+	width: 100%;
+	text-align: left;
+}
+
+#content p.documentDescription,
+#description {
+	color: gray;
+	font: bold 1em "Helvetica Neue", Arial, sans-serif !important;
+	margin-left: 0;
+}
+
+/* @end */
+
+/* @group Edit bar */
+
+#content-views {
+	margin: 1em 0;
+}
+
+#edit-bar { 
+	width: 937px;
+	margin: 0 auto;
+	background-color: #75ad0a;
+	clear: both;
+}
+
+#edit-menu ul { 
+	padding-left: 0.5em;
+	border-top: 4px solid #87BA26;
+	background: #75ad0a 0 -2px url(images/accordion-gradient.png) repeat-x;
+}
+
+#edit-menu li a { 
+	color: White;
+	font-weight: bold;
+	padding: 0.5em;
+	line-height: 2em;
+}
+
+
+#edit-menu li a:hover, 
+#edit-menu li.selected a { 
+	color: #75ad0a;
+	background-color: White;
+	border-top: 1px solid #75ad0a;
+	line-height: 2em;
+}
+
+#edit-menu li:hover a, 
+#edit-menu li.selected a { 
+	color: #75ad0a;
+}
+
+#action-menu {
+	float:right;
+	clear: right;
+}
+
+#action-menu ul li a {
+	color: White;
+	font-weight: bold;
+}
+
+#action-menu ul li a img {
+	display: none;
+}
+/* @end */
+
+
+
+/* @group Data tables */
+
+table.listing {
+	width: 100%;
+	border-spacing: 0; 
+}
+
+table.listing td, 
+table.listing th {
+	padding: 0.5em;
+}
+
+table.listing td.listingCheckbox, 
+table.listing th.listingCheckbox {
+	text-align: center;
+}
+
+table.listing thead th {
+	text-align: left;
+	color: #666;
+	border-bottom: 1px solid #e7e7e7;
+	padding-left: 0;
+}
+table.listing tbody th {
+	font-weight: bold;
+}
+table.listingtbody tr {
+	text-align:left;
+}
+table.listing tbody tr.odd {
+	background: #f9f9f9;
+}
+table.listing tbody tr td { 
+	background: transparent;
+}
+table.listing tbody tr.odd td { 
+	background: #f9f9f9;
+}
+table.listing a { 
+	border: none !important;
+}
+
+div.listingBar {
+	font-size: 13px;	
+}
+
+div.listingBar a {
+	border: none !important;
+}
+
+div.listingBar a:hover {
+	color: White !important;
+	background-color: #329fd7;
+}
+
+div.listingBar a.listingNext {
+	display: block;
+	width: 50%;
+	float: right;
+	text-align: right;
+}
+
+div.listingBar a.listingPrevious {
+	display: block;
+	width: 50%;
+}
+
+
+/* @end */
+
+/* @group Status messages */
+
+dl.portalMessage {
+    font-size: &dtml-fontSmallSize;;
+    background-color: #ffffe3; 
+    border: 1px solid #996;    
+}
+
+dl.portalMessage a {
+    color: black !important;
+    border: none !important;
+    text-decoration: underline;
+}
+dl.portalMessage dt {
+    background-color: #996; 
+    font-weight: bold;
+    float: left;
+    margin: 0 0.5em 0 0;
+    padding: 0.5em 0.75em;
+    color: White;
+    line-height: 1.25em;
+}
+dl.portalMessage dd {
+    padding: 0.5em 0.5em; 
+    margin: 0;
+    line-height: 1.25em;
+}
+dl.warning {
+    border-color: #d80;
+}
+dl.warning dt {
+    background-color: #d80;
+}
+dl.error {
+    border-color: #d00;    
+}
+dl.error dt {
+    background-color: #d00; 
+}
+dl.warning {
+    border-color: #d80;    
+}
+dl.warning dd {
+    background-color: #fd7; 
+}
+dl.error {
+    border-color: #d80;    
+}
+dl.error dd {
+    background-color: #fd7; 
+}
+
+
+
+/* @end */
+
+/* @group Editing */
+
+/* @group Pulldown menus */
+
+.contentActions {
+    background-color: white;
+    text-align: right;
+    padding: 0 0 0 1em;
+    z-index: 2;
+    position:relative;
+    height: 1.6em;
+}
+.contentActions ul,
+.contentActions li {
+    margin: 0;
+    list-style: none;
+    list-style-image: none;
+    color: Black;
+    text-align: left;
+    line-height: 1.6em;
+}
+.contentActions li {
+    float: right;
+    z-index: 4;
+    border-left: 1px solid #74ae0b;
+}
+.contentActions a {
+    text-decoration: none;
+    color: White;
+    padding: 0 0.5em;
+    cursor: pointer;
+}
+.contentActions span.subMenuTitle {
+    padding: 0em 0.5em;
+    position: relative;
+    white-space: nowrap;
+    display: inline;
+}
+.contentActions a span.subMenuTitle {
+    padding: 0px;
+    display: inline;
+}
+.actionMenu {
+    /*  The spec says we can't put this on an element with a float (although
+        Opera is the only one that cares) and we need it in order to catch
+        the position:absolute bubbling up */
+
+    position: relative;
+    margin: 0;
+    padding: 0;
+	font-weight: bold;
+}
+.actionMenu .actionMenuHeader {
+    margin: 0;
+    padding: 0;
+}
+.actionMenu.activated .actionMenuHeader {
+    position: relative;
+    z-index: 10;
+}
+.actionMenu .actionMenuHeader a {
+    display: block;
+	color: White;
+	padding: 0.5em 0.5em;
+}
+.arrowDownAlternative {
+    font-size: 0.85em;
+}
+.actionMenu .actionMenuContent {
+    display: none;
+    z-index: 5;
+    position: absolute;
+    top: 1.5em;
+    right: 0;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+.actionMenu.activated .actionMenuContent {
+    display: block !important;
+}
+.actionMenu.activated .actionMenuContent {
+    /* this one will be ignored by IE, it is here to fix the cut-off error in
+       Firefox */
+    display: table !important;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.actionMenu.deactivated .actionMenuContent {
+    display: none !important;
+}
+.actionMenu .actionMenuContent ul {
+    display: block;
+    background: #75ad0a;
+	color: White;
+    margin: 0.5em 0 0 0;
+	border: 3px solid #74ae0b;
+}
+.actionMenu .actionMenuContent li {
+    float: none;
+    display: inline;
+}
+.actionMenu .actionMenuContent li a {
+    display: block;
+    white-space: nowrap;
+	background-color: #74ae0b;
+	color: White;
+	padding: 0.5em;
+}
+.actionMenu .actionMenuContent .selected {
+    display: block;
+    white-space: nowrap;
+    padding: 0 0.5em;
+    margin: 0.2em 0;
+}
+.actionMenu .actionMenuContent li a:hover {
+    background-color: White;
+    color: #75ad0a !important;
+}
+.actionMenu .actionMenuContent .actionSeparator a {
+    padding-top: 0.2em;
+    border-top: 1px solid #74ae0b;
+}
+#templateMenu li a {
+    padding-left: 16px;
+}
+
+dl.actionMenu {
+	float:right;
+}
+
+
+
+/* @end */
+
+/* @group Control panel */
+
+ul.configlets {
+    margin: 1em 0;
+    list-style-image: none;
+    list-style: none;
+}
+
+.configlet .contentViews {
+    font-size: 90%;
+}
+
+ul.configlets li {
+    margin-bottom: 1em;
+}
+ul.configlets li a {
+    text-decoration: none;
+    border: none;
+}
+ul.configlets li a:visited {
+    color: #436976;
+    background-color: transparent;
+}
+ul.configlets li a:active {
+    color: #436976;
+    background-color: transparent;
+}
+ul.configlets li label {
+    font-weight: bold;
+}
+ul.configletDetails {
+    margin: 0em 1em 1em 4em;
+    list-style-image: none;
+    list-style: none;
+}
+ul.configletDetails li {
+    margin-bottom: 1em;
+    display: inline;
+}
+ul.configletDetails li a {
+	text-decoration: none;
+}
+ul.configletDetails li label {
+    font-weight: bold;
+}
+ul.configletDetails li.configletDescription {
+    display: block;
+    color: #76797c;
+    font-size: 90%;
+    margin: 0;
+}
+.inlineDisplay {
+display:inline
+}
+table.controlpanel-listing {
+width:100%;
+}
+table.controlpanel-listing td, table.controlpanel-listing th {
+font-size:120%;
+}
+table.controlpanel-listing dl {
+margin-top:0;
+}
+table.controlpanel-listing dd {
+margin-left: 1em;
+}
+table.controlpanel-listing dl dt a .trigger{
+font-weight:normal;
+}
+table .controlpanel-listing td {
+vertical-align:top;
+}
+table.controlpanel-listing td.checker{
+text-align:center;
+}
+table.controlpanel-listing th.smallcolumn {
+width:1.5em;
+}
+.chooser-right {
+float:right;
+margin-right:0 !important;
+margin-bottom:0 !important;
+}
+.rule-element {
+background-color:#EEF3F5;
+margin:0.5em 0pt 0.5em;
+padding:0.3em 1em 0.3em 1em;
+width:auto;
+}
+.rule-element dl {
+}
+.rule-element dl dd {
+margin-left:1em;
+}
+.rule-updown, .rule-operations {
+float:right;
+padding-top:0.8em;
+}
+/* @end */
+/* Additional STX workaround classes */
+.stx table p {
+    margin: 0;
+    padding: 0;
+}
+.stx table {
+    border: 1px solid #8cacbb ! important;
+}
+.stx table td {
+    border-bottom: 1px solid #8cacbb;
+}
+
+.reviewHistory,
+.contentHistory {
+    display: inline;
+    font-size: 110% !important; 
+    color: Black;
+}
+
+/* @group Comments */
+
+.comment {
+	border: 1px solid #eee;
+	background-color: #f6f6f6;
+    padding: 0.25em 1em 1em 1em;
+    margin-bottom: 1em;
+}
+.comment h1,
+.comment h2,
+.comment h3,
+.comment h4, 
+.comment h5,
+.comment h6 {
+    border-bottom: 1px solid #76797c;
+    font-weight: normal;
+}
+.commentBody {
+	font-size: 13px;
+}
+
+/* @end */
+.spacer {
+    margin: 1em;
+}
+
+/* @group Collapsible */
+dl.collapsible {
+    border: 1px solid #8cacbb !important;
+    margin: 1em 0 0 0;
+    padding: 0;
+}
+dl.collapsible dt.collapsibleHeader {
+    display: block;
+    float: left;
+    background: White;
+    line-height: 1.2em;
+    vertical-align: middle;
+    font-size: 90%;
+    position: relative;
+    top: -0.6em;
+    width: auto;
+    margin: 0 0 -0.6em 1em;
+    padding: 0 0.5em;
+}
+dl.collapsible dd.collapsibleContent {
+    margin: 0;
+    padding: 0 1em;
+    clear: left;
+}
+
+/* for IE the following isn't needed, that's why the css2 selector is used */
+dl.collapsible dd.collapsibleContent > dl {
+    margin: 0;
+    padding: 0;
+}
+
+dl.expandedInlineCollapsible dt.collapsibleHeader,
+dl.expandedBlockCollapsible dt.collapsibleHeader {
+    padding: 0 6px 0 22px;
+    background: White url(treeExpanded.png) no-repeat 6px 50%;
+    cursor: pointer;
+}
+
+dl.collapsedBlockCollapsible {
+    border: none !important;
+    height: 1em;
+    width: auto;
+}
+dl.collapsedBlockCollapsible dt.collapsibleHeader {
+    float: none;
+    position: static;
+    margin: 0;
+    padding: 0 0 0 22px;
+    line-height: 1em;
+    cursor: pointer;
+}
+dl.collapsedInlineCollapsible dd.collapsibleContent,
+dl.collapsedBlockCollapsible dd.collapsibleContent {
+    display: none;
+}
+dl.collapsedInlineCollapsible {
+    border: none !important;
+    height: 1em;
+    width: auto;
+    display: inline;
+}
+dl.collapsedInlineCollapsible dt.collapsibleHeader {
+    position: static;
+    float: none;
+    margin: 0;
+    padding: 0 0 0 22px;
+    line-height: 1em;
+    cursor: pointer;
+    display: inline;
+}
+
+/* @end */
+
+.label {
+    font-weight: bold;
+    display: inline;
+    padding-right: 0.5em;
+}
+.optionsToggle {
+    border: 1px solid #8cacbb;
+    color: Black;
+    background-color: #dee7ec;
+    font-weight: normal !important;
+    font-size: 90%;
+} 
+
+#portal-column-content fieldset > * input:focus,
+#portal-column-content fieldset > * textarea:focus {
+    border-color: #ffa500;
+    border-width: 1px;
+}
+
+/* for highlighting of search terms */
+.highlightedSearchTerm {
+   background-color: #ffa;
+}
+
+dl.searchResults .highlightedSearchTerm {
+    background-color: transparent;
+    font-weight: bold;
+}
+/* for greying out inherited roles */
+.noInheritedRoles {
+    color: #a0a0a0;
+}
+/* for highlighting current items, like the language or today in the calendar */
+.currentItem {
+    border-collapse: collapse;
+    border: 2px solid #ffa500;
+    padding: 1px;
+}
+.managePortletsLink {
+    display:  block;
+    color: #76797c;
+    font-size: 90%;
+    font-weight: normal;
+}
+
+
+/* @end */
+
+/* @group Tabbed form fieldsets */
+
+ul.formTabs {
+    position: relative;
+    display: block;
+    list-style-type: none;
+    text-align: center;
+	background-color: #329fd7;
+	border-top: 3px solid #329fd7;
+	margin-left: 0 !important;
+}
+li.formTab {
+    display: inline !important;
+    margin: 0;
+    padding: 0;
+}
+li.formTab a {
+    /* this isn't supported by all browsers, so we keep it in a separate rule */
+    display: inline-block;
+}
+li.formTab a {
+	background-color: #329fd7;
+    color: White !important;
+    padding: 0.125em 0.75em;
+    text-decoration: none;
+	border: none !important;
+	font-weight: bold;
+}
+li.formTab a:visited {
+}
+li.firstFormTab a {
+}
+li.lastFormTab a {
+}
+li.formTab a.selected,
+li.formTab a:hover {
+    background: White;
+    color: #329fd7 !important;
+}
+li.formTab a.notify {
+    background-color: #ffce7b;
+    color: Black;
+}
+li.formTab a.required span {
+    background-image: url(http://localhost:8080/demo/required.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding-right: 8px;
+}
+li.formTab a.notify:hover {
+    background-color: #ffa500;
+}
+.formPanel {
+	margin-top: -1.5em;
+    border: 1px solid #8cacbb;
+    padding-top: 1em;
+}
+.formPanel.hidden {
+    display: none;
+}
+div.formControls input.hidden {
+    display: none;
+}
+
+/* @end */
+
+/* @group Forms */
+div.formControls {
+	margin-top: 1em;
+}
+#content textarea {
+font: 100% Monaco, "Courier New", Courier, monospace;
+width: 100%;
+}
+#content select {
+vertical-align: top;
+}
+#content fieldset {
+border: 1px solid #329fd7;
+border-style: solid none none none;
+}
+#content legend {
+padding: 0.5em 0.5em 0.5em 0;
+font-size: 90%;
+}
+label {
+font-weight: bold;
+}
+#content optgroup {
+font-style: normal;
+font-weight: bold;
+color: #999;
+padding-left: 0.25em;
+}
+#content option {
+color: black;
+}
+#content optgroup > option {
+padding: 0 0.25em 0 1em;
+}
+dl.enableFormTabbing dd {
+margin-left: 0;
+padding-top: 2em;
+}
+#login-form {
+width: 30em;
+margin: 0 auto;
+}
+#login-form .field {
+clear: none;
+}
+#login-form input {
+font-size: 150%;
+}
+#login-form input.context {
+padding: 1px 10px 1px 20px;
+background-position: 9px 5px;
+margin-bottom: 1em;
+}
+#forgotten-password {
+float: right;
+width: 35%;
+margin: 0 1em;
+}
+#content input.searchButton {
+}
+.searchSection {
+color: #76797c;
+margin-top: 0.25em;
+}
+.searchSection label:hover {
+color: Black;
+}
+.field {
+clear: both;
+margin-top: 1em;
+}
+.field input {
+	width: 100%;
+}
+.fieldRequired {
+background: url(http://localhost:8080/demo/required.gif) center left no-repeat;
+padding: 0 0 0 8px;
+color: White;
+}
+.fieldUploadFile {
+text-align: right;
+margin-right: 0.75em;
+display: none;
+}
+.fieldTextFormat {
+text-align: right;
+margin-right: 0.75em
+}
+.formHelp {
+font-size: 90%;
+color: #76797c;
+margin: 0 0 0.2em 0;
+}
+.formHelp:hover {
+color: Black;
+cursor: default;
+}
+div.error {
+/* */
+background-color: #fdc;
+border: 1px solid #d00;
+padding: 0.5em;
+margin: 0 0 1em 0;
+width: 95%;
+}
+.error .fieldRequired {
+color: #d00;
+}
+input.inputLabelActive {
+color: #76797c;
+}
+textarea#form\.description {
+height: 6em;
+width: 99%;
+}
+tr.selected {
+background-color: #ffa;
+}
+
+/* @end */
+
+
+
+/* @group Portlets */
+
+div.managePortletsLink {
+	text-align: center;
+	padding: 1em;
+}
+
+/*dl.portlet {
+	margin-top: 3em;
+	margin-left: 1em;
+}
+dl.portlet dt {
+	background-color: #666;
+	color: white;
+	padding: 10px 15px;
+}
+dl.portlet dt a {
+	text-decoration: none;
+	display: block;
+	padding: 0.75em 1.1em;
+	margin: -0.75em -1.1em;
+	background-color: #5a9bc6;
+	color: white;
+}
+
+dl.portlet dt a:hover {
+	background-color: #666;
+}
+
+dl.portlet dd {
+	font-size: 12px;
+	line-height: 15px;
+}
+
+dl.portlet dd a {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+dl.portlet dt.portletHeader {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 14px;
+	margin: 0 0 10px 0;
+	clear: both;
+}
+
+dl.portlet dd a img {
+	vertical-align: middle;
+}
+
+dl.portlet dd.portletFooter {
+	text-align: right;
+	margin: 6px 0 ;
+}
+
+dl.portlet dd.portletFooter a {
+	padding: 0 8px 8px 0 ;
+}
+
+div.managePortletsLink {
+	clear: both;
+    text-align: center;
+	font-size: 11px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+}
+
+div.managePortletsLink a {
+	-moz-border-radius: 1.1em;
+	-webkit-border-radius: 1.1em;
+	background-color: #e5e5e5;
+	color: #909090;
+	font-size: 9px;
+	padding: 3px 1.7em;
+	border: 1px solid #e5e5e5;
+}
+
+div.managePortletsLink a:hover {
+	background-color: #5a9bc6;
+	color: white;
+	border: 1px outset #e5e5e5;
+}*/
+
+/* @end */
+
+/* @group Navigation portlet */
+
+dl.portletNavigationTree dd a {
+	color: #666;
+	text-decoration: none;
+	display: block;
+	padding: 0;
+}
+
+dl.portletNavigationTree dd a:hover {
+	color: White;
+	background-color: #329fd7;
+}
+
+dl.portletNavigationTree li {
+	display: block;
+}
+
+dl.portletNavigationTree li a {
+	width: auto;
+	line-height: 15px;
+}
+
+dl.portletNavigationTree li a span {
+	display: block;
+	padding: 4px 6px 4px 0;
+	background: url(edgeColour.gif) repeat-y right;
+}
+
+dl.portletNavigationTree li a img {
+	margin-top: 2px;
+	margin-left: -19px;
+	float: left;
+}
+dl.portletNavigationTree .navTreeCurrentItem {
+	background-color: #bfbfbf;
+	display: block;
+}
+
+dl.portletNavigationTree li.navTreeItemInPath {
+	background-color: #ebebeb;
+	display: block;
+}
+
+dl.portletNavigationTree li a.navTreeCurrentItem span {
+	background: url(currentNav.gif) no-repeat right center !important;
+	color: black !important;
+}
+
+li.navTreeItemInPath a.navTreeFolderish {
+	background: url(twistie-open-gray.gif) no-repeat 10px 6px;
+}
+
+a.navTreeFolderish {
+	background: url(twistie-closed-gray.gif) no-repeat 10px 6px;
+	display: block;
+}
+
+a.navTreeItemInPath.navTreeFolderish,
+a.navTreeCurrentItem.navTreeFolderish,
+a.navTreeCurrentNode.navTreeFolderish {
+	background-image: url(twistie-open-gray.gif) ;
+	background-repeat: no-repeat;
+}
+
+ul.portletNavigationTree li ul {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+	margin-top: 0;
+}
+
+.navTreeLevel0 li a {
+	padding-left: 1.5em !important;
+}
+
+.navTreeLevel1 li a {
+	padding-left: 2em !important;
+	background-position: 27px 6px;
+}
+
+.navTreeLevel2 li a {
+	padding-left: 78px !important;
+	background-position: 46px 6px;
+}
+
+.navTreeLevel3 a {
+	padding-left: 88px !important;
+	
+}
+
+.navTreeLevel4 a {
+	padding-left: 98px !important;
+	
+}
+
+.navTreeLevel5 {
+	padding-left: 108px !important;
+	
+}
+
+.navTreeLevel6 {
+	
+}
+
+.navTreeLevel7 {
+	
+}
+
+.navTreeLevel8 {
+	
+}
+
+.navTreeLevel9 {
+	
+}
+
+.navTreeLevel10 {
+	
+}
+
+/* @end */
+
+/* @group Search portlet */
+
+dl.portletSearch {
+    position:relative;
+    z-index:5;
+	margin-bottom: 5px !important;
+}
+
+input.searchField {
+	width: 173px;
+	background: url(searchField.png) no-repeat right center;
+	color: #999;
+	border: 1px solid #666;
+	font-size: 11px;
+	padding: 4px 20px 4px 5px;
+	font-weight: bold;
+}
+
+input.searchField:focus {
+	color: black;
+}
+
+dl.portletSearch input.searchButton {
+	display: none;
+}
+
+dl.portletSearch dt.portletHeader,
+dl.portletSearch dd.portletFooter {
+	display: none;
+}
+
+/* @end */
+
+/* @group Calendar */
+
+/* @group Previous/Next (Column 1) */
+
+
+
+/* @end */
+
+/* @group Previous/Next (Column 2) */
+
+dl.portletCalendar dt a.calendarPrevious {
+	width: 16px !important;
+	height: 0;
+	overflow: hidden;
+	float: right;
+	position: absolute;
+	background: transparent url(buttonBack.png) no-repeat 0 0 !important;
+	top: 10px;
+	padding: 20px 0 0 !important;
+	color: #666;
+	right: 29px;
+	margin: 0 !important;
+}
+
+dl.portletCalendar dt a.calendarNext {
+	width: 16px !important;
+	height: 0;
+	overflow: hidden;
+	float: right;
+	position: absolute;
+	background: transparent url(buttonForward.png) no-repeat 0 0 !important;
+	top: 10px;
+	padding: 20px 0 0 !important;
+	color: #666;
+	right: 10px;
+	margin: 0 !important;
+}
+
+.narrow dl.portletCalendar dt a.calendarPrevious {
+	right: 16px;
+	top: 4px;
+}
+
+.narrow dl.portletCalendar dt a.calendarNext {
+	right: -3px;
+	top: 4px;
+}
+
+dl.portletCalendar dt a.calendarPrevious:hover {
+	background-position: -16px 0 !important;
+}
+
+dl.portletCalendar dt a.calendarNext:hover {
+	background-position: -16px 0 !important;
+}
+
+dl.portletCalendar dd {
+	min-height: 170px;
+	margin-right: 3px !important;
+	margin-left: 3px !important;
+}
+
+
+/* @end */
+dl.portletCalendar dt {
+	position: relative;	
+	text-decoration: none;
+	display: block;
+}
+
+dl.portletCalendar table {
+	width: 100%;
+	font-size: 0.9em;
+}
+
+.narrow dl.portletCalendar table {
+	width: 216px;
+	position: relative;
+	left: -8px;
+}
+
+dl.portletCalendar table td {
+	margin: 0;
+	border-style: none;
+	letter-spacing: 0;
+	text-align: center;
+	padding: 5px 0;
+}
+
+dl.portletCalendar table thead tr.weekdays td {
+	padding-top: 0;
+}
+
+dl.portletCalendar table thead th {
+	color: black;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 5px;
+}
+
+dl.portletCalendar table a {
+	display: block;
+}
+
+/* @end */
+
+/* @group Login portlet */
+
+dl.portletLogin div.field input {
+	width: 175px;
+	border: 1px solid #666;
+	font-size: 10px;
+	padding: 3px 20px 3px 3px;
+	margin-bottom: 5px;
+}
+
+dl.portletLogin label {
+	font-size: 10px;
+}
+
+dl.portletLogin div.formControls {
+	border-style: none;
+	text-align: left;
+}
+
+dl.portletLogin dd a {
+	color: #5a9bc6;
+	width: 150px;
+	margin-top: 10px;
+}
+
+/* @end */
+
+/* @group Prefs portlet */
+#portlet-prefs strong {
+	margin-left: 2em;
+}
+
+
+/* @end */
+
+/* @group Table of Contents */
+ Table of Contents styling - essentially a portlet with smaller fonts and aligned right + limited in width 
+dl.toc {
+	float: right;
+    width: 35%;
+	font-size: 11px !important;
+    margin: 0 0 0.5em 1.5em;
+	border-left: 1px solid #666;
+}
+dl.toc dt {
+	margin-left: 3em;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+dl.toc dd {
+	margin-bottom: 0 !important;
+}
+dl.toc dd ol {
+	margin-left: 1.5em !important;
+}
+
+/* @end */
+
+ @end */
+
+/* @group Visual editor */
+
+.kupu-save-message {
+color: white;
+font-weight: bold;
+background-color: red;
+padding: 0.3em;
+position: fixed;
+top: 0;
+right: 0;
+z-index: 999;
+}
+
+#toolbar {
+    background-color: White;
+    width: auto;
+    border: none;
+}
+#toolbar button {
+	border-color: White;
+}
+#kupu-editor-iframe-text {
+	border: 1px solid Black;
+}
+#kupu-colorchooser {
+	display: none;
+}
+
+
+/* @end */
+
+/* @group Trac */
+
+#prefs {
+	float: right;	
+	width: 25em;
+	border: 1px solid #eee;
+	background-color: #f6f6f6;
+	padding: 1em;
+	font-size: 13px;
+	margin: 0 0 1em 1em;
+}
+
+#prefs .field {
+	display: block;
+	margin: 0;
+}
+
+#prefs .field input {
+	width: auto;
+	margin: 0 0.5em;
+}
+#prefs label {
+	font-weight: normal;
+}
+
+#prefs fieldset label {
+	font-weight: bold;
+}
+
+#ticket {
+	border: 1px solid #eee;
+	background-color: #f6f6f6;
+	padding: 1em;
+	margin-top: 1em;
+}
+
+#ticket h2 {
+	margin-top: 0;
+}
+
+#ticket .date {
+	float: right;
+}
+#ticket .date p {
+	color: #666;
+	font-size: 11px;
+	margin: 0;
+}
+#ticket table.properties {
+	border-top: 1px solid #eee;	
+	width: 60%;
+}
+
+dt .time {
+	font-size: 11px;
+	color: #666;
+}
+
+dd.files span.comment {
+	border: none;
+	background: none;
+	padding: 0 1em;
+}
+
+#dirlist td.name a,
+#dirlist td.rev a,
+td.summary a {
+	display: block;
+}
+
+#help {
+	display: none;
+}
+
+table.progress {
+ border: 1px solid black;
+ border-collapse: collapse;
+ border-spacing: 0;
+ float: left;
+ empty-cells: show;
+ width: 55% !important;
+}
+table.progress a, table.progress :link, table.progress :visited,
+table.progress :link:hover, table.progress :visited:hover {
+ border: none !important;
+ display: block;
+ width: 100%;
+ height: 1.2em;
+ text-decoration: none
+}
+table.progress td { background: #fff; padding: 0 }
+table.progress td.closed { background: #75ad0a }
+table.progress td :hover { background: none }
+p.percent { font-size: 10px; line-height: 2.4em; margin: 0.9em 0 0 }
+#content ul.milestones li { list-style:none; }
+#content ul.milestones .info dt { display: inline; margin: 0 }
+#content ul.milestones .info dd { display: inline; margin: 0 .5em; }
+#content ul.milestones p.date { font-size: 11px; color: #666; } 
+
+#content div.diff li.entry {
+	border: 1px solid #eee;
+	background-color: #f6f6f6;
+}
+#content div.diff ul.entries {
+	margin: 0;
+}
+/* @end */
+
+/* @group Invisibles */
+
+.hiddenStructure {
+    display: none;
+    background: transparent;
+    background-image: none; /* safari bug */
+    border: none;
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    margin: -1px 0 0 -1px;
+    width: 1px;
+}
+
+.visualClear {
+	clear: both;
+}
+
+/* @end */
