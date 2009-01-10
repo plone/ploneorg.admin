@@ -31,3 +31,16 @@ In the target site:
     ResourceRegistries that incorporates this change: 
     http://dev.plone.org/plone/changeset/23996
     (the symptoms will be that you don't get the Kupu CSS)
+
+Using nginx
+
+  You may need to install libxslt/libxml2/pcre via macports for this to work.
+  bin/main start  - starts nginx
+  
+  To enable proxying of plone.org you need to set in your /etc/hosts:
+  
+  127.0.0.1 plone.org
+  
+  And change the buildout nginx.conf as per the comments.
+  
+  (note: static/development.html is there as a representative page for testing)
