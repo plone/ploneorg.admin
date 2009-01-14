@@ -13,7 +13,7 @@
 +        fi
 +    fi
 +    if [ $LIBXSLT != NONE ]; then
-+        ngx_feature_path="$LIBXSLT/include/libxslt $ngx_feature_path"
++        ngx_feature_path="$LIBXSLT/include $ngx_feature_path"
 +        if [ $NGX_RPATH = YES ]; then
 +            ngx_feature_libs="-R$LIBXSLT/lib -L$LIBXSLT/lib $ngx_feature_libs"
 +        else
