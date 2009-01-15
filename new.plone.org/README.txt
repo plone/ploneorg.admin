@@ -35,12 +35,11 @@ In the target site:
 Using nginx
 
   You may need to install libxslt/libxml2/pcre via macports for this to work.
+  
+  You need to export LD_LIBRARY_PATH=${buildout:directory}/parts/libxml2/lib:${buildout:directory}/parts/libxslt/lib
+  
   bin/main start  - starts nginx
   
-  To enable proxying of plone.org you need to set in your /etc/hosts:
-  
-  127.0.0.1 plone.org
-  
-  And change the buildout nginx.conf as per the comments.
+  It is currently set up for proxying plone.org
   
   (note: static/development.html is there as a representative page for testing)
