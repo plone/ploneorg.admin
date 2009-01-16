@@ -32,6 +32,15 @@
  
      ngx_uint_t           done;         /* unsigned  done:1; */
  } ngx_http_xslt_filter_ctx_t;
+@@ -144,7 +146,7 @@
+ 
+ 
+ ngx_str_t  ngx_http_xslt_default_types[] = {
+-    ngx_string("text/xml"),
++    ngx_string("example/workaround"),
+     ngx_null_string
+ };
+ 
 @@ -172,6 +174,13 @@
        offsetof(ngx_http_xslt_filter_loc_conf_t, types_keys),
        &ngx_http_xslt_default_types[0] },
