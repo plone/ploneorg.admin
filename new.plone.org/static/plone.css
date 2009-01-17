@@ -864,11 +864,13 @@ dl.portlet dd {
 
 #sitemap dl {
 	color: White;
-	display: inline-block;
-	vertical-align: top;
+    /*display: inline-block;
+    vertical-align: top;*/
 	/*width: 16.3%;*/
 	width: 19.7%;
 	font-family: "Lucida Grande", Verdana;
+    float: left;
+    margin-bottom: 3em;
 }
 #sitemap dl a {
 	font-size: 10px;
