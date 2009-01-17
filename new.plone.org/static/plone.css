@@ -1973,6 +1973,7 @@ dl.portletNavigationTree dd a:hover {
 
 dl.portletNavigationTree li {
 	display: block;
+	list-style: none;
 }
 
 dl.portletNavigationTree li a {
