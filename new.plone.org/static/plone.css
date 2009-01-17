@@ -1140,8 +1140,8 @@ dl.portlet li {
 }
 
 #action-menu {
-	float:right;
-	clear: right;
+	/*float:right;
+	clear: right;*/
 }
 
 #action-menu ul li a {
