@@ -180,7 +180,7 @@ Index: src/mod_transform.c
 -                xmlCtxtUseOptions(ctxt, XML_PARSE_NOENT | XML_PARSE_NOCDATA);
 -                ctxt->directory = xmlParserGetDirectory(f->r->filename);
 +	        if (isHtml) {
-+		    f->ctx = ctxt = htmlCreatePushParserCtxt(0, 0, buf, bytes, 0, XML_CHAR_ENCODING_NONE);
++		    f->ctx = ctxt = htmlCreatePushParserCtxt(0, 0, buf, bytes, 0, XML_CHAR_ENCODING_UTF8);
 +		    if (dconf->opts & HIDE_PARSE_ERRORS) {
 +		        htmlCtxtUseOptions(ctxt, HTML_PARSE_RECOVER | HTML_PARSE_NOERROR | HTML_PARSE_NOWARNING);
 +		    }

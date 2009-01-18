@@ -123,7 +123,7 @@
 -            return NGX_ERROR;
 +        
 +        if (ctx->html_parser) {
-+            ctxt = htmlCreatePushParserCtxt(NULL, NULL, NULL, 0, NULL, XML_CHAR_ENCODING_NONE);
++            ctxt = htmlCreatePushParserCtxt(NULL, NULL, NULL, 0, NULL, XML_CHAR_ENCODING_UTF8);
 +            if (ctxt == NULL) {
 +                ngx_log_error(NGX_LOG_ERR, r->connection->log, 0,
 +                              "htmlCreatePushParserCtxt() failed");
