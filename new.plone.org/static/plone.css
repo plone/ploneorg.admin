@@ -1027,6 +1027,7 @@ dl.portlet li {
 #content dt {
 	font-weight: bold;
 	margin-bottom: 0;
+	margin-right: 0;
 }
 #content dd {
 	margin: 0 0 1em 1em;
