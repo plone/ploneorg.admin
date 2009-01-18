@@ -5,17 +5,21 @@ What is this?
 
 How does it work?
 
-  To install:
+  For development purposes, you might want to run the proxy version that doesn't
+  require you to compile nginx and other related parts. See the nginx version 
+  below if that's what you want to do instead.
+
+  To install the development version:
   cd new.plone.org
   python bootstrap.py
-  bin/buildout (or, if you're on OS X: bin/buildout -C osx.cfg)
+  bin/buildout -c development.cfg
 
   Then, to run the proxy:
-  bin/run-deliverance
+  bin/paster serve server.ini
 
-  This will look for a Plone site at http://new.plone.org/ and apply the
-  new plone.org theme to it. If you want to replace this with a local instance,
-  edit 'server.ini'.
+  This will look for a Plone site at http://localhost:8080/demo and apply the
+  new plone.org theme to it. If you want to replace this with a different 
+  local/remote instance, edit 'server.ini'.
 
 In the target site:
 
@@ -38,7 +42,14 @@ Using nginx
   
   You need to export LD_LIBRARY_PATH=${buildout:directory}/parts/libxml2/lib:${buildout:directory}/parts/libxslt/lib
   
-  bin/main start  - starts nginx
+
+  To install the production version:
+  cd new.plone.org
+  python bootstrap.py
+  bin/buildout
+
+  Then, to start nginx:
+  bin/main start
   
   It is currently set up for proxying plone.org
   
