@@ -1092,8 +1092,8 @@ dl.portlet li {
 }
 
 #content p.documentDescription,
-#description {
-	color: gray;
+#description * {
+	color: gray !important;
 	font: bold 1em "Helvetica Neue", Arial, sans-serif !important;
 	margin-left: 0;
 }
@@ -1167,6 +1167,7 @@ table.listing {
 table.listing td, 
 table.listing th {
 	padding: 0.5em;
+	vertical-align: top;
 }
 
 table.listing td.listingCheckbox, 
