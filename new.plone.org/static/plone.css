@@ -1993,7 +1993,7 @@ dl.portletNavigationTree li a {
 dl.portletNavigationTree li a span {
 	display: block;
 	padding: 4px 6px 4px 0;
-	background: url(edgeColour.gif) repeat-y right;
+/*	background: url(edgeColour.gif) repeat-y right;*/
 }
 
 dl.portletNavigationTree li a img {
@@ -2012,12 +2012,12 @@ dl.portletNavigationTree li.navTreeItemInPath {
 }
 
 dl.portletNavigationTree li a.navTreeCurrentItem span {
-	background: url(currentNav.gif) no-repeat right center !important;
+/*	background: url(currentNav.gif) no-repeat right center !important;*/
 	color: black !important;
 }
 
 li.navTreeItemInPath a.navTreeFolderish {
-	background: url(twistie-open-gray.gif) no-repeat 10px 6px;
+/*	background: url(twistie-open-gray.gif) no-repeat 10px 6px;*/
 }
 
 a.navTreeFolderish {
@@ -2028,7 +2028,7 @@ a.navTreeFolderish {
 a.navTreeItemInPath.navTreeFolderish,
 a.navTreeCurrentItem.navTreeFolderish,
 a.navTreeCurrentNode.navTreeFolderish {
-	background-image: url(twistie-open-gray.gif) ;
+/*	background-image: url(twistie-open-gray.gif) ;*/
 	background-repeat: no-repeat;
 }
 
