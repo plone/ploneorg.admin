@@ -1094,6 +1094,10 @@ dl.portlet li {
 	margin-left: 0;
 }
 
+#content img.tileImage {
+	float: right;
+}
+
 /* @end */
 
 /* @group Edit bar */
