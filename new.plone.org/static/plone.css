@@ -859,6 +859,7 @@ dl.portlet dd {
 #sitemap  {
 	clear: both;
 	margin-bottom: 3em;
+	float:left;
 }
 
 #sitemap dl {
