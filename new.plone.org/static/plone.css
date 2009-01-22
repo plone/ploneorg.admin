@@ -1099,7 +1099,9 @@ dl.portlet li {
 	float: right;
 	margin: 0 1em 0.5em 1em;
 }
-
+#content div.newsImageContainer p.discreet {
+	margin: 0;
+}
 /* @end */
 
 /* @group Edit bar */
