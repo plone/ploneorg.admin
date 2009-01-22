@@ -2021,7 +2021,7 @@ li.navTreeItemInPath a.navTreeFolderish {
 }
 
 a.navTreeFolderish {
-	background: url(twistie-closed-gray.gif) no-repeat 10px 6px;
+/*	background: url(twistie-closed-gray.gif) no-repeat 10px 6px;*/
 	display: block;
 }
 
