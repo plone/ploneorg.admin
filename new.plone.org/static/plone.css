@@ -860,6 +860,7 @@ dl.portlet dd {
 	clear: both;
 	margin-bottom: 3em;
 	float:left;
+	width: 100%;
 }
 
 #sitemap dl {
