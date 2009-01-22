@@ -1096,6 +1096,7 @@ dl.portlet li {
 
 #content img.tileImage {
 	float: right;
+	margin: 0 0 1em 1em;
 }
 
 /* @end */
