@@ -1095,7 +1095,7 @@ dl.portlet li {
 }
 
 #content img.tileImage,
-#content img.newsImage {
+#content div.newsImageContainer {
 	float: right;
 	margin: 0 0 1em 1em;
 }
