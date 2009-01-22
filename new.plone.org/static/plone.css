@@ -856,7 +856,8 @@ dl.portlet dd {
 
 /* @group Site map */
 
-#sitemap {
+#sitemap  {
+	clear: both;
 	margin-bottom: 3em;
 }
 
