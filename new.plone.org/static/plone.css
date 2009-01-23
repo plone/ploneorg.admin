@@ -731,7 +731,9 @@ dl.portlet {
 #accordion {
 	height: 29.7em;	
 }
-
+#accordion h2 {
+	cursor: pointer;
+}
 
 #accordion h2,
 dl.portlet dt {
@@ -740,8 +742,7 @@ dl.portlet dt {
 	line-height: 2em;
 	padding: 0 6px;
 	margin: -1px -1px 0 -1px;
-	color: White;
-	cursor: pointer;
+	color: White !important;
 	font-weight: bold;
 }
 
@@ -2133,7 +2134,7 @@ dl.portletSearch dd.portletFooter {
 
 /* @group Previous/Next (Column 2) */
 
-dl.portletCalendar dt a.calendarPrevious {
+dl.gCalendar dt a.calendarPrevious {
 	width: 16px !important;
 	height: 0;
 	overflow: hidden;
