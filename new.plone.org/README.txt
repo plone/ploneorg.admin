@@ -38,10 +38,8 @@ In the target site:
 
 Using nginx
 
-  You may need to install libxslt/libxml2/pcre via macports for this to work.
-  
-  You need to export LD_LIBRARY_PATH=${buildout:directory}/parts/libxml2/lib:${buildout:directory}/parts/libxslt/lib
-  
+  You may need to install libxslt/libxml2/pcre (via MacPorts or your preferred
+  packaging system) for this to work.  
 
   To install the production version:
   cd new.plone.org
@@ -49,8 +47,13 @@ Using nginx
   bin/buildout
 
   Then, to start nginx:
-  bin/main start
   
-  It is currently set up for proxying plone.org
+  Make sure you have set these environment variables:
+    export LD_LIBRARY_PATH=${buildout:directory}/parts/libxml2/lib:${buildout:directory}/parts/libxslt/lib
+
+  To start the process:
+    bin/main start
+  
+  It is currently set up for proxying plone.org.
   
   (note: static/development.html is there as a representative page for testing)
