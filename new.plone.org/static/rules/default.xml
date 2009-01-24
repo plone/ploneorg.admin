@@ -26,7 +26,7 @@
 
 	<!-- Copy over the contents of the page body -->
 	<!-- XXX TODO: This should probably be region-content in both locations to avoid 2x#content -->
-	<copy content='//*[@id="region-content"]'	theme='//*[@id="content"]' />
+	<replace content='//*[@id="region-content"]'	theme='//*[@id="region-content"]' />
 
 	<!-- Bring the portlet columns over  to the sidebar -->
 	<append content='//*[@id="portal-column-one"]/div'	theme='//*[@id="sidebar"]' />
