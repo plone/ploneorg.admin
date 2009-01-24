@@ -165,6 +165,7 @@ ul.navigation li a:visited {
 	font-weight: bold;
 	border-right: 1px solid #dcdcdc;
 	border-left: 1px solid white;
+	white-space: nowrap;
 }
 
 ul.navigation li a:hover {
