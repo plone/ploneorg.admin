@@ -191,7 +191,7 @@ ul.navigation li.active a {
 
 #user {
 	font-size: 14px;
-	width: 145px;
+	width: 135px;
 	height: 14px;
 	overflow: hidden;
 	float: right;
@@ -1759,9 +1759,17 @@ div.formControls input.hidden {
 /* @end */
 
 /* @group Forms */
+
 div.formControls {
 	margin-top: 1em;
 }
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+	background-color: #ffffe0;
+	/* outline: none; */
+}
+
 #content textarea {
 font: 100% Monaco, "Courier New", Courier, monospace;
 width: 100%;
