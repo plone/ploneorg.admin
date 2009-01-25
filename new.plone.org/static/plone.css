@@ -1106,8 +1106,9 @@ dl.portlet li {
 #content div.newsImageContainer p.discreet {
 	margin: 0;
 	padding: 0.5em;
-	background-color: Black;
+	background-color: #333;
 	color: White;
+	font-weight: bold;
 }
 /* @end */
 
