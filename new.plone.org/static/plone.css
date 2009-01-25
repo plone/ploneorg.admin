@@ -1102,7 +1102,6 @@ dl.portlet li {
 #content div.newsImageContainer {
 	float: right;
 	margin: 0 1em 0.5em 1em;
-	width: 200px;
 }
 #content div.newsImageContainer p.discreet {
 	margin: 0;
@@ -1110,6 +1109,7 @@ dl.portlet li {
 	background-color: #333;
 	color: White;
 	font-weight: bold;
+	width: 200px;
 }
 /* @end */
 
