@@ -1103,13 +1103,15 @@ dl.portlet li {
 	float: right;
 	margin: 0 1em 0.5em 1em;
 }
+#content div.newsImageContainer {
+	width: 200px;
+}
 #content div.newsImageContainer p.discreet {
 	margin: 0;
 	padding: 0.5em;
 	background-color: #333;
 	color: White;
 	font-weight: bold;
-	width: 200px;
 }
 /* @end */
 
