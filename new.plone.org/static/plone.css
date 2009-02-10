@@ -1041,6 +1041,7 @@ dl.portlet li {
 	overflow-x: auto;
 	font-size: 80%;
 	margin-bottom: 1em;
+	line-height: 1em;
 }
 
 #content code {
