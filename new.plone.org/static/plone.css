@@ -975,7 +975,10 @@ dl.portlet ul {
 	font-size: 13px;
 }
 
-#content p {
+#content p,
+#content dl,
+#content ul,
+#content ol {
 	text-align: justify;	
 }
 
