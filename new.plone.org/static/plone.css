@@ -1250,7 +1250,7 @@ div.listingBar a.listingPrevious {
 /* @group Status messages */
 
 dl.portalMessage {
-    font-size: &dtml-fontSmallSize;;
+    font-size: 12px;
     background-color: #ffffe3; 
     border: 1px solid #996;    
 }
