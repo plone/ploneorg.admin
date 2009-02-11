@@ -2403,6 +2403,10 @@ dd.files span.comment {
 	padding: 0 1em;
 }
 
+#overview dt.property {
+	position: inherit !important;
+}
+
 #dirlist td.name a,
 #dirlist td.rev a,
 td.summary a {
