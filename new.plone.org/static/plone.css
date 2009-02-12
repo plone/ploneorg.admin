@@ -228,7 +228,7 @@ div.splash {
 	background-color: #205c90;
 	color: White;
 	min-height: 196px;
-
+	margin-bottom: 1em;
 	border-radius: 0.5em;
 	-webkit-border-radius: 0.5em;
 	-moz-border-radius: 0.5em;
