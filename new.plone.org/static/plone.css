@@ -570,6 +570,9 @@ ul.downloads li {
 	display:block;
 	font-size:1em;
 	color:#000;
+	border-bottom:1px solid #ccc;
+	padding:5px 0px;
+
 }
 
 .product-leadin {
@@ -595,12 +598,6 @@ ul.downloads li {
 	display:block;
 	font-weight:bold;
 	margin-top:10px;
-}
-
-.new-details {
-	display:block;
-	border-bottom:1px solid #ccc;
-	padding:5px 0px;
 }
 
 .advice {
