@@ -1038,7 +1038,7 @@ dl.portlet li {
 #content pre {
 	background-color: #222;
 	color: White;
-	font-family: Monaco, Consolas, "Courier New", monospace;
+	font-family: Monaco, Consolas, Inconsolata, "Courier New", monospace;
 	padding: 10px;
 	overflow-x: auto;
 	font-size: 80%;
@@ -1047,9 +1047,7 @@ dl.portlet li {
 }
 
 #content code {
-	font-family: "American Typewriter", Consolas, "Courier New", monospace;
-	padding: 0 0.25em;
-	background-color: #eee;
+	font-family: Monaco, Consolas, Inconsolata, "Courier New", monospace;
 }
 
 #content div.documentByLine {
