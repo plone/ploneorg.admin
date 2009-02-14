@@ -1050,7 +1050,8 @@ dl.portlet li {
 	font-family: Monaco, Consolas, Inconsolata, "Courier New", monospace;
 }
 
-#content div.documentByLine {
+#content div.documentByLine, 
+#content span.documentByLine, {
 	margin-bottom: 10px;
 	font-size: 11px;
 	display: block;
