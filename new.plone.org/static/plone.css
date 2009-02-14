@@ -564,15 +564,14 @@ ul.downloads li {
 	display:block;
 	font-size:.8em;
 	color:#999;
+	border-bottom:1px solid #ccc;
+	padding:5px 0px;
 }
 
 #product-details p {
 	display:block;
 	font-size:1em;
 	color:#000;
-	border-bottom:1px solid #ccc;
-	padding:5px 0px;
-
 }
 
 .product-leadin {
