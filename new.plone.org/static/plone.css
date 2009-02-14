@@ -1051,7 +1051,7 @@ dl.portlet li {
 }
 
 #content div.documentByLine, 
-#content span.documentByLine, {
+#content span.documentByLine {
 	margin-bottom: 10px;
 	font-size: 11px;
 	display: block;
