@@ -96,7 +96,7 @@ body {
 }
 
 a:link, a:visited {
-	color: #1e5b8f;
+	color: #205c90;
 }
 
 a:link:hover {
@@ -225,7 +225,7 @@ ul.navigation li.active a {
 
 div.splash {
 	font-family: "Helvetica Neue", Arial, sans-serif;
-	background-color: #1e5b8f;
+	background-color: #205c90;
 	color: White;
 	min-height: 196px;
 	margin-bottom: 1em;
@@ -354,7 +354,7 @@ img.book-cover {
 #splash-frontpage {
 	min-height: 284px !important;
 	margin: 0 1em 1em 0;
-/*	background: #1e5b8f url(images/splash-bg.jpg) no-repeat;*/
+/*	background: #205c90 url(images/splash-bg.jpg) no-repeat;*/
 	/*margin-top: 0;*/
 	/*width: 676px;*/
 }
@@ -373,7 +373,7 @@ img.book-cover {
 }
 
 #splash-enterprise {
-	background: #1e5b8f url(images/splash-enterprise.jpg) no-repeat;
+	background: #205c90 url(images/splash-enterprise.jpg) no-repeat;
 }
 
 /* @end */
@@ -959,7 +959,7 @@ dl.portlet ul {
 
 #content a:link,
 dl.portlet a:link {
-	color: #1e5b8f;
+	color: #205c90;
 	border-bottom: 1px solid #ccc;
 }
 
