@@ -561,9 +561,6 @@ ul.downloads li {
 }
 
 #product-details {
-	display:block;
-	font-size:.8em;
-	color:#999;
 	border-bottom:1px solid #ccc;
 	padding:5px 0px;
 }
@@ -571,6 +568,8 @@ ul.downloads li {
 .product-leadin {
 	display:block;
 	padding:0px 0px 10px 0px;
+	font-size:.8em;
+	color:#999;
 }
 
 .company-logo {
