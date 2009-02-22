@@ -92,7 +92,7 @@ body {
 }
 
 #main {
-	background-color: #329fd7;
+	background-color: #40aede; /* Alternate color: #329fd7 */
 }
 
 a:link, a:visited {
@@ -809,7 +809,7 @@ dl.portlet dd {
 	color: White;
 	font-family: "Lucida Grande", Verdana;
 	font-size: 10px;
-	background-color: #329fd7;
+	background-color: #40aede;
 	width: 800px;
 	margin: 1em auto 0 auto;
 }
