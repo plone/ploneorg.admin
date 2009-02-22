@@ -88,11 +88,11 @@ img { vertical-align: middle; }
 
 body { 
 	font-family: Arial;
-	padding-top: 11px;
 }
 
 #main {
 	background-color: #40aede; /* Alternate color: #329fd7 */
+	padding-top: 11px;
 }
 
 a:link, a:visited {
@@ -832,21 +832,25 @@ dl.portlet dd {
 /* @group Site map */
 
 #sitemap  {
+/* IE:
 	clear: both;
 	margin-bottom: 3em;
 	float:left;
+*/
 	width: 100%;
+
 }
 
 #sitemap dl {
-	color: White;
-    /*display: inline-block;
-    vertical-align: top;*/
-	/*width: 16.3%;*/
-	width: 19.7%;
 	font-family: "Lucida Grande", Verdana;
-    float: left;
+	color: White;
+	display: inline-block;
+	vertical-align: top;
+	width: 19.7%;
+/* IE:   width: 16.3%;*/
+/* IE:   float: left;*/
     margin-bottom: 3em;
+
 }
 #sitemap dl a {
 	font-size: 10px;
