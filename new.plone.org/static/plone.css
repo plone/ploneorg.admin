@@ -26,6 +26,15 @@ a { outline: none; }
 table { border-spacing: 0; }
 img { vertical-align: middle; }
 
+a:link, a:visited {
+	color: #205c90;
+}
+
+a:link:hover {
+	color: #75ad0a;
+}
+
+
 /* @end */
 
 /* @group Grid */
@@ -90,29 +99,27 @@ body {
 	font-family: Arial;
 }
 
-#main {
-	background-color: #40aede; /* Alternate color: #329fd7 */
-	padding-top: 11px;
+html, body {
+/* Sticky footer */
+	height: 100%;
 }
 
-a:link, a:visited {
-	color: #205c90;
-}
-
-a:link:hover {
-	color: #75ad0a;
-}
 
 #outer-wrapper {
-	background: left 0px url("images/nav-gradient.png") repeat-x;
+	background: left 11px url("images/nav-gradient.png") repeat-x;
 	background-color: white;
+/* Sticky footer */
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -16em;
 }
 #inner-wrapper {
-	border-top: 2px solid white;
-	background: url(images/footer-gradient.png) repeat-x;
-	background-position: bottom left;
+	border-top: 11px solid #40aede; 
 	padding-bottom: 2em;
 	clear:both;
+/* Sticky footer */
+	margin-bottom: -16em;
 }
 
 #content-wrapper {
@@ -133,7 +140,7 @@ a:link:hover {
 
 #main-nav {
 	font-size: 14px;
-	line-height: 28px;
+	line-height: 29px;
 }
 
 #main-nav li:first-child a {
@@ -186,7 +193,6 @@ ul.navigation li.active a {
 	background: url(images/search-wrapper.png) no-repeat;
 	height: 20px;
 	padding: 10px 25px;
-	margin-top: -2px;
 }
 
 #user {
@@ -805,18 +811,24 @@ dl.portlet dd {
 
 /* @group Footer */
 
+#footer-wrapper {
+/* Sticky footer */
+    height: 16em;
+	background: #40aede top left url(images/footer-gradient.png) repeat-x;
+}
+
 #footer {
 	color: White;
 	font-family: "Lucida Grande", Verdana;
 	font-size: 10px;
-	background-color: #40aede;
+	margin: 0 auto;
+	padding: 2em 0;
 	width: 800px;
-	margin: 1em auto 0 auto;
 }
 
 #footer-logo {
 	float: left;
-	margin: 0 10px 0 0;
+	padding: 0 1em 2em 0;
 }
 
 #footer-logo img {
@@ -824,7 +836,7 @@ dl.portlet dd {
 }
 
 #footer-text {
-	padding: 5px 0 30px 0;	
+	padding: 2em 0;
 }
 
 /* @end */
@@ -838,6 +850,7 @@ dl.portlet dd {
 	float:left;
 */
 	width: 100%;
+	clear: both;
 
 }
 
@@ -846,10 +859,9 @@ dl.portlet dd {
 	color: White;
 	display: inline-block;
 	vertical-align: top;
-	width: 19.7%;
+	width: 19%;
 /* IE:   width: 16.3%;*/
 /* IE:   float: left;*/
-    margin-bottom: 3em;
 
 }
 #sitemap dl a {
