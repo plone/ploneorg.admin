@@ -118,8 +118,6 @@ html, body {
 	border-top: 11px solid #40aede; 
 	padding-bottom: 2em;
 	clear:both;
-/* Sticky footer */
-	margin-bottom: -16em;
 }
 
 #content-wrapper {
@@ -815,6 +813,11 @@ dl.portlet dd {
 /* Sticky footer */
     height: 16em;
 	background: #40aede top left url(images/footer-gradient.png) repeat-x;
+}
+
+#push {
+/* Sticky footer */
+	height: 16em;
 }
 
 #footer {
