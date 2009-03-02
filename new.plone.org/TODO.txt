@@ -1,3 +1,25 @@
-[ ] Make the inputLabel JS in Plone capable of inserting type="search" on search boxes, so we can keep valid HTML
+Remaining tasks:
 
-[ ] Saves don't seem to trigger at the moment, may be Kupu-related.
+[ ] Fix nav tree CSS
+[ ] Consolidate Splash and Sidebar CSS
+[ ] fix pane CSS so it doesn't have expand/collapse by default
+[ ] Add Plone icon instead of "Home"
+[ ] Make the inputLabel JS in Plone capable of inserting type="search" on search boxes, so we can keep valid HTML (JS from Martijn)
+[ ] Add tile JS and classes (JS from Martijn)
+[ ] Fix login page
+[ ] Fix plone_control_panel (#region-content)
+[ ] Make a first draft of the Support page
+[ ] Print CSS
+
+Shortly after launch (can be prepared up front):
+
+[ ] Planet Plone version
+[ ] Nabble version
+
+
+Nice-to-have template tasks (not critical for release):
+
+[ ] Pulldown JS/CSS for user profile (Site setup + logout goes here) and version selectors for PSC/PHC.
+[ ] Backport the #region-content fixes to Plone 3.3, should be in main_template
+[ ] Add in FancyZoom (jQ version) to replace screenshot fullscreen view in PSC
+[ ] LiveSearch CSS
