@@ -10,12 +10,14 @@ Remaining tasks:
 [ ] Fix plone_control_panel (#region-content)
 [ ] Make a first draft of the Support page
 [ ] Print CSS
+[ ] Sprites for images
+
 
 Shortly after launch (can be prepared up front):
 
 [ ] Planet Plone version
 [ ] Nabble version
-
+[ ] Mibbit color scheme/font
 
 Nice-to-have template tasks (not critical for release):
 
