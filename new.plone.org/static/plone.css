@@ -1902,6 +1902,10 @@ div.managePortletsLink {
 }
 */
 
+ul.navTree {
+	margin-left: 1em !important;
+}
+
 dl.portletNavigationTree dd a {
 	color: #666;
 	text-decoration: none;
