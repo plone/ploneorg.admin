@@ -1243,7 +1243,8 @@ div.listingBar a.listingPrevious {
 dl.portalMessage {
     font-size: 12px;
     background-color: #ffffe3; 
-    border: 1px solid #996;    
+    border: 1px solid #996;
+    margin-bottom: 1em;
 }
 
 dl.portalMessage a {
