@@ -101,8 +101,7 @@ html, body {
 
 
 #outer-wrapper {
-	background: left 11px url("images/nav-gradient.png") repeat-x;
-	background-color: white;
+	background: left -859px url("images/sprite-ploneorg.png") repeat-x;
 /* Sticky footer */
 	min-height: 100%;
 	height: auto !important;
