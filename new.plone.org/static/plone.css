@@ -1,5 +1,7 @@
-/* @override http://new.plone.org/plone.css */
-
+/* @override 
+	http://new.plone.org/plone.css
+	http://dev.plone.org/plone.css
+*/
 
 /* @group Neutralize! */
 
@@ -21,11 +23,51 @@ a { outline: none; }
 table { border-spacing: 0; }
 img { vertical-align: middle; }
 
+
+
+/* @end */
+
+/* @group Basics */
+
+body { 
+	font: 100% Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	letter-spacing: -1px;
+	font-family: "Helvetica Neue", Arial, sans-serif; 
+	font-weight: bold;
+	line-height: 125%;
+}
+h1 {
+	font-size: 1.625em; /* 26px equiv */
+}
+h2 {
+	font-size: 1.375em; /* 22px equiv */
+}
+h3 {
+	font-size: 1.125em; /* 18px equiv */
+}
+h4 {
+	font-size: 0.875em; /* 14px equiv */
+}
+h5 {
+	font-size: 0.75em; /* 12px equiv */
+}
+h6 {
+	font-size: 0.625; /* 10px equiv */
+}
+
+p {
+	font-size: 0.75em; /* 12px equiv */
+}
+
 a:link, a:visited {
 	color: #205c90;
 }
 
-a:link:hover {
+a:link:hover,
+a:visited:hover {
 	color: #75ad0a;
 }
 
@@ -90,9 +132,6 @@ a:link:hover {
 
 /* @group Wrappers */
 
-body { 
-	font-family: Arial;
-}
 
 html, body {
 /* Sticky footer */
@@ -102,7 +141,7 @@ html, body {
 
 #outer-wrapper {
 	background: left -859px url("images/sprite-ploneorg.png") repeat-x;
-/* Sticky footer */
+/* Sticky footer w/IE fixes*/
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
@@ -110,13 +149,12 @@ html, body {
 }
 #inner-wrapper {
 	border-top: 11px solid #329fd7; 
-	padding: 0 1em 2em 1em;
-	clear:both;
+	padding: 0 1em 2em;
 }
 
 #content-wrapper {
 	width: 937px;
-	margin: 1em auto 0 auto;
+	margin: 1em auto 0;
 }
 
 #logo-wrapper {
@@ -125,9 +163,8 @@ html, body {
 }
 
 #logo {
-	margin: 0 22px 25px 22px;
-	background-image: url(images/sprite-ploneorg.png);
-	background-position: 0 -775px;
+	margin: 0 22px 25px;
+	background: 0 -775px url(images/sprite-ploneorg.png);
 	width: 215px;
 	height: 56px;
 	display: block;
@@ -152,16 +189,12 @@ html, body {
 #main-nav li:first-child a {
 	/*XXX TODO: mini-logo goes here*/
 	/*color: transparent;*/
-}
-
-#main-nav li:first-child a {
 	border-left: none;
 	/*padding-left: 0;*/
 }
 
 #sub-nav {
-	font-size: 13px;
-	line-height: 30px;
+	font: 13px/30px "Helvetica Neue", Arial;
 	border-top: 1px solid #dcdcdc;
 	margin-right: 210px;
 }
@@ -187,19 +220,17 @@ ul.navigation li a:hover {
 ul.navigation li.selected a,
 ul.navigation li.active a {
 	color: #75ad0a;
-	padding: 6px 8px 5px 8px;
+	padding: 6px 8px 5px;
 	border-bottom: 2px solid white;
-	border-left: 1px solid white;
 }
 
 
 #search {
 	float: right;
 	position: relative;
-	background: #329fd7 url(images/sprite-ploneorg.png) no-repeat;
-	background-position: 0 -706px;
+	background: #329fd7 0 -706px url(images/sprite-ploneorg.png) no-repeat;
 	height: 20px;
-	padding: 9px 22px 10px 22px;
+	padding: 9px 22px 10px;
 }
 
 #user {
@@ -208,7 +239,7 @@ ul.navigation li.active a {
 	height: 14px;
 	overflow: hidden;
 	float: right;
-	padding: 5px 4px;
+	padding: 6px 4px;
 }
 
 #user a {
@@ -231,75 +262,26 @@ div.splash {
 	font-family: "Helvetica Neue", Arial, sans-serif;
 	background-color: #205c90;
 	color: White;
-	min-height: 196px;
+	font-weight: bold;
 	margin-bottom: 1em;
+	padding: 1em 1.5em 2em;
 	border-radius: 0.5em;
 	-webkit-border-radius: 0.5em;
 	-moz-border-radius: 0.5em;
-}
-
-div.splash h1 {
-	padding: 1em 0.5em 0 260px !important;
-	font-weight: bold;
-	font-size: 26px;
-	line-height: 32px;
-	letter-spacing: -1px;
-
-}
-
-div.splash h2 {
-	padding: 0 0 0 387px;
-	font-weight: bold;
-	font-size: 22px;
-	line-height: 28px;
-	letter-spacing: -1px;
-}
-
-div.splash p {
-	padding: 20px 0 0 260px;
-	font-size: 12px;
-	font-weight: bold;
 }
 
 div.splash a {
 	color: White;
-	float: right;
-	line-height: 16px;
-	margin-right: 32px;
-	padding-right: 16px;
 }
 
 div.pullout {
 	background-color: #87B829;
-	color: White;
-	min-height: 172px;
-	padding: 1.5em 15px 0 3em;
-	margin-bottom: 24px;
+	padding-left: 2.5em;
 	margin-left: -1em;
-
-	border-radius: 0.5em;
-	-webkit-border-radius: 0.5em;
-	-moz-border-radius: 0.5em;
-}
-
-div.pullout h2 {
-	font-size: 24px;
-	margin-bottom: 0.5em;
-}
-
-div.pullout p,
-div.pullout ul,
-div.pullout ol {
-	font-size: 12px;
-	margin-bottom: 1em;
 }
 
 div.pullout li {
 	display: block;
-}
-
-div.pullout a {
-	color: White;
 }
 
 div.pullout li a:before {
@@ -355,52 +337,44 @@ img.book-cover {
 /* @group Page-specific splash styles */
 
 #splash-frontpage {
-	min-height: 284px !important;
-	margin: 0 1em 1em 0;
+	min-height: 284px;
+	margin-right: 1em;
 /*	background: #205c90 url(images/splash-bg.jpg) no-repeat;*/
-	/*margin-top: 0;*/
-	/*width: 676px;*/
-}
-#splash-frontpage h1 {
-	padding: 20px 18px !important;
 }
 
-#splash-frontpage p {
-	padding: 20px 0 0 387px;
-}
 
 #splash-downloads {
-	background-image:url(images/plone-box.png);
-	background-repeat:no-repeat;
-	background-position: 5em 2em;
-}
-
-#splash-enterprise {
-	background: #205c90 url(images/splash-enterprise.jpg) no-repeat;
+	/* TODO: move inside splash definition, make it not show the bottom part:
+	background: url(images/sprite-ploneorg.png) no-repeat;
+	background-position: 0 -495px;*/
 }
 
 /* @end */
 
+#splash-documentation {
+	min-height: 99px;
 
+}
 
 /* @end */
 
 /* @group Listings */
 
-/* @group Documentation tile */
+/* @group Pane */
 
 div.pane {
 	background-color: #eee;
-	padding: 10px;
+	padding: 0.7em;
 	clear: left;
 	border-radius: 0.5em;
 	-webkit-border-radius: 0.5em;
 	-moz-border-radius: 0.5em;
 }
 
-div.pane h1 {
+div.pane h2 {
+	font-size: 1.1em;
 	padding-bottom: 0.5em;
-	padding-left: 10px;
+	padding-left: 0.5em;
 }
 
 a.versions {
@@ -420,13 +394,9 @@ div.pagesearch {
 	padding-right: 10px;
 }
 
-div.pagesearch input {
-	color: #666;
-}
-
 #categories {
 	background-color: white;
-	padding: 10px;
+	padding: 0.7em; 
 	/*margin-top: 8px; compensate for corners*/ 
 	border-radius: 0.5em;
 	-webkit-border-radius: 0.5em;
@@ -435,7 +405,6 @@ div.pagesearch input {
 
 #categories h3 {
 	border-top: 1px solid #ccc;
-	font-size: 14px;
 }
 
 #categories h3 a {
@@ -449,17 +418,14 @@ div.pagesearch input {
 	cursor: default;
 }
 
-#categories h3 a:before {
+div.collapsible h3 a:before {
 	content: "▶ ";
 }
-
-#categories h3.selected a:before {
+div.collapsible h3.selected a:before {
 	content: "▼ ";
-	/*content: "";*/
 }
 
-
-#categories p {
+div.collapsible p {
 	font-size: 11px;	
 }
 
@@ -481,7 +447,7 @@ ul.topic li {
 
 /* @group Downloads tile */
 
-/* Refactor these */
+/* TODO: Refactor these */
 
 #download-plone {
 	background-image:url(images/download-platforms.png);
@@ -491,136 +457,39 @@ ul.topic li {
 	margin:10px 0px 10px 260px;
 }	
 
-div.downloadssearch {
-	float: right;
-	font-size: 11px;
-	padding-right: 10px;
-}
-
-div.downloadssearch input {
-	color: #666;
-}
-
-.rss-icon {
-	float:right;
-	padding:10px;
-	display:block;
-	margin-top:-40px;
-}
-
-.next-previous {
-	float:right;
-	width:25%;
-	margin-top:-15px;
-	display:block;
-	font-size:.8em;
-}
-
-.next-previous .next-previous-item a {
-	color:#ccc;
-}
-
-#download-footer-links {
-	font-size:.8em;
-	color:#999;
-	width:100%;
-	display: block;
-	padding:5px 0px;
-	margin-top:20px;
-}
-
 #sort-by {
-	margin-left:10px;
+	margin-left:.7em;
 	font-size:.7em;
-	line-height: 2em;
 }
-
-.sort {
-	margin:0px 10px 0px 0px;
-	color:#999;
-	font-weight:bold;
-}
-
-#sort-by a.plain {
-	margin-right:10px;
-	color:#000;
-}
-
-#sortby a.selected {
-	font-size:.9em;
-}
-
 
 #numreleases {
 	font-size:.8em;
 	border-bottom:1px solid #ccc;
-	width:100%;
 	display: block;
 	padding:5px 0px;
 }
 
-ul.downloads li {
-	border-bottom:1px solid #ccc;
-}
 
 #product-details {
-	border-bottom:1px solid #ccc;
-	padding:5px 0px;
+	border-bottom: 1px solid #ccc;
+	padding: 5px 0px;
 }
 
 .product-leadin {
-	display:block;
-	padding:0px 0px 10px 0px;
-	font-size:.8em;
-	color:#999;
+	display: block;
+	font-size: .7em;
+	color: #666;
+	margin: -1em 0 1em;
 }
 
 .company-logo {
-	float:right;
-	padding:10px;
-}
-
-.advice {
-	display:block;
-	font-size:.7em;
-	font-weight:bold;
-	margin:10px 0px;
-	width:90%;
-}
-
-.downloads h3 {
-	margin-top:10px;
-}
-
-h2.add-on-categories-hdr {
-	font-size:1.2em;
-}
-
-div.sidebar ol#add-on-categories {
-	padding:10px 0px;
-}
-
-div.sidebar ol#add-on-categories li {
-	border-bottom:none;
-	border-top:none;
-	font-weight:bold;
-	line-height:6px;
-	font-size:.8em;
-}
-
-.list-your-addon {
-	height:19px;
-	width:209px;
-}
-
-.down-arrow {
-	display:block;
-	padding:5px 0px 0px 5px;
-	border-bottom:1px solid #ccc;
+	float: right;
+	padding: 1em 0.5em;
 }
 
 /* @end */
 
+/* @group Box */
 
 div.box {
 	height: 38em;
@@ -632,14 +501,12 @@ div.box {
 }
 
 div.box h1 {
-	font-family: "Helvetica Neue", Arial;
-	margin: -9px -12px;
-	padding: 0 12px;
+	margin: -0.625em -1em;
+	padding: 0 1em;
 	line-height: 2em;
 	background: #eee url(images/sprite-ploneorg.png) repeat-x;
 	background-position: 0 -163px;
-	font-size: 14px;
-	vertical-align: 1em;
+	font-size: 120%;
 }
 
 div.box p {
@@ -693,13 +560,17 @@ div.box .date {
 	height: 28px;
 }
 
+
+
+/* @end */
+
 a.link-parent {
 	font-size: 11px;
 }
 
 /* @end */
 
-/* @group Accordion menu */
+/* @group Accordion */
 
 #accordion,
 dl.portlet {
@@ -712,19 +583,19 @@ dl.portlet {
 }
 #accordion h2 {
 	cursor: pointer;
+	font-size: 1em;
+	letter-spacing: 0;
 }
 
 #accordion h2,
 dl.portlet dt {
-	font-family: "Helvetica Neue", Arial;
 	background-color: #76AD17;
 	border-bottom: 1em solid #63A100;
 	line-height: 2em;
 	height: 1em;
-	padding: 0 6px;
+	padding: 0 .5em;
 	margin: -1px -1px 0 -1px;
-	color: White !important;
-	font-weight: bold;
+	color: White;
 }
 
 dl.portlet {
@@ -917,54 +788,19 @@ dl.portlet dd {
 #content h1,
 #archetypes-fieldname-title input {
 	margin-top: 0.5em;
-	font-family: "Helvetica Neue", Arial, sans-serif;
-	color: black;
-	clear: left;
-	font-weight: bold;
-	font-size: 26px;
-	line-height: 32px;
-	letter-spacing: -1px;
 }
-
 
 #content h1.documentFirstHeading {
 	margin-top: 0;
 }
 
-#content h2 {
-	margin-top: 0.5em;
-	color: #444;
-	padding: 0;
-	letter-spacing: -1px;
-	font: bold 22px/28px "Helvetica Neue", Arial, sans-serif;
-}
-
-#content h3 {
-	margin-top: 0.5em;
-	color: #444;
-	padding: 0;
-	letter-spacing: -1px;
-	font: bold 18px/24px "Helvetica Neue", Arial, sans-serif;
-}
+#content h2,
+#content h3,
 #content h4 {
 	margin-top: 0.5em;
-	color: #444;
-	padding: 0;
-	letter-spacing: -1px;
+	color: #444;	
 }
 
-#content h2 a:link,
-h2 a:link,
-#content h2 a:link:hover  {
-	display: block;
-	text-decoration: none;
-	margin-bottom: 8px;
-	border-style: none;
-}
-
-#content h3 a:link:hover {
-	text-decoration: none;
-}
 
 #content p,
 #content ul,
@@ -982,12 +818,12 @@ dl.portlet ul {
 	font-size: 13px;
 }
 
-#content p,
+/*#content p,
 #content dl,
 #content ul,
 #content ol {
 	text-align: justify;	
-}
+}*/
 
 #content a:link,
 dl.portlet a:link {
