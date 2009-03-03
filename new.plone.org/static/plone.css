@@ -818,7 +818,12 @@ dl.portlet dd {
 #footer-wrapper {
 /* Sticky footer */
     height: 16em;
-	background: #329fd7 top left url(images/footer-gradient.png) repeat-x;
+	background: #329fd7;
+}
+
+#footer-gradient {
+	background: #329fd7 top left url(images/sprite-ploneorg.png) repeat-x;
+	height: 7px;
 }
 
 #push {
