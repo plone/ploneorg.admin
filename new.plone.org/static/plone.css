@@ -480,7 +480,7 @@ ul.topic li {
 /* Refactor these */
 
 #download-plone {
-	background-image:url(images/download-plone.png);
+	background-image:url(images/download-platforms.png);
 	background-repeat:no-repeat;
 	height:58px;
 	width:300px;
@@ -792,14 +792,14 @@ dl.portlet dd {
 
 #download-link {
 	display: block;
-	width: 163px;
-	height: 43px;
+	width: 153px;
+	height: 51px;
 	background: url(images/download-box.png) no-repeat;
 	color: white;
 	font-size: 12px;
 	font-weight: bold;
-	padding: 8px 14px;
-	margin: 0 30px;
+	padding: 144px 0 0 10px;
+	margin: 0 auto;
 }
 
 /* @end */
