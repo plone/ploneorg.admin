@@ -673,8 +673,8 @@ dl.portlet dt a:hover {
 }
 
 dl.portlet dd {
-	font-size: 13px;	
-	padding: 1em;
+	font-size: 0.825em;	
+	padding: 1em 2em;
 }
 
 
@@ -692,26 +692,19 @@ div.managePortletsLink {
 
 /* @group Navigation portlet */
 
-/* Why is there a stray div in the navtree list item? 
-#sub-nav li.navTreeItem div { 
-	display: inline !important;
-}
-*/
-
 ul.navTree {
-	margin-left: 1em !important;
+	margin-left: 0 !important;
+}
+
+dl.portletNavigationTree dd {
+	padding: 0;
 }
 
 dl.portletNavigationTree dd a {
 	color: #666;
 	text-decoration: none;
 	display: block;
-	padding: 0;
-}
-
-dl.portletNavigationTree dd a:hover {
-	color: White !important;
-	background-color: #bfbfbf;
+	padding: 0 1em;
 }
 
 dl.portletNavigationTree li {
@@ -729,36 +722,33 @@ dl.portletNavigationTree li a span {
 }
 
 dl.portletNavigationTree .navTreeCurrentItem {
-	background-color: #bfbfbf;
+	background: #ddd;
 }
 
 dl.portletNavigationTree li.navTreeItemInPath {
-	background-color: #ebebeb;
+	background: #eee
 }
 
 dl.portletNavigationTree li a.navTreeCurrentItem span {
-	color: White !important;
+	color: black;
 }
 
-
-
-a.navTreeItemInPath.navTreeFolderish,
-a.navTreeCurrentItem.navTreeFolderish,
-a.navTreeCurrentNode.navTreeFolderish {
-	background-repeat: no-repeat;
+dl.portletNavigationTree .navTreeLevel0 li a {
+	padding-left: 2em;
+	margin: 0 -2em 0 0;
 }
-
-ul.portletNavigationTree li ul {
-	list-style: none;
-	margin-left: 0;
-	padding-left: 0;
-	margin-top: 0;
+dl.portletNavigationTree .navTreeLevel1 li a {
+	padding-left: 2.5em;
+	margin: 0 -2em 0 0;
 }
-
-.navTreeLevel0 li a {
-	padding-left: 1em !important;
+dl.portletNavigationTree .navTreeLevel2 li a {
+	padding-left: 3em;
+	margin: 0 -2em 0 0;
 }
-
+dl.portletNavigationTree .navTreeLevel3 li a {
+	padding-left: 3.5em;
+	margin: 0 -2em 0 0;
+}
 
 /* @end */
 
