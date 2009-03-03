@@ -537,7 +537,7 @@ div.downloadssearch input {
 
 .sort {
 	margin:0px 10px 0px 0px;
-	color:#999
+	color:#999;
 	font-weight:bold;
 }
 
@@ -1998,7 +1998,9 @@ ul.portletNavigationTree li ul {
 /* @end */
 
 /* @group Table of Contents */
- Table of Contents styling - essentially a portlet with smaller fonts and aligned right + limited in width 
+
+ /*Table of Contents styling - essentially a portlet with smaller fonts and aligned right + limited in width*/ 
+
 dl.toc {
 	float: right;
     width: 35%;
@@ -2020,7 +2022,6 @@ dl.toc dd ol {
 
 /* @end */
 
- @end */
 
 /* @group Visual editor */
 
