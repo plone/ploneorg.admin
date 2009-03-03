@@ -1,8 +1,10 @@
 Remaining tasks:
 
-[ ] Fix nav tree CSS
-[ ] Consolidate Splash and Sidebar CSS
-[ ] fix pane CSS so it doesn't have expand/collapse by default
+[ ] Test #content change (-> main_template) and port to Plone proper if sensible (at least trunk)
+
+[x] Fix nav tree CSS
+[x] Consolidate Splash and Sidebar CSS
+[x] fix pane CSS so it doesn't have expand/collapse by default
 [ ] Add Plone icon instead of "Home"
 [ ] Make the inputLabel JS in Plone capable of inserting type="search" on search boxes, so we can keep valid HTML (JS from Martijn)
 [ ] Add tile JS and classes (JS from Martijn)
