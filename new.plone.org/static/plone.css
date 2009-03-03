@@ -711,8 +711,10 @@ dl.portlet {
 #accordion h2,
 dl.portlet dt {
 	font-family: "Helvetica Neue", Arial;
-	background: #75ad0a url(images/accordion-gradient.png) repeat-x;
+	background-color: #76AD17;
+	border-bottom: 1em solid #63A100;
 	line-height: 2em;
+	height: 1em;
 	padding: 0 6px;
 	margin: -1px -1px 0 -1px;
 	color: White !important;
@@ -1120,8 +1122,11 @@ dl.portlet li {
 
 #edit-menu ul { 
 	padding-left: 0.5em;
-	border-top: 4px solid #87BA26;
-	background: #75ad0a 0 -2px url(images/accordion-gradient.png) repeat-x;
+	border-top: 4px solid #76AD17;
+	background-color: #76AD17;
+	border-bottom: 1em solid #63A100;
+	line-height: 2em;
+	height: 1em;
 }
 
 #edit-menu li a { 
