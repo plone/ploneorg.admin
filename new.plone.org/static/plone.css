@@ -71,6 +71,9 @@ a:visited:hover {
 	color: #75ad0a;
 }
 
+dt {
+	font-weight: bold;
+}
 
 /* @end */
 
@@ -601,26 +604,6 @@ dl.portlet dt {
 	color: White;
 }
 
-dl.portlet {
-	margin: 0 0 1em 1em;
-}
-
-dl.portlet dt {
-	padding-left: 1em;
-}
-
-dl.portlet dt a:link,
-dl.portlet dt a:visited,
-dl.portlet dt a:hover {
-	color: White !important;
-	border: none !important;
-}
-
-dl.portlet dd {
-	font-size: 13px;	
-	padding: 1em;
-}
-
 
 #accordion h2.selected {
 	cursor: inherit;
@@ -659,23 +642,123 @@ dl.portlet dd {
 	margin-left: 1em;
 }
 
-#plone-boxed {
-	display: block;
-	margin: 0 auto;
-}
-
 #download-link {
 	display: block;
 	width: 123px;
 	height: 51px;
-	background: url(images/sprite-ploneorg.png) no-repeat;
-	background-position: 0 -495px;
+	background: 0 -495px url(images/sprite-ploneorg.png) no-repeat;
 	color: white;
-	font-size: 12px;
 	font-weight: bold;
 	padding: 144px 30px 0 10px;
 	margin: 0 auto;
 }
+
+/* @end */
+
+/* @group Portlets */
+
+dl.portlet {
+	margin: 0 0 1em 1em;
+}
+
+dl.portlet dt {
+	padding-left: 1em;
+}
+
+dl.portlet dt a:link,
+dl.portlet dt a:visited,
+dl.portlet dt a:hover {
+	color: White !important;
+	border: none !important;
+}
+
+dl.portlet dd {
+	font-size: 13px;	
+	padding: 1em;
+}
+
+
+div.managePortletsLink {
+	text-align: center;
+	padding: 1em;
+	font-size: 0.75em;
+}
+
+#portlet-prefs strong {
+	margin-left: 2em;
+}
+
+/* @end */
+
+/* @group Navigation portlet */
+
+/* Why is there a stray div in the navtree list item? 
+#sub-nav li.navTreeItem div { 
+	display: inline !important;
+}
+*/
+
+ul.navTree {
+	margin-left: 1em !important;
+}
+
+dl.portletNavigationTree dd a {
+	color: #666;
+	text-decoration: none;
+	display: block;
+	padding: 0;
+}
+
+dl.portletNavigationTree dd a:hover {
+	color: White !important;
+	background-color: #bfbfbf;
+}
+
+dl.portletNavigationTree li {
+	display: block;
+	list-style: none;
+}
+
+dl.portletNavigationTree li a {
+	border: none !important;
+}
+
+dl.portletNavigationTree li a span {
+	display: block;
+	padding: 0.25em 0;
+}
+
+dl.portletNavigationTree .navTreeCurrentItem {
+	background-color: #bfbfbf;
+}
+
+dl.portletNavigationTree li.navTreeItemInPath {
+	background-color: #ebebeb;
+}
+
+dl.portletNavigationTree li a.navTreeCurrentItem span {
+	color: White !important;
+}
+
+
+
+a.navTreeItemInPath.navTreeFolderish,
+a.navTreeCurrentItem.navTreeFolderish,
+a.navTreeCurrentNode.navTreeFolderish {
+	background-repeat: no-repeat;
+}
+
+ul.portletNavigationTree li ul {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+	margin-top: 0;
+}
+
+.navTreeLevel0 li a {
+	padding-left: 1em !important;
+}
+
 
 /* @end */
 
@@ -1736,97 +1819,6 @@ width: 99%;
 tr.selected {
 background-color: #ffa;
 }
-
-/* @end */
-
-
-
-/* @group Portlets */
-
-div.managePortletsLink {
-	text-align: center;
-	padding: 1em;
-}
-
-/* @end */
-
-/* @group Navigation portlet */
-
-/* Why is there a stray div in the navtree list item? 
-#sub-nav li.navTreeItem div { 
-	display: inline !important;
-}
-*/
-
-ul.navTree {
-	margin-left: 1em !important;
-}
-
-dl.portletNavigationTree dd a {
-	color: #666;
-	text-decoration: none;
-	display: block;
-	padding: 0;
-}
-
-dl.portletNavigationTree dd a:hover {
-	color: White !important;
-	background-color: #bfbfbf;
-}
-
-dl.portletNavigationTree li {
-	display: block;
-	list-style: none;
-}
-
-dl.portletNavigationTree li a {
-	border: none !important;
-}
-
-dl.portletNavigationTree li a span {
-	display: block;
-	padding: 0.25em 0;
-}
-
-dl.portletNavigationTree .navTreeCurrentItem {
-	background-color: #bfbfbf;
-}
-
-dl.portletNavigationTree li.navTreeItemInPath {
-	background-color: #ebebeb;
-}
-
-dl.portletNavigationTree li a.navTreeCurrentItem span {
-	color: White !important;
-}
-
-
-
-a.navTreeItemInPath.navTreeFolderish,
-a.navTreeCurrentItem.navTreeFolderish,
-a.navTreeCurrentNode.navTreeFolderish {
-	background-repeat: no-repeat;
-}
-
-ul.portletNavigationTree li ul {
-	list-style: none;
-	margin-left: 0;
-	padding-left: 0;
-	margin-top: 0;
-}
-
-.navTreeLevel0 li a {
-	padding-left: 1em !important;
-}
-
-
-/* @end */
-
-/* @group Prefs portlet */
-#portlet-prefs strong {
-	margin-left: 2em;
-}
-
 
 /* @end */
 
