@@ -822,7 +822,7 @@ dl.portlet dd {
 }
 
 #footer-gradient {
-	background: #329fd7 top left url(images/sprite-ploneorg.png) repeat-x;
+	background: top left url(images/sprite-ploneorg.png) repeat-x;
 	height: 7px;
 }
 
