@@ -638,7 +638,8 @@ div.box h1 {
 	margin: -9px -12px;
 	padding: 0 12px;
 	line-height: 2em;
-	background: #eee url(images/box-gradient.png) repeat-x;
+	background: #eee url(images/sprite-ploneorg.png) repeat-x;
+	background-position: 0 -163px;
 	font-size: 14px;
 	vertical-align: 1em;
 }
