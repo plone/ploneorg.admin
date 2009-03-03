@@ -298,6 +298,9 @@ div.sidebar {
 	margin-left: 1em;
 }
 
+#sidebar-frontpage {
+	margin-left: 0;
+}
 
 div.sidebar ul li a {
 	line-height: 36px;
