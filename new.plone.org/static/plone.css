@@ -127,6 +127,11 @@ html, body {
 
 #logo {
 	margin: 0 22px 25px 22px;
+	background-image: url(images/sprite-ploneorg.png);
+	background-position: 0 -775px;
+	width: 215px;
+	height: 56px;
+	display: block;
 }
 
 /* @end */
@@ -192,7 +197,8 @@ ul.navigation li.active a {
 #search {
 	float: right;
 	position: relative;
-	background: #329fd7 url(images/search-wrapper.png) no-repeat;
+	background: #329fd7 url(images/sprite-ploneorg.png) no-repeat;
+	background-position: 0 -706px;
 	height: 20px;
 	padding: 9px 22px 10px 22px;
 }
@@ -320,7 +326,8 @@ div.sidebar ul li a {
 	display: block;
 	border-top: 1px solid #eee;
 	font-weight: bold;
-	background: left 9px url(images/arrow-blue.png) no-repeat;
+	background: url(images/sprite-ploneorg.png) no-repeat;
+    background-position: 0 -441px;
 	padding-left: 16px;
 	letter-spacing: -1px;
 }
@@ -659,7 +666,8 @@ div.box li.even {
 }
 
 #current {
-	background: 150px 380px url(images/cogs.png) no-repeat;	
+	/*TODO: this needs to be a sprite element*/
+	/*background: 150px 380px url(images/cogs.png) no-repeat;*/	
 }
 
 div.box li.spotlight {
@@ -794,7 +802,8 @@ dl.portlet dd {
 	display: block;
 	width: 123px;
 	height: 51px;
-	background: url(images/download-box.png) no-repeat;
+	background: url(images/sprite-ploneorg.png) no-repeat;
+	background-position: 0 -495px;
 	color: white;
 	font-size: 12px;
 	font-weight: bold;
@@ -828,7 +837,12 @@ dl.portlet dd {
 
 #footer-logo {
 	float: left;
-	padding: 0 1em 2em 0;
+	background-image: url(images/sprite-ploneorg.png);
+	background-position: 0 -376px;
+	width: 114px;
+	height: 44px;
+	border-right: 1px solid white;
+	margin-right: 1em;
 }
 
 #footer-logo img {
