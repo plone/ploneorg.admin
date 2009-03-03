@@ -340,7 +340,7 @@ img.book-cover {
 /* @group Page-specific splash styles */
 
 #splash-frontpage {
-	min-height: 284px;
+	min-height: 15.5em;
 	margin-right: 1em;
 /*	background: #205c90 url(images/splash-bg.jpg) no-repeat;*/
 }
@@ -638,13 +638,8 @@ dl.portlet dd {
 
 
 #accordion div {
-	margin: 10px;
+	padding: 10px;
 	font-size: 12px;
-}
-
-#accordion div li {	
-	display: block;
-	margin-top: 0.25em;
 }
 
 #accordion li a:before {
@@ -654,7 +649,6 @@ dl.portlet dd {
 
 #accordion dl {
 	margin-top: 0;
-	margin-bottom: 1em;
 	line-height: 1.5em;
 }
 
