@@ -737,13 +737,13 @@ dl.portletNavigationTree .navTreeLevel0 li a {
 	padding-left: 2em;
 }
 dl.portletNavigationTree .navTreeLevel1 li a {
-	padding-left: 2.5em;
-}
-dl.portletNavigationTree .navTreeLevel2 li a {
 	padding-left: 3em;
 }
+dl.portletNavigationTree .navTreeLevel2 li a {
+	padding-left: 4em;
+}
 dl.portletNavigationTree .navTreeLevel3 li a {
-	padding-left: 3.5em;
+	padding-left: 5em;
 }
 
 /* @end */
