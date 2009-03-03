@@ -697,14 +697,11 @@ ul.navTree {
 }
 
 dl.portletNavigationTree dd {
-	padding: 0;
+	padding: 1em 0;
 }
 
 dl.portletNavigationTree dd a {
-	color: #666;
-	text-decoration: none;
 	display: block;
-	padding: 0 1em;
 }
 
 dl.portletNavigationTree li {
@@ -733,21 +730,20 @@ dl.portletNavigationTree li a.navTreeCurrentItem span {
 	color: black;
 }
 
+dl.portletNavigationTree ul {
+	margin: 0 !important;
+}
 dl.portletNavigationTree .navTreeLevel0 li a {
 	padding-left: 2em;
-	margin: 0 -2em 0 0;
 }
 dl.portletNavigationTree .navTreeLevel1 li a {
 	padding-left: 2.5em;
-	margin: 0 -2em 0 0;
 }
 dl.portletNavigationTree .navTreeLevel2 li a {
 	padding-left: 3em;
-	margin: 0 -2em 0 0;
 }
 dl.portletNavigationTree .navTreeLevel3 li a {
 	padding-left: 3.5em;
-	margin: 0 -2em 0 0;
 }
 
 /* @end */
