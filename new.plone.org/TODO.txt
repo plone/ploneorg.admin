@@ -35,5 +35,5 @@ Nice-to-have template tasks (not critical for release):
 
 [ ] Pulldown JS/CSS for user profile (Site setup + logout goes here) and version selectors for PSC/PHC.
 [ ] Backport the #region-content fixes to Plone 3.3, should be in main_template
-[ ] Add in FancyZoom (jQ version) to replace screenshot fullscreen view in PSC
+[x] Add in FancyZoom (jQ version) to replace screenshot fullscreen view in PSC
 [ ] LiveSearch CSS
