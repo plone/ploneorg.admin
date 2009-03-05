@@ -197,8 +197,11 @@ html, body {
 }
 
 #main-nav li:first-child a:hover {
-	border-left: none;
 	background: 1.2em 0.3em url(images/plone-icon-24-selected.png) no-repeat;
+}
+
+body.template-ploneorg_frontpage #main-nav li:first-child a {
+	opacity: 0.1;	
 }
 
 #sub-nav {
