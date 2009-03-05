@@ -201,7 +201,7 @@ html, body {
 }
 
 body.template-ploneorg_frontpage #main-nav li:first-child a {
-	opacity: 0.1;	
+	opacity: 0.2;
 }
 
 #sub-nav {
