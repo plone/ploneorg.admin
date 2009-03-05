@@ -203,6 +203,10 @@ html, body {
 body.template-ploneorg_frontpage #main-nav li:first-child a {
 	opacity: 0.2;
 }
+body.template-ploneorg_frontpage #main-nav li:first-child a:hover {
+	cursor: default;
+	background: 1.2em 0.3em url(images/plone-icon-24.png) no-repeat;
+}
 
 #sub-nav {
 	font: 13px/30px "Helvetica Neue", Arial;
