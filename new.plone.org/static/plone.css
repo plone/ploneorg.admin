@@ -206,11 +206,11 @@ html, body {
 	background: 0.5em 0.3em url(images/plone-icon-24-selected.png) no-repeat;
 }
 
-body.template-ploneorg_frontpage #main-nav li:first-child a {
+body.template-new_frontpage #main-nav li:first-child a {
 	opacity: 0.2;
 	padding: 0.4em 0 0.6em;
 }
-body.template-ploneorg_frontpage #main-nav li:first-child a:hover {
+body.template-new_frontpage #main-nav li:first-child a:hover {
 	cursor: default;
 	background: 0.5em 0.3em url(images/plone-icon-24.png) no-repeat;
 }

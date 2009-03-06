@@ -15,7 +15,7 @@ Remaining tasks:
 [x] Sprites for images, possibly inverted arrow for colors
 [ ] Convert CSS to shorthand properties
 [ ] Remove all color profiles
-[ ] Fix batch navigation (previous/next)
+[x] Fix batch navigation (previous/next)
 
 Right before launch:
 [ ] Meet with Iain, make sure all the colors are correct and have no color profiles.
