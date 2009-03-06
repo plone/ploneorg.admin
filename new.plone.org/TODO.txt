@@ -8,8 +8,9 @@ Remaining tasks:
 [x] Add Plone icon instead of "Home"
 [ ] Make the inputLabel JS in Plone capable of inserting type="search" on search boxes, so we can keep valid HTML (JS from Martijn)
 [ ] Add tile JS and classes (JS from Martijn)
-[ ] Fix login page
-[ ] Fix plone_control_panel, dashboard (#region-content?)
+[x] Fix login/join/logout pages
+[ ] Fix plone_control_panel
+[x] Fix dashboard (#region-content?)
 [ ] Make a first draft of the Support page
 [ ] Print CSS
 [x] Sprites for images, possibly inverted arrow for colors
@@ -36,5 +37,6 @@ Nice-to-have template tasks (not critical for release):
 
 [ ] Pulldown JS/CSS for user profile (Site setup + logout goes here) and version selectors for PSC/PHC.
 [ ] Backport the #region-content fixes to Plone 3.3, should be in main_template
+[ ] Backport anything useful from custom folder + portal_view_customizations
 [x] Add in FancyZoom (jQ version) to replace screenshot fullscreen view in PSC
 [ ] LiveSearch CSS

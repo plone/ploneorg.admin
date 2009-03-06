@@ -26,7 +26,6 @@
 	<drop content='//*[@id="plone-contentmenu-factories"]/dd/ul/li/a/img' /> 
 
 	<!-- Copy over the contents of the page body -->
-	<!-- XXX TODO: This should probably be region-content in both locations to avoid 2x#content -->
 	<replace content='//*[@id="region-content"]'	theme='//*[@id="region-content"]' />
 
 	<!-- Bring the portlet columns over  to the sidebar -->

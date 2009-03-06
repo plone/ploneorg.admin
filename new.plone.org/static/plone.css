@@ -706,6 +706,15 @@ div.managePortletsLink {
 	margin-left: 2em;
 }
 
+#dashboard-portlets1,
+#dashboard-portlets2,
+#dashboard-portlets3,
+#dashboard-portlets4 {
+	width:16em;
+	display: inline-block;
+	margin: 0 1em 1em 0;
+}
+
 /* @end */
 
 /* @group Navigation portlet */
@@ -1372,50 +1381,6 @@ float:right;
 padding-top:0.8em;
 }
 /* @end */
-/* Additional STX workaround classes */
-.stx table p {
-    margin: 0;
-    padding: 0;
-}
-.stx table {
-    border: 1px solid #8cacbb ! important;
-}
-.stx table td {
-    border-bottom: 1px solid #8cacbb;
-}
-
-.reviewHistory,
-.contentHistory {
-    display: inline;
-    font-size: 110% !important; 
-    color: Black;
-}
-
-/* @group Comments */
-
-.comment {
-	border: 1px solid #eee;
-	background-color: #f6f6f6;
-    padding: 0.25em 1em 1em 1em;
-    margin-bottom: 1em;
-}
-.comment h1,
-.comment h2,
-.comment h3,
-.comment h4, 
-.comment h5,
-.comment h6 {
-    border-bottom: 1px solid #76797c;
-    font-weight: normal;
-}
-.commentBody {
-	font-size: 13px;
-}
-
-/* @end */
-.spacer {
-    margin: 1em;
-}
 
 /* @group Collapsible */
 dl.collapsible {
@@ -1489,6 +1454,51 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 }
 
 /* @end */
+
+/* @group Comments */
+
+.comment {
+	border: 1px solid #eee;
+	background-color: #f6f6f6;
+    padding: 0.25em 1em 1em 1em;
+    margin-bottom: 1em;
+}
+.comment h1,
+.comment h2,
+.comment h3,
+.comment h4, 
+.comment h5,
+.comment h6 {
+    border-bottom: 1px solid #76797c;
+    font-weight: normal;
+}
+.commentBody {
+	font-size: 13px;
+}
+
+/* @end */
+
+/* Additional STX workaround classes */
+.stx table p {
+    margin: 0;
+    padding: 0;
+}
+.stx table {
+    border: 1px solid #8cacbb ! important;
+}
+.stx table td {
+    border-bottom: 1px solid #8cacbb;
+}
+
+.reviewHistory,
+.contentHistory {
+    display: inline;
+    font-size: 110% !important; 
+    color: Black;
+}
+.spacer {
+    margin: 1em;
+}
 
 .label {
     font-weight: bold;
