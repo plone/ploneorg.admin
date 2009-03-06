@@ -156,12 +156,12 @@ html, body {
 }
 
 #content-wrapper {
-	width: 937px;
+	width: 910px; /* 937px; */
 	margin: 1em auto 0;
 }
 
 #logo-wrapper {
-	width: 937px;
+	width: 910px;
 	margin: 0 auto;
 }
 
@@ -179,7 +179,7 @@ html, body {
 
 #nav {
 /* Should be named header, but conflicts with the accordion.js for now */
-	width: 937px;
+	width: 910px;
 	margin: 0 auto;
 	font-family: "Helvetica Neue", Arial;
 }
@@ -955,7 +955,7 @@ dl.portlet li {
 }
 
 #edit-bar { 
-	width: 937px;
+	width: 910px;
 	margin: 0 auto;
 	background-color: #75ad0a;
 	clear: both;

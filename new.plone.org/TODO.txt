@@ -5,7 +5,7 @@ Remaining tasks:
 [x] Fix nav tree CSS
 [x] Consolidate Splash and Sidebar CSS
 [x] fix pane CSS so it doesn't have expand/collapse by default
-[ ] Add Plone icon instead of "Home"
+[x] Add Plone icon instead of "Home"
 [ ] Make the inputLabel JS in Plone capable of inserting type="search" on search boxes, so we can keep valid HTML (JS from Martijn)
 [ ] Add tile JS and classes (JS from Martijn)
 [ ] Fix login page
@@ -15,13 +15,14 @@ Remaining tasks:
 [x] Sprites for images, possibly inverted arrow for colors
 [ ] Convert CSS to shorthand properties
 [ ] Remove all color profiles
+[ ] Fix batch navigation (previous/next)
 
 Right before launch:
 [ ] Meet with Iain, make sure all the colors are correct and have no color profiles.
 [ ] Check that site doesn't totally break in IE6, have Denis assist here.
 [ ] Check that site looks OK in Ubuntu + Firefox
 [ ] Minimize HTTP requests and check cache headers
-[ ] Make sure JS and CSS is minified (YUI Compressor does a good job on CSS)
+[ ] Make sure JS and CSS is minified (YUI Compressor does a good job on CSS), and that it's all zip packed.
 [ ] Make sure all the JS is combined into a single file served up by Plone
 [ ] Get comparison stats (KB/HTTP req) from old vs. new for announcement
 
