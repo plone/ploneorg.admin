@@ -710,9 +710,7 @@ div.managePortletsLink {
 #dashboard-portlets2,
 #dashboard-portlets3,
 #dashboard-portlets4 {
-	width:16em;
 	display: inline-block;
-	margin: 0 1em 1em 0;
 }
 
 /* @end */
