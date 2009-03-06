@@ -1056,17 +1056,14 @@ div.listingBar {
 	margin: 1em 0;
 }
 
-div.listingBar a.listingNext,
 div.listingBar .next {
 	display: inline-block;
 	float: right;
 }
 
-div.listingBar a.listingPrevious,
 div.listingBar .previous {
 	display: inline-block;
 }
-
 
 div.listingBar a {
 	display: inline-block;
