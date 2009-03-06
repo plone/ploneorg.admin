@@ -1717,6 +1717,10 @@ font-size: 150%;
 width: inherit;
 }
 
+body.template-join_form input {
+font-size: 150%;
+width: inherit;
+}
 
 
 /* @end */
