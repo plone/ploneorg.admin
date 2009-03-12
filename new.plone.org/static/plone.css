@@ -299,12 +299,16 @@ div.splash {
 	-moz-border-radius: 0.5em;
 }
 
-#content div.splash h2 {
+#content div.splash h2,
+#content div.splash h3 {
 	color: White;
 }
 
 #content div.splash a {
 	color: White;
+	border: none;
+	background: transparent 0 -115px url(images/sprite-ploneorg.png) no-repeat;
+	padding-left: 16px;
 }
 
 div.pullout {
@@ -340,7 +344,8 @@ div.sidebar {
 	font-size: 1em;
 }
 
-#content div.sidebar ul {
+#content div.sidebar ul,
+#content div.sidebar ol {
 	list-style: none;	
 	margin: 0;
 }
@@ -364,7 +369,6 @@ div.sidebar {
 
 div.sidebar ol li {
 	line-height: 18px;
-	font-size: 11px;
 	display: block;
 	margin-bottom: 0.5em;
 	padding-top: 0.5em;
@@ -395,17 +399,37 @@ img.book-cover {
 
 
 #splash-downloads {
-	/* TODO: move inside splash definition, make it not show the bottom part:
-	background: url(images/sprite-ploneorg.png) no-repeat;
-	background-position: 0 -495px;*/
+	height: 11em;
 }
 
-/* @end */
+#sidebar-downloads {
+	height: 11em;
+}
+
+
+#splash-download-plone {
+	background: transparent 0 -30px url(images/sprite-ploneorg.png) no-repeat !important;
+	height:58px;
+	width:300px;
+	margin:10px 0px 10px 260px;
+	display: block;
+	padding-top: 1em;	
+	float: right;
+}	
+
+#splash-download-package {
+	background: transparent 0 -495px url(images/sprite-ploneorg.png) no-repeat;
+	height:130px;
+	margin-left: 2em;
+}
+
 
 #splash-documentation {
 	min-height: 99px;
 
 }
+
+
 
 /* @end */
 
@@ -461,12 +485,21 @@ div.pagesearch {
 #categories h3 a {
 	display: block;
 	padding: 0.5em 0 0.5em 0;
+	border: none !important;
 }
 
 #categories h3.selected a {
 	/*padding-left: 1.25em;*/
 	color: black;
 	cursor: default;
+}
+
+#categories ul {
+	margin-left: 0 !important;
+}
+
+#categories ul li {
+	list-style: none;
 }
 
 div.collapsible h3 a:before {
@@ -500,13 +533,7 @@ ul.topic li {
 
 /* TODO: Refactor these */
 
-#download-plone {
-	background-image:url(images/download-platforms.png);
-	background-repeat:no-repeat;
-	height:58px;
-	width:300px;
-	margin:10px 0px 10px 260px;
-}	
+
 
 #sort-by {
 	margin-left:.7em;
@@ -528,9 +555,8 @@ ul.topic li {
 
 .product-leadin {
 	display: block;
-	font-size: .7em;
+	font-size: .9em;
 	color: #666;
-	margin: -1em 0 1em;
 }
 
 .company-logo {
