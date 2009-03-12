@@ -989,7 +989,7 @@ dl.portlet li {
 }
 
 #content p.documentDescription,
-#description * {
+#description {
 	color: gray !important;
 	font: bold 1em "Helvetica Neue", Arial, sans-serif !important;
 	margin-left: 0;
