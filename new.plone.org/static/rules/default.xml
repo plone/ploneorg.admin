@@ -13,7 +13,7 @@
 	<prepend theme="/html/body" content="/html/body/@id" />
 
 	<!-- Copy the main navigation -->
-	<append content='//*[@id="portal-globalnav"]/li'		theme='//*[@id="main-nav"]' />
+	<copy content='//*[@id="portal-globalnav"]/li'		theme='//*[@id="main-nav"]' />
 
 	<!-- Get rid of the user icon and copy the user link -->
 	<drop content='//*[@id="user-name"]/img' /> 
