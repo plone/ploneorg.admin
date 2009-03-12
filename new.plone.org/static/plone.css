@@ -255,7 +255,7 @@ ul.navigation li.active a {
 	position: relative;
 	background: #329fd7 0 -706px url(images/sprite-ploneorg.png) no-repeat;
 	height: 20px;
-	padding: 9px 22px 10px;
+	padding: 9px 24px 10px;
 }
 
 #user {
@@ -564,14 +564,13 @@ div.box p {
 div.box li {	
 	list-style: none;
 	display: block;
-	margin: 0 -12px;
+	margin: 0 -1em;
 	padding: 1em;
 	height: 6em;
 }
 
-
-div.box li.even {
-	background-color: #eef3f6;
+div.box li:nth-child(even) {
+	background-color: #fafafa;
 }
 
 #events {
@@ -590,25 +589,20 @@ div.box div.sources {
 div.box li.spotlight {
 	color: #666;
 	letter-spacing: -1px;
-	font: bold 18px/24px 'Helvetica Neue', Arial, sans-serif !important;
+	font: bold 1.4em/1.4em "Helvetica Neue", Arial, sans-serif;
 }
 
 div.box li.spotlight strong {
 	color: black;
 }
 
-div.box a {
-	display: block;
-	padding: 20px 12px 10px 12px;
-	margin: -20px -12px;
+#content div.box a {
+	border: none;
 }
 
-div.box .date {
-	color: black;
+div.box .info {
 	display: block;
 	text-align: right;
-	margin-top: 10px;
-	height: 28px;
 }
 
 
