@@ -675,17 +675,19 @@ dl.portlet dt {
 	font-size: 12px;
 }
 #content #accordion dd {
-	margin-bottom: 0;
+	margin-bottom: 0ter;
 }
 
 #download-link {
 	display: block;
 	width: 123px;
 	height: 51px;
+	line-height: 1.25em;
 	background: 0 -495px url(images/sprite-ploneorg.png) no-repeat;
-	color: white;
+	color: white !important;
+	border-bottom: none !important;
 	font-weight: bold;
-	padding: 144px 30px 0 10px;
+	padding: 142px 30px 0 14px;
 	margin: 0 auto;
 }
 
