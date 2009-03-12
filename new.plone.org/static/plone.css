@@ -173,6 +173,7 @@ html, body {
 	width: 215px;
 	height: 56px;
 	display: block;
+	border: none !important;
 }
 
 /* @end */
@@ -580,6 +581,10 @@ div.box li.even {
 #current {
 	/*TODO: this needs to be a sprite element*/
 	/*background: 150px 380px url(images/cogs.png) no-repeat;*/	
+}
+
+div.box div.sources {
+	font-size: 11px;
 }
 
 div.box li.spotlight {
