@@ -3,7 +3,7 @@
 	http://dev.plone.org/plone.css
 */
 
-/* @group Neutralize! */
+/* @group CSS Reset */
 
 /* Remove implicit browser styles to have a neutral starting point:
    - No elements should have implicit margin/padding
@@ -294,7 +294,11 @@ div.splash {
 	-moz-border-radius: 0.5em;
 }
 
-div.splash a {
+#content div.splash h2 {
+	color: White;
+}
+
+#content div.splash a {
 	color: White;
 }
 
@@ -326,11 +330,22 @@ div.sidebar {
 	margin-left: 0;
 }
 
-div.sidebar ul li a {
+#content div.sidebar h3 {
+	margin: 0;
+	font-size: 1em;
+}
+
+#content div.sidebar ul {
+	list-style: none;	
+	margin: 0;
+}
+
+#content div.sidebar ul li a {
 	line-height: 36px;
 	font-size: 18px;
 	display: block;
 	border-top: 1px solid #eee;
+	border-bottom: none;
 	font-weight: bold;
 	background: url(images/sprite-ploneorg.png) no-repeat;
     background-position: 0 -441px;
@@ -342,10 +357,10 @@ div.sidebar ol li {
 	line-height: 18px;
 	font-size: 11px;
 	display: block;
-	border-top: 1px solid #eee;
 	margin-bottom: 0.5em;
 	padding-top: 0.5em;
 	clear: both;
+	list-style: none;
 }
 
 div.sidebar ol li a {
@@ -607,13 +622,11 @@ dl.portlet {
 #accordion {
 	height: 29.7em;	
 }
-#accordion h2 {
+#content #accordion h2 {
 	cursor: pointer;
-	font-size: 1em;
-	letter-spacing: 0;
 }
 
-#accordion h2,
+#content #accordion h2,
 dl.portlet dt {
 	background-color: #76AD17;
 	border-bottom: 1em solid #63A100;
@@ -622,6 +635,8 @@ dl.portlet dt {
 	padding: 0 .5em;
 	margin: -1px -1px 0 -1px;
 	color: White;
+	font-size: 1em;
+	letter-spacing: 0;
 }
 
 
@@ -657,9 +672,10 @@ dl.portlet dt {
 
 #accordion dt {
 	font-weight: bold;
+	font-size: 12px;
 }
-#accordion dd {
-	margin-left: 1em;
+#content #accordion dd {
+	margin-bottom: 0;
 }
 
 #download-link {
@@ -808,7 +824,6 @@ dl.portletNavigationTree .navTreeLevel3 li a {
 #content dd,
 dl.portlet p,
 dl.portlet ul {
-	margin-right: 1em;
 	margin-bottom: 1em;
 	line-height: 1.5em;
 	font-size: 13px;
