@@ -543,7 +543,7 @@ div.box {
 }
 
 div.box h1 {
-	margin: -0.625em -1em;
+	margin: -0.625em -1em !important;
 	padding: 0 1em;
 	line-height: 2em;
 	background: #eee url(images/sprite-ploneorg.png) repeat-x;
@@ -556,7 +556,12 @@ div.box p {
 	padding: 10px 12px;
 }
 
+#content div.box ul {
+	margin: 0;
+}
+
 div.box li {	
+	list-style: none;
 	display: block;
 	margin: 0 -12px;
 	padding: 1em;
