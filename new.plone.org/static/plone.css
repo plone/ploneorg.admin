@@ -188,8 +188,8 @@ html, body {
 }
 
 #main-nav {
-	font-size: 14px;
-	line-height: 29px;
+	font-size: 0.875em;
+	line-height: 2.3em;
 }
 
 #main-nav li:first-child a {
@@ -264,11 +264,11 @@ ul.navigation li.active a {
 }
 
 #user {
-	font-size: 14px;
-	width: 8em;
+	font-size: 0.875em;
+	width: 7.9em;
 	overflow: hidden;
 	float: right;
-	padding: 6px 4px;
+	line-height: 2.3em;
 }
 
 #user a {
