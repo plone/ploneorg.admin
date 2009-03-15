@@ -1731,7 +1731,7 @@ color: Black;
 clear: both;
 margin-top: 1em;
 }
-.field input {
+.field input[type="text"] {
 	width: 100%;
 }
 .fieldRequired {
