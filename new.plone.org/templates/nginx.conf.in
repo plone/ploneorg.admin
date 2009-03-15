@@ -6,6 +6,7 @@ events {
 }
 http {
     include    ${buildout:directory}/etc/mime.types;
+    error_log  ${buildout:directory}/var/log/nginx-error.log debug;
 
     # Main server goes upstream to Varnish
     server {
