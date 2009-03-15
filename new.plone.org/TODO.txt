@@ -42,4 +42,4 @@ Nice-to-have template tasks (not critical for release):
 [x] Add in FancyZoom (jQ version) to replace screenshot fullscreen view in PSC
 [ ] LiveSearch CSS
 [ ] Mail Tarek & co about missing icons in the PSC pref panes
-
+[ ] Some of the control panel templates have duplicate content, prefs_user_details is one. Backport.

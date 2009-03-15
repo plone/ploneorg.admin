@@ -934,7 +934,7 @@ dl.portlet li {
 #content pre {
 	background-color: #222;
 	color: White;
-	font-family: Monaco, Consolas, Inconsolata, "Courier New", monospace;
+	font-family: Monaco, Consolas, Inconsolata, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Courier New", monospace;	
 	padding: 10px;
 	overflow-x: auto;
 	font-size: 80%;
