@@ -41,3 +41,5 @@ Nice-to-have template tasks (not critical for release):
 [ ] Backport anything useful from custom folder + portal_view_customizations
 [x] Add in FancyZoom (jQ version) to replace screenshot fullscreen view in PSC
 [ ] LiveSearch CSS
+[ ] Mail Tarek & co about missing icons in the PSC pref panes
+
