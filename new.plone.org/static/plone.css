@@ -1785,7 +1785,7 @@ font-size: 150%;
 width: inherit;
 }
 
-body.template-join_form input {
+body.template-join_form #content input {
 font-size: 150%;
 width: inherit;
 }

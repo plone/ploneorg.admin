@@ -1,6 +1,6 @@
 Remaining tasks:
 
-[ ] Test #content change (-> main_template) and port to Plone proper if sensible (at least trunk)
+[x] Test #content change (-> main_template) and port to Plone proper if sensible (at least trunk)
 
 [x] Fix nav tree CSS
 [x] Consolidate Splash and Sidebar CSS
@@ -19,6 +19,7 @@ Remaining tasks:
 [x] Fix batch navigation (previous/next)
 
 Right before launch:
+[ ] Get feeds.plone.org CNAME added, move main 4 RSS feeds to Feedburner
 [ ] Meet with Iain, make sure all the colors are correct and have no color profiles.
 [ ] Check that site doesn't totally break in IE6, have Denis assist here.
 [ ] Check that site looks OK in Ubuntu + Firefox
