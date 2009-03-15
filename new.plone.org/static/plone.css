@@ -934,12 +934,12 @@ dl.portlet li {
 #content pre {
 	background-color: #222;
 	color: White;
-	font-family: Monaco, Consolas, Inconsolata, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Courier New", monospace;	
+	font-family: Consolas, Inconsolata, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;	
 	padding: 10px;
 	overflow-x: auto;
-	font-size: 80%;
+	font-size: 90%;
 	margin-bottom: 1em;
-	line-height: 1.3em;
+	line-height: 1em;
 }
 
 #content code {
