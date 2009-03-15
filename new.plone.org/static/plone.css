@@ -1780,7 +1780,7 @@ background-color: #ffa;
 
 /* @group Login form */
 
-#login-form #content input {
+#login-form input {
 font-size: 150%;
 width: inherit;
 }
