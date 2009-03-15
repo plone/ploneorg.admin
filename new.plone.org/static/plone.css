@@ -269,6 +269,7 @@ ul.navigation li.active a {
 	overflow: hidden;
 	float: right;
 	line-height: 2.3em;
+	white-space: nowrap;
 }
 
 #user a {
