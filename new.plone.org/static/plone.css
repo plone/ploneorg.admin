@@ -264,11 +264,12 @@ ul.navigation li.active a {
 	background: #329fd7 0 -706px url(images/sprite-ploneorg.png) no-repeat;
 	height: 39px;
 	width: 199px;
+	text-align: center;
 }
 
 #search-site {
-	width: 85%;
-	margin: 0.9em 1.5em;
+	width: 80%;
+	margin-top: 0.9em;
 }
 
 #user {
