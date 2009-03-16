@@ -76,6 +76,9 @@ a:visited:hover {
 dt {
 	font-weight: bold;
 }
+input {
+	font-family: "Lucida Grande", Arial, FreeSans;
+}
 
 /* @end */
 
