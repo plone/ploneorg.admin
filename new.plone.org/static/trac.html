@@ -31,16 +31,18 @@
 
 <div id="nav">
 
-	<div id="search">
-	<input type="search" class="inputLabel" title="Search in Development…" />
-	<input type="hidden" name="wiki" value="on" /> 
-	<input type="hidden" name="changeset" value="on" /> 
-	<input type="hidden" name="ticket" value="on" /> 	</div>
-	
+	<form id="search" name="searchform" action="http://plone.org/search"> 
+		<input id="search-site"
+			name="SearchableText" type="search" 
+			title="Search this site…" accesskey="4"
+			class="inputLabel" size="10"
+			/> 
+	</form>
+
 	<div id="user">
 		<a href="">Bruce Wayne ▼</a>
 	</div>
-	
+
 	<ul id="main-nav" class="navigation">
 		<li><a href="http://plone.org">Home</a></li
 		><li><a href="http://plone.org/downloads">Downloads</a></li
