@@ -1000,7 +1000,7 @@ dl.portlet li {
 #content p.documentDescription,
 #description {
 	color: gray !important;
-	font: bold 1em "Helvetica Neue", Arial, sans-serif !important;
+	font: bold 1em "Helvetica Neue", Arial, FreeSans, sans-serif !important;
 	margin-left: 0;
 }
 
