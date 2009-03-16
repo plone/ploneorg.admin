@@ -354,7 +354,7 @@ div.sidebar {
 	margin: 0;
 }
 
-#content div.sidebar ul li{
+#content div.sidebar ul li {
 	margin-bottom: 0;
 }
 
@@ -433,7 +433,7 @@ img.book-cover {
 
 }
 
-
+/* @end */
 
 /* @end */
 
@@ -890,7 +890,6 @@ dl.portlet a:link {
 #content a:link:hover,
 dl.portlet a:link:hover {
 	color: #75ad0a;
-	border-bottom: 1px solid #ccc;
 }
 
 #content a:visited, 
