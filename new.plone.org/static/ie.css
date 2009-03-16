@@ -1,3 +1,4 @@
+/* Workarounds for Internet Explorer */
 #footer,
 ul.navigation {
     height: 1%;
@@ -25,3 +26,4 @@ ul.navigation li a.active {
 * html .ui-accordion-header {
     height: 1%
 }
+
