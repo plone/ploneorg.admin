@@ -624,7 +624,7 @@ div.box div.sources {
 div.box li.spotlight {
 	color: #666;
 	letter-spacing: -1px;
-	font: bold 1.4em/1.4em "Helvetica Neue", Arial, sans-serif;
+	font: bold 1.4em/1.4em "Helvetica Neue", Arial, Electron, sans-serif;
 }
 
 div.box li.spotlight strong {
