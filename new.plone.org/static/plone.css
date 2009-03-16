@@ -30,11 +30,11 @@ img { vertical-align: middle; }
 /* @group Basics */
 
 body { 
-	font: 100% Arial, Electron, sans-serif;
+	font: 100% Arial, FreeSans, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Helvetica Neue", Arial, Electron, sans-serif; 
+	font-family: "Helvetica Neue", Arial, FreeSans, sans-serif; 
 	font-weight: bold;
 	line-height: 125%;
 }
@@ -184,7 +184,7 @@ html, body {
 /* Should be named header, but conflicts with the accordion.js for now */
 	width: 910px;
 	margin: 0 auto;
-	font-family: "Helvetica Neue", Arial, Electron, sans-serif; 
+	font-family: "Helvetica Neue", Arial, FreeSans, sans-serif; 
 }
 
 #main-nav {
@@ -289,7 +289,7 @@ ul.navigation li.active a {
 /* @group Splash pages */
 
 div.splash {
-	font-family: "Helvetica Neue", Arial, Electron, sans-serif; 
+	font-family: "Helvetica Neue", Arial, FreeSans, sans-serif; 
 	background-color: #205c90;
 	color: White;
 	font-weight: bold;
@@ -624,7 +624,7 @@ div.box div.sources {
 div.box li.spotlight {
 	color: #666;
 	letter-spacing: -1px;
-	font: bold 1.4em/1.4em "Helvetica Neue", Arial, Electron, sans-serif;
+	font: bold 1.4em/1.4em "Helvetica Neue", Arial, FreeSans, sans-serif;
 }
 
 div.box li.spotlight strong {
@@ -1841,7 +1841,7 @@ dl.toc dd ol {
 
 #footer {
 	color: White;
-	font-family: "Lucida Grande", Verdana, Electron, sans-serif;
+	font-family: "Lucida Grande", Verdana, FreeSans, sans-serif;
 	margin: 0 auto;
 	padding: 1em 0;
 	width: 800px;
@@ -1873,7 +1873,7 @@ dl.toc dd ol {
 }
 
 #sitemap dl {
-	font-family: "Lucida Grande", Verdana, Electron, sans-serif;
+	font-family: "Lucida Grande", Verdana, FreeSans, sans-serif;
 	color: White;
 	display: inline-block;
 	vertical-align: top;
