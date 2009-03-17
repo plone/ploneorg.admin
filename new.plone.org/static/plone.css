@@ -719,7 +719,7 @@ dl.portlet dt {
 	content: "→ ";
 }
 
-#accordion a {
+#accordion dl dt a {
 	color: #205c90;	
 }
 
