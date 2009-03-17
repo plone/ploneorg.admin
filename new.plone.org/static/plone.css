@@ -301,7 +301,6 @@ div.splash {
 	font-family: "Helvetica Neue", Arial, FreeSans, sans-serif; 
 	background-color: #205c90;
 	color: White;
-	font-weight: bold;
 	margin-bottom: 1em;
 	padding: 1em 1.5em 2em;
 	border-radius: 0.5em;
@@ -317,8 +316,10 @@ div.splash {
 #content div.splash a {
 	color: White;
 	border: none;
-	background: transparent 0 -115px url(images/sprite-ploneorg.png) no-repeat;
+	background: transparent 0 -114px url(images/sprite-ploneorg.png) no-repeat;
 	padding-left: 16px;
+	font-size: 1.375em;
+	font-weight: bold;
 }
 
 div.pullout {
