@@ -308,9 +308,16 @@ div.splash {
 	-moz-border-radius: 0.5em;
 }
 
+#content div.splash h1 {	
+	letter-spacing: 0;
+}
+
+
 #content div.splash h2,
 #content div.splash h3 {
 	color: White;
+	letter-spacing: 0;
+	font-weight: normal;
 }
 
 #content div.splash a {
