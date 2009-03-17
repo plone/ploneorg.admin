@@ -720,7 +720,7 @@ dl.portlet dt {
 }
 
 #accordion dl dt a {
-	color: #205c90;	
+	color: #205c90 !important;	
 }
 
 
