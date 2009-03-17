@@ -629,6 +629,7 @@ div.box li:nth-child(even) {
 #current {
 	/*TODO: this needs to be a sprite element*/
 	/*background: 150px 380px url(images/cogs.png) no-repeat;*/	
+	border-right: none;
 }
 
 div.box div.sources {
