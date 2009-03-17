@@ -404,7 +404,8 @@ img.book-cover {
 #splash-frontpage {
 	min-height: 15.5em;
 	margin-right: 1em;
-/*	background: #205c90 url(images/splash-bg.jpg) no-repeat;*/
+	padding-right: 40%;
+	background: #205c90 url(file://./images/frontpage-image.jpg) no-repeat;
 }
 
 
