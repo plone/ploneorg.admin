@@ -616,6 +616,7 @@ div.box p {
 
 #content div.box ul {
 	margin: 0;
+	margin-top: 0.5em;
 }
 
 div.box li {	
@@ -651,7 +652,8 @@ div.box div.sources {
 div.box li.spotlight {
 	color: #666;
 	letter-spacing: -1px;
-	font: bold 1.4em/1.4em "Helvetica Neue", Arial, FreeSans, sans-serif;
+	font: bold 1.4em/1.4em "Helvetica Neue", Arial, FreeSans, sans-serif !important;
+	margin-top: 1.5em;
 }
 
 div.box li.spotlight strong {
