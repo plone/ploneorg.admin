@@ -408,6 +408,10 @@ img.book-cover {
 	background: #205c90 0 -23px url(images/frontpage-image.png) no-repeat;
 }
 
+#splash-frontpage a {
+	float: right;
+	margin-top: 3.5em;
+}
 
 #splash-downloads {
 	height: 11em;

@@ -43,3 +43,4 @@ Nice-to-have template tasks (not critical for release):
 [ ] LiveSearch CSS
 [ ] Mail Tarek & co about missing icons in the PSC pref panes
 [ ] Some of the control panel templates have duplicate content, prefs_user_details is one. Backport.
+[ ] Consider alternate arrows for the accordion. &#9656; &#9654; &#9655; are options.
