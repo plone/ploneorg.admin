@@ -662,9 +662,15 @@ div.box li.spotlight {
 	margin-top: -1em;
 }
 
-div.box li.spotlight strong {
-	color: black;
+div.box li.spotlight strong,
+div.box li.spotlight a {
+	color: black !important;
 }
+
+div.box li.spotlight a:hover {
+	color: #75ad0a !important;
+}
+
 
 #content div.box a {
 	border: none;
