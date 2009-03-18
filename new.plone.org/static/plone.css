@@ -436,8 +436,9 @@ img.book-cover {
 	width:300px;
 	margin:10px 0px 10px 260px;
 	display: block;
-	padding-top: 1em;	
 	float: right;
+	font-size: 1em !important;
+	padding-top: 1em;
 }	
 
 #splash-download-package {
