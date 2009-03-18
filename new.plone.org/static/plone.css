@@ -429,6 +429,11 @@ img.book-cover {
 	height: 11em;
 }
 
+#splash-downloads h1,
+#splash-downloads p {
+	text-align: right;
+	margin-right: 20px;
+}
 
 #splash-download-plone {
 	background: transparent 0 -30px url(images/sprite-ploneorg.png) no-repeat !important;
@@ -654,7 +659,7 @@ div.box li.spotlight {
 	color: #666;
 	letter-spacing: -1px;
 	font: bold 1.4em/1.4em "Helvetica Neue", Arial, FreeSans, sans-serif !important;
-	margin-top: 1.5em;
+	margin-top: -1em;
 }
 
 div.box li.spotlight strong {
