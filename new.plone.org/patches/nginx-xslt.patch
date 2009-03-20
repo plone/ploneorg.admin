@@ -214,3 +214,11 @@
      return NGX_CONF_OK;
  }
  
+@@ -1272,6 +1323,7 @@
+ ngx_http_xslt_filter_init(ngx_conf_t *cf)
+ {
+     xmlInitParser();
++    xmlSubstituteEntitiesDefault(0);
+
+ #if (NGX_HAVE_EXSLT)
+     exsltRegisterAll();
