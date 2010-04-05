@@ -1,0 +1,20 @@
+<VirtualHost 82.94.219.236:80>
+	ServerName	stats.plone.org
+
+	DocumentRoot	/srv/stats.plone.org/http/root
+	ScriptAlias	/cgi-bin/	/srv/stats.plone.org/http/cgi-bin/
+	Alias		/icons/		/usr/share/apache2/icons/
+	Alias		/awstats-icon/	/usr/share/awstats/icon/
+
+	CustomLog	/var/log/apache2/stats.plone.org/access.log combined
+	ErrorLog	/var/log/apache2/stats.plone.org/error.log
+
+	RewriteEngine	On
+	RewriteRule	^/awstats/(.*)	/cgi-bin/awstats.pl?config=$1 [R]
+
+	<Directory /srv/stats.plone.org/http/root/mrtg>
+		AllowOverride	Indexes
+		DirectoryIndex	/cgi-bin/mrtgindex.cgi
+	</Directory>
+</VirtualHost>
+

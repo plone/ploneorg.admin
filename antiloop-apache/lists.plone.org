@@ -1,0 +1,16 @@
+<VirtualHost 82.94.219.236:80>
+	ServerName	lists.plone.org
+
+	DocumentRoot	/srv/lists.plone.org/http/root
+	ScriptAlias	/mailman/	/usr/lib/cgi-bin/mailman/
+
+	Alias		/pipermail/	/srv/lists.plone.org/mailman/archives/public/
+	Alias		/images/	/usr/share/images/mailman/
+	Alias		/icons/		/usr/share/apache2/icons/
+
+	RedirectMatch	^/$	http://lists.plone.org/mailman/listinfo
+
+	CustomLog	/var/log/apache2/lists.plone.org/access.log combined
+	ErrorLog	/var/log/apache2/lists.plone.org/error.log
+</VirtualHost>
+

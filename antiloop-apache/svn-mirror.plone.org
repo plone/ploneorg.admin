@@ -1,0 +1,61 @@
+<VirtualHost 82.94.219.236:80>
+	ServerName	svn-mirror.plone.org
+
+	DocumentRoot	/srv/svn.plone.org/http/root
+	ScriptAlias	/cgi-bin/	/srv/svn.plone.org/http/cgi-bin/
+	Alias		/icons/		/usr/share/apache2/icons/
+
+	RewriteEngine	On
+	RewriteRule	^/$		http://plone.org/development/info/subversion
+	CustomLog	/var/log/apache2/svn.plone.org/access.log combined
+	ErrorLog	/var/log/apache2/svn.plone.org/error.log
+
+	MultiViewsMatch	Any
+	Options		+MultiViews +IncludesNoExec
+	DirectoryIndex	index.xml index.xhtml index.html index.xgi
+
+	<Location /svn>
+		DAV		svn
+		SVNParentPath	/srv/svn.plone.org/svn
+
+		<LimitExcept GET PROPFIND OPTIONS REPORT>
+			deny from all
+		</LimitExcept>
+	</Location>
+
+</VirtualHost>
+
+<VirtualHost 82.94.219.236:443>
+	ServerName	svn-mirror.plone.org
+
+	SSLEngine	On
+	SSLCertificateFile	/srv/svn.plone.org/etc/ssl/svn.plone.org.crt
+	SSLCertificateKeyFile	/srv/svn.plone.org/etc/ssl/svn.plone.org.key
+
+	DocumentRoot	/srv/svn.plone.org/http/root
+	ScriptAlias	/cgi-bin/	/srv/svn.plone.org/http/cgi-bin/
+	Alias		/icons/		/usr/share/apache/icons/
+
+	RewriteEngine	On
+	RewriteRule	^/$		http://plone.org/development/info/subversion
+	CustomLog	/var/log/apache2/svn.plone.org/access.log combined
+	ErrorLog	/var/log/apache2/svn.plone.org/error.log
+
+	MultiViewsMatch	Any
+	Options		+MultiViews +IncludesNoExec
+	DirectoryIndex	index.xml index.xhtml index.html index.xgi
+
+	<Location /svn>
+		DAV			svn
+		SVNParentPath		/srv/svn.plone.org/svn
+
+		AuthType		Basic
+		AuthName		svn-mirror.plone.org
+		AuthUserFile		/srv/svn.plone.org/etc/passwd
+
+		require valid-user
+
+		AuthzSVNAccessFile	/srv/svn.plone.org/etc/svn_auth
+	</Location>
+</VirtualHost>
+
