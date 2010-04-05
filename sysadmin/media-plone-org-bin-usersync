@@ -1,0 +1,52 @@
+#!/bin/bash
+
+set -e
+
+userfile=/srv/antiloop.plone.org/http/dav/users.gpg
+autzfile=/srv/svn.plone.org/etc/svn_auth
+
+if [ ! -f $userfile ] ; then
+	echo User file not preset - aborting >&2
+	exit 1
+fi
+
+
+if ! gpg -q --verify $userfile ; then
+	echo Unable to verify PGP signature >&2
+	exit 2
+fi
+
+tmp=$(tempfile)
+cat $userfile | gpg -q > $tmp
+
+sql=$(tempfile)
+cat <<EOF > $sql
+BEGIN;
+DELETE FROM passwd;
+EOF
+
+cat $tmp | while read user password groups ; do
+	echo "INSERT INTO passwd (login,password) VALUES ('$user', '$password');" >> $sql
+done 
+echo COMMIT >> $sql
+
+chmod 644 $sql
+sudo -u postgres psql -f $sql plone.org
+chmod 600 $sql
+
+
+sed -ne '0,/^### BEGIN AUTOGROUPS/p' $autzfile > $sql
+
+for group in plone collective archetypes ; do
+	users=$(sed -ne "s/^\([^ ]\+\) [^ ]\+ .*$group.*/\1/p" $tmp)
+	echo $group=$(echo $users|sed -e 's/ /,/g') >> $sql
+done
+
+sed -ne '/^### END AUTOGROUPS/,$p' $autzfile >> $sql
+
+cp -a $autzfile ${autzfile}.old
+cat $sql > $autzfile
+/etc/init.d/apache2 reload
+
+rm -f $sql $tmp
+
