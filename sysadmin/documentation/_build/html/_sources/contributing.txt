@@ -1,0 +1,38 @@
+Contributing to this project 
+==================================
+
+Contributing to this project is easy, just follow these steps*:
+
+1. Check out the project::
+
+    $ svn co https://svn.plone.org/svn/plone/sysadmin/trunk plone-admin
+
+2. Change directories to the documentation directory::
+
+    $ cd plone-admin/documentation
+
+3. Make your changes. If you don't know Sphinx, you can read about it here::
+
+    http://sphinx.pocoo.org/
+
+4. Build the html::
+
+    $ make html
+
+5. Commit your changes::
+
+    $ svn commit -m 'Added documenation to make the world a better place'
+
+6. Login to deus.plone.org to synchronize your changes**::
+
+    $ ssh deus.plone.org
+    $ cd /srv/admin.plone.org/http/root
+    $ svn up
+
+(*) You will need core contributor access, you can read about that here::
+
+    http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing
+
+(**) If you don't have access to deus.plone.org, please send email to::
+
+    admins@plone.org

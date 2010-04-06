@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to Plone.org System Administrator’s documentation! &mdash; Plone.org System Administrator v1.0 documentation</title>
+    <title>Contributing to this project &mdash; Plone.org System Administrator v1.0 documentation</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -19,8 +19,8 @@
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Plone.org System Administrator v1.0 documentation" href="#" />
-    <link rel="next" title="Plone.org systems" href="systems.html" /> 
+    <link rel="top" title="Plone.org System Administrator v1.0 documentation" href="index.html" />
+    <link rel="prev" title="Plone.org systems" href="systems.html" /> 
   </head>
   <body>
     <div class="related">
@@ -31,8 +31,8 @@
              accesskey="I">index</a></li>
         <li class="right" >
           <a href="systems.html" title="Plone.org systems"
-             accesskey="N">next</a> |</li>
-        <li><a href="#">Plone.org System Administrator v1.0 documentation</a> &raquo;</li> 
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Plone.org System Administrator v1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -41,22 +41,43 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="welcome-to-plone-org-system-administrator-s-documentation">
-<h1>Welcome to Plone.org System Administrator&#8217;s documentation!<a class="headerlink" href="#welcome-to-plone-org-system-administrator-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
-<ul>
-<li class="toctree-l1"><a class="reference external" href="systems.html">Plone.org systems</a></li>
-<li class="toctree-l1"><a class="reference external" href="systems.html#about-this-report">About this report</a></li>
-<li class="toctree-l1"><a class="reference external" href="contributing.html">Contributing to this project</a></li>
-</ul>
+  <div class="section" id="contributing-to-this-project">
+<h1>Contributing to this project<a class="headerlink" href="#contributing-to-this-project" title="Permalink to this headline">¶</a></h1>
+<p>Contributing to this project is easy, just follow these steps*:</p>
+<ol class="arabic">
+<li><p class="first">Check out the project:</p>
+<div class="highlight-python"><pre>$ svn co https://svn.plone.org/svn/plone/sysadmin/trunk plone-admin</pre>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference external" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference external" href="modindex.html"><em>Module Index</em></a></li>
-<li><a class="reference external" href="search.html"><em>Search Page</em></a></li>
-</ul>
+</li>
+<li><p class="first">Change directories to the documentation directory:</p>
+<div class="highlight-python"><pre>$ cd plone-admin/documentation</pre>
+</div>
+</li>
+<li><p class="first">Make your changes. If you don&#8217;t know Sphinx, you can read about it here:</p>
+<div class="highlight-python"><pre>http://sphinx.pocoo.org/</pre>
+</div>
+</li>
+<li><p class="first">Build the html:</p>
+<div class="highlight-python"><pre>$ make html</pre>
+</div>
+</li>
+<li><p class="first">Commit your changes:</p>
+<div class="highlight-python"><pre>$ svn commit -m 'Added documenation to make the world a better place'</pre>
+</div>
+</li>
+<li><p class="first">Login to deus.plone.org to synchronize your changes**:</p>
+<div class="highlight-python"><pre>$ ssh deus.plone.org
+$ cd /srv/admin.plone.org/http/root
+$ svn up</pre>
+</div>
+</li>
+</ol>
+<p>(*) You will need core contributor access, you can read about that here:</p>
+<div class="highlight-python"><pre>http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing</pre>
+</div>
+<p>(**) If you don&#8217;t have access to deus.plone.org, please send email to:</p>
+<div class="highlight-python"><pre>admins@plone.org</pre>
+</div>
 </div>
 
 
@@ -65,20 +86,12 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-            <h3><a href="#">Table Of Contents</a></h3>
-            <ul>
-<li><a class="reference external" href="#">Welcome to Plone.org System Administrator&#8217;s documentation!</a><ul>
-</ul>
-</li>
-<li><a class="reference external" href="#indices-and-tables">Indices and tables</a></li>
-</ul>
-
-            <h4>Next topic</h4>
+            <h4>Previous topic</h4>
             <p class="topless"><a href="systems.html"
-                                  title="next chapter">Plone.org systems</a></p>
+                                  title="previous chapter">Plone.org systems</a></p>
             <h3>This Page</h3>
             <ul class="this-page-menu">
-              <li><a href="_sources/index.txt"
+              <li><a href="_sources/contributing.txt"
                      rel="nofollow">Show Source</a></li>
             </ul>
           <div id="searchbox" style="display: none">
@@ -106,8 +119,8 @@
              >index</a></li>
         <li class="right" >
           <a href="systems.html" title="Plone.org systems"
-             >next</a> |</li>
-        <li><a href="#">Plone.org System Administrator v1.0 documentation</a> &raquo;</li> 
+             >previous</a> |</li>
+        <li><a href="index.html">Plone.org System Administrator v1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

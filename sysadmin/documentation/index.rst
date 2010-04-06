@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
    systems.rst
+   contributing.rst
 
 Indices and tables
 ==================
