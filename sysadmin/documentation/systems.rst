@@ -132,7 +132,7 @@ Plone.org systems
 (*)Inactive
 
 About this report
------------------
+=================
 
 Hardware information gathered via:
 
