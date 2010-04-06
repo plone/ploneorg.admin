@@ -3,7 +3,7 @@ Plone.org systems
 =================
 
 +---------------------------+----------------------+---------------+-----------+
-| Server                    | Services             | Owner/Location| Notes     |
+| Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | plone01.sixfeetup.com     | - dist.plone.org     | Six Feet Up/  |           |
@@ -12,6 +12,10 @@ Plone.org systems
 | - FreeBSD                 | - old.plone.org*     |               |           |
 | - 7.1-RELEASE             | - plone.org          |               |           |
 | - amd64                   | - staging.plone.org  |               |           |
+| - Mem: 9305M Active       |                      |               |           |
+| - Swap: 4096M Total       |                      |               |           |
+|                           |                      |               |           |
+|                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | plonenet.pilotsystems.net | - plone.net          | Pilot Systems/|           |
 | (85.118.46.41)            |                      | Marseille,    |           |
@@ -19,6 +23,10 @@ Plone.org systems
 | - Linux                   |                      |               |           |
 | - 2.6.26-2-xen-amd64      |                      |               |           |
 | - x86_64                  |                      |               |           |
+| - Mem:   2048216k total   |                      |               |           |
+| - Swap:        0k total   |                      |               |           |
+|                           |                      |               |           |
+|                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | deus.plone.org            | - api.plone.org      | Oregon State/ |           |
 | (140.211.166.62)          | - deus.plone.org     | Eugene, OR    |           |
@@ -26,7 +34,8 @@ Plone.org systems
 | - Linux                   | - paste.plone.org*   |               |           |
 | - 2.6.26-2-686            | - planet.plone.org   |               |           |
 | - i686                    | - svn.plone.org      |               |           |
-|                           |                      |               |           |
+| - Mem:   2076244k total   |                      |               |           |
+| - Swap:  1048568k total   |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | antiloop.plone.org        | - antiloop.plone.org | XS4ALL/       |           |
 | (82.94.219.235)           | - dist.plone.org*    | Amsterdam,    |           |
@@ -35,8 +44,8 @@ Plone.org systems
 | - Linux                   | - planet.plone.org   |               |           |
 | - 2.6.17-rc2              | - plone.hu           |               |           |
 | - i686                    | - plone.it           |               |           |
-|                           | - plone.net          |               |           |
-|                           | - plone.net-backup   |               |           |
+| - Mem:   4150536k total   | - plone.net          |               |           |
+| - Swap:  1048568k total   | - plone.net-backup   |               |           |
 |                           | - plone.org          |               |           |
 |                           | - proxy.plone.org    |               |           |
 |                           | - stats.plone.org    |               |           |
@@ -51,6 +60,18 @@ Plone.org systems
 | - Linux                   |                      |               |           |
 | - 2.6.18-5-686            |                      |               |           |
 | - i686                    |                      |               |           |
+| - Mem:   2076408k total   |                      |               |           |
+| - Swap:   524280k total   |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
-*Inactive
+(*)Inactive
+
+About this report
+-----------------
+
+Hardware information gathered via:
+
+- uname
+- uname -m
+- top
+- sysctl -a
