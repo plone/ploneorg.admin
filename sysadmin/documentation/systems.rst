@@ -110,7 +110,7 @@ Plone.org systems
 | - Backups: No             |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
-| aneka.plone.org           | - backups.plone.org  | XS4ALL/       |           |
+| aneka.plone.org           | - backups.plone.org* | XS4ALL/       |           |
 | (82.94.219.234)           |                      | Amsterdam,    |           |
 |                           |                      | Netherlands   |           |
 | - Linux                   |                      |               |           |
