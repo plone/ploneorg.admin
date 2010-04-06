@@ -6,7 +6,7 @@
 	Alias		/icons/		/usr/share/apache2/icons/
 
 	RewriteEngine	On
-	RewriteRule	^/$		http://plone.org/development/info/subversion
+	RewriteRule	^/$		http://dev.plone.org/plone
 	CustomLog	/var/log/apache2/svn.plone.org/access.log combined
 	ErrorLog	/var/log/apache2/svn.plone.org/error.log
 
@@ -37,7 +37,7 @@
 	Alias		/icons/		/usr/share/apache/icons/
 
 	RewriteEngine	On
-	RewriteRule	^/$		http://plone.org/development/info/subversion
+	RewriteRule	^/$		https://dev.plone.org/plone
 	CustomLog	/var/log/apache2/svn.plone.org/access.log combined
 	ErrorLog	/var/log/apache2/svn.plone.org/error.log
 
