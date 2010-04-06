@@ -28,6 +28,8 @@ Plone.org systems
 |                           |                      |               |           |
 | - Network:                |                      |               |           |
 |                           |                      |               |           |
+| - Backups: Yes            |                      |               |           |
+|                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | plonenet.pilotsystems.net | - plone.net          | Pilot Systems/|           |
 | (85.118.46.41)            |                      | Marseille,    |           |
@@ -51,6 +53,8 @@ Plone.org systems
 |                           |                      |               |           |
 | - Network:                |                      |               |           |
 |                           |                      |               |           |
+| - Backups:                |                      |               |           |
+|                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | deus.plone.org            | - api.plone.org      | Oregon State/ |           |
 | (140.211.166.62)          | - deus.plone.org     | Eugene, OR    |           |
@@ -73,6 +77,8 @@ Plone.org systems
 |  - Core count: 1          |                      |               |           |
 |                           |                      |               |           |
 | - Network:                |                      |               |           |
+|                           |                      |               |           |
+| - Backups: Yes            |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | antiloop.plone.org        | - antiloop.plone.org | XS4ALL/       |           |
@@ -101,6 +107,8 @@ Plone.org systems
 |  - Speed: 100Mbps         |                      |               |           |
 |  - Duplex: Full           |                      |               |           |
 |                           |                      |               |           |
+| - Backups: No             |                      |               |           |
+|                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | aneka.plone.org           | - backups.plone.org  | XS4ALL/       |           |
 | (82.94.219.234)           |                      | Amsterdam,    |           |
@@ -126,6 +134,8 @@ Plone.org systems
 |                           |                      |               |           |
 |  - Speed: 100Mbps         |                      |               |           |
 |  - Duplex: Full           |                      |               |           |
+|                           |                      |               |           |
+| - Backups: No             |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
