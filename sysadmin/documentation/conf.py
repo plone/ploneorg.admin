@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Plone.org System Administration documentation build configuration file, created by
+# Plone.org System Administrator documentation build configuration file, created by
 # sphinx-quickstart on Mon Apr  5 22:26:46 2010.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -37,7 +37,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Plone.org System Administration'
+project = u'Plone.org System Administrator'
 copyright = u'2010, Plone Foundation'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -158,7 +158,7 @@ html_static_path = ['_static']
 #html_file_suffix = ''
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'PloneorgSystemAdministrationdoc'
+htmlhelp_basename = 'PloneorgSystemAdministratordoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -172,7 +172,7 @@ htmlhelp_basename = 'PloneorgSystemAdministrationdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'PloneorgSystemAdministration.tex', u'Plone.org System Administration Documentation',
+  ('index', 'PloneorgSystemAdministrator.tex', u'Plone.org System Administrator Documentation',
    u'Plone Foundation', 'manual'),
 ]
 
