@@ -21,7 +21,7 @@ Contributing to this project is easy, just follow these steps*:
 
 5. Commit your changes::
 
-    $ svn commit -m 'Added documenation to make the world a better place'
+    $ svn commit -m 'Added documentation to make the world a better place'
 
 6. Login to deus.plone.org to synchronize your changes**::
 
