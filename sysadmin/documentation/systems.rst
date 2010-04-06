@@ -15,10 +15,13 @@ Plone.org systems
 | - Mem: 9305M Active       |                      |               |           |
 | - Swap: 4096M Total       |                      |               |           |
 | - CPU1:                   |                      |               |           |
+|                           |                      |               |           |
 |  - Speed: 2833 MHz        |                      |               |           |
 |  - Family: Xeon           |                      |               |           |
 |  - Core count: 4          |                      |               |           |
+|                           |                      |               |           |
 | - CPU2:                   |                      |               |           |
+|                           |                      |               |           |
 |  - Speed: 2833 MHz        |                      |               |           |
 |  - Family: Xeon           |                      |               |           |
 |  - Core count: 4          |                      |               |           |
@@ -32,15 +35,17 @@ Plone.org systems
 | - x86_64                  |                      |               |           |
 | - Mem:   2048216k total   |                      |               |           |
 | - Swap:        0k total   |                      |               |           |
+| - CPU1:                   |                      |               |           |
 |                           |                      |               |           |
+|  - Speed: 2.00GHz         |                      |               |           |
+|  - Family: Xeon           |                      |               |           |
+|  - Core count: 1          |                      |               |           |
 |                           |                      |               |           |
+| - CPU2:                   |                      |               |           |
 |                           |                      |               |           |
-|                           |                      |               |           |
-|                           |                      |               |           |
-|                           |                      |               |           |
-|                           |                      |               |           |
-|                           |                      |               |           |
-|                           |                      |               |           |
+|  - Speed: 2.00GHz         |                      |               |           |
+|  - Family: Xeon           |                      |               |           |
+|  - Core count: 1          |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | deus.plone.org            | - api.plone.org      | Oregon State/ |           |
@@ -52,11 +57,16 @@ Plone.org systems
 | - Mem:   2076244k total   |                      |               |           |
 | - Swap:  1048568k total   |                      |               |           |
 | - CPU1:                   |                      |               |           |
+|                           |                      |               |           |
 |  - Speed: 3066 MHz        |                      |               |           |
 |  - Family: Xeon           |                      |               |           |
+|  - Core count: 1          |                      |               |           |
+|                           |                      |               |           |
 | - CPU2:                   |                      |               |           |
+|                           |                      |               |           |
 |  - Speed: 3066 MHz        |                      |               |           |
 |  - Family: Xeon           |                      |               |           |
+|  - Core count: 1          |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | antiloop.plone.org        | - antiloop.plone.org | XS4ALL/       |           |
@@ -66,15 +76,19 @@ Plone.org systems
 | - Linux                   | - planet.plone.org   |               |           |
 | - 2.6.17-rc2              | - plone.hu           |               |           |
 | - i686                    | - plone.it           |               |           |
-| - Mem:   4150536k total   | - plone.net          |               |           |
+| - Mem:   4150536k total   | - plone.net*         |               |           |
 | - Swap:  1048568k total   | - plone.net-backup   |               |           |
 | - CPU1:                   | - plone.org          |               |           |
-|  - Speed: 3200 MHz        | - proxy.plone.org    |               |           |
-|  - Family: Pentium 4      | - stats.plone.org    |               |           |
-| - CPU2:                   | - svn.plone.org      |               |           |
-|  - Speed: 3200 MHz        | - test.plone.org     |               |           |
-|  - Family: Pentium 4      | - tests.plone.org    |               |           |
-|                           | - trac.plone.org     |               |           |
+|                           | - proxy.plone.org    |               |           |
+|  - Speed: 3200 MHz        | - stats.plone.org    |               |           |
+|  - Family: Pentium 4      | - svn.plone.org      |               |           |
+|  - Core count: 1          | - test.plone.org     |               |           |
+|                           | - tests.plone.org    |               |           |
+| - CPU2:                   | - trac.plone.org     |               |           |
+|                           |                      |               |           |
+|  - Speed: 3200 MHz        |                      |               |           |
+|  - Family: Pentium 4      |                      |               |           |
+|  - Core count: 1          |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | aneka.plone.org           | - backups.plone.org  | XS4ALL/       |           |
@@ -86,11 +100,16 @@ Plone.org systems
 | - Mem:   2076408k total   |                      |               |           |
 | - Swap:   524280k total   |                      |               |           |
 | - CPU1:                   |                      |               |           |
+|                           |                      |               |           |
 |  - Speed: 2800 MHz        |                      |               |           |
 |  - Family: Pentium 4      |                      |               |           |
+|  - Core count: 1          |                      |               |           |
+|                           |                      |               |           |
 | - CPU2:                   |                      |               |           |
+|                           |                      |               |           |
 |  - Speed: 2800 MHz        |                      |               |           |
 |  - Family: Pentium 4      |                      |               |           |
+|  - Core count: 1          |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
@@ -106,3 +125,4 @@ Hardware information gathered via:
 - top
 - dmidecode | grep -i speed
 - dmidecode | grep -i family
+- dmidecode | grep -i core
