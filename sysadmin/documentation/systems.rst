@@ -14,7 +14,14 @@ Plone.org systems
 | - amd64                   | - staging.plone.org  |               |           |
 | - Mem: 9305M Active       |                      |               |           |
 | - Swap: 4096M Total       |                      |               |           |
-|                           |                      |               |           |
+| - CPU1:                   |                      |               |           |
+|  - Speed: 2833 MHz        |                      |               |           |
+|  - Family: Xeon           |                      |               |           |
+|  - Core count: 4          |                      |               |           |
+| - CPU2:                   |                      |               |           |
+|  - Speed: 2833 MHz        |                      |               |           |
+|  - Family: Xeon           |                      |               |           |
+|  - Core count: 4          |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | plonenet.pilotsystems.net | - plone.net          | Pilot Systems/|           |
@@ -27,6 +34,14 @@ Plone.org systems
 | - Swap:        0k total   |                      |               |           |
 |                           |                      |               |           |
 |                           |                      |               |           |
+|                           |                      |               |           |
+|                           |                      |               |           |
+|                           |                      |               |           |
+|                           |                      |               |           |
+|                           |                      |               |           |
+|                           |                      |               |           |
+|                           |                      |               |           |
+|                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | deus.plone.org            | - api.plone.org      | Oregon State/ |           |
 | (140.211.166.62)          | - deus.plone.org     | Eugene, OR    |           |
@@ -36,6 +51,13 @@ Plone.org systems
 | - i686                    | - svn.plone.org      |               |           |
 | - Mem:   2076244k total   |                      |               |           |
 | - Swap:  1048568k total   |                      |               |           |
+| - CPU1:                   |                      |               |           |
+|  - Speed: 3066 MHz        |                      |               |           |
+|  - Family: Xeon           |                      |               |           |
+| - CPU2:                   |                      |               |           |
+|  - Speed: 3066 MHz        |                      |               |           |
+|  - Family: Xeon           |                      |               |           |
+|                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | antiloop.plone.org        | - antiloop.plone.org | XS4ALL/       |           |
 | (82.94.219.235)           | - dist.plone.org*    | Amsterdam,    |           |
@@ -46,13 +68,14 @@ Plone.org systems
 | - i686                    | - plone.it           |               |           |
 | - Mem:   4150536k total   | - plone.net          |               |           |
 | - Swap:  1048568k total   | - plone.net-backup   |               |           |
-|                           | - plone.org          |               |           |
-|                           | - proxy.plone.org    |               |           |
-|                           | - stats.plone.org    |               |           |
-|                           | - svn.plone.org      |               |           |
-|                           | - test.plone.org     |               |           |
-|                           | - tests.plone.org    |               |           |
+| - CPU1:                   | - plone.org          |               |           |
+|  - Speed: 3200 MHz        | - proxy.plone.org    |               |           |
+|  - Family: Pentium 4      | - stats.plone.org    |               |           |
+| - CPU2:                   | - svn.plone.org      |               |           |
+|  - Speed: 3200 MHz        | - test.plone.org     |               |           |
+|  - Family: Pentium 4      | - tests.plone.org    |               |           |
 |                           | - trac.plone.org     |               |           |
+|                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | aneka.plone.org           | - backups.plone.org  | XS4ALL/       |           |
 | (82.94.219.234)           |                      | Amsterdam,    |           |
@@ -62,6 +85,13 @@ Plone.org systems
 | - i686                    |                      |               |           |
 | - Mem:   2076408k total   |                      |               |           |
 | - Swap:   524280k total   |                      |               |           |
+| - CPU1:                   |                      |               |           |
+|  - Speed: 2800 MHz        |                      |               |           |
+|  - Family: Pentium 4      |                      |               |           |
+| - CPU2:                   |                      |               |           |
+|  - Speed: 2800 MHz        |                      |               |           |
+|  - Family: Pentium 4      |                      |               |           |
+|                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
 (*)Inactive
@@ -74,4 +104,5 @@ Hardware information gathered via:
 - uname
 - uname -m
 - top
-- sysctl -a
+- dmidecode | grep -i speed
+- dmidecode | grep -i family
