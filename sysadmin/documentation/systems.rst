@@ -26,6 +26,8 @@ Plone.org systems
 |  - Family: Xeon           |                      |               |           |
 |  - Core count: 4          |                      |               |           |
 |                           |                      |               |           |
+| - Network:                |                      |               |           |
+|                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | plonenet.pilotsystems.net | - plone.net          | Pilot Systems/|           |
 | (85.118.46.41)            |                      | Marseille,    |           |
@@ -47,6 +49,8 @@ Plone.org systems
 |  - Family: Xeon           |                      |               |           |
 |  - Core count: 1          |                      |               |           |
 |                           |                      |               |           |
+| - Network:                |                      |               |           |
+|                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | deus.plone.org            | - api.plone.org      | Oregon State/ |           |
 | (140.211.166.62)          | - deus.plone.org     | Eugene, OR    |           |
@@ -67,6 +71,8 @@ Plone.org systems
 |  - Speed: 3066 MHz        |                      |               |           |
 |  - Family: Xeon           |                      |               |           |
 |  - Core count: 1          |                      |               |           |
+|                           |                      |               |           |
+| - Network:                |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | antiloop.plone.org        | - antiloop.plone.org | XS4ALL/       |           |
@@ -90,6 +96,8 @@ Plone.org systems
 |  - Family: Pentium 4      |                      |               |           |
 |  - Core count: 1          |                      |               |           |
 |                           |                      |               |           |
+| - Network:                |                      |               |           |
+|                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | aneka.plone.org           | - backups.plone.org  | XS4ALL/       |           |
 | (82.94.219.234)           |                      | Amsterdam,    |           |
@@ -110,6 +118,8 @@ Plone.org systems
 |  - Speed: 2800 MHz        |                      |               |           |
 |  - Family: Pentium 4      |                      |               |           |
 |  - Core count: 1          |                      |               |           |
+|                           |                      |               |           |
+| - Network:                |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
