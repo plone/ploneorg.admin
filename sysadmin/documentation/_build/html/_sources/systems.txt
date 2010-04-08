@@ -84,22 +84,22 @@ Report
 | - Backups: Yes            |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
-| antiloop.plone.org        | - antiloop.plone.org | XS4ALL/       |           |
-| (82.94.219.235)           | - dist.plone.org*    | Amsterdam,    |           |
-| (82.94.219.236)           | - lists.plone.org    | Netherlands   |           |
+| antiloop.plone.org        | - antiloop.plone.org | XS4ALL/       | svn.p.o is| 
+| (82.94.219.235)           | - dist.plone.org*    | Amsterdam,    | really    |
+| (82.94.219.236)           | - `lists.plone.org`_ | Netherlands   | svn-mirror|
 |                           | - media.plone.org*   |               |           |
-| - Linux                   | - planet.plone.org   |               |           |
+| - Linux                   | - planet.plone.org*  |               |           |
 | - 2.6.17-rc2              | - plone.hu           |               |           |
 | - i686                    | - plone.it           |               |           |
 | - Mem:   4150536k total   | - plone.net*         |               |           |
-| - Swap:  1048568k total   | - plone.net-backup   |               |           |
-| - CPU1:                   | - plone.org          |               |           |
-|                           | - proxy.plone.org    |               |           |
-|  - Speed: 3200 MHz        | - stats.plone.org    |               |           |
-|  - Family: Pentium 4      | - svn.plone.org      |               |           |
-|  - Core count: 1          | - test.plone.org     |               |           |
-|                           | - tests.plone.org    |               |           |
-| - CPU2:                   | - trac.plone.org     |               |           |
+| - Swap:  1048568k total   | - plone.net-backup*  |               |           |
+| - CPU1:                   | - plone.org*         |               |           |
+|                           | - proxy.plone.org*   |               |           |
+|  - Speed: 3200 MHz        | - `stats.plone.org`_ |               |           |
+|  - Family: Pentium 4      | - `svn.plone.org`_   |               |           |
+|  - Core count: 1          | - test.plone.org*    |               |           |
+|                           | - tests.plone.org*   |               |           |
+| - CPU2:                   | - trac.plone.org*    |               |           |
 |                           |                      |               |           |
 |  - Speed: 3200 MHz        |                      |               |           |
 |  - Family: Pentium 4      |                      |               |           |
@@ -141,6 +141,10 @@ Report
 | - Backups: No             |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
+
+.. _`lists.plone.org`: http://lists.plone.org
+.. _`stats.plone.org`: http://stats.plone.org
+.. _`svn.plone.org`: http://svn-mirror.plone.org
 
 (*)Inactive
 
