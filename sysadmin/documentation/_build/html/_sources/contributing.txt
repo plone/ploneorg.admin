@@ -11,9 +11,11 @@ Contributing to this project is easy, just follow these steps*:
 
     $ cd plone-admin/documentation
 
-3. Make your changes. If you don't know Sphinx, you can read about it here::
+3. Make your changes. If you don't know Sphinx or reStructuredText, 
+   you can read about them respectively here_, `and here`_.
 
-    http://sphinx.pocoo.org/
+.. _here: http://sphinx.pocoo.org/
+.. _`and here`: http://docutils.sourceforge.net/rst.html
 
 4. Build the html::
 

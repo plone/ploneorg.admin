@@ -11,8 +11,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   systems.rst
+   about.rst
    contributing.rst
+   systems.rst
+   theend.rst
 
 Indices and tables
 ==================

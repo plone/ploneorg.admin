@@ -2,6 +2,9 @@
 Plone.org systems
 =================
 
+Report
+------
+
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
@@ -140,9 +143,6 @@ Plone.org systems
 +---------------------------+----------------------+---------------+-----------+
 
 (*)Inactive
-
-About this report
-=================
 
 Hardware information gathered via:
 
