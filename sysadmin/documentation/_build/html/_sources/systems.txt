@@ -96,7 +96,7 @@ Report
 | - CPU1:                   | - plone.org*         |               |           |
 |                           | - proxy.plone.org*   |               |           |
 |  - Speed: 3200 MHz        | - `stats.plone.org`_ |               |           |
-|  - Family: Pentium 4      | - `svn.plone.org`_   |               |           |
+|  - Family: Pentium 4      | - svn.plone.org      |               |           |
 |  - Core count: 1          | - test.plone.org*    |               |           |
 |                           | - tests.plone.org*   |               |           |
 | - CPU2:                   | - trac.plone.org*    |               |           |
@@ -144,7 +144,6 @@ Report
 
 .. _`lists.plone.org`: http://lists.plone.org
 .. _`stats.plone.org`: http://stats.plone.org
-.. _`svn.plone.org`: http://svn-mirror.plone.org
 
 (*)Inactive
 
