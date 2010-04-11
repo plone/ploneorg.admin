@@ -14,6 +14,7 @@ Contents:
    about.rst
    contributing.rst
    systems.rst
+   svn.rst
    theend.rst
 
 Indices and tables
