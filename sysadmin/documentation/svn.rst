@@ -15,6 +15,11 @@ Servers
 The primary server is OSU's deus.plone.org with a mirror to XS4ALL's 
 antiloop.plone.org.
 
+Users
+-----
+
+The repositories are owned by the ``www-data`` user.
+
 Mirroring
 ---------
 
@@ -51,7 +56,7 @@ In /etc/cron.hourly on deus we have::
         lockfile-remove $LOCKFILE
     fi
 
-Occasionally when mirroring you may get an error like this::
+Occasionally when mirroring on ``deus`` you may get an error like this::
 
     Failed to get lock on destination repos…
 

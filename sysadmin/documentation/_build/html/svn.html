@@ -61,6 +61,10 @@ repositories:</p>
 <p>The primary server is OSU&#8217;s deus.plone.org with a mirror to XS4ALL&#8217;s
 antiloop.plone.org.</p>
 </div>
+<div class="section" id="users">
+<h2>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h2>
+<p>The repositories are owned by the <tt class="docutils literal"><span class="pre">www-data</span></tt> user.</p>
+</div>
 <div class="section" id="mirroring">
 <h2>Mirroring<a class="headerlink" href="#mirroring" title="Permalink to this headline">¶</a></h2>
 <p>In /etc/cron.hourly on deus we have:</p>
@@ -95,7 +99,7 @@ if [ -x /usr/bin/lockfile-create ] ; then
     lockfile-remove $LOCKFILE
 fi</pre>
 </div>
-<p>Occasionally when mirroring you may get an error like this:</p>
+<p>Occasionally when mirroring on <tt class="docutils literal"><span class="pre">deus</span></tt> you may get an error like this:</p>
 <div class="highlight-python"><pre>Failed to get lock on destination repos…</pre>
 </div>
 <p>At which point the following command should help:</p>
@@ -114,6 +118,7 @@ fi</pre>
             <ul>
 <li><a class="reference external" href="#">Subversion Repository Management</a><ul>
 <li><a class="reference external" href="#servers">Servers</a></li>
+<li><a class="reference external" href="#users">Users</a></li>
 <li><a class="reference external" href="#mirroring">Mirroring</a></li>
 </ul>
 </li>
