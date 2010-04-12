@@ -129,10 +129,13 @@ if [ -x /usr/bin/lockfile-create ] ; then
     lockfile-remove $LOCKFILE
 fi</pre>
 </div>
-<p>Occasionally when mirroring on <tt class="docutils literal"><span class="pre">deus</span></tt> you may get an error like this:</p>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>Occasionally when running svnsync on <tt class="docutils literal"><span class="pre">deus</span></tt> you may get an error like this:</p>
 <div class="highlight-python"><pre>Failed to get lock on destination repos…</pre>
 </div>
-<p>At which point the following command should help:</p>
+<p>At which point running the following command should help:</p>
 <div class="highlight-python"><pre>svn pdel --revprop -r 0 svn:sync-lock https://svn-mirror.plone.org/svn/&lt;repo&gt;</pre>
 </div>
 </div>
@@ -153,6 +156,7 @@ fi</pre>
 <li><a class="reference external" href="#servers">Servers</a></li>
 <li><a class="reference external" href="#users">Users</a></li>
 <li><a class="reference external" href="#mirroring">Mirroring</a></li>
+<li><a class="reference external" href="#troubleshooting">Troubleshooting</a></li>
 </ul>
 </li>
 </ul>

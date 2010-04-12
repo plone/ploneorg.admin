@@ -2,6 +2,8 @@
 Plone.org systems
 =================
 
+These are the community managed servers as of April 2010**.
+
 Report
 ------
 
@@ -155,3 +157,9 @@ Hardware information gathered via:
 - dmidecode | grep -i speed
 - dmidecode | grep -i family
 - dmidecode | grep -i core
+
+(**)The community receives support from both `Pilot Systems`_ and `Six Feet Up`_ for their respective systems
+
+.. _`Pilot Systems`: http://pilotsystems.net
+.. _`Six Feet Up`: http://sixfeetup.com
+

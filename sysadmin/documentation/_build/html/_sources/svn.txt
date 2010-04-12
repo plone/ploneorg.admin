@@ -56,10 +56,13 @@ In /etc/cron.hourly on deus we have::
         lockfile-remove $LOCKFILE
     fi
 
-Occasionally when mirroring on ``deus`` you may get an error like this::
+Troubleshooting
+---------------
+
+Occasionally when running svnsync on ``deus`` you may get an error like this::
 
     Failed to get lock on destination repos…
 
-At which point the following command should help::
+At which point running the following command should help::
 
     svn pdel --revprop -r 0 svn:sync-lock https://svn-mirror.plone.org/svn/<repo>

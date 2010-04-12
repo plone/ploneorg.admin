@@ -1,9 +1,9 @@
-Contributing to this project 
+Contributing to this documentation 
 ==================================
 
-Contributing to this project is easy, just follow these steps*:
+Contributing to this documentation is easy, just follow these steps*:
 
-1. Check out the project::
+1. Check out the documentation::
 
     $ svn co https://svn.plone.org/svn/plone/sysadmin/trunk plone-admin
 
@@ -31,10 +31,7 @@ Contributing to this project is easy, just follow these steps*:
     $ cd /srv/admin.plone.org/http/root
     $ svn up
 
-(*) You will need core contributor access, you can read about that here::
+(*) You will need core contributor access, you can read about that here
+    http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing.
 
-    http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing
-
-(**) If you don't have access to deus.plone.org, please send email to::
-
-    admins@plone.org
+(**) If you don't have access to deus.plone.org, please send email to admins@plone.org.
