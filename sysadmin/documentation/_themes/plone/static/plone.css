@@ -1,0 +1,299 @@
+/**
+ * Sphinx stylesheet -- Plone theme
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+@import url("default.css");
+
+body {
+    font-family: Arial,FreeSans,sans-serif;
+    font-size: 100%;
+    background-color: #329fd7;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+div.document {
+    background-color: rgb(246, 246, 246);
+}
+
+div.body {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0 20px 30px 20px;
+}
+
+div.footer {
+    color: #ffffff;
+    width: 100%;
+    padding: 9px 0 9px 0;
+    text-align: center;
+    font-size: 75%;
+}
+
+div.footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+div.related {
+    background-color: #329fd7;
+    line-height: 30px;
+    color: #ffffff;
+}
+
+div.related a {
+    color: #ffffff;
+}
+
+div.sphinxsidebar {
+}
+
+div.sphinxsidebar p.logo {
+    text-align: center;
+}
+
+div.sphinxsidebar h3,
+div.sphinxsidebar h4 {
+    background-color: #76ad17;
+    border-bottom: 1em solid #63a100;
+    color: white;
+    font-size: 1em;
+    height:  1em;
+    letter-spacing: 0;
+    font-weight: normal;
+    line-height: 2em;
+    margin: 0;
+    padding: 0 0.5em;
+}
+
+div.sphinxsidebar h3 a, 
+div.sphinxsidebar h3 a:hover { 
+    color: white; 
+}
+
+
+div.sphinxsidebar p {
+    color: #205c90;
+}
+
+div.sphinxsidebar p.topless {
+    margin: 5px 10px 10px 10px;
+}
+
+div.sphinxsidebar ul {
+    margin: 10px;
+    padding: 0;
+    color: #205c90;
+}
+
+div.sphinxsidebar a {
+    color: #0083be;
+}
+
+div.sphinxsidebar a:hover {
+    color: #75ad0a;
+}
+
+div.sphinxsidebar input {
+    border: 1px solid #0083be;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+/* -- body styles ----------------------------------------------------------- */
+
+a {
+    color: #205c90;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #75ad0a;
+    text-decoration: underline;
+}
+
+div.body p, div.body dd, div.body li, div.body td {
+    font-size: 13px;
+    text-align: justify;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* @group Headings */
+
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+    font-family: "Helvetica Neue",Arial,FreeSans,sans-serif;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    padding: 0;
+    line-height: 125%;
+}
+
+div.body h1 {
+    margin-top: 0;
+    font-size: 1.625em;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+div.body h2 {
+    color:  #444444;
+    margin-top: 0.5em;
+    font-size: 1.375em;
+    letter-spacing: -1px;
+}
+
+div.body h3 {
+    color:  #444444;
+    font-size: 1.125em;
+}
+
+div.body h4 {
+    color:  #444444;
+    font-size: 0.875em;
+}
+
+div.body h5 {
+    color:  #444444;
+    font-size: 0.875em;
+}
+
+div.body h6 {
+    color:  #444444;
+    font-size: 0.875em;
+}
+
+/* @end */
+
+a.headerlink {
+    color: #75ad0a;
+    font-size: 0.8em;
+    padding: 0 4px 0 4px;
+    text-decoration: none;
+}
+
+a.headerlink:hover {
+    background-color: #75ad0a;
+    color: white;
+}
+
+a.exit {
+    padding-right: 13px;
+    background: transparent url(external.png) no-repeat scroll right center;
+}
+
+div.body p, div.body dd, div.body li {
+    text-align: justify;
+    line-height: 130%;
+}
+
+/* @group Admonitions */
+
+div.admonition {
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;    
+    background-color: #ffc;
+    clear: left;
+}
+
+div.note {
+    border: 1px solid #ff6;
+}
+
+div.seealso {
+    border: 1px solid #ff6;
+}
+
+div.topic {
+    background-color: #eee;
+}
+
+div.warning {
+    background-color: #ffe4e4;
+    border: 1px solid #f66;
+}
+
+p.admonition-title {
+    display: inline;
+}
+
+p.admonition-title:after {
+    content: ":";
+}
+
+/* @end */
+
+p.p-versionmodified {
+    float:right;
+    background-color: #fef49c;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    padding: 0.5em;
+    margin-left: 0.5em;
+}
+
+span.versionmodified {
+    display: block;
+    font-weight:bold;
+}
+
+tt {
+    background-color: #ecf0f3;
+    padding: 0 1px 0 1px;
+    font-size: 0.95em;
+}
+
+div.sidebar {
+    background-color: #edfc00;
+    border: none;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+}
+
+/* @group Table of contents */
+
+li.toctree-l1,
+li.toctree-l2,
+li.toctree-l3,
+li.toctree-l4,
+li.toctree-l5,
+li.toctree-l6 {
+    list-style-type: none;
+    background-color: #eeeeee;
+    font-weight: bold;
+}
+li.toctree-l2:first-child,
+li.toctree-l3:first-child,
+li.toctree-l4:first-child,
+li.toctree-l5:first-child,
+li.toctree-l6:first-child {
+	margin-top: 1em;
+}
+/* @end */
+
+table.footnote {
+    width: 100%;
+    border-top: 1px solid black;
+}
+
+/* Boxes from ..inlineinclude:: xxx */
+
+div.highlight pre {
+    background-color: #dee7ec;
+    color: #000000;
+}
+
+/* @group For optional Disqus */
+
+div#disqus_thread {
+    margin-left: 10px;
+}
+/* @end */

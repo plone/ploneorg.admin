@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
     <title>Search &mdash; Plone.org System Administrator v1.0 documentation</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/plone.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -21,7 +21,37 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/searchtools.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
-    <link rel="top" title="Plone.org System Administrator v1.0 documentation" href="index.html" /> 
+    <link rel="top" title="Plone.org System Administrator v1.0 documentation" href="index.html" />
+<script language="javascript">
+//<![CDATA[
+
+Documentation.addTranslations({"locale": "fr", "plural_expr": "(n > 1)", "messages": {"See the definition": "Voir la d\u00e9finition"}});
+
+// See http://disqus.disqus.com/general_integration_help/
+var disqus_developer = 1;
+if (document.location.protocol == 'http:') {
+    disqus_developer = 0;
+}
+
+// Some HTML/CSS transforms we can't do in pure CSS (waiting for CSS3 support)
+$(document).ready(function () {
+
+    // Style of .. verisonmodified:: , .. versionadded:: ...
+    $('p:has(span.versionmodified)').addClass('p-versionmodified');
+
+    // Decorate links to other sites
+    $('a[@href^="http://"]').addClass('exit').attr('target', '_blank');
+
+    // Glossary terms
+    $('em.xref').attr('title', _('See the definition'));
+
+    // We need to have all <pre> in a <div class="highlight"> to mimic pygments
+    $('div.highlight-python > pre').wrap('<div class="highlight" />');
+    return true;
+});
+//]]>
+</script>
+
   </head>
   <body>
     <div class="related">
@@ -68,6 +98,9 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+<p class="logo"><a href="index.html"><img src="_static/plone-icon-64.png" />
+</a></p>
+
         </div>
       </div>
       <div class="clearer"></div>
@@ -82,10 +115,13 @@
       </ul>
     </div>
   
+
     <div class="footer">
       &copy; Copyright 2010, Plone Foundation.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.5.
     </div>
+
+
   <script type="text/javascript" src="searchindex.js"></script>
 
   </body>
