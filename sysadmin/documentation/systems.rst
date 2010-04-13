@@ -4,13 +4,16 @@ Plone.org systems
 
 These are the community managed servers as of April 2010**.
 
-Report
-------
+.. contents::
+
+Host: plone01.sixfeetup.com
+---------------------------
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
+|                           |                      |               |           |
 | plone01.sixfeetup.com     | - dist.plone.org     | Six Feet Up/  |           |
 | (74.203.223.202)          | - maint.plone.org    | Fortville, IN |           |
 |                           | - media.plone.org    | USA           |           |
@@ -34,6 +37,14 @@ Report
 | - Network:                |                      |               |           |
 |                           |                      |               |           |
 | - Backups: Yes            |                      |               |           |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+
+Host: plonenet.pilotsystems.net 
+-------------------------------
+
++---------------------------+----------------------+---------------+-----------+
+| Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | plonenet.pilotsystems.net | - plone.net          | Pilot Systems/|           |
@@ -61,6 +72,14 @@ Report
 | - Backups:                |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
+
+Host: deus.plone.org
+--------------------
+
++---------------------------+----------------------+---------------+-----------+
+| Server/Hardware           | Services             | Owner/Location| Notes     |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
 | deus.plone.org            | - api.plone.org      | Oregon State/ |           |
 | (140.211.166.62)          | - deus.plone.org     | Eugene, OR    |           |
 |                           | - dev.plone.org      | USA           |           |
@@ -84,6 +103,14 @@ Report
 | - Network:                |                      |               |           |
 |                           |                      |               |           |
 | - Backups: Yes            |                      |               |           |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+
+Host: antiloop.plone.org
+------------------------
+
++---------------------------+----------------------+---------------+-----------+
+| Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | antiloop.plone.org        | - antiloop.plone.org | XS4ALL/       | svn.p.o is| 
@@ -115,6 +142,14 @@ Report
 | - Backups: No             |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
+
+Host: aneka.plone.org
+--------------------- 
+
++---------------------------+----------------------+---------------+-----------+
+| Server/Hardware           | Services             | Owner/Location| Notes     |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
 | aneka.plone.org           | - backups.plone.org* | XS4ALL/       |           |
 | (82.94.219.234)           |                      | Amsterdam,    |           |
 |                           |                      | Netherlands   |           |
@@ -144,10 +179,8 @@ Report
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
-.. _`lists.plone.org`: http://lists.plone.org
-.. _`stats.plone.org`: http://stats.plone.org
-
-(*)Inactive
+About this report
+-----------------
 
 Hardware information gathered via:
 
@@ -158,8 +191,12 @@ Hardware information gathered via:
 - dmidecode | grep -i family
 - dmidecode | grep -i core
 
+(*)Inactive
+
 (**)The community receives support from both `Pilot Systems`_ and `Six Feet Up`_ for their respective systems
 
+.. _`lists.plone.org`: http://lists.plone.org
+.. _`stats.plone.org`: http://stats.plone.org
 .. _`Pilot Systems`: http://pilotsystems.net
 .. _`Six Feet Up`: http://sixfeetup.com
 
