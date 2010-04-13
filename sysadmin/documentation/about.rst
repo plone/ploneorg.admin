@@ -3,8 +3,7 @@ About this project
 ==================
 
 This is the Plone.org system administrator's documentation to be used
-by Plone.org system administrators and ``you``, if you would like
-to join the project. 
+by Plone.org system administrators and ``you``, if you would like to help.
 
 Contact
 -------
