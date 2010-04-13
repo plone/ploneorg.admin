@@ -86,9 +86,9 @@ Host: deus.plone.org
 | - Linux                   | - paste.plone.org*   |               |           |
 | - 2.6.26-2-686            | - planet.plone.org   |               |           |
 | - i686                    | - svn.plone.org      |               |           |
-| - Mem:   2076244k total   |                      |               |           |
-| - Swap:  1048568k total   |                      |               |           |
-| - CPU1:                   |                      |               |           |
+| - Mem:   2076244k total   | - admin.plone.org    |               |           |
+| - Swap:  1048568k total   | - collective-docs.   |               |           |
+| - CPU1:                   |   plone.org          |               |           |
 |                           |                      |               |           |
 |  - Speed: 3066 MHz        |                      |               |           |
 |  - Family: Xeon           |                      |               |           |
