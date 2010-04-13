@@ -15,6 +15,7 @@ Contents:
    contributing.rst
    systems.rst
    svn.rst
+   ploneorg.rst
    theend.rst
 
 Indices and tables

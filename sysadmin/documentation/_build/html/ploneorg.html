@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to Plone.org System Administrator’s documentation! &mdash; Plone.org System Administrator v1.0 documentation</title>
+    <title>The plone.org website &mdash; Plone.org System Administrator v1.0 documentation</title>
     <link rel="stylesheet" href="_static/plone.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -20,8 +20,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
-    <link rel="top" title="Plone.org System Administrator v1.0 documentation" href="#" />
-    <link rel="next" title="About this project" href="about.html" />
+    <link rel="top" title="Plone.org System Administrator v1.0 documentation" href="index.html" />
+    <link rel="next" title="The End" href="theend.html" />
+    <link rel="prev" title="Subversion Repository Management" href="svn.html" />
 <script language="javascript">
 //<![CDATA[
 
@@ -61,9 +62,12 @@ $(document).ready(function () {
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="about.html" title="About this project"
+          <a href="theend.html" title="The End"
              accesskey="N">next</a> |</li>
-        <li><a href="#">Plone.org System Administrator v1.0 documentation</a> &raquo;</li> 
+        <li class="right" >
+          <a href="svn.html" title="Subversion Repository Management"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Plone.org System Administrator v1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -72,42 +76,37 @@ $(document).ready(function () {
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="welcome-to-plone-org-system-administrator-s-documentation">
-<h1>Welcome to Plone.org System Administrator&#8217;s documentation!<a class="headerlink" href="#welcome-to-plone-org-system-administrator-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
-<ul>
-<li class="toctree-l1"><a class="reference external" href="about.html">About this project</a><ul>
-<li class="toctree-l2"><a class="reference external" href="about.html#contact">Contact</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference external" href="contributing.html">Contributing to this documentation</a></li>
-<li class="toctree-l1"><a class="reference external" href="systems.html">Plone.org systems</a><ul>
-<li class="toctree-l2"><a class="reference external" href="systems.html#report">Report</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference external" href="svn.html">Subversion Repository Management</a><ul>
-<li class="toctree-l2"><a class="reference external" href="svn.html#servers">Servers</a></li>
-<li class="toctree-l2"><a class="reference external" href="svn.html#users">Users</a></li>
-<li class="toctree-l2"><a class="reference external" href="svn.html#mirroring">Mirroring</a></li>
-<li class="toctree-l2"><a class="reference external" href="svn.html#troubleshooting">Troubleshooting</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference external" href="ploneorg.html">The plone.org website</a><ul>
-<li class="toctree-l2"><a class="reference external" href="ploneorg.html#the-buildout">The buildout</a></li>
-<li class="toctree-l2"><a class="reference external" href="ploneorg.html#the-issues">The issues</a></li>
-<li class="toctree-l2"><a class="reference external" href="ploneorg.html#deployment">Deployment</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference external" href="theend.html">The End</a></li>
-</ul>
+  <div class="section" id="the-plone-org-website">
+<h1>The plone.org website<a class="headerlink" href="#the-plone-org-website" title="Permalink to this headline">¶</a></h1>
+<p>One of the main responsibilities of the Plone.org admins team is to keep the plone.org
+website running smoothly. This includes the deployment of frequent &#8220;dot releases&#8221;,
+major upgrades (e.g. Plone 3 → Plone 4), and monitoring system performance.</p>
+<div class="section" id="the-buildout">
+<h2>The buildout<a class="headerlink" href="#the-buildout" title="Permalink to this headline">¶</a></h2>
+<p>To get started, you should familiarize yourself with the combined buildout and policy
+product here:</p>
+<blockquote>
+<a class="reference external" href="https://dev.plone.org/plone/browser/Products.PloneOrg/trunk">https://dev.plone.org/plone/browser/Products.PloneOrg/trunk</a></blockquote>
+<p>E.g.:</p>
+<div class="highlight-python"><pre>$ svn co http://svn.plone.org/svn/plone/Products.PloneOrg/trunk/
+$ python2.4 bootstrap.py
+$ bin/buildout
+$ bin/instance fg</pre>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference external" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference external" href="modindex.html"><em>Module Index</em></a></li>
-<li><a class="reference external" href="search.html"><em>Search Page</em></a></li>
-</ul>
+</div>
+<div class="section" id="the-issues">
+<h2>The issues<a class="headerlink" href="#the-issues" title="Permalink to this headline">¶</a></h2>
+<p>You can find a list of things that need to be fixed here:
+<a class="reference external" href="https://dev.plone.org/plone.org/report/1">https://dev.plone.org/plone.org/report/1</a></p>
+</div>
+<div class="section" id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h2>
+<p>You will need core developer access to commit your changes to the PloneOrg package. You
+can read about that here:
+<a class="reference external" href="http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing">http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing</a>.</p>
+<p>Contact the <a class="reference external" href="mailto:admins&#37;&#52;&#48;plone&#46;org">admins team</a> or join #plone.org on irc.freenode.net to discuss deployment of
+your changes!</p>
+</div>
 </div>
 
 
@@ -116,23 +115,28 @@ $(document).ready(function () {
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<p class="logo"><a href="#"><img src="_static/plone-icon-64.png" />
+<p class="logo"><a href="index.html"><img src="_static/plone-icon-64.png" />
 </a></p>
 
-            <h3><a href="#">Table Of Contents</a></h3>
+            <h3><a href="index.html">Table Of Contents</a></h3>
             <ul>
-<li><a class="reference external" href="#">Welcome to Plone.org System Administrator&#8217;s documentation!</a><ul>
+<li><a class="reference external" href="#">The plone.org website</a><ul>
+<li><a class="reference external" href="#the-buildout">The buildout</a></li>
+<li><a class="reference external" href="#the-issues">The issues</a></li>
+<li><a class="reference external" href="#deployment">Deployment</a></li>
 </ul>
 </li>
-<li><a class="reference external" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="svn.html"
+                                  title="previous chapter">Subversion Repository Management</a></p>
             <h4>Next topic</h4>
-            <p class="topless"><a href="about.html"
-                                  title="next chapter">About this project</a></p>
+            <p class="topless"><a href="theend.html"
+                                  title="next chapter">The End</a></p>
             <h3>This Page</h3>
             <ul class="this-page-menu">
-              <li><a href="_sources/index.txt"
+              <li><a href="_sources/ploneorg.txt"
                      rel="nofollow">Show Source</a></li>
             </ul>
           <div id="searchbox" style="display: none">
@@ -159,9 +163,12 @@ $(document).ready(function () {
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="about.html" title="About this project"
+          <a href="theend.html" title="The End"
              >next</a> |</li>
-        <li><a href="#">Plone.org System Administrator v1.0 documentation</a> &raquo;</li> 
+        <li class="right" >
+          <a href="svn.html" title="Subversion Repository Management"
+             >previous</a> |</li>
+        <li><a href="index.html">Plone.org System Administrator v1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
 
