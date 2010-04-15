@@ -17,9 +17,9 @@ Host: plone01.sixfeetup.com
 | plone01.sixfeetup.com     | - dist.plone.org     | Six Feet Up/  |           |
 | (74.203.223.202)          | - maint.plone.org    | Fortville, IN |           |
 |                           | - media.plone.org    | USA           |           |
-| - FreeBSD                 | - old.plone.org*     |               |           |
-| - 7.1-RELEASE             | - plone.org          |               |           |
-| - amd64                   | - staging.plone.org  |               |           |
+| - FreeBSD                 | - plone.org          |               |           |
+| - 7.1-RELEASE             | - staging.plone.org  |               |           |
+| - amd64                   |                      |               |           |
 | - Mem: 9305M Active       |                      |               |           |
 | - Swap: 4096M Total       |                      |               |           |
 | - CPU1:                   |                      |               |           |
