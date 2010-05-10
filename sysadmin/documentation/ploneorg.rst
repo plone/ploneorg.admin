@@ -5,36 +5,43 @@ One of the main responsibilities of the Plone.org admins team is to keep the plo
 website running smoothly. This includes the deployment of frequent "dot releases",
 major upgrades (e.g. Plone 3 → Plone 4), and monitoring system performance.
 
-The buildout
-------------
+Development
+-----------
 
 To get started, you should familiarize yourself with the combined buildout and policy 
-product here:
+product located here: http://dev.plone.org/plone/browser/Products.PloneOrg/trunk.
 
-    https://dev.plone.org/plone/browser/Products.PloneOrg/trunk
+To develop locally, follow these steps::
 
-E.g.::
-
-    $ svn co http://svn.plone.org/svn/plone/Products.PloneOrg/trunk/
+    $ svn co https://svn.plone.org/svn/plone/Products.PloneOrg/trunk/
     $ python2.4 bootstrap.py
     $ bin/buildout
     $ bin/instance fg
 
-The issues
-----------
+Issues
+------
 
-You can find a list of things that need to be fixed here:
-https://dev.plone.org/plone.org/report/1
+You can find a list of things that need to be fixed here::
+
+    https://dev.plone.org/plone.org/report/1
 
 Deployment
 ----------
 
 You will need core developer access to commit your changes to the PloneOrg package. You 
-can read about that here:
-http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing.
+can read about that here: http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing.
 
 Contact the `admins team`_ or join #plone.org on irc.freenode.net to discuss deployment of
 your changes!
+
+If you are an admin, you can deploy changes like this::
+
+    $ ssh plone.org
+    $ cd /srv/plone.org
+    $ sudo -u zope svn up
+    $ sudo -u zope bin/buildout -c production.cfg
+
+Then restart the instances as instructed below.
 
 Restarting
 ----------
@@ -50,4 +57,3 @@ To do that, you can use the following commands::
 
 
 .. _`admins team`: mailto:admins@plone.org
-

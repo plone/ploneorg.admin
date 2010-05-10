@@ -81,31 +81,36 @@ $(document).ready(function () {
 <p>One of the main responsibilities of the Plone.org admins team is to keep the plone.org
 website running smoothly. This includes the deployment of frequent &#8220;dot releases&#8221;,
 major upgrades (e.g. Plone 3 → Plone 4), and monitoring system performance.</p>
-<div class="section" id="the-buildout">
-<h2>The buildout<a class="headerlink" href="#the-buildout" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="development">
+<h2>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h2>
 <p>To get started, you should familiarize yourself with the combined buildout and policy
-product here:</p>
-<blockquote>
-<a class="reference external" href="https://dev.plone.org/plone/browser/Products.PloneOrg/trunk">https://dev.plone.org/plone/browser/Products.PloneOrg/trunk</a></blockquote>
-<p>E.g.:</p>
-<div class="highlight-python"><pre>$ svn co http://svn.plone.org/svn/plone/Products.PloneOrg/trunk/
+product located here: <a class="reference external" href="http://dev.plone.org/plone/browser/Products.PloneOrg/trunk">http://dev.plone.org/plone/browser/Products.PloneOrg/trunk</a>.</p>
+<p>To develop locally, follow these steps:</p>
+<div class="highlight-python"><pre>$ svn co https://svn.plone.org/svn/plone/Products.PloneOrg/trunk/
 $ python2.4 bootstrap.py
 $ bin/buildout
 $ bin/instance fg</pre>
 </div>
 </div>
-<div class="section" id="the-issues">
-<h2>The issues<a class="headerlink" href="#the-issues" title="Permalink to this headline">¶</a></h2>
-<p>You can find a list of things that need to be fixed here:
-<a class="reference external" href="https://dev.plone.org/plone.org/report/1">https://dev.plone.org/plone.org/report/1</a></p>
+<div class="section" id="issues">
+<h2>Issues<a class="headerlink" href="#issues" title="Permalink to this headline">¶</a></h2>
+<p>You can find a list of things that need to be fixed here:</p>
+<div class="highlight-python"><pre>https://dev.plone.org/plone.org/report/1</pre>
+</div>
 </div>
 <div class="section" id="deployment">
 <h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h2>
 <p>You will need core developer access to commit your changes to the PloneOrg package. You
-can read about that here:
-<a class="reference external" href="http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing">http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing</a>.</p>
+can read about that here: <a class="reference external" href="http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing">http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing</a>.</p>
 <p>Contact the <a class="reference external" href="mailto:admins&#37;&#52;&#48;plone&#46;org">admins team</a> or join #plone.org on irc.freenode.net to discuss deployment of
 your changes!</p>
+<p>If you are an admin, you can deploy changes like this:</p>
+<div class="highlight-python"><pre>$ ssh plone.org
+$ cd /srv/plone.org
+$ sudo -u zope svn up
+$ sudo -u zope bin/buildout -c production.cfg</pre>
+</div>
+<p>Then restart the instances as instructed below.</p>
 </div>
 <div class="section" id="restarting">
 <h2>Restarting<a class="headerlink" href="#restarting" title="Permalink to this headline">¶</a></h2>
@@ -132,8 +137,8 @@ $ sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}</pre>
             <h3><a href="index.html">Table Of Contents</a></h3>
             <ul>
 <li><a class="reference external" href="#">The plone.org website</a><ul>
-<li><a class="reference external" href="#the-buildout">The buildout</a></li>
-<li><a class="reference external" href="#the-issues">The issues</a></li>
+<li><a class="reference external" href="#development">Development</a></li>
+<li><a class="reference external" href="#issues">Issues</a></li>
 <li><a class="reference external" href="#deployment">Deployment</a></li>
 <li><a class="reference external" href="#restarting">Restarting</a></li>
 </ul>
