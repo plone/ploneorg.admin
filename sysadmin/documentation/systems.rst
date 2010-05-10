@@ -115,7 +115,7 @@ Host: antiloop.plone.org
 +---------------------------+----------------------+---------------+-----------+
 | antiloop.plone.org        | - antiloop.plone.org | XS4ALL/       | svn.p.o is| 
 | (82.94.219.235)           | - dist.plone.org*    | Amsterdam,    | really    |
-| (82.94.219.236)           | - `lists.plone.org`_ | Netherlands   | svn-mirror|
+| (82.94.219.236)           | - lists.plone.org*   | Netherlands   | svn-mirror|
 |                           | - media.plone.org*   |               |           |
 | - Linux                   | - planet.plone.org*  |               |           |
 | - 2.6.17-rc2              | - plone.hu           |               |           |
@@ -151,7 +151,7 @@ Host: aneka.plone.org
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | aneka.plone.org           | - backups.plone.org* | XS4ALL/       |           |
-| (82.94.219.234)           |                      | Amsterdam,    |           |
+| (82.94.219.234)           | - `lists.plone.org`_ | Amsterdam,    |           |
 |                           |                      | Netherlands   |           |
 | - Linux                   |                      |               |           |
 | - 2.6.18-5-686            |                      |               |           |

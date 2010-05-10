@@ -17,9 +17,9 @@ Host: plone01.sixfeetup.com
 | plone01.sixfeetup.com     | - dist.plone.org     | Six Feet Up/  |           |
 | (74.203.223.202)          | - maint.plone.org    | Fortville, IN |           |
 |                           | - media.plone.org    | USA           |           |
-| - FreeBSD                 | - old.plone.org*     |               |           |
-| - 7.1-RELEASE             | - plone.org          |               |           |
-| - amd64                   | - staging.plone.org  |               |           |
+| - FreeBSD                 | - plone.org          |               |           |
+| - 7.1-RELEASE             | - staging.plone.org  |               |           |
+| - amd64                   |                      |               |           |
 | - Mem: 9305M Active       |                      |               |           |
 | - Swap: 4096M Total       |                      |               |           |
 | - CPU1:                   |                      |               |           |
@@ -86,9 +86,9 @@ Host: deus.plone.org
 | - Linux                   | - paste.plone.org*   |               |           |
 | - 2.6.26-2-686            | - planet.plone.org   |               |           |
 | - i686                    | - svn.plone.org      |               |           |
-| - Mem:   2076244k total   |                      |               |           |
-| - Swap:  1048568k total   |                      |               |           |
-| - CPU1:                   |                      |               |           |
+| - Mem:   2076244k total   | - admin.plone.org    |               |           |
+| - Swap:  1048568k total   | - collective-docs.   |               |           |
+| - CPU1:                   |   plone.org          |               |           |
 |                           |                      |               |           |
 |  - Speed: 3066 MHz        |                      |               |           |
 |  - Family: Xeon           |                      |               |           |
@@ -115,7 +115,7 @@ Host: antiloop.plone.org
 +---------------------------+----------------------+---------------+-----------+
 | antiloop.plone.org        | - antiloop.plone.org | XS4ALL/       | svn.p.o is| 
 | (82.94.219.235)           | - dist.plone.org*    | Amsterdam,    | really    |
-| (82.94.219.236)           | - `lists.plone.org`_ | Netherlands   | svn-mirror|
+| (82.94.219.236)           | - lists.plone.org*   | Netherlands   | svn-mirror|
 |                           | - media.plone.org*   |               |           |
 | - Linux                   | - planet.plone.org*  |               |           |
 | - 2.6.17-rc2              | - plone.hu           |               |           |
@@ -151,7 +151,7 @@ Host: aneka.plone.org
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | aneka.plone.org           | - backups.plone.org* | XS4ALL/       |           |
-| (82.94.219.234)           |                      | Amsterdam,    |           |
+| (82.94.219.234)           | - `lists.plone.org`_ | Amsterdam,    |           |
 |                           |                      | Netherlands   |           |
 | - Linux                   |                      |               |           |
 | - 2.6.18-5-686            |                      |               |           |

@@ -107,6 +107,17 @@ can read about that here:
 <p>Contact the <a class="reference external" href="mailto:admins&#37;&#52;&#48;plone&#46;org">admins team</a> or join #plone.org on irc.freenode.net to discuss deployment of
 your changes!</p>
 </div>
+<div class="section" id="restarting">
+<h2>Restarting<a class="headerlink" href="#restarting" title="Permalink to this headline">¶</a></h2>
+<p>If you are a member of the admins team, you may be occassionaly asked to restart the instances.
+To do that, you can use the following commands:</p>
+<div class="highlight-python"><pre>$ ssh plone.org
+$ cd /usr/local
+$ sudo -u zope bin/supervisorctl restart plone.org-client-{1,2,3,4}
+$ sleep 60
+$ sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}</pre>
+</div>
+</div>
 </div>
 
 
@@ -124,6 +135,7 @@ your changes!</p>
 <li><a class="reference external" href="#the-buildout">The buildout</a></li>
 <li><a class="reference external" href="#the-issues">The issues</a></li>
 <li><a class="reference external" href="#deployment">Deployment</a></li>
+<li><a class="reference external" href="#restarting">Restarting</a></li>
 </ul>
 </li>
 </ul>

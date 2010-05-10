@@ -36,5 +36,18 @@ http://plone.org/documentation/manual/plone-core-developer-reference/overview/co
 Contact the `admins team`_ or join #plone.org on irc.freenode.net to discuss deployment of
 your changes!
 
+Restarting
+----------
+
+If you are a member of the admins team, you may be occassionaly asked to restart the instances.
+To do that, you can use the following commands::
+
+    $ ssh plone.org
+    $ cd /usr/local
+    $ sudo -u zope bin/supervisorctl restart plone.org-client-{1,2,3,4}
+    $ sleep 60 
+    $ sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}
+
+
 .. _`admins team`: mailto:admins@plone.org
 
