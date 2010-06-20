@@ -14,6 +14,8 @@ Contents:
    about.rst
    contributing.rst
    systems.rst
+   services.rst
+   mailman.rst
    svn.rst
    ploneorg.rst
    theend.rst

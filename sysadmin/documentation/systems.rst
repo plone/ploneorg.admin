@@ -150,9 +150,9 @@ Host: aneka.plone.org
 | Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
-| aneka.plone.org           | - backups.plone.org* | XS4ALL/       |           |
-| (82.94.219.234)           | - `lists.plone.org`_ | Amsterdam,    |           |
-|                           |                      | Netherlands   |           |
+| aneka.plone.org           | - backups.plone.org* | XS4ALL/       | See       |
+| (82.94.219.234)           | - `lists.plone.org`_ | Amsterdam,    | mailman   |
+|                           |                      | Netherlands   | section.  |
 | - Linux                   |                      |               |           |
 | - 2.6.18-5-686            |                      |               |           |
 | - i686                    |                      |               |           |
@@ -191,9 +191,9 @@ Hardware information gathered via:
 - dmidecode | grep -i family
 - dmidecode | grep -i core
 
-(*)Inactive
+(*)Inactive.
 
-(**)The community receives support from both `Pilot Systems`_ and `Six Feet Up`_ for their respective systems
+(**)The community receives support from both `Pilot Systems`_ and `Six Feet Up`_ for their respective systems.
 
 .. _`lists.plone.org`: http://lists.plone.org
 .. _`stats.plone.org`: http://stats.plone.org

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>About this project &mdash; Plone.org System Administrator v1.0 documentation</title>
+    <title>Mailman &mdash; Plone.org System Administrator v1.0 documentation</title>
     <link rel="stylesheet" href="_static/plone.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -21,10 +21,10 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="author" title="About these documents" href="#" />
+    <link rel="author" title="About these documents" href="about.html" />
     <link rel="top" title="Plone.org System Administrator v1.0 documentation" href="index.html" />
-    <link rel="next" title="Contributing to this documentation" href="contributing.html" />
-    <link rel="prev" title="Welcome to Plone.org System Administrator’s documentation!" href="index.html" />
+    <link rel="next" title="Subversion Repository Management" href="svn.html" />
+    <link rel="prev" title="Services" href="services.html" />
 <script language="javascript">
 //<![CDATA[
 
@@ -64,10 +64,10 @@ $(document).ready(function () {
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="contributing.html" title="Contributing to this documentation"
+          <a href="svn.html" title="Subversion Repository Management"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="index.html" title="Welcome to Plone.org System Administrator’s documentation!"
+          <a href="services.html" title="Services"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">Plone.org System Administrator v1.0 documentation</a> &raquo;</li> 
       </ul>
@@ -78,14 +78,42 @@ $(document).ready(function () {
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="about-this-project">
-<h1>About this project<a class="headerlink" href="#about-this-project" title="Permalink to this headline">¶</a></h1>
-<p>This is the Plone.org system administrator&#8217;s documentation to be used
-by Plone.org system administrators and <tt class="docutils literal"><span class="pre">you</span></tt>, if you would like to help.</p>
-<div class="section" id="contact">
-<h2>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h2>
-<p>Please send email to <a class="reference external" href="mailto:admins&#37;&#52;&#48;plone&#46;org?subject='Iwanttohelp!'">admins<span>&#64;</span>plone<span>&#46;</span>org</a> to request a task! You can also find
-the admins team in #plone.org on irc.freenode.net.</p>
+  <div class="section" id="mailman">
+<h1>Mailman<a class="headerlink" href="#mailman" title="Permalink to this headline">¶</a></h1>
+<p>These are the details of the Mailman service running on aneka.plone.org (CNAME lists.plone.org).</p>
+<div class="section" id="id1">
+<h2>Mailman<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="specs">
+<h3>Specs<a class="headerlink" href="#specs" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Version = 2.1.6 (source build)</li>
+<li>Location = /srv/lists.plone.org/mailman</li>
+<li>Path = /Applications/mailman (symlinked Applications = /srv/lists.plone.org)</li>
+</ul>
+</div>
+<div class="section" id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
+<p>Mailman was built from source due to the need to pass selected parameters on install. The original location on dues was copied on the aneka install and on the original the libs and archives where symlinked as well, the newer install uses the same method symlinking from the server release location to /Applications/mailman/archives/</p>
+<p>The path is /Applications symlinked as that was what was most convenient to use at the time due to the person migrating it using that path on there own system.</p>
+</div>
+</div>
+<div class="section" id="postfix">
+<h2>Postfix<a class="headerlink" href="#postfix" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Specs<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Postfix: Version = 2.3.8</li>
+<li>Location = /usr/lib/postfix</li>
+<li>relay domains = lists.plone.org</li>
+<li>Allowed domains = aneka.plone.org, localhost.plone.org, localhost</li>
+<li>Spamassassin: Version = 3.2.3</li>
+<li>Perl version = 5.8.8</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>Notes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Spamassassin is using Bayes system rules with a current score of 5.0 – at the moment it delivers the mail marked as spam so a judgement can be made on if it is spam or not until a good balance in terms of scoring has been found, they can then be temporarily stored in a separate mailbox or discarded automatically.</p>
+</div>
 </div>
 </div>
 
@@ -100,21 +128,30 @@ the admins team in #plone.org on irc.freenode.net.</p>
 
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">About this project</a><ul>
-<li><a class="reference internal" href="#contact">Contact</a></li>
+<li><a class="reference internal" href="#">Mailman</a><ul>
+<li><a class="reference internal" href="#id1">Mailman</a><ul>
+<li><a class="reference internal" href="#specs">Specs</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#postfix">Postfix</a><ul>
+<li><a class="reference internal" href="#id2">Specs</a></li>
+<li><a class="reference internal" href="#id3">Notes</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="index.html"
-                        title="previous chapter">Welcome to Plone.org System Administrator&#8217;s documentation!</a></p>
+  <p class="topless"><a href="services.html"
+                        title="previous chapter">Services</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="contributing.html"
-                        title="next chapter">Contributing to this documentation</a></p>
+  <p class="topless"><a href="svn.html"
+                        title="next chapter">Subversion Repository Management</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/about.txt"
+    <li><a href="_sources/mailman.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -141,10 +178,10 @@ the admins team in #plone.org on irc.freenode.net.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="contributing.html" title="Contributing to this documentation"
+          <a href="svn.html" title="Subversion Repository Management"
              >next</a> |</li>
         <li class="right" >
-          <a href="index.html" title="Welcome to Plone.org System Administrator’s documentation!"
+          <a href="services.html" title="Services"
              >previous</a> |</li>
         <li><a href="index.html">Plone.org System Administrator v1.0 documentation</a> &raquo;</li> 
       </ul>
