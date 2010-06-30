@@ -125,6 +125,25 @@ $ sleep 60
 $ sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}</pre>
 </div>
 </div>
+<div class="section" id="other-services">
+<h2>Other services<a class="headerlink" href="#other-services" title="Permalink to this headline">¶</a></h2>
+<p>Some services are not included in the buildout, including:</p>
+<ul class="simple">
+<li>Varnish</li>
+<li>NGINX</li>
+<li>Pound</li>
+<li>LDAP</li>
+<li>Postfix</li>
+</ul>
+<p>Generally speaking, these services are controlled &#8220;BSD-style&#8221; and are located in /usr/local.
+So for example to restart nginx, you can do the following:</p>
+<div class="highlight-python"><pre>$ /usr/local/etc/rc.d restart nginx</pre>
+</div>
+<p>Note the configuration files for some of these services are version controlled, e.g.
+<a class="reference external" href="http://svn.plone.org/svn/plone/plone01-nginx/trunk/">http://svn.plone.org/svn/plone/plone01-nginx/trunk/</a>.</p>
+<p>Ideally, all configuration files of interest will be added to our version control
+system. The next likely targets for inclusion are Varnish and Pound.</p>
+</div>
 </div>
 
 
@@ -143,6 +162,7 @@ $ sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}</pre>
 <li><a class="reference internal" href="#issues">Issues</a></li>
 <li><a class="reference internal" href="#deployment">Deployment</a></li>
 <li><a class="reference internal" href="#restarting">Restarting</a></li>
+<li><a class="reference internal" href="#other-services">Other services</a></li>
 </ul>
 </li>
 </ul>

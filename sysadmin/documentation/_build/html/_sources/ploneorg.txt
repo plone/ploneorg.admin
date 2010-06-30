@@ -55,5 +55,26 @@ To do that, you can use the following commands::
     $ sleep 60 
     $ sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}
 
+Other services
+--------------
+
+Some services are not included in the buildout, including:
+
+- Varnish
+- NGINX
+- Pound
+- LDAP
+- Postfix
+
+Generally speaking, these services are controlled "BSD-style" and are located in /usr/local.
+So for example to restart nginx, you can do the following::
+
+    $ /usr/local/etc/rc.d restart nginx
+
+Note the configuration files for some of these services are version controlled, e.g.
+http://svn.plone.org/svn/plone/plone01-nginx/trunk/.
+
+Ideally, all configuration files of interest will be added to our version control
+system. The next likely targets for inclusion are Varnish and Pound.
 
 .. _`admins team`: mailto:admins@plone.org
