@@ -3,6 +3,8 @@
 	ServerAdmin admins@plone.org
     ServerName hudson.plone.org
 
+    DocumentRoot /var/www
+
 	ErrorLog /var/log/apache2/hudson-error.log
 
 	# Possible values include: debug, info, notice, warn, error, crit,
