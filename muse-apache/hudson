@@ -13,6 +13,8 @@
 
 	CustomLog /var/log/apache2/hudson-access.log combined
 
+    RewriteEngine On
+
     # Use last flag because no more rewrite can be applied after proxy pass
     RewriteRule       ^/hudson(.*)$  http://localhost:8080/hudson$1 [P,L]
     ProxyPassReverse  /hudson        http://localhost:8080/hudson
