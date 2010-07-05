@@ -186,13 +186,14 @@ Host: muse.plone.org
 | Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
-| muse.plone.org            | - hudson.plone.org   |               |           |
+| muse.plone.org            | - hudson.plone.org   | Citum/Finland |           |
 | (91.216.77.14)            |                      |               |           |
 |                           |                      |               |           |
 | - Linux                   |                      |               |           |
 | - 2.6.18-194…5            |                      |               |           |
 | - x86_64                  |                      |               |           |
-| - Mem:   6656000k total   |                      |               |           |
+| - Mem:   6,656,000k total |                      |               |           |
+|   (Up to 16GB avail)      |                      |               |           |
 | - Swap:        0k total   |                      |               |           |
 | - CPU1:                   |                      |               |           |
 |                           |                      |               |           |
