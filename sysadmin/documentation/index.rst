@@ -18,6 +18,7 @@ Contents:
    mailman.rst
    svn.rst
    ploneorg.rst
+   hudson.rst
    theend.rst
 
 Indices and tables
