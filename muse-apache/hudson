@@ -1,28 +1,23 @@
 <VirtualHost *:80>
 
-	ServerAdmin admins@plone.org
+    ServerAdmin admins@plone.org
     ServerName hudson.plone.org
 
     DocumentRoot /var/www
 
-	ErrorLog /var/log/apache2/hudson-error.log
+    ErrorLog /var/log/apache2/hudson-error.log
 
-	# Possible values include: debug, info, notice, warn, error, crit,
-	# alert, emerg.
-	LogLevel warn
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel warn
 
-	CustomLog /var/log/apache2/hudson-access.log combined
+    CustomLog /var/log/apache2/hudson-access.log combined
 
-    RewriteEngine On
-
-    # Use last flag because no more rewrite can be applied after proxy pass
-    RewriteRule       ^/hudson(.*)$  http://localhost:8080/hudson$1 [P,L]
-    ProxyPassReverse  /hudson        http://localhost:8080/hudson
+    ProxyPass         /        http://localhost:8080/
+    ProxyPassReverse  /        http://localhost:8080/
     ProxyRequests     Off
 
-    # Local reverse proxy authorization override
-    # Most unix distribution deny proxy by default (ie /etc/apache2/mods-enabled/proxy.conf in Ubuntu)
-    <Proxy http://localhost:8080/hudson*>
+    <Proxy http://localhost:8080/*>
       Order deny,allow
       Allow from all
     </Proxy>
