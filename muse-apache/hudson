@@ -22,4 +22,15 @@
       Allow from all
     </Proxy>
 
+    <Location />
+        AuthBasicProvider ldap
+        AuthType    Basic
+        AuthName    "plone.org hudson ci"
+        AuthLDAPUrl ldap://plone.org:389/ou=People,dc=plone,dc=org?uid NONE
+        AuthLDAPGroupAttributeIsDN on
+        AuthLDAPGroupAttribute  uniquemember
+        AuthzLDAPAuthoritative off
+        require ldap-group cn=Committers,ou=Groups,dc=plone,dc=org
+    </Location>
+
 </VirtualHost>
