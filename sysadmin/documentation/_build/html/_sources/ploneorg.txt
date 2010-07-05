@@ -77,4 +77,4 @@ http://svn.plone.org/svn/plone/plone01-nginx/trunk/.
 Ideally, all configuration files of interest will be added to our version control
 system. The next likely targets for inclusion are Varnish and Pound.
 
-.. _`admins team`: mailto:admins@plone.org
+.. _`admins team`: mailto:admins@lists.plone.org

@@ -34,4 +34,4 @@ Contributing to this documentation is easy, just follow these steps*:
 (*) You will need core contributor access, you can read about that here
     http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing.
 
-(**) If you don't have access to deus.plone.org, please send email to admins@plone.org.
+(**) If you don't have access to deus.plone.org, please send email to admins@lists.plone.org.
