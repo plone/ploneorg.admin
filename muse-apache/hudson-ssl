@@ -1,4 +1,4 @@
-<VirtualHost *:80>
+<VirtualHost *:443>
 
     ServerAdmin admins@plone.org
     ServerName hudson.plone.org
