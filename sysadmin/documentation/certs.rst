@@ -3,7 +3,7 @@ SSL Certificate
 ===============
 
 The Plone Foundation has a wildcard SSL certificate
-for *.plone.org. This is currently used via apache2
+for \*.plone.org. This is currently used via apache2
 on dev.plone.org and svn.plone.org.
 
 The certificate and key files are at
