@@ -8,6 +8,7 @@ on dev.plone.org and svn.plone.org.
 
 The certificate and key files are at
 /srv/deus.plone.org/etc/ssl . Please exercise all
-care in handling of the key file.
+care in handling of the key file: it should be treated as a secret, 
+highly confidential and protected from unintended disclosure. 
 
 
