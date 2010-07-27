@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
    about.rst
+   certs.rst
    contributing.rst
    systems.rst
    services.rst
