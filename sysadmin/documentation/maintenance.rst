@@ -2,11 +2,13 @@ Maintenance
 ===========
 
 Occasionally, things like software upgrades and hardware replacment must occur 
-on plone.org. To facilitate this process, we generally try to schedule maintenance
-windows at least one week in advance.
+on plone.org. 
 
 Procedure
 ---------
+
+To facilitate this process, we generally try to schedule maintenance
+windows at least one week in advance.
 
 If you are a member of the admin's team, and you are considering an action that 
 will require plone.org downtime (i.e. outage of any plone.org :doc:`service </services>`), please
