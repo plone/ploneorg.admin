@@ -9,7 +9,7 @@ on plone.org. To facilitate this process, we generally try to schedule maintenan
 windows at least one week in advance.
 
 If you are a member of the admin's team, and you are considering an action that 
-will require plone.org downtime (i.e. outage of any plone.org service), please
+will require plone.org downtime (i.e. outage of any plone.org :doc:`service </services>`), please
 create a news item on plone.org (e.g. http://plone.org/plone.org-upgrade-coming) 
 and submit it for publication.
 
