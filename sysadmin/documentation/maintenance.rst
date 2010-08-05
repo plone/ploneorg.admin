@@ -18,9 +18,9 @@ and submit it for publication.
 After submitting, please notify someone with publishing-ability in `#plone`_ and ask
 them to review/publish it. E.g. limi, baekholt, jonstahl.
 
-In addition if the service is plone.org, please send email to support at sixfeetup 
-dot com before you begin, so they can remove the service from their monitoring system
-(otherwise their folks will get paged, and show up in #plone.org asking what
+In addition, if the service is plone.org please send email to support at sixfeetup 
+dot com before you begin so they can remove the service from their monitoring system
+(otherwise their folks will get paged and show up in #plone.org asking what
 is going on :-)).
 
 .. _`#plone`: http://plone.org/support/chat
