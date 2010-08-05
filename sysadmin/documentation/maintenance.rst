@@ -2,23 +2,23 @@ Maintenance
 ===========
 
 Occasionally, things like software upgrades and hardware replacment must occur 
-on plone.org. 
+on plone.org services.
 
-Procedure
----------
+Basic procedure
+---------------
 
-To facilitate this process, we generally try to schedule maintenance
-windows at least one week in advance.
+To facilitate this process:
 
-If you are a member of the admin's team, and you are considering an action that 
-will require plone.org downtime (i.e. outage of any plone.org :doc:`service </services>`), please
-create a news item on plone.org (e.g. http://plone.org/plone.org-upgrade-coming) 
-and submit it for publication.
+- We generally try to schedule maintenance windows at least **one week in advance**.
 
-After submitting, please notify someone with publishing-ability in `#plone`_ and ask
-them to review/publish it. E.g. limi, baekholt, jonstahl.
+- If you are a member of the admin's team, and you are considering an action that will require plone.org downtime (i.e. outage of any plone.org :doc:`service </services>`), please **create a news item** on plone.org (e.g. http://plone.org/plone.org-upgrade-coming) and submit it for publication.
 
-In addition, if the service is plone.org please send email to support at sixfeetup 
+- After submitting, please **notify someone** with publishing-ability in `#plone`_ and ask them to review/publish it. E.g. limi, baekholt, jonstahl.
+
+Additional steps
+----------------
+
+In addition, if the service is plone.org **please send email** to support at sixfeetup
 dot com before you begin so they can remove the service from their monitoring system
 (otherwise their folks will get paged and show up in #plone.org asking what
 is going on :-)).
