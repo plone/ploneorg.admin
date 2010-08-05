@@ -20,6 +20,7 @@ Contents:
    svn.rst
    ploneorg.rst
    hudson.rst
+   maintenance.rst
    theend.rst
 
 Indices and tables
