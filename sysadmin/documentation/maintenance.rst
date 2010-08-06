@@ -1,7 +1,7 @@
 Maintenance
 ===========
 
-Occasionally, things like software upgrades and hardware replacment must occur 
+Occasionally, things like software upgrades and hardware replacement must occur 
 on plone.org services.
 
 Basic procedure
