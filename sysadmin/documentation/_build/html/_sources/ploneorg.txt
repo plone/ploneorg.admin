@@ -13,7 +13,7 @@ product located here: http://dev.plone.org/plone/browser/Products.PloneOrg/trunk
 
 To develop locally, follow these steps::
 
-    $ svn co https://svn.plone.org/svn/plone/Products.PloneOrg/trunk/
+    $ svn co https://svn.plone.org/svn/plone/Products.PloneOrg/trunk Products.PloneOrg
     $ python2.4 bootstrap.py
     $ bin/buildout
     $ bin/instance fg
