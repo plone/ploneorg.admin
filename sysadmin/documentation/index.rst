@@ -16,11 +16,6 @@ Contents:
    contributing.rst
    systems.rst
    services.rst
-   mailman.rst
-   svn.rst
-   ploneorg.rst
-   hudson.rst
-   planet.rst
    maintenance.rst
    theend.rst
 
