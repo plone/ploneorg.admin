@@ -1,0 +1,2 @@
+# TUPA nameserver statistics
+*/2 * * * * www-data /usr/bin/php4 /srv/deus.plone.org/http/root/tupa/crontab/cron_120s.php > /dev/null

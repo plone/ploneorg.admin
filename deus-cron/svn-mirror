@@ -1,0 +1,4 @@
+MAILTO=admins@lists.plone.org
+#*/10 * * * * www-data svnsync sync https://svn-mirror.plone.org/svn/archetypes --non-interactive > /dev/null
+#3/10 * * * * www-data svnsync sync https://svn-mirror.plone.org/svn/plone --non-interactive > /dev/null
+# 6/10 * * * * www-data svnsync sync https://svn-mirror.plone.org/svn/collective --non-interactive > /dev/null

@@ -1,0 +1,3 @@
+# Update the planet site every 10 minutes
+MAILTO=admins@plone.org
+*/10 * * * * planet /srv/planet.plone.org/bin/update >/dev/null 2>/dev/null

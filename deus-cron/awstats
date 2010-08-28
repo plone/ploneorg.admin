@@ -1,0 +1,1 @@
+*/10 * * * * www-data [ -x /usr/lib/cgi-bin/awstats.pl ] && /usr/local/sbin/awupdate
