@@ -32,8 +32,9 @@ Contributing to this documentation is easy, just follow these steps*:
 7. Login to deus.plone.org to synchronize your changes**::
 
     $ ssh deus.plone.org
-    $ cd /srv/admin.plone.org/http/root
-    $ svn up
+    $ cd /srv/admin.plone.org
+    $ sudo svn up
+    $ sudo make html
 
 (*) You will need core contributor access, you can read about that here
     http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing.
