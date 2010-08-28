@@ -212,7 +212,7 @@ Details
 Planet
 ------
 
-The Plone planet (http://planet.plone.org) aggregates feeds of various community members for the enjoyment of all.
+Planet Plone (http://planet.plone.org) aggregates blog feeds of various community members to a single website, for the enjoyment of all.
 
 Details
 ~~~~~~~
