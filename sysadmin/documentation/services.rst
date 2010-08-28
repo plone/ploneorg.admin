@@ -22,3 +22,7 @@ Subversion
 Hudson
 ------
 - :doc:`Hudson </hudson>`
+
+Planet
+------
+- :doc:`Planet </planet>`

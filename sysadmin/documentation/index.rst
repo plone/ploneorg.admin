@@ -20,6 +20,7 @@ Contents:
    svn.rst
    ploneorg.rst
    hudson.rst
+   planet.rst
    maintenance.rst
    theend.rst
 
