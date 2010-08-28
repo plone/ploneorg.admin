@@ -1,0 +1,2 @@
+#!/bin/sh
+0 0 * * * cd /srv/admin.plone.org; svn up; make html
