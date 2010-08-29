@@ -1,10 +1,8 @@
 # VCL file optimized for Plone with a webserver in front.  See vcl(7) for details
 
-#Default backend is nginx on port 80:
-
 backend default {
     .host = "127.0.0.1";
-    .port = "80";
+    .port = "5021";
 }
 
 backend ploneorg {
