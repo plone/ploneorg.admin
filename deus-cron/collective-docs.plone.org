@@ -1,2 +1,2 @@
-#!/bin/sh
-0 0 * * * root cd /srv/collective-docs.plone.org; svn up; make html
+##!/bin/sh
+#0 0 * * * root cd /srv/collective-docs.plone.org; svn up; make html
