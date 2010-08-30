@@ -83,6 +83,17 @@ All configuration files of interest are either created by buildout or included i
 
 .. _`admins team`: mailto:admins@lists.plone.org
 
+
+Typical routine
+~~~~~~~~~~~~~~~
+
+For whatever it is worth, a typical routine for the plone.org admin is to login, svn up, run buildout and restart the instances::
+
+    $ cd /srv/plone.org 
+    $ sudo -u zope svn up 
+    $ sudo -u zope bin/buildout -c conf/production.cfg
+    $ sudo -u zope bin/supervisorctl restart plone.org-client-{1,2,3,4} ; sleep 60 ; sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}
+
 Mailman
 -------
 
