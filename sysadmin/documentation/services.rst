@@ -20,7 +20,7 @@ product located here: http://dev.plone.org/plone/browser/Products.PloneOrg/trunk
 To develop locally, follow these steps::
 
     $ svn co https://svn.plone.org/svn/plone/Products.PloneOrg/trunk Products.PloneOrg
-    $ python2.4 bootstrap.py
+    $ python2.6 bootstrap.py
     $ bin/buildout
     $ bin/instance fg
 
@@ -56,9 +56,9 @@ If you are a member of the admins team, you may be occassionaly asked to restart
 To do that, you can use the following commands::
 
     $ ssh plone.org
-    $ cd /usr/local
+    $ cd /srv/plone.org
     $ sudo -u zope bin/supervisorctl restart plone.org-client-{1,2,3,4}
-    $ sleep 60 
+    $ sleep 60
     $ sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}
 
 Other services
@@ -67,7 +67,6 @@ Other services
 Some services are not included in the buildout, including:
 
 - Varnish
-- NGINX
 - Pound
 - LDAP
 - Postfix
@@ -75,13 +74,12 @@ Some services are not included in the buildout, including:
 Generally speaking, these services are controlled "BSD-style" and are located in /usr/local.
 So for example to restart nginx, you can do the following::
 
-    $ /usr/local/etc/rc.d restart nginx
+    $ /usr/local/etc/rc.d/pound restart
 
 Note the configuration files for some of these services are version controlled, e.g.
-http://svn.plone.org/svn/plone/plone01-nginx/trunk/.
+http://svn.plone.org/svn/plone/plone01-pound/trunk/.
 
-Ideally, all configuration files of interest will be added to our version control
-system. The next likely targets for inclusion are Varnish and Pound.
+All configuration files of interest are either created by buildout or included in version control.
 
 .. _`admins team`: mailto:admins@lists.plone.org
 
