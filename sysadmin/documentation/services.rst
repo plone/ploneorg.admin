@@ -52,14 +52,14 @@ Then restart the instances as instructed below.
 Restarting
 ~~~~~~~~~~
 
-If you are a member of the admins team, you may be occassionaly asked to restart the instances.
+If you are a member of the admins team, you may be occassionaly asked to login, svn up, run buildout, and restart the instances.
 To do that, you can use the following commands::
 
     $ ssh plone.org
     $ cd /srv/plone.org
-    $ sudo -u zope bin/supervisorctl restart plone.org-client-{1,2,3,4}
-    $ sleep 60
-    $ sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}
+    $ sudo -u zope svn up 
+    $ sudo -u zope bin/buildout -c conf/production.cfg
+    $ sudo -u zope bin/supervisorctl restart plone.org-client-{1,2,3,4} ; sleep 60 ; sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}
 
 Other services
 ~~~~~~~~~~~~~~
@@ -82,17 +82,6 @@ http://svn.plone.org/svn/plone/plone01-pound/trunk/.
 All configuration files of interest are either created by buildout or included in version control.
 
 .. _`admins team`: mailto:admins@lists.plone.org
-
-
-Typical routine
-~~~~~~~~~~~~~~~
-
-For whatever it is worth, a typical routine for the plone.org admin is to login, svn up, run buildout and restart the instances::
-
-    $ cd /srv/plone.org 
-    $ sudo -u zope svn up 
-    $ sudo -u zope bin/buildout -c conf/production.cfg
-    $ sudo -u zope bin/supervisorctl restart plone.org-client-{1,2,3,4} ; sleep 60 ; sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}
 
 Mailman
 -------
