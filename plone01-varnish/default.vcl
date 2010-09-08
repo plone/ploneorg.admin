@@ -15,23 +15,10 @@ acl purge {
     "127.0.0.1";
 }
 
-# Define a sub to handle requests where we ignore cache-control headers.  Now
-# we don't have to put the check for a 200 status code in every content type:
-sub override {
-    if (obj.status == 200) {
-        deliver;
-    }
-    pass;
-}
-
 sub normalize_accept_encoding {
     if (req.http.Accept-Encoding) {
         if (req.url ~ "\.(jpe?g|png|gif|swf|pdf|gz|tgz|bz2|tbz|zip)$" || req.url ~ "/image_[^/]*$") {
             # No point in compressing these
-            remove req.http.Accept-Encoding;
-        } elsif (req.http.user-agent ~ "MSIE [1-6]\." && req.url ~ "\.(css|js)$") {
-            # Some versions of IE6 can't handle css/js correctly
-            # See: http://www.webveteran.com/blog/index.php/web-coding/coldfusion/fix-for-ie6-and-gzip-compressed-javascripts/
             remove req.http.Accept-Encoding;
         } elsif (req.http.Accept-Encoding ~ "gzip") {
             set req.http.Accept-Encoding = "gzip";
@@ -62,14 +49,6 @@ sub rewrite_s_maxage {
     }
 }
 
-sub rewrite_maxage {
-    if (req.http.X-Anonymous && obj.http.Cache-Control ~ "max-age=0") {
-        # rewrite maxage so anonymous users' browsers cache for 5 minutes
-        set obj.http.Cache-Control = regsub(obj.http.Cache-Control, "max-age=0", "max-age=300");
-        remove obj.http.Expires;
-    }
-}
-
 sub vcl_recv {
     set req.grace = 120s;
     if (!req.http.host || req.http.host ~ "(^manage\.|^old\.|^)plone.org") {
@@ -77,7 +56,7 @@ sub vcl_recv {
     } else {
         set req.backend = default;
         if (req.http.host == "media.plone.org") {
-            pipe;
+            return(pipe);
         }
     }
     if (req.request == "PURGE") {
@@ -89,40 +68,35 @@ sub vcl_recv {
     }
     if (req.request != "GET" && req.request != "HEAD") {
         # We only deal with GET and HEAD by default
-        pass;
+        return(pass);
     }
     call normalize_accept_encoding;
     call annotate_request;
-    lookup;
+    return(lookup);
 }
 
 sub vcl_fetch {
-    if (obj.http.Vary && obj.http.Content-Type ~ "text/html") {
-        # Make sure we vary on X-Anonymous so that logged in users do not get served anonymous data
-        set obj.http.Vary = obj.http.Vary ", X-Anonymous";
+    if (!beresp.cacheable) {
+        set beresp.http.X-Varnish-Action = "FETCH (pass - not cacheable)";
+        return(pass);
     }
-    if (req.url ~ "\.(jpg|jpeg|gif|png|tiff|tif|svg|swf|ico|css|js|vsd|doc|ppt|pps|xls|pdf|mp3|mp4|m4a|ogg|mov|avi|wmv|sxw|zip|gz|bz2|tgz|tar|rar|odc|odb|odf|odg|odi|odp|ods|odt|sxc|sxd|sxi|sxw|dmg|torrent|deb|msi|iso|rpm)$") {
-        set obj.ttl = 600s;
-        call override;
+    if (beresp.http.Set-Cookie) {
+        set beresp.http.X-Varnish-Action = "FETCH (pass - response sets cookie)";
+        return(pass);
     }
-    if (obj.http.Content-Type ~ "image.*$") {
-        set obj.ttl = 600s;
-        call override;
+    if (!beresp.http.Cache-Control ~ "s-maxage=[1-9]" && beresp.http.Cache-Control ~ "(private|no-cache|no-store)") {
+        set beresp.http.X-Varnish-Action = "FETCH (pass - response sets private/no-cache/no-store token)";
+        return(pass);
     }
-    if (obj.http.Set-Cookie) {
-        set obj.http.X-Varnish-Action = "FETCH (pass - response sets cookie)";
-        pass;
+    if (req.http.Authorization && !beresp.http.Cache-Control ~ "public") {
+        set beresp.http.X-Varnish-Action = "FETCH (pass - authorized and no public cache control)";
+        return(pass);
     }
-    if (!req.http.X-Anonymous && !obj.http.Cache-Control ~ "public") {
-        set obj.http.X-Varnish-Action = "FETCH (pass - authorized and no public cache control)";
-        pass;
+    if (!req.http.X-Anonymous && !beresp.http.Cache-Control ~ "public") {
+        set beresp.http.X-Varnish-Action = "FETCH (pass - authorized and no public cache control)";
+        return(pass);
     }
-    if (!obj.cacheable) {
-        set obj.http.X-Varnish-Action = "FETCH (pass - not cacheable)";
-        pass;
-    }
-    call rewrite_maxage;
-    deliver;
+    return(deliver);
 }
 
 sub vcl_deliver {
@@ -162,5 +136,5 @@ sub vcl_error {
 
 </html>
 "};
-    deliver;
+    return(deliver);
 }
