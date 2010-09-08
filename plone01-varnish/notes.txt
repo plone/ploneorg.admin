@@ -1,0 +1,9 @@
+
+Notes for aclark:
+
+Use default.vcl.new initially.
+
+After the changeover, I'll take a closer look at the p.a.caching configuration
+and then we can use default.vcl.new2 which removes some overrides that are easier
+to control straight from p.a.caching.
+
