@@ -19,9 +19,9 @@ acl purge {
 # we don't have to put the check for a 200 status code in every content type:
 sub override {
     if (obj.status == 200) {
-        deliver;
+        return(deliver);
     }
-    pass;
+    return(pass);
 }
 
 sub normalize_accept_encoding {
