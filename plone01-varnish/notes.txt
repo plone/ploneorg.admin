@@ -1,9 +1,11 @@
 
 Notes for aclark:
 
-Use default.vcl.new initially.
+ - default.vcl.new
+   Initial conversion trying to maintain most of the original
 
-After the changeover, I'll take a closer look at the p.a.caching configuration
-and then we can use default.vcl.new2 which removes some overrides that are easier
-to control straight from p.a.caching.
+ - default.vcl.new2
+   An alternative vcl with more control off-loaded to p.a.caching
 
+ - default.vcl.new3
+   Same as .new3 but with manage.plone.org not cached
