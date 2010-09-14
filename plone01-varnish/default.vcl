@@ -55,7 +55,7 @@ sub vcl_recv {
         set req.backend = ploneorg;
     } else {
         set req.backend = default;
-        if (req.http.host == "media.plone.org") {
+        if (req.http.host == "media.plone.org" || req.http.host == "dist.plone.org") {
             return(pipe);
         }
     }
