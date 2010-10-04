@@ -242,7 +242,18 @@ That file looks like this::
     MAILTO=admins@plone.org
     */10 * * * * planet /srv/planet.plone.org/bin/update >/dev/null 2>/dev/null
 
-You can update it manually by running the following command on deus.plone.org as the planet user::
 
-    $ /srv/planet.plone.org/bin/update
+Deploy changes
+''''''''''''''
+
+You can deploy changes like so:
+
+    - Deploy changes commited to https://svn.plone.org/svn/plone/planet/trunk via::
+
+        $ cd /srv/planet.plone.org/venus/plone
+        $ sudo -u planet svn up 
+
+    - Update manually by running the following command on deus.plone.org as the planet user::
+
+        $ sudo -u planet /srv/planet.plone.org/bin/update
 
