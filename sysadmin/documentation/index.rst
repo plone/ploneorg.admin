@@ -6,22 +6,26 @@
 Welcome to Plone.org System Administrator's documentation!
 ===========================================================
 
-Contents:
+This is the Plone.org system administrator's documentation to be used
+by Plone.org system administrators and ``you``, if you would like to help.
+
+.. figure:: whudson.jpg
+
+   Wyn Williams installing new Plone continuous integration server somewhere in Finland (October 2010)
+
+Contact
+-------
+
+Please send email to `admins@lists.plone.org`_ to request a task! You can also find 
+the admins team in ``#plone.org`` on ``irc.freenode.net``.
+
+.. _admins@lists.plone.org: mailto:admins@lists.plone.org?subject='I want to help!' 
+
+Table of Contents
+-----------------
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 3
+    :glob:
 
-   about.rst
-   certs.rst
-   contributing.rst
-   systems.rst
-   services.rst
-   maintenance.rst
-   theend.rst
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+    *
