@@ -2,7 +2,7 @@
 Plone.org systems
 =================
 
-These are the community managed servers as of April 2010**.
+These are the community managed servers as of October 2010*.
 
 .. contents::
 
@@ -11,32 +11,33 @@ Host: plone01.sixfeetup.com
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
-|                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 |                           |                      |               |           |
-| plone01.sixfeetup.com     | - dist.plone.org     | Six Feet Up/  |           |
-| (74.203.223.202)          | - maint.plone.org    | Fortville, IN |           |
-|                           | - media.plone.org    | USA           |           |
-| - FreeBSD                 | - plone.org          |               |           |
-| - 7.1-RELEASE             | - staging.plone.org  |               |           |
+| plone01.sixfeetup.com     | - plone.org          | Six Feet Up/  | media     |
+| (74.203.223.202)          | - dist.plone.org     | Fortville, IN | redirects |
+|                           |                      | USA           | to        |
+| - FreeBSD                 |                      |               | dist/media|
+| - 7.1-RELEASE             |                      |               |           |
 | - amd64                   |                      |               |           |
 | - Mem: 9305M Active       |                      |               |           |
 | - Swap: 4096M Total       |                      |               |           |
 | - CPU1:                   |                      |               |           |
-|                           |                      |               |           |
 |  - Speed: 2833 MHz        |                      |               |           |
 |  - Family: Xeon           |                      |               |           |
 |  - Core count: 4          |                      |               |           |
-|                           |                      |               |           |
 | - CPU2:                   |                      |               |           |
-|                           |                      |               |           |
 |  - Speed: 2833 MHz        |                      |               |           |
 |  - Family: Xeon           |                      |               |           |
 |  - Core count: 4          |                      |               |           |
-|                           |                      |               |           |
 | - Network:                |                      |               |           |
-|                           |                      |               |           |
 | - Backups: Yes            |                      |               |           |
+| - Disk:                   |                      |               |           |
+|  - /     496M             |                      |               |           |
+|  - /dev  1.0K             |                      |               |           |
+|  - /tmp  9.7G             |                      |               |           |
+|  - /usr  108G             |                      |               |           |
+|  - /var  103G             |                      |               |           |
+|  - /srv  450G             |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
@@ -45,7 +46,6 @@ Host: plonenet.pilotsystems.net
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
-|                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 | plonenet.pilotsystems.net | - plone.net          | Pilot Systems/|           |
 | (85.118.46.41)            |                      | Marseille,    |           |
@@ -56,20 +56,20 @@ Host: plonenet.pilotsystems.net
 | - Mem:   2048216k total   |                      |               |           |
 | - Swap:        0k total   |                      |               |           |
 | - CPU1:                   |                      |               |           |
-|                           |                      |               |           |
 |  - Speed: 2.00GHz         |                      |               |           |
 |  - Family: Xeon           |                      |               |           |
 |  - Core count: 1          |                      |               |           |
-|                           |                      |               |           |
 | - CPU2:                   |                      |               |           |
-|                           |                      |               |           |
 |  - Speed: 2.00GHz         |                      |               |           |
 |  - Family: Xeon           |                      |               |           |
 |  - Core count: 1          |                      |               |           |
-|                           |                      |               |           |
 | - Network:                |                      |               |           |
-|                           |                      |               |           |
 | - Backups:                |                      |               |           |
+| - Disk:                   |                      |               |           |
+|  - /               50G    |                      |               |           |
+|  - /lib/init/rw  1001M    |                      |               |           |
+|  - /dev            10M    |                      |               |           |
+|  - /dev/shm      1001M    |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
@@ -239,8 +239,7 @@ Hardware information gathered via:
 - dmidecode | grep -i speed
 - dmidecode | grep -i family
 - dmidecode | grep -i core
-
-(*)Inactive.
+- df
 
 (**)The community receives support from both `Pilot Systems`_ and `Six Feet Up`_ for their respective systems.
 
