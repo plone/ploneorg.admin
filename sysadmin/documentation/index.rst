@@ -11,7 +11,7 @@ by Plone.org system administrators and ``you``, if you would like to help.
 
 .. figure:: whudson.jpg
 
-   Wyn Williams installing new Plone continuous integration server somewhere in Finland (October 2010)
+   Wyn Williams installs a new Plone continuous integration server (somewhere in Finland, October 2010).
 
 Contact
 -------
