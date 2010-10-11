@@ -22,16 +22,21 @@ Host: plone01.sixfeetup.com
 | - Mem: 9305M Active       |                      |               |           |
 | - Swap: 4096M Total       |                      |               |           |
 | - CPU1:                   |                      |               |           |
+|                           |                      |               |           |
 |  - Speed: 2833 MHz        |                      |               |           |
 |  - Family: Xeon           |                      |               |           |
 |  - Core count: 4          |                      |               |           |
+|                           |                      |               |           |
 | - CPU2:                   |                      |               |           |
+|                           |                      |               |           |
 |  - Speed: 2833 MHz        |                      |               |           |
 |  - Family: Xeon           |                      |               |           |
 |  - Core count: 4          |                      |               |           |
+|                           |                      |               |           |
 | - Network:                |                      |               |           |
 | - Backups: Yes            |                      |               |           |
 | - Disk:                   |                      |               |           |
+|                           |                      |               |           |
 |  - /     496M             |                      |               |           |
 |  - /dev  1.0K             |                      |               |           |
 |  - /tmp  9.7G             |                      |               |           |
@@ -56,16 +61,21 @@ Host: plonenet.pilotsystems.net
 | - Mem:   2048216k total   |                      |               |           |
 | - Swap:        0k total   |                      |               |           |
 | - CPU1:                   |                      |               |           |
+|                           |                      |               |           |
 |  - Speed: 2.00GHz         |                      |               |           |
 |  - Family: Xeon           |                      |               |           |
 |  - Core count: 1          |                      |               |           |
+|                           |                      |               |           |
 | - CPU2:                   |                      |               |           |
+|                           |                      |               |           |
 |  - Speed: 2.00GHz         |                      |               |           |
 |  - Family: Xeon           |                      |               |           |
 |  - Core count: 1          |                      |               |           |
+|                           |                      |               |           |
 | - Network:                |                      |               |           |
 | - Backups:                |                      |               |           |
 | - Disk:                   |                      |               |           |
+|                           |                      |               |           |
 |  - /               50G    |                      |               |           |
 |  - /lib/init/rw  1001M    |                      |               |           |
 |  - /dev            10M    |                      |               |           |
