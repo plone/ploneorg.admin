@@ -9,11 +9,11 @@ Contributing to this documentation is easy, just follow these steps*:
 
 2. Check out the documentation::
 
-    $ svn co https://svn.plone.org/svn/plone/sysadmin/trunk plone-admin
+    $ svn co https://svn.plone.org/svn/plone/plone.org/admin-docs/trunk plone-admin
 
 3. Change directories to the documentation directory::
 
-    $ cd plone-admin/documentation
+    $ cd admin-docs
 
 4. Make your changes. If you don't know Sphinx or reStructuredText, 
    you can read about them respectively here_, `and here`_.
