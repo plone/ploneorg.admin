@@ -13,7 +13,7 @@ Host: plone01.sixfeetup.com (SFU)
 | Server/Hardware           | Services             | Owner/Location| Notes     |
 +---------------------------+----------------------+---------------+-----------+
 |                           |                      |               |           |
-| plone01.sixfeetup.com     | - plone.org          | Six Feet Up/  | media     |
+| `plone01.sixfeetup.com`_  | - plone.org          | Six Feet Up/  | media     |
 | (74.203.223.202)          | - dist.plone.org     | Fortville, IN | redirects |
 |                           |                      | USA           | to        |
 | - FreeBSD                 |                      |               | dist/media|
@@ -49,39 +49,39 @@ Host: plone01.sixfeetup.com (SFU)
 Host: plonenet.pilotsystems.net (Pilot)
 ---------------------------------------
 
-+---------------------------+----------------------+---------------+-----------+
-| Server/Hardware           | Services             | Owner/Location| Notes     |
-+---------------------------+----------------------+---------------+-----------+
-| plonenet.pilotsystems.net | - plone.net          | Pilot Systems/|           |
-| (85.118.46.41)            |                      | Marseille,    |           |
-|                           |                      | France        |           |
-| - Linux                   |                      |               |           |
-| - 2.6.26-2-xen-amd64      |                      |               |           |
-| - x86_64                  |                      |               |           |
-| - Mem:   2048216k total   |                      |               |           |
-| - Swap:        0k total   |                      |               |           |
-| - CPU1:                   |                      |               |           |
-|                           |                      |               |           |
-|  - Speed: 2.00GHz         |                      |               |           |
-|  - Family: Xeon           |                      |               |           |
-|  - Core count: 1          |                      |               |           |
-|                           |                      |               |           |
-| - CPU2:                   |                      |               |           |
-|                           |                      |               |           |
-|  - Speed: 2.00GHz         |                      |               |           |
-|  - Family: Xeon           |                      |               |           |
-|  - Core count: 1          |                      |               |           |
-|                           |                      |               |           |
-| - Network:                |                      |               |           |
-| - Backups:                |                      |               |           |
-| - Disk:                   |                      |               |           |
-|                           |                      |               |           |
-|  - /               50G    |                      |               |           |
-|  - /lib/init/rw  1001M    |                      |               |           |
-|  - /dev            10M    |                      |               |           |
-|  - /dev/shm      1001M    |                      |               |           |
-|                           |                      |               |           |
-+---------------------------+----------------------+---------------+-----------+
++------------------------------+----------------------+---------------+-----------+
+| Server/Hardware              | Services             | Owner/Location| Notes     |
++------------------------------+----------------------+---------------+-----------+
+| `plonenet.pilotsystems.net`_ | - plone.net          | Pilot Systems/|           |
+| (85.118.46.41)               |                      | Marseille,    |           |
+|                              |                      | France        |           |
+| - Linux                      |                      |               |           |
+| - 2.6.26-2-xen-amd64         |                      |               |           |
+| - x86_64                     |                      |               |           |
+| - Mem:   2048216k total      |                      |               |           |
+| - Swap:        0k total      |                      |               |           |
+| - CPU1:                      |                      |               |           |
+|                              |                      |               |           |
+|  - Speed: 2.00GHz            |                      |               |           |
+|  - Family: Xeon              |                      |               |           |
+|  - Core count: 1             |                      |               |           |
+|                              |                      |               |           |
+| - CPU2:                      |                      |               |           |
+|                              |                      |               |           |
+|  - Speed: 2.00GHz            |                      |               |           |
+|  - Family: Xeon              |                      |               |           |
+|  - Core count: 1             |                      |               |           |
+|                              |                      |               |           |
+| - Network:                   |                      |               |           |
+| - Backups:                   |                      |               |           |
+| - Disk:                      |                      |               |           |
+|                              |                      |               |           |
+|  - /               50G       |                      |               |           |
+|  - /lib/init/rw  1001M       |                      |               |           |
+|  - /dev            10M       |                      |               |           |
+|  - /dev/shm      1001M       |                      |               |           |
+|                              |                      |               |           |
++------------------------------+----------------------+---------------+-----------+
 
 Host: deus.plone.org (OSUOSL)
 -----------------------------
@@ -90,7 +90,7 @@ Host: deus.plone.org (OSUOSL)
 | Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
-| deus.plone.org            | - api.plone.org      | Oregon State/ |           |
+| `deus.plone.org`_         | - api.plone.org      | Oregon State/ |           |
 | (140.211.166.62)          | - deus.plone.org     | Eugene, OR    |           |
 |                           | - dev.plone.org      | USA           |           |
 | - Linux                   | - paste.plone.org*   |               |           |
@@ -123,7 +123,7 @@ Host: antiloop.plone.org (XS4ALL)
 | Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
-| antiloop.plone.org        | - antiloop.plone.org | XS4ALL/       | svn.p.o is| 
+| `antiloop.plone.org`_     | - antiloop.plone.org | XS4ALL/       | svn.p.o is| 
 | (82.94.219.235)           | - dist.plone.org*    | Amsterdam,    | really    |
 | (82.94.219.236)           | - lists.plone.org*   | Netherlands   | svn-mirror|
 |                           | - media.plone.org*   |               |           |
@@ -160,7 +160,7 @@ Host: aneka.plone.org (XS4ALL)
 | Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
-| aneka.plone.org           | - backups.plone.org* | XS4ALL/       | See       |
+| `aneka.plone.org`_        | - backups.plone.org* | XS4ALL/       | See       |
 | (82.94.219.234)           | - `lists.plone.org`_ | Amsterdam,    | mailman   |
 |                           |                      | Netherlands   | section.  |
 | - Linux                   |                      |               |           |
@@ -196,7 +196,7 @@ Host: muse.plone.org (Citum)
 | Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
-| muse.plone.org            | - hudson.plone.org   | Citum/Finland |           |
+| `muse.plone.org`_         | - hudson.plone.org   | Citum/Finland |           |
 | (91.216.77.14)            |                      |               |           |
 |                           |                      |               |           |
 | - Linux                   |                      |               |           |
@@ -245,6 +245,7 @@ Host: placebo.plone.org (Citum)
 | Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
+| `placebo.plone.org`_      |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
@@ -263,6 +264,13 @@ Hardware information gathered via:
 
 (**)The community receives support from both `Pilot Systems`_ and `Six Feet Up`_ for their respective systems.
 
+.. _`muse.plone.org`: http://muse.plone.org
+.. _`placebo.plone.org`: http://placebo.plone.org
+.. _`antiloop.plone.org`: http://antiloop.plone.org
+.. _`aneka.plone.org`: http://aneka.plone.org
+.. _`deus.plone.org`: http://deus.plone.org
+.. _`plonenet.pilotsystems.net`: http://plonenet.pilotsystems.net
+.. _`plone01.sixfeetup.com`: http://plone01.sixfeetup.com
 .. _`lists.plone.org`: http://lists.plone.org
 .. _`stats.plone.org`: http://stats.plone.org
 .. _`Pilot Systems`: http://pilotsystems.net
