@@ -9,7 +9,7 @@ Contributing to this documentation is easy, just follow these steps*:
 
 2. Check out the documentation::
 
-    $ svn co https://svn.plone.org/svn/plone/plone.org/admin-docs/trunk plone-admin
+    $ svn co https://svn.plone.org/svn/plone/plone.org/admin-docs/trunk admin-docs
 
 3. Change directories to the documentation directory::
 
@@ -36,7 +36,8 @@ Contributing to this documentation is easy, just follow these steps*:
     $ sudo svn up
     $ sudo make html
 
-(*) You will need core contributor access, you can read about that here
-    http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing.
+(*) You will need core contributor access, you can read about that here:
 
-(**) If you don't have access to deus.plone.org, please send email to admins@lists.plone.org.
+    - http://dev.plone.org/plone/
+
+(**) If you don't have access to deus.plone.org, please send a request to admins@plone.org.
