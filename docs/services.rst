@@ -257,3 +257,21 @@ You can deploy changes like so:
 
         $ sudo -u planet /srv/planet.plone.org/bin/update
 
+Trac
+----
+
+This section contains information about the community managed trac instances located at dev.plone.org.
+
+
+Theme
+~~~~~
+
+By default, trac is themed along with the rest of plone.org. If you prefer the default Trac theme, visit this url (which sets a cookie):
+
+- http://dev.plone.org/trac-theme
+
+To go back to the Plone theme, visit this url:
+
+- http://dev.plone.org/plone-theme
+
+
