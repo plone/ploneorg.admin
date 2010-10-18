@@ -6,8 +6,8 @@ These are the community managed servers as of October 2010*.
 
 .. contents::
 
-Host: plone01.sixfeetup.com
----------------------------
+Host: plone01.sixfeetup.com (SFU)
+---------------------------------
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
@@ -46,8 +46,8 @@ Host: plone01.sixfeetup.com
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
-Host: plonenet.pilotsystems.net 
--------------------------------
+Host: plonenet.pilotsystems.net (Pilot)
+---------------------------------------
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
@@ -83,8 +83,8 @@ Host: plonenet.pilotsystems.net
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
-Host: deus.plone.org
---------------------
+Host: deus.plone.org (OSUOSL)
+-----------------------------
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
@@ -116,8 +116,8 @@ Host: deus.plone.org
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
-Host: antiloop.plone.org
-------------------------
+Host: antiloop.plone.org (XS4ALL)
+---------------------------------
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
@@ -153,8 +153,8 @@ Host: antiloop.plone.org
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
-Host: aneka.plone.org
---------------------- 
+Host: aneka.plone.org (XS4ALL)
+------------------------------ 
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
@@ -189,8 +189,8 @@ Host: aneka.plone.org
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
-Host: muse.plone.org
--------------------- 
+Host: muse.plone.org (Citum)
+----------------------------
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
@@ -238,8 +238,8 @@ Host: muse.plone.org
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
-Host: placebo.plone.org
--------------------- 
+Host: placebo.plone.org (Citum)
+------------------------------- 
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
