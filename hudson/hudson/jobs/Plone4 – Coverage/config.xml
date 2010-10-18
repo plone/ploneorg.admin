@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.plugins.disk__usage.DiskUsageProperty/>
+  </properties>
+  <scm class="hudson.scm.SubversionSCM">
+    <locations>
+      <hudson.scm.SubversionSCM_-ModuleLocation>
+        <remote>https://svn.plone.org/svn/plone/buildouts/plone-coredev/branches/4.0</remote>
+        <local>build</local>
+      </hudson.scm.SubversionSCM_-ModuleLocation>
+    </locations>
+    <useUpdate>true</useUpdate>
+    <doRevert>false</doRevert>
+    <excludedRegions></excludedRegions>
+    <includedRegions></includedRegions>
+    <excludedUsers></excludedUsers>
+    <excludedRevprop></excludedRevprop>
+    <excludedCommitMessages></excludedCommitMessages>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+cd $WORKSPACE/build
+python2.6 bootstrap.py -c hudson.cfg
+bin/buildout -c hudson.cfg
+echo &quot;Environment built&quot;</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+cd $WORKSPACE/build
+#bin/alltests --coverage ../../coverage
+mkdir /home/hudson/.hudson/jobs/Plone4Coverage/ncover
+bin/coverage-report coverage report/
+echo &quot;Coverage complete&quot;</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <ncover.NCoverArchiver>
+      <coverageDir>build/report/</coverageDir>
+      <indexFileName>all.html</indexFileName>
+      <keepAll>false</keepAll>
+    </ncover.NCoverArchiver>
+  </publishers>
+  <buildWrappers/>
+</project>
