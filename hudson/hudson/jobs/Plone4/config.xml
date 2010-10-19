@@ -19,411 +19,411 @@
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/buildouts/plone-coredev/branches/4.0</remote>
-        <local>build</local>
+        <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/Plone/trunk</remote>
-        <local>Plone</local>
+        <local>src/Plone</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/archetypes/archetypes.kss/trunk</remote>
-        <local>archetypes.kss</local>
+        <local>src/archetypes.kss</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/archetypes/MoreFieldsAndWidgets/archetypes.referencebrowserwidget/trunk</remote>
-        <local>archetypes.referencebrowserwidget</local>
+        <local>src/archetypes.referencebrowserwidget</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/archetypes/archetypes.schemaextender/trunk</remote>
-        <local>archetypes.schemaextender</local>
+        <local>src/archetypes.schemaextender</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/borg/components/borg.localrole/trunk</remote>
-        <local>borg.localrole</local>
+        <local>src/borg.localrole</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/collective.monkeypatcher/trunk</remote>
-        <local>collective.monkeypatcher</local>
+        <local>src/collective.monkeypatcher</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://svn.zope.org/repos/main/five.customerize/trunk</remote>
-        <local>five.customerize</local>
+        <local>src/five.customerize</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://svn.zope.org/repos/main/five.formlib/trunk</remote>
-        <local>five.formlib</local>
+        <local>src/five.formlib</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://svn.zope.org/repos/main/five.localsitemanager/trunk</remote>
-        <local>five.localsitemanager</local>
+        <local>src/five.localsitemanager</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.browserlayer/trunk</remote>
-        <local>plone.browserlayer</local>
+        <local>src/plone.browserlayer</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.contentrules/trunk</remote>
-        <local>plone.contentrules</local>
+        <local>src/plone.contentrules</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.fieldsets/trunk</remote>
-        <local>plone.fieldsets</local>
+        <local>src/plone.fieldsets</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.folder/trunk</remote>
-        <local>plone.folder</local>
+        <local>src/plone.folder</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.i18n/trunk</remote>
-        <local>plone.i18n</local>
+        <local>src/plone.i18n</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.indexer/trunk</remote>
-        <local>plone.indexer</local>
+        <local>src/plone.indexer</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.intelligenttext/trunk</remote>
-        <local>plone.intelligenttext</local>
+        <local>src/plone.intelligenttext</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.keyring/trunk</remote>
-        <local>plone.keyring</local>
+        <local>src/plone.keyring</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.locking/trunk</remote>
-        <local>plone.locking</local>
+        <local>src/plone.locking</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.memoize/trunk</remote>
-        <local>plone.memoize</local>
+        <local>src/plone.memoize</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.openid/trunk</remote>
-        <local>plone.openid</local>
+        <local>src/plone.openid</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.portlets/trunk</remote>
-        <local>plone.portlets</local>
+        <local>src/plone.portlets</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.protect/trunk</remote>
-        <local>plone.protect</local>
+        <local>src/plone.protect</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.reload/trunk</remote>
-        <local>plone.reload</local>
+        <local>src/plone.reload</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.scale/trunk</remote>
-        <local>plone.scale</local>
+        <local>src/plone.scale</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.session/trunk</remote>
-        <local>plone.session</local>
+        <local>src/plone.session</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.stringinterp/trunk</remote>
-        <local>plone.stringinterp</local>
+        <local>src/plone.stringinterp</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.theme/trunk</remote>
-        <local>plone.theme</local>
+        <local>src/plone.theme</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.blob/trunk</remote>
-        <local>plone.app.blob</local>
+        <local>src/plone.app.blob</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.content/trunk</remote>
-        <local>plone.app.content</local>
+        <local>src/plone.app.content</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.contentmenu/trunk</remote>
-        <local>plone.app.contentmenu</local>
+        <local>src/plone.app.contentmenu</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.contentrules/trunk</remote>
-        <local>plone.app.contentrules</local>
+        <local>src/plone.app.contentrules</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.controlpanel/trunk</remote>
-        <local>plone.app.controlpanel</local>
+        <local>src/plone.app.controlpanel</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.customerize/trunk</remote>
-        <local>plone.app.customerize</local>
+        <local>src/plone.app.customerize</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.folder/trunk</remote>
-        <local>plone.app.folder</local>
+        <local>src/plone.app.folder</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.form/trunk</remote>
-        <local>plone.app.form</local>
+        <local>src/plone.app.form</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.i18n/trunk</remote>
-        <local>plone.app.i18n</local>
+        <local>src/plone.app.i18n</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.imaging/trunk</remote>
-        <local>plone.app.imaging</local>
+        <local>src/plone.app.imaging</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.iterate/trunk</remote>
-        <local>plone.app.iterate</local>
+        <local>src/plone.app.iterate</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.jquerytools/trunk</remote>
-        <local>plone.app.jquerytools</local>
+        <local>src/plone.app.jquerytools</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.kss/trunk</remote>
-        <local>plone.app.kss</local>
+        <local>src/plone.app.kss</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.layout/trunk</remote>
-        <local>plone.app.layout</local>
+        <local>src/plone.app.layout</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.linkintegrity/trunk</remote>
-        <local>plone.app.linkintegrity</local>
+        <local>src/plone.app.linkintegrity</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.locales/trunk</remote>
-        <local>plone.app.locales</local>
+        <local>src/plone.app.locales</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.openid/trunk</remote>
-        <local>plone.app.openid</local>
+        <local>src/plone.app.openid</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.portlets/trunk</remote>
-        <local>plone.app.portlets</local>
+        <local>src/plone.app.portlets</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.redirector/trunk</remote>
-        <local>plone.app.redirector</local>
+        <local>src/plone.app.redirector</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.upgrade/trunk</remote>
-        <local>plone.app.upgrade</local>
+        <local>src/plone.app.upgrade</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.users/trunk</remote>
-        <local>plone.app.users</local>
+        <local>src/plone.app.users</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.viewletmanager/trunk</remote>
-        <local>plone.app.viewletmanager</local>
+        <local>src/plone.app.viewletmanager</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.vocabularies/trunk</remote>
-        <local>plone.app.vocabularies</local>
+        <local>src/plone.app.vocabularies</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.app.workflow/trunk</remote>
-        <local>plone.app.workflow</local>
+        <local>src/plone.app.workflow</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.portlet.collection/trunk</remote>
-        <local>plone.portlet.collection</local>
+        <local>src/plone.portlet.collection</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plone.portlet.static/trunk</remote>
-        <local>plone.portlet.static</local>
+        <local>src/plone.portlet.static</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/buildout/plone.recipe.alltests/trunk</remote>
-        <local>plone.recipe.alltests</local>
+        <local>src/plone.recipe.alltests</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/buildout/plone.recipe.zope2instance/trunk</remote>
-        <local>plone.recipe.zope2instance</local>
+        <local>src/plone.recipe.zope2instance</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/buildout/plone.recipe.zeoserver/trunk</remote>
-        <local>plone.recipe.zeoserver</local>
+        <local>src/plone.recipe.zeoserver</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/txtfilter/trunk</remote>
-        <local>txtfilter</local>
+        <local>src/txtfilter</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/wicked/trunk</remote>
-        <local>wicked</local>
+        <local>src/wicked</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://svn.zope.org/repos/main/z3c.autoinclude/trunk</remote>
-        <local>z3c.autoinclude</local>
+        <local>src/z3c.autoinclude</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/archetypes/Products.Archetypes/trunk</remote>
-        <local>Products.Archetypes</local>
+        <local>src/Products.Archetypes</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/Products.ATContentTypes/trunk</remote>
-        <local>Products.ATContentTypes</local>
+        <local>src/Products.ATContentTypes</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/archetypes/MoreFieldsAndWidgets/ATReferenceBrowserWidget/trunk</remote>
-        <local>Products.ATReferenceBrowserWidget</local>
+        <local>src/Products.ATReferenceBrowserWidget</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://svn.zope.org/repos/main/Products.CMFActionIcons/branches/2.1</remote>
-        <local>Products.CMFActionIcons</local>
+        <local>src/Products.CMFActionIcons</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://svn.zope.org/repos/main/Products.CMFCalendar/branches/2.2</remote>
-        <local>Products.CMFCalendar</local>
+        <local>src/Products.CMFCalendar</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://svn.zope.org/repos/main/Products.CMFCore/branches/2.2</remote>
-        <local>Products.CMFCore</local>
+        <local>src/Products.CMFCore</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://svn.zope.org/repos/main/Products.CMFDefault/branches/2.2</remote>
-        <local>Products.CMFDefault</local>
+        <local>src/Products.CMFDefault</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/Products.CMFDiffTool/trunk</remote>
-        <local>Products.CMFDiffTool</local>
+        <local>src/Products.CMFDiffTool</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/CMFDynamicViewFTI/trunk</remote>
-        <local>Products.CMFDynamicViewFTI</local>
+        <local>src/Products.CMFDynamicViewFTI</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/Products.CMFEditions/trunk</remote>
-        <local>Products.CMFEditions</local>
+        <local>src/Products.CMFEditions</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/CMFFormController/trunk</remote>
-        <local>Products.CMFFormController</local>
+        <local>src/Products.CMFFormController</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/Products.CMFPlacefulWorkflow/trunk</remote>
-        <local>Products.CMFPlacefulWorkflow</local>
+        <local>src/Products.CMFPlacefulWorkflow</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/CMFQuickInstallerTool/trunk</remote>
-        <local>Products.CMFQuickInstallerTool</local>
+        <local>src/Products.CMFQuickInstallerTool</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/Products.CMFTestCase/trunk</remote>
-        <local>Products.CMFTestCase</local>
+        <local>src/Products.CMFTestCase</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://svn.zope.org/repos/main/Products.CMFTopic/branches/2.2</remote>
-        <local>Products.CMFTopic</local>
+        <local>src/Products.CMFTopic</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://svn.zope.org/repos/main/Products.CMFUid/branches/2.2</remote>
-        <local>Products.CMFUid</local>
+        <local>src/Products.CMFUid</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/Products.contentmigration/trunk</remote>
-        <local>Products.contentmigration</local>
+        <local>src/Products.contentmigration</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://svn.zope.org/repos/main/Products.DCWorkflow/trunk</remote>
-        <local>Products.DCWorkflow</local>
+        <local>src/Products.DCWorkflow</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/Products.ExtendedPathIndex/trunk</remote>
-        <local>Products.ExtendedPathIndex</local>
+        <local>src/Products.ExtendedPathIndex</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://svn.zope.org/repos/main/Products.ExternalEditor/trunk</remote>
-        <local>Products.ExternalEditor</local>
+        <local>src/Products.ExternalEditor</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://svn.zope.org/repos/main/Products.GenericSetup/trunk</remote>
-        <local>Products.GenericSetup</local>
+        <local>src/Products.GenericSetup</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/Products.GroupUserFolder/trunk</remote>
-        <local>Products.GroupUserFolder</local>
+        <local>src/Products.GroupUserFolder</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/Products.i18ntestcase/trunk</remote>
-        <local>Products.i18ntestcase</local>
+        <local>src/Products.i18ntestcase</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/Products.LinguaPlone/trunk</remote>
-        <local>Products.LinguaPlone</local>
+        <local>src/Products.LinguaPlone</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/archetypes/Products.Marshall/trunk</remote>
-        <local>Products.Marshall</local>
+        <local>src/Products.Marshall</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/archetypes/Products.MimetypesRegistry/trunk</remote>
-        <local>Products.MimetypesRegistry</local>
+        <local>src/Products.MimetypesRegistry</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/Products.PasswordResetTool/trunk</remote>
-        <local>Products.PasswordResetTool</local>
+        <local>src/Products.PasswordResetTool</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/PlacelessTranslationService/trunk</remote>
-        <local>Products.PlacelessTranslationService</local>
+        <local>src/Products.PlacelessTranslationService</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/PloneLanguageTool/trunk</remote>
-        <local>Products.PloneLanguageTool</local>
+        <local>src/Products.PloneLanguageTool</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/Products.PlonePAS/trunk</remote>
-        <local>Products.PlonePAS</local>
+        <local>src/Products.PlonePAS</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/Products.PloneTestCase/trunk</remote>
-        <local>Products.PloneTestCase</local>
+        <local>src/Products.PloneTestCase</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://svn.zope.org/repos/main/Products.PluggableAuthService/trunk</remote>
-        <local>Products.PluggableAuthService</local>
+        <local>src/Products.PluggableAuthService</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://svn.zope.org/repos/main/Products.PluginRegistry/trunk</remote>
-        <local>Products.PluginRegistry</local>
+        <local>src/Products.PluginRegistry</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/archetypes/Products.PortalTransforms/trunk</remote>
-        <local>Products.PortalTransforms</local>
+        <local>src/Products.PortalTransforms</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/ResourceRegistries/trunk</remote>
-        <local>Products.ResourceRegistries</local>
+        <local>src/Products.ResourceRegistries</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/SecureMailHost/branches/1.1</remote>
-        <local>Products.SecureMailHost</local>
+        <local>src/Products.SecureMailHost</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/statusmessages/trunk</remote>
-        <local>Products.statusmessages</local>
+        <local>src/Products.statusmessages</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/Products.TinyMCE/trunk</remote>
-        <local>Products.TinyMCE</local>
+        <local>src/Products.TinyMCE</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/archetypes/Products.validation/trunk</remote>
-        <local>Products.validation</local>
+        <local>src/Products.validation</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://svn.zope.org/repos/main/Products.ZopeVersionControl/trunk</remote>
-        <local>Products.ZopeVersionControl</local>
+        <local>src/Products.ZopeVersionControl</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plonetheme.sunburst/trunk</remote>
-        <local>plonetheme.sunburst</local>
+        <local>src/plonetheme.sunburst</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/plone/plonetheme.classic/trunk</remote>
-        <local>plonetheme.classic</local>
+        <local>src/plonetheme.classic</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
     <useUpdate>true</useUpdate>
