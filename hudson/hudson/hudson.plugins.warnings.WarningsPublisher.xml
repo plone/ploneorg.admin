@@ -3,7 +3,7 @@
   <groovyParsers>
     <hudson.plugins.warnings.GroovyParser>
       <name>zptlint</name>
-      <regexp>^.*in:\s(.*)\s*\&lt;class\s&apos;(.*)&apos;\&gt;:\s(.*)\s*,.*line\s*([0-9]*).*$</regexp>
+      <regexp>^.*in:\s(.*)\s*(.*):\s(.*)\s*,.*line\s*([0-9]*).*$</regexp>
       <script>import hudson.plugins.warnings.parser.Warning
 import hudson.plugins.analysis.util.model.Priority
 
