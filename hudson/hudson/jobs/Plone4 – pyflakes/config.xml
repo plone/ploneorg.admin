@@ -16,8 +16,8 @@
     <hudson.tasks.Shell>
       <command>#!/bin/bash
 cd $WORKSPACE/
-bin/zptlint-test
-echo &quot;zptlint complete&quot;</command>
+bin/pyflakes-test
+echo &quot;pylakes complete&quot;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -47,14 +47,14 @@ echo &quot;zptlint complete&quot;</command>
         <failedNewNormal></failedNewNormal>
         <failedNewLow></failedNewLow>
       </thresholds>
-      <pattern>**/zptlint.log</pattern>
+      <pattern>**/pyflakes.log</pattern>
       <parserNames>
-        <string>zptlint</string>
+        <string>pyflakes</string>
       </parserNames>
       <ignoreConsole>true</ignoreConsole>
     </hudson.plugins.warnings.WarningsPublisher>
     <hudson.tasks.ArtifactArchiver>
-      <artifacts>**/buildtag, **/zptlint.log</artifacts>
+      <artifacts>**/buildtag, **/pyflakes.log</artifacts>
       <latestOnly>false</latestOnly>
     </hudson.tasks.ArtifactArchiver>
     <hudson.tasks.Fingerprinter>

@@ -463,18 +463,10 @@ echo &quot;Environment built&quot;</command>
   </builders>
   <publishers>
     <hudson.tasks.ArtifactArchiver>
-      <artifacts>build/buildtag</artifacts>
+      <artifacts>buildtag</artifacts>
       <latestOnly>false</latestOnly>
     </hudson.tasks.ArtifactArchiver>
     <hudson.tasks.test.AggregatedTestResultPublisher/>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>Plone4 – Tests, Plone4 – pylint, Plone4 – zptlint</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
     <hudson.tasks.Fingerprinter>
       <targets></targets>
       <recordBuildArtifacts>true</recordBuildArtifacts>
@@ -488,6 +480,14 @@ echo &quot;Environment built&quot;</command>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
     <hudson.plugins.cigame.GamePublisher/>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>Plone4 – zptlint, Plone4 – pyflakes</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
   </publishers>
   <buildWrappers/>
 </project>
