@@ -83,6 +83,19 @@ All configuration files of interest are either created by buildout or included i
 
 .. _`admins team`: mailto:admins@lists.plone.org
 
+Adding users to sudo group
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+plone.org runs on FreeBSD. The commands might differ from what you have learn from Linux.
+
+* sudoers group is called ``wheel``
+
+* http://www.freebsd.org/doc/handbook/users-groups.html
+
+Maybe::
+
+        pw groupmod wheel -m mikko
+
 Mailman
 -------
 
