@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Diazo'
-copyright = u'2010, Laurence Rowe, Martin Aspeli and contributors'
+copyright = u'2010, Plone Foundation'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -179,7 +179,7 @@ htmlhelp_basename = 'Diazodoc'
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'Diazo.tex', u'Diazo Documentation',
-   u'Laurence Rowe, Martin Aspeli and contributors', 'manual'),
+   u'Plone Foundation', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -212,5 +212,5 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'diazo', u'Diazo Documentation',
-     [u'Laurence Rowe, Martin Aspeli and contributors'], 1)
+     [u'Plone Foundation'], 1)
 ]
