@@ -21,6 +21,8 @@ the admins team in ``#plone.org`` on ``irc.freenode.net``.
 
 .. _admins@plone.org: mailto:admins@plone.org?subject='I can haz task?!'
 
+Or, you can sign up for the admin list here: http://lists.plone.org/mailman/listinfo/admins
+
 Table of Contents
 -----------------
 
