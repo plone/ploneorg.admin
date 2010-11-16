@@ -1,0 +1,11 @@
+<VirtualHost 82.94.219.236:80>
+	ServerName	antiloop.plone.org
+
+	DocumentRoot	/srv/antiloop.plone.org/http/root
+	RedirectMatch	^/$	http://dist.plone.org
+
+	CustomLog	/var/log/apache2/antiloop.plone.org/access.log combined
+	ErrorLog	/var/log/apache2/antiloop.plone.org/error.log
+
+</VirtualHost>
+
