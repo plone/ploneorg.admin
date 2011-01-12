@@ -1,0 +1,8 @@
+<VirtualHost 140.211.166.62:80>
+	ServerName	admin.plone.org
+	ServerAlias	admins.plone.org
+	ServerAlias	admin-docs.plone.org
+	DocumentRoot	/srv/admin.plone.org/_build/html
+	CustomLog	/var/log/apache2/admin.plone.org/access.log combined
+    ErrorLog	/var/log/apache2/admin.plone.org/error.log
+</VirtualHost>
