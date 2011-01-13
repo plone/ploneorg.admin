@@ -30,7 +30,6 @@ Table of Contents
     systems
     services
     *
-    end
 
 .. _`Infrastructure Team`: http://plone.org/team/InfrastructureTeam
 .. _admins@plone.org: mailto:admins@plone.org?subject='Request a task'
