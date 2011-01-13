@@ -61,3 +61,5 @@ Todo 2011
 * Host something like http://paster.joelburton.com/ on plone.org.
 
 * Host a paste server that doesn't suck, e.g. http://dpaste.com.
+
+* Move the rest of the Sourceforge lists to lists.plone.org
