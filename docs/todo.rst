@@ -50,5 +50,5 @@ Todo 2011
 
   - Separate foundation intranet from general Plone community
 
-* Export/import Plone content via transmogrifier
+* Export/import Plone.org content via transmogrifier
 
