@@ -46,8 +46,9 @@ Todo 2011
 
 * Break plone.org up into smaller Plone sites
 
-  - Foster community use of plone.org as an "intranet" again
+  - Foster community use of plone.org as intranet
 
-  - Separate foundation "intranet" from general Plone community affairs
+  - Separate foundation intranet from general Plone community
 
-  - Export/import Plone content via transmogrifier
+* Export/import Plone content via transmogrifier
+
