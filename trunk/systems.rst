@@ -2,12 +2,14 @@
 Plone.org systems
 =================
 
-These are the community managed servers as of October 2010*.
+These are the community managed systems.
 
 .. contents::
 
-Host: plone01.sixfeetup.com (SFU)
----------------------------------
+Host: plone01.sixfeetup.com
+---------------------------
+
+*Provided by Six Feet Up*
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
@@ -15,7 +17,7 @@ Host: plone01.sixfeetup.com (SFU)
 |                           |                      |               |           |
 | `plone01.sixfeetup.com`_  | - plone.org          | Six Feet Up/  | media     |
 | (74.203.223.202)          | - dist.plone.org     | Fortville, IN | redirects |
-|                           |                      | USA           | to        |
+|                           | - lists.plone.org    | USA           | to        |
 | - FreeBSD                 |                      |               | dist/media|
 | - 7.1-RELEASE             |                      |               |           |
 | - amd64                   |                      |               |           |
@@ -46,8 +48,10 @@ Host: plone01.sixfeetup.com (SFU)
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
-Host: plonenet.pilotsystems.net (Pilot)
----------------------------------------
+Host: plonenet.pilotsystems.net
+-------------------------------
+
+*Provided by Pilot Systems*
 
 +------------------------------+----------------------+---------------+-----------+
 | Server/Hardware              | Services             | Owner/Location| Notes     |
@@ -83,8 +87,10 @@ Host: plonenet.pilotsystems.net (Pilot)
 |                              |                      |               |           |
 +------------------------------+----------------------+---------------+-----------+
 
-Host: deus.plone.org (OSUOSL)
------------------------------
+Host: deus.plone.org
+--------------------
+
+*Provided by OSUOSL*
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
@@ -116,8 +122,10 @@ Host: deus.plone.org (OSUOSL)
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
-Host: antiloop.plone.org (XS4ALL)
----------------------------------
+Host: antiloop.plone.org (**DECOM**)
+------------------------------------
+
+*Provided by XS4ALL*
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
@@ -153,8 +161,10 @@ Host: antiloop.plone.org (XS4ALL)
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
-Host: aneka.plone.org (XS4ALL)
------------------------------- 
+Host: aneka.plone.org (**DECOM**)
+---------------------------------
+
+*Provided by XS4ALL*
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
@@ -189,8 +199,10 @@ Host: aneka.plone.org (XS4ALL)
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
-Host: muse.plone.org (Citum)
-----------------------------
+Host: muse.plone.org
+--------------------
+
+*Provided by Devaus*
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
@@ -238,8 +250,10 @@ Host: muse.plone.org (Citum)
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
-Host: placebo.plone.org (Citum)
-------------------------------- 
+Host: placebo.plone.org
+-----------------------
+
+*Provided by Devaus*
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
@@ -262,8 +276,6 @@ Hardware information gathered via:
 - dmidecode | grep -i core
 - df
 
-(**)The community receives support from both `Pilot Systems`_ and `Six Feet Up`_ for their respective systems.
-
 .. _`muse.plone.org`: http://muse.plone.org
 .. _`placebo.plone.org`: http://placebo.plone.org
 .. _`antiloop.plone.org`: http://antiloop.plone.org
@@ -275,4 +287,3 @@ Hardware information gathered via:
 .. _`stats.plone.org`: http://stats.plone.org
 .. _`Pilot Systems`: http://pilotsystems.net
 .. _`Six Feet Up`: http://sixfeetup.com
-
