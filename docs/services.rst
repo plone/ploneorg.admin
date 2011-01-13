@@ -144,14 +144,6 @@ repositories:
 - https://svn.plone.org/svn/foundation
 - https://svn.plone.org/svn/plone
 
-LDAP
-~~~~~~~
-
-Currently the LDAP services are configured to have all updates happen via plone.org running on plone01 (the master LDAP directory) and are replicated through the standard ssl channel through to the other servers such as dues and hudson.plone.org and plone.net.
-
-Replication occurs periodically and each of the servers are configured to receive use there local openldap service which listens on port 636 for requests from plone01.
-
-plone01.sixfeetup.com sends data via ssl but does not listen on that port and will not respond to connection requests.
 
 Servers
 ~~~~~~~
@@ -210,6 +202,15 @@ Occasionally when running svnsync on ``deus`` you may get an error like this::
 At which point running the following command should help::
 
     svn pdel --revprop -r 0 svn:sync-lock https://svn-mirror.plone.org/svn/<repo>
+
+LDAP
+----
+
+Currently the LDAP services are configured to have all updates happen via plone.org running on plone01 (the master LDAP directory) and are replicated through the standard ssl channel through to the other servers such as dues and hudson.plone.org and plone.net.
+
+Replication occurs periodically and each of the servers are configured to receive use there local openldap service which listens on port 636 for requests from plone01.
+
+plone01.sixfeetup.com sends data via ssl but does not listen on that port and will not respond to connection requests.
 
 Hudson
 ------
