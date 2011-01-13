@@ -36,13 +36,9 @@ Todo list
 
   - What stats if any do we want to track?
 
-* Reinstall collective-docs.plone.org
+* Move collective-docs.plone.org to "new deus"
 
-  - Really just move to "new deus"
-
-* Reinstall admin-docs.plone.org
-
-  - Really just move to "new deus"
+* Move admin-docs.plone.org to "new deus"
 
 * Move demo.plone.org to community controlled resource
 
