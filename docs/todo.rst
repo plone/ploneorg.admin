@@ -6,6 +6,16 @@ Todo 2011
 
   - Check in all configs to http://svn.plone.org/svn/plone/plone.org/
 
+* Combine/consolidate http://dev.plone.org/plone.org trac with http://dev.plone.org/plone trac
+
+* Configure commit hook to use "Fixes" and "Refs" across 
+  repositories. E.g. use something like "Fixes plone:#1234" in a commit
+  to the archetypes repository. 
+  http://trac-hacks.org/wiki/InterTracCommitPatch implements this.
+  Configure Intertrac links to link to other trac instances,
+  like archetypes:[1234] to link to the archetypes changeset. See
+  http://trac.edgewall.org/wiki/InterTrac
+
 * Reinstall Planet Plone with latest Venus: https://github.com/rubys/venus/commits/master
 
 * Install PHP LDAP Admin: http://phpldapadmin.sourceforge.net/wiki/index.php/Main_Page
@@ -21,8 +31,6 @@ Todo 2011
 * Update/reinstall http://api.plone.org.
 
   - Create a buildout to run epydoc on core
-
-* Combine/consolidate http://dev.plone.org/plone.org trac with http://dev.plone.org/plone trac
 
 * Host plone.hu, plone.it and all international Plone sites.
 
