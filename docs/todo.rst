@@ -22,9 +22,9 @@ Todo 2011
 
   - Create a buildout to run epydoc on core
 
-* Combine/consolidate plone.org trac with plone trac
+* Combine/consolidate http://dev.plone.org/plone.org trac with http://dev.plone.org/plone trac
 
-* Host plone.hu, plone.it, et al. international Plone sites.
+* Host plone.hu, plone.it and all international Plone sites.
 
   - Some of these are on antiloop; DNS have expired for most.
 
@@ -36,9 +36,9 @@ Todo 2011
 
   - What stats if any do we want to track?
 
-* Move collective-docs.plone.org to "new deus"
+* Move http://collective-docs.plone.org to "new deus"
 
-* Move admin-docs.plone.org to "new deus"
+* Move http://admin-docs.plone.org to "new deus"
 
 * Move demo.plone.org to community controlled resource
 
@@ -52,3 +52,6 @@ Todo 2011
 
 * Export/import Plone.org content via transmogrifier
 
+* Setup git.plone.org mirror of svn.plone.org (to experiment with git)
+
+* Setup hg.plone.org mirror of svn.plone.org (to experiment with hg)
