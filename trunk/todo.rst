@@ -6,15 +6,18 @@ Todo 2011
 
   - Check in all configs to http://svn.plone.org/svn/plone/plone.org/
 
-* Combine/consolidate http://dev.plone.org/plone.org trac with http://dev.plone.org/plone trac
+  - Configure commit hook to use "Fixes" and "Refs" across 
+    repositories. E.g. use something like "Fixes plone:#1234" in a commit
+    to the archetypes repository. 
+    http://trac-hacks.org/wiki/InterTracCommitPatch implements this.
+    Configure Intertrac links to link to other trac instances,
+    like archetypes:[1234] to link to the archetypes changeset. See
+    http://trac.edgewall.org/wiki/InterTrac
 
-* Configure commit hook to use "Fixes" and "Refs" across 
-  repositories. E.g. use something like "Fixes plone:#1234" in a commit
-  to the archetypes repository. 
-  http://trac-hacks.org/wiki/InterTracCommitPatch implements this.
-  Configure Intertrac links to link to other trac instances,
-  like archetypes:[1234] to link to the archetypes changeset. See
-  http://trac.edgewall.org/wiki/InterTrac
+  - Install Erik Roses' SubversionLocation plugin: http://trac-hacks.org/wiki/SubversionLocationPlugin
+
+  - Combine/consolidate http://dev.plone.org/plone.org trac with http://dev.plone.org/plone
+    trac. http://trac-hacks.org/wiki/TicketMoverPlugin may help with this.
 
 * Reinstall Planet Plone with latest Venus: https://github.com/rubys/venus/commits/master
 
