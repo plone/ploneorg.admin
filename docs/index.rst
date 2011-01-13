@@ -13,19 +13,22 @@ subscribe to the admins mailing list here: http://lists.plone.org/mailman/listin
 You may also find the admins team hanging out in the #plone.org channel
 on the irc.freenode.net IRC network.
 
+Table of Contents
+-----------------
+
 .. figure:: whudson.jpg
    :align: right
 
    Wyn Williams installing a new Plone continuous integration server
    (somewhere in Finland, October 2010).
 
-Table of Contents
------------------
-
 .. toctree::
     :maxdepth: 3
     :glob:
 
+    contributing
+    systems
+    services
     *
 
 .. _`Infrastructure Team`: http://plone.org/team/InfrastructureTeam
