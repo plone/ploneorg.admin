@@ -3,25 +3,28 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Plone.org System Administrator's documentation!
-===========================================================
+Welcome to the ``Plone.org systems`` documentation!
+===================================================
 
-This is the Plone.org system administrator's documentation to be used
-by Plone.org system administrators and ``you``, if you would like to help.
+This is the ``Plone.org systems`` documentation, to be used
+by `Infrastructure Team`_ and ``you`` if you would like to help.
 
 .. figure:: whudson.jpg
+   :align: right
 
    Wyn Williams installs a new Plone continuous integration server (somewhere in Finland, October 2010).
+
+.. _`Infrastructure Team`: http://plone.org/team/InfrastructureTeam
 
 Contact
 -------
 
-Please send email to `admins@plone.org`_ to request a task! You can also find 
+Please send email to `admins@plone.org`_ to request a task. You can also find 
 the admins team in ``#plone.org`` on ``irc.freenode.net``.
 
-.. _admins@plone.org: mailto:admins@plone.org?subject='I can haz task?!'
+.. _admins@plone.org: mailto:admins@plone.org?subject='Request a task'
 
-Or, you can sign up for the admin list here: http://lists.plone.org/mailman/listinfo/admins
+Or you can sign up for the admins list here: http://lists.plone.org/mailman/listinfo/admins
 
 Table of Contents
 -----------------
