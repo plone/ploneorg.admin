@@ -40,7 +40,7 @@ Todo 2011
 
 * Move http://admin-docs.plone.org to "new deus"
 
-* Move demo.plone.org to community controlled resource
+* Move http://demo.plone.org to community controlled resource
 
   - Currently CNAME'd to http://plone-demo.sixfeetup.com/
 
