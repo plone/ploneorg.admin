@@ -6,25 +6,18 @@
 Welcome to the ``Plone.org systems`` documentation!
 ===================================================
 
-This is the ``Plone.org systems`` documentation, to be used
-by `Infrastructure Team`_ and ``you`` if you would like to help.
+This is the Plone.org systems documentation, to be used
+by the `Infrastructure Team`_ and **you** if you would like to help.
+Please send email to `admins@plone.org`_ to request a task, or you can
+subscribe to the admins mailing list here: http://lists.plone.org/mailman/listinfo/admins.
+You may also find the admins team hanging out in the #plone.org channel
+on the irc.freenode.net IRC network.
 
 .. figure:: whudson.jpg
    :align: right
 
-   Wyn Williams installs a new Plone continuous integration server (somewhere in Finland, October 2010).
-
-.. _`Infrastructure Team`: http://plone.org/team/InfrastructureTeam
-
-Contact
--------
-
-Please send email to `admins@plone.org`_ to request a task. You can also find 
-the admins team in ``#plone.org`` on ``irc.freenode.net``.
-
-.. _admins@plone.org: mailto:admins@plone.org?subject='Request a task'
-
-Or you can sign up for the admins list here: http://lists.plone.org/mailman/listinfo/admins
+   Wyn Williams installing a new Plone continuous integration server
+   (somewhere in Finland, October 2010).
 
 Table of Contents
 -----------------
@@ -34,3 +27,6 @@ Table of Contents
     :glob:
 
     *
+
+.. _`Infrastructure Team`: http://plone.org/team/InfrastructureTeam
+.. _admins@plone.org: mailto:admins@plone.org?subject='Request a task'
