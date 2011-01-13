@@ -55,3 +55,9 @@ Todo 2011
 * Setup git.plone.org mirror of svn.plone.org (to experiment with git)
 
 * Setup hg.plone.org mirror of svn.plone.org (to experiment with hg)
+
+* Host something like http://uml.joelburton.com/ on plone.org.
+
+* Host something like http://paster.joelburton.com/ on plone.org.
+
+
