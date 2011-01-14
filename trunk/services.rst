@@ -52,7 +52,7 @@ Then restart the instances as instructed below.
 Restarting
 ~~~~~~~~~~
 
-If you are a member of the admins team, you may be occassionaly asked to login, svn up, run buildout, and restart the instances.
+If you are a member of the admins team, you may be occasionally asked to login, svn up, run buildout, and restart the instances.
 To do that, you can use the following commands::
 
     $ ssh plone.org
