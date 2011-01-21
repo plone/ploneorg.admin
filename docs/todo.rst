@@ -74,3 +74,6 @@ Todo 2011
 * Host a paste server that doesn't suck, e.g. http://dpaste.com.
 
 * Move the rest of the Sourceforge lists to lists.plone.org
+
+* Fix http://dist.plone.org:5021/ (this is really annoying, and my fault.)
+
