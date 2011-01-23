@@ -75,5 +75,7 @@ Todo 2011
 
 * Move the rest of the Sourceforge lists to lists.plone.org
 
-* Fix http://dist.plone.org:5021/ (this is really annoying, and my fault.)
+* Fix http://dist.plone.org:5021/
+
+* Restore svn-mirror.plone.org functionality
 
