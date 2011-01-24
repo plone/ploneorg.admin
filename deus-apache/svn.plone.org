@@ -1,0 +1,124 @@
+BrowserMatch setuptools setuptools
+
+<VirtualHost 140.211.166.62:80>
+	ServerName	svn.plone.org
+
+	DocumentRoot	/srv/svn.plone.org/http/root
+	ScriptAlias	/cgi-bin/	/srv/svn.plone.org/http/cgi-bin/
+	Alias		/icons/		/usr/share/apache2/icons/
+	Alias		/websvn/	/usr/share/websvn/
+	Alias		/viewcvs/	/usr/share/viewcvs/
+
+	Alias		/view		/usr/lib/cgi-bin/viewcvs.cgi
+
+	RewriteEngine	On
+#	RewriteRule	^/$		http://plone.org/development/info/subversion
+	CustomLog	/var/log/apache2/svn.plone.org/access.log combined
+	ErrorLog	/var/log/apache2/svn.plone.org/error.log
+
+	MultiViewsMatch	Any
+	Options		+MultiViews +IncludesNoExec
+	DirectoryIndex	index.xml index.xhtml index.html index.xgi
+
+	<Location /svn>
+		DAV		svn
+		SVNParentPath	/srv/svn.plone.org/svn
+
+		<LimitExcept GET PROPFIND OPTIONS REPORT>
+			deny from all
+		</LimitExcept>
+
+		Order allow,deny
+		Allow from all
+		Deny from env=setuptools
+	</Location>
+	<Location /svn/archetypes>
+        SVNIndexXSLT /archetypes-svnindex.xsl
+    </Location>
+	<Location /svn/collective>
+        SVNIndexXSLT /collective-svnindex.xsl
+    </Location>
+	<Location /svn/plone>
+        SVNIndexXSLT /plone-svnindex.xsl
+    </Location>
+<Location /svn/foundation>
+        SVNIndexXSLT /foundation-svnindex.xsl
+    </Location>
+
+</VirtualHost>
+
+<VirtualHost 140.211.166.62:443>
+	ServerName	svn.plone.org
+
+	SSLEngine	On
+	SSLCertificateFile      /srv/deus.plone.org/etc/ssl/plone.org.crt
+	SSLCertificateKeyFile   /srv/deus.plone.org/etc/ssl/plone.org.key
+
+	DocumentRoot	/srv/svn.plone.org/http/root
+	ScriptAlias	/cgi-bin/	/srv/svn.plone.org/http/cgi-bin/
+	Alias		/icons/		/usr/share/apache/icons/
+	Alias		/websvn/	/usr/share/websvn/
+	Alias		/viewcvs/	/usr/share/viewcvs/
+
+	RewriteEngine	On
+#	RewriteRule	^/$		http://plone.org/development/info/subversion
+	CustomLog	/var/log/apache2/svn.plone.org/access.log combined
+    ErrorLog	/var/log/apache2/svn.plone.org/error.log
+
+	MultiViewsMatch	Any
+	Options		+MultiViews +IncludesNoExec
+	DirectoryIndex	index.xml index.xhtml index.html index.xgi
+
+	<Location /svn>
+		DAV			svn
+		SVNParentPath		/srv/svn.plone.org/svn
+
+		AuthBasicProvider	ldap
+		AuthType		Basic
+		AuthName		svn.plone.org
+		AuthLDAPUrl	ldap://localhost:389/ou=People,dc=plone,dc=org
+		AuthLDAPGroupAttributeIsDN on
+		AuthLDAPGroupAttribute	uniquemember
+
+		Order allow,deny
+		Allow from all
+		Deny from env=setuptools
+	</Location>
+
+#	<Location /svn>
+#		<LimitExcept GET PROPFIND OPTIONS REPORT>
+#			deny from all
+#		</LimitExcept>
+#	</Location>
+
+	<Location /svn/archetypes>
+        SVNIndexXSLT /ssl-archetypes-svnindex.xsl
+		<LimitExcept GET PROPFIND OPTIONS REPORT>
+			require ldap-group cn=ArchetypesCommitters,ou=Groups,dc=plone,dc=org
+		</LimitExcept>
+	</Location>
+
+	<Location /svn/collective>
+        SVNIndexXSLT /ssl-collective-svnindex.xsl
+		<LimitExcept GET PROPFIND OPTIONS REPORT>
+			require ldap-group cn=CollectiveCommitters,ou=Groups,dc=plone,dc=org
+		</LimitExcept>
+	</Location>
+
+	<Location /svn/plone>
+        SVNIndexXSLT /ssl-plone-svnindex.xsl
+		<LimitExcept GET PROPFIND OPTIONS REPORT>
+			require ldap-group cn=Committers,ou=Groups,dc=plone,dc=org
+		</LimitExcept>
+	</Location>
+
+          <Location /svn/foundation>
+        SVNIndexXSLT /ssl-foundation-svnindex.xsl
+                AuthType Basic
+                AuthUserFile /srv/svn.plone.org/etc/svn-auth-foundation
+                Require valid-user
+        </Location>
+
+
+</VirtualHost>
+
