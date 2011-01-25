@@ -79,3 +79,4 @@ Todo 2011
 
 * Restore svn-mirror.plone.org functionality
 
+* Fix https://dev.plone.org/plone search box
