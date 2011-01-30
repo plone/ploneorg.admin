@@ -82,3 +82,6 @@ Todo 2011
 * Fix https://dev.plone.org/plone search box
 
 * publish trac feeds through feedburner 
+
+* Add ci.plone.org CNAME for hudson.plone.org, or vice versa (to phase out hudson name)
+
