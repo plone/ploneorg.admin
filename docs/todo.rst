@@ -85,3 +85,7 @@ Todo 2011
 
 * Add ci.plone.org CNAME for hudson.plone.org, or vice versa (to phase out hudson name)
 
+* Fix Products.PloneOrg buildout such that:
+
+  - The buildout.cfg files are restored to the top level
+  - The buildout uses XDV to deliver the Plone theme in Plone
