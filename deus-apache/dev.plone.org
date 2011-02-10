@@ -1,0 +1,148 @@
+LoadModule depends_module /usr/lib/apache2/modules/mod_depends.so
+LoadModule transform_module /usr/lib/apache2/modules/mod_transform.so
+
+<VirtualHost 140.211.166.62:80>
+	ServerName	dev.plone.org
+
+	DocumentRoot	/srv/dev.plone.org/http/root
+	ScriptAlias	/cgi-bin/	/srv/dev.plone.org/http/cgi-bin/
+	Alias		/icons/		/usr/share/apache2/icons/
+
+	CustomLog	/var/log/apache2/dev.plone.org/access.log combined
+	ErrorLog	/var/log/apache2/dev.plone.org/error.log
+
+	RewriteEngine	On
+	RewriteRule	^/([^/]+)/login(.*)	https://dev.plone.org/$1/login$2
+	RedirectMatch ^[/]$ https://dev.plone.org
+
+    # support for cookie-based themes
+    RewriteRule     ^/trac-theme /plone [CO=theme:trac:%{HTTP_HOST},R,L]
+    RewriteRule     ^/plone-theme /plone [CO=theme:plone:%{HTTP_HOST},R,L]
+    RewriteCond     %{HTTP_COOKIE} theme=trac
+    RewriteRule     ^/(.*) /trac/$1 [PT]
+
+    # XXX This stuff used to be in /home/lrowe/new/static
+	Alias /plone.css	/srv/dev.plone.org/static/plone.css
+	Alias /plone-trac.css	/srv/dev.plone.org/static/plone-trac.css
+	Alias /ie.css		/srv/dev.plone.org/static/ie.css
+	Alias /images/		/srv/dev.plone.org/static/images/
+
+	FilterDeclare THEME
+	FilterProvider THEME XSLT Content-Type $text/html
+	# XXX weirdness: resp=Content-Type does not filter properly
+
+	TransformOptions +ApacheFS +HTML +HideParseErrors
+	TransformSet /trac.xsl
+	TransformCache /trac.xsl /home/lrowe/new/trac.xsl
+
+        <LocationMatch "^/(archetypes|collective|marketing|plone|plone.net|plone.org)">
+                PythonOption    PYTHON_EGG_CACHE /srv/dev.plone.org/egg               
+                 SetHandler      mod_python
+                PythonHandler   trac.web.modpython_frontend
+                PythonOption    TracEnvParentDir /srv/dev.plone.org/trac
+                PythonOption    TracUriRoot /
+		FilterChain	THEME
+        </LocationMatch>
+
+        <LocationMatch "^/trac/(archetypes|collective|marketing|plone|plone.net|plone.org)">
+		PythonOption    PYTHON_EGG_CACHE /srv/dev.plone.org/egg
+		SetHandler	mod_python
+		PythonHandler	trac.web.modpython_frontend
+		PythonOption	TracEnvParentDir /srv/dev.plone.org/trac
+		PythonOption	TracUriRoot /
+        </LocationMatch>
+
+#	<LocationMatch "^/old/(archetypes|collective|marketing|plone|plone.net|plone.org)">
+#		PythonOption    PYTHON_EGG_CACHE  /srv/dev.plone.org/egg
+#		SetHandler	mod_python
+#		PythonHandler	trac.web.modpython_frontend
+#		PythonOption	TracEnvParentDir /srv/dev.plone.org/trac
+#		PythonOption	TracUriRoot /old
+#	</LocationMatch>
+
+	<Location /plone.css>
+		SetHandler	None
+	</Location>
+
+	<Location /plone-trac.css>
+		SetHandler	None
+	</Location>
+
+</VirtualHost>
+
+
+<VirtualHost 140.211.166.62:443>
+	ServerName	dev.plone.org
+
+	SSLEngine               on
+	SSLCertificateFile      /srv/deus.plone.org/etc/ssl/plone.org.crt
+	SSLCertificateKeyFile   /srv/deus.plone.org/etc/ssl/plone.org.key
+
+	DocumentRoot	/srv/dev.plone.org/http/root
+	ScriptAlias	/cgi-bin/	/srv/dev.plone.org/http/cgi-bin/
+	Alias		/icons/		/usr/share/apache2/icons/
+
+	CustomLog	/var/log/apache2/dev.plone.org/access.log combined
+	ErrorLog	/var/log/apache2/dev.plone.org/error.log
+
+        # support for cookie-based themes
+	RewriteEngine	On
+        RewriteRule     ^/trac-theme /plone [CO=theme:trac:%{HTTP_HOST}:1000000,R,L]
+        RewriteRule     ^/plone-theme /plone [CO=theme:plone:%{HTTP_HOST}:1000000,R,L]
+        RewriteCond     %{HTTP_COOKIE} theme=trac
+        RewriteRule     ^/(.*) /trac/$1 [PT]
+
+	<Location />
+		PythonOption	PYTHON_EGG_CACHE /srv/dev.plone.org/egg
+		SetHandler	mod_python
+		PythonHandler	trac.web.modpython_frontend
+		PythonOption	TracEnvParentDir /srv/dev.plone.org/trac
+		PythonOption	TracUriRoot /
+
+		AuthBasicProvider	ldap
+		AuthType		Basic
+		AuthName	"plone.org tracker"
+		AuthLDAPUrl	ldap://localhost:389/ou=People,dc=plone,dc=org?uid NONE
+		AuthLDAPGroupAttributeIsDN on
+		AuthLDAPGroupAttribute	uniquemember
+		AuthzLDAPAuthoritative off
+		require		valid-user
+	</Location>
+
+#	<Location /old>
+#		PythonOption	TracUriRoot /old
+#	</Location>
+
+        <LocationMatch "^/(archetypes|collective|marketing|plone|plone.net|plone.org)">
+		FilterChain	THEME
+	</LocationMatch>
+
+	<Location /plone.css>
+		SetHandler	None
+	</Location>
+
+	Alias /plone.css	/home/lrowe/new/static/plone.css
+	Alias /ie.css		/home/lrowe/new/static/ie.css
+	Alias /images/		/home/lrowe/new/static/images/
+
+	FilterDeclare THEME
+	FilterProvider THEME XSLT Content-Type $text/html
+	# XXX weirdness: resp=Content-Type does not filter properly
+
+	TransformOptions +ApacheFS +HTML +HideParseErrors
+	TransformSet /trac.xsl
+	TransformCache /trac.xsl /home/lrowe/new/trac.xsl
+
+
+
+# This does not work - trac shows the tracker list instead
+#	<LocationMatch "/[^/]+/login">
+#		AuthLDAPEnabled	On
+#		AuthLDAPAuthoritative on
+#		AuthName	"plone.org tracker"
+#		AuthType	Basic
+#		require		valid-user
+#		AuthLDAPUrl	ldap://localhost:389/ou=People,dc=plone,dc=org
+#	</LocationMatch>
+</VirtualHost>
+
