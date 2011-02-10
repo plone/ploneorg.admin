@@ -61,6 +61,37 @@ To do that, you can use the following commands::
     $ sudo -u zope bin/buildout -c conf/production.cfg
     $ sudo -u zope bin/supervisorctl restart plone.org-client-{1,2,3,4} ; sleep 60 ; sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}
 
+Clearing the cache
+~~~~~~~~~~~~~~~~~~
+
+If you are a member of the admins team, you may be occasionally asked to login and clear the cache.
+To do that, you can use the following commands::
+
+    $ ssh plone.org
+    $ telnet localhost 81
+
+At which point you will be in the Varnish management console and can do things like `url.purge /`::
+
+    plone01:/usr/local/etc/rc.d$ telnet localhost 81
+    Trying 127.0.0.1...
+    Connected to localhost.
+    Escape character is '^]'.
+    200 154
+    -----------------------------
+    Varnish HTTP accelerator CLI.
+    -----------------------------
+    Type 'help' for command list.
+    Type 'quit' to close CLI session.
+
+    url.purge /
+    200 0
+
+When you are done, use CTRL-] to return to the telnet console, at which point you may `close`::
+
+    ^]
+    telnet> close
+    Connection closed.
+
 Other services
 ~~~~~~~~~~~~~~
 
