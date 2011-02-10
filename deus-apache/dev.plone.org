@@ -144,5 +144,8 @@ LoadModule transform_module /usr/lib/apache2/modules/mod_transform.so
 #		require		valid-user
 #		AuthLDAPUrl	ldap://localhost:389/ou=People,dc=plone,dc=org
 #	</LocationMatch>
+
+    RedirectMatch ^/old$ /trac-theme
+
 </VirtualHost>
 
