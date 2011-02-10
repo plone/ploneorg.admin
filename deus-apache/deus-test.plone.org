@@ -1,0 +1,27 @@
+<virtualhost *:80>
+    ServerName deus-test.plone.org
+ 
+    DocumentRoot /srv/dev.plone.org/vtrac/trac/htdocs
+    ErrorLog /var/log/apache2/vtrac-error.log
+    CustomLog /var/log/apache2/vtrac-access.log combined
+ 
+    # Trac Auth
+    <location />
+        AuthType Basic
+        AuthName "Trac"
+        AuthUserFile /srv/dev.plone.org/vtrac/trac/.htpasswd
+        Require valid-user
+    < /location>
+ 
+    #Trac
+    #Define ProcessGroup with user and group under which it should run
+    WSGIDaemonProcess trac user=trac group=www-data python-path=/srv/dev.plone.org/vtrac/python/lib/python2.6/site-packages python-eggs=/srv/dev.plone.org/vtrac/trac/python/cache
+    WSGIScriptAlias / /srv/dev.plone.org/vtrac/trac/htdocs/trac.wsgi
+ 
+    <directory /srv/dev.plone.org/vtrac/trac/htdocs>
+        WSGIProcessGroup trac
+        WSGIApplicationGroup %{GLOBAL}
+        SetEnv trac.env_parent_dir /srv/dev.plone.org/vtrac/trac/projects
+    </directory>
+</virtualhost>
+
