@@ -11,6 +11,14 @@ One of the main responsibilities of the Plone.org admins team is to keep the plo
 website running smoothly. This includes the deployment of frequent "dot releases",
 major upgrades (e.g. Plone 3 → Plone 4), and monitoring system performance.
 
+http vs https
+~~~~~~~~~~~~~
+
+There are two http server configs running on deus: one nginx instance for ssl and
+one for https. The https nginx is a FreeBSD port install and is configured and
+controlled in the standard /usr/local/etc area. The http server config is
+deployed via a buildout configuration in /srv/plone.org.
+
 Development
 ~~~~~~~~~~~
 
@@ -145,6 +153,8 @@ Notes
 Mailman was built from source due to the need to pass selected parameters on install. The original location on dues was copied on the aneka install and on the original the libs and archives where symlinked as well, the newer install uses the same method symlinking from the server release location to /Applications/mailman/archives/
 
 The path is /Applications symlinked as that was what was most convenient to use at the time due to the person migrating it using that path on there own system.
+
+Web interface for Mailman is via the https nginx (/usr/local/etc/nginx)
 
 Postfix
 -------
