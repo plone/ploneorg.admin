@@ -1,0 +1,13 @@
+server {
+        listen          127.0.0.1:80;
+        server_name     media.plone.org;
+        rewrite ^(.*) http://dist.plone.org/media$1 permanent;
+
+#        location / {
+#           root /srv/media.plone.org/http/root/;
+#           index index.html;
+#        }
+#          
+        access_log /var/log/nginx-access.log combined;
+        autoindex on; 
+}

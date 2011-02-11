@@ -1,0 +1,98 @@
+    # Main server goes upstream to Varnish
+    server {
+        listen 127.0.0.1:5021;
+        server_name plone.org;
+        root /srv/plone.org/static; 
+
+	location = /nginx-status {
+            stub_status on;
+            allow 127.0.0.1;
+            deny all;
+	}
+
+        gzip             on;
+        gzip_min_length  1000;
+        gzip_proxied     any;
+        gzip_types       text/xml text/plain application/xml;
+
+        client_max_body_size 10M;
+
+        # increase proxy buffer size to avoid problems with HTMLParser
+        proxy_buffers 8 256k;
+        proxy_buffer_size 256k;
+
+        # Push this to varnish to avoid problems
+        # error_page 500 /500.html;
+        location = /500.html {  }
+
+        location ^~ /images/ {
+            autoindex on;
+        }
+        location = /plone.css {  }
+        location = /ie.css {  }
+        location ~ /emptypage$ {
+            rewrite ^/(.*)$ /VirtualHostBase/http/plone.org:80/plone.org/VirtualHostRoot/$1 break;
+            proxy_pass http://localhost:5020;
+        }
+        location / {
+            proxy_pass http://localhost:5020/VirtualHostBase/http/plone.org:80/plone.org/VirtualHostRoot/;
+            xslt_stylesheet /srv/plone.org/etc/default.xsl;
+            xslt_html_parser on;
+            xslt_types text/html;
+        }
+        location = / {
+            proxy_pass http://localhost:5020/VirtualHostBase/http/plone.org:80/plone.org/VirtualHostRoot/;
+            xslt_stylesheet /srv/plone.org/etc/wide.xsl;
+            xslt_html_parser on;
+            xslt_types text/html;
+        }
+        location ~ ^/(products(/psc_view_ploneorg)?|support)/?$ {
+            rewrite ^/(.*)$ /VirtualHostBase/http/plone.org:80/plone.org/VirtualHostRoot/$1 break;
+            proxy_pass http://localhost:5020;
+            xslt_stylesheet /srv/plone.org/etc/wide.xsl;
+            xslt_html_parser on;
+            xslt_types text/html;
+        }
+        location ~ ^/products/(simple|links|\+\+simple\+\+)/?$ {
+            rewrite ^    http://dist.plone.org/packages permanent;
+        }
+        location /dist.plone.org {
+            internal;
+            # autoindex on;
+            alias /srv/dist.plone.org/http/root/;
+        }
+        location ~ ^/products/(.*)/((.*)(tgz|tar.gz|bz2|tar.bz2|zip|tbz|exe))$ {
+            rewrite ^/products/(.*)/((.*)(tgz|tar.gz|bz2|tar.bz2|zip|tbz|exe))$ /dist.plone.org/packages/$3$4;
+        }
+        
+    }
+               
+    server {
+        listen 127.0.0.1:80;
+        server_name old.plone.org;
+        root /srv/plone.org/static;
+
+        location = /nginx-status {
+            stub_status on;
+            allow 127.0.0.1;
+            deny all;
+        }
+
+        gzip             on;
+        gzip_min_length  1000;
+        gzip_proxied     any;
+        gzip_types       text/xml text/plain application/xml;
+
+        location / {
+            proxy_pass http://localhost:5020/VirtualHostBase/http/old.plone.org:80/plone.org/VirtualHostRoot/;
+        }
+        location ^~ /images/ {
+            autoindex on;
+        }
+        location ^~ /plone.css {  }
+        location ^~ /ie.css {  }
+        location ~ /emptypage$ {
+            rewrite ^/(.*)$ /VirtualHostBase/http/plone.org:80/plone.org/VirtualHostRoot/$1 break;
+            proxy_pass http://localhost:5020;
+        }
+    }

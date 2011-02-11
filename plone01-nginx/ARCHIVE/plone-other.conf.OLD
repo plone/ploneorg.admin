@@ -1,0 +1,16 @@
+server {
+	listen		127.0.0.1:80;
+	server_name	www.plone.org plone.eu www.plone.eu;
+	location / {
+		rewrite ^/(.*)$ http://plone.org/$1 last;
+	}
+}
+
+server {
+	listen		127.0.0.1:80;
+	server_name	www.plone.net;
+	location / {
+		rewrite ^/(.*)$ http://plone.net/$1 last;
+	}
+}
+

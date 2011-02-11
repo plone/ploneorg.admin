@@ -1,0 +1,8 @@
+    server {
+        listen 127.0.0.1:80;
+        server_name newplone.sixfeetup.com;
+	location / {
+	rewrite (.*)$ http://plone.org$1 permanent;
+	}
+        
+    }
