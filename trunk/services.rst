@@ -28,16 +28,20 @@ product located here: http://dev.plone.org/plone/browser/Products.PloneOrg/trunk
 To develop locally, follow these steps::
 
     $ svn co https://svn.plone.org/svn/plone/Products.PloneOrg/trunk Products.PloneOrg
+    (edit buildout.cfg to make it extend the develop.cfg configuration instead of production)
     $ python2.6 bootstrap.py
     $ bin/buildout
     $ bin/instance fg
+
+See the README in this package for more information on running a themed copy
+of the site with real data.
 
 Issues
 ~~~~~~
 
 You can find a list of things that need to be fixed here::
 
-    https://dev.plone.org/plone.org/report/1
+    https://dev.plone.org/plone/report/48
 
 Deployment
 ~~~~~~~~~~
