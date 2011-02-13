@@ -14,6 +14,7 @@ LoadModule transform_module /usr/lib/apache2/modules/mod_transform.so
 	RewriteEngine	On
 	RewriteRule	^/([^/]+)/login(.*)	https://dev.plone.org/$1/login$2
 	RedirectMatch ^[/]$ https://dev.plone.org
+    RedirectMatch ^/old$ https://dev.plone.org/trac-theme
 
     # support for cookie-based themes
     RewriteRule     ^/trac-theme /plone [CO=theme:trac:%{HTTP_HOST},R,L]
