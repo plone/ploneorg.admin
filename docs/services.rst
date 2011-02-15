@@ -70,7 +70,7 @@ To do that, you can use the following commands::
     $ ssh plone.org
     $ cd /srv/plone.org
     $ sudo -u zope svn up 
-    $ sudo -u zope bin/buildout -c conf/production.cfg
+    $ sudo -u zope bin/buildout
     $ sudo -u zope bin/supervisorctl restart plone.org-client-{1,2,3,4} ; sleep 60 ; sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}
 
 Clearing the cache
