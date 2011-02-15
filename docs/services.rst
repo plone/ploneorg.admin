@@ -57,7 +57,7 @@ If you are an admin, you can deploy changes like this::
     $ ssh plone.org
     $ cd /srv/plone.org
     $ sudo -u zope svn up
-    $ sudo -u zope bin/buildout -c production.cfg
+    $ sudo -u zope bin/buildout
 
 Then restart the instances as instructed below.
 
