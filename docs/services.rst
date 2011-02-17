@@ -14,7 +14,7 @@ major upgrades (e.g. Plone 3 → Plone 4), and monitoring system performance.
 http vs https
 ~~~~~~~~~~~~~
 
-There are two http server configs running on deus: one nginx instance for ssl and
+There are two http server configs running on plone.org: one nginx instance for ssl and
 one for https. The https nginx is a FreeBSD port install and is configured and
 controlled in the standard /usr/local/etc area. The http server config is
 deployed via a buildout configuration in /srv/plone.org.
