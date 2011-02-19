@@ -147,6 +147,7 @@ LoadModule transform_module /usr/lib/apache2/modules/mod_transform.so
 #	</LocationMatch>
 
     RedirectMatch ^/old$ /trac-theme
+    RedirectMatch ^/plone.org/newticket(.*) /plone/newticket$1
 
 </VirtualHost>
 
