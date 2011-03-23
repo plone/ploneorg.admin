@@ -19,7 +19,7 @@ one for https. The https nginx is a FreeBSD port install and is configured and
 controlled in the standard /usr/local/etc area. The http server config is
 deployed via a buildout configuration in /srv/plone.org.
 
-.. figure:: plone.org.dot.png
+.. figure:: plone.org.gv.png
    :width: 100 %
    :alt: Diagram of services powering plone.org and their interconnections
    
