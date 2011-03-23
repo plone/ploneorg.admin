@@ -61,7 +61,74 @@ can read about that here: http://plone.org/documentation/manual/plone-core-devel
 Contact the `admins team`_ or join #plone.org on irc.freenode.net to discuss deployment of
 your changes!
 
-If you are an admin, you can deploy changes like this::
+If you are an admin, you can deploy changes to staging and production servers.
+
+Staging
+'''''''
+
+Changes to production server should be tested at staging server available at http://staging.plone.org:6021/ that is variance of production buildout.
+
+- Commit your changes to SVN and merge your changes into staging branch::
+
+    $ cd Products.PloneOrg
+    $ svn ci
+    $ cd ..
+    $ svn co https://svn.plone.org/svn/plone/plone.org/Products.PloneOrg/branches/interra-staging-ticket11435 Products.PloneOrg-staing
+    ...
+    $ cd Products.PloneOrg-staing
+    $ svn merge https://svn.plone.org/svn/plone/plone.org/Products.PloneOrg/trunk
+    --- Merging r48153 through r48187 into '.':
+    U    src/Products/PloneOrg/skins/ploneorg/login.js
+    U    src/Products/PloneOrg/skins/ploneorg/newplone.css
+    U    static/plone.html
+    U    static/plone-wide.html
+
+    $ svn ci -m "Merged from [log:/plone.org/Products.PloneOrg/trunk#48153:48187 trunk]"
+    Sending        .
+    Sending        src/Products/PloneOrg/skins/ploneorg/login.js
+    Sending        src/Products/PloneOrg/skins/ploneorg/newplone.css
+    Sending        static/plone-wide.html
+    Sending        static/plone.html
+    Transmitting file data ....
+    Committed revision 48188.
+
+- Deploy to staging server from working copy of PloneOrg buildout (staging branch)::
+
+    $ bin/fab staging deploy
+    [staging.plone.org] Executing task 'deploy'
+    [staging.plone.org] sudo: nice svn up
+    [staging.plone.org] out: U    src/Products/PloneOrg/skins/ploneorg/login.js
+    [staging.plone.org] out: U    src/Products/PloneOrg/skins/ploneorg/newplone.css
+    [staging.plone.org] out: U    static/plone.html
+    [staging.plone.org] out: U    static/plone-wide.html
+    [staging.plone.org] out:  U   .
+    [staging.plone.org] out: Updated to revision 48188.
+    [staging.plone.org] out: 
+    [staging.plone.org] sudo: nice bin/buildout
+    [staging.plone.org] out: ---------------------------------------------------------
+    [staging.plone.org] out: The current global buildout threat level is:   HIGH  
+    [staging.plone.org] out: ---------------------------------------------------------
+    [staging.plone.org] out: mr.developer: Queued 'Products.ExternalStorage' for checkout.
+    [staging.plone.org] out: mr.developer: Queued 'Products.FoundationMember' for checkout.
+    ...
+    [staging.plone.org] out: static/plone-wide.html
+    [staging.plone.org] out: *************** PICKED VERSIONS ****************
+    [staging.plone.org] out: [versions]
+    [staging.plone.org] out: 
+    [staging.plone.org] out: *************** /PICKED VERSIONS ***************
+    [staging.plone.org] out: 
+    [staging.plone.org] sudo: nice bin/supervisorctl reload
+    [staging.plone.org] out: Restarted supervisord
+    [staging.plone.org] out: 
+
+    Done.
+    Disconnecting from staging.plone.org... done.
+
+
+Production
+''''''''''
+
+You can deploy changes to production server like this::
 
     $ ssh plone.org
     $ cd /srv/plone.org
@@ -71,7 +138,7 @@ If you are an admin, you can deploy changes like this::
 Then restart the instances as instructed below.
 
 Restarting
-~~~~~~~~~~
+''''''''''
 
 If you are a member of the admins team, you may be occasionally asked to login, svn up, run buildout, and restart the instances.
 To do that, you can use the following commands::
