@@ -19,6 +19,15 @@ one for https. The https nginx is a FreeBSD port install and is configured and
 controlled in the standard /usr/local/etc area. The http server config is
 deployed via a buildout configuration in /srv/plone.org.
 
+.. figure:: plone.org.dot.png
+   :width: 100 %
+   :alt: Diagram of services powering plone.org and their interconnections
+   
+   Diagram of services powering plone.org and their interconnections (validated on 11th of March, 2011)
+
+   Varnish running on port 80 (http), nginx running on port 443 (https) and 
+   pound running on port 5020 are FreeBSD port installs. 
+
 Development
 ~~~~~~~~~~~
 
