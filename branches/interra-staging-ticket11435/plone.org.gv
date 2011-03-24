@@ -47,8 +47,8 @@ digraph G{
     po_instances:i8 -> po_zeo;
     po_instances:debug -> po_zeo;
 
-    ports_varnish -> spo_nginx [color="brown4", style="dashed"];
-    ports_nginx-> spo_instances:i1 [color="brown4", style="dashed"];
+    ports_varnish -> spo_nginx;
+    ports_nginx-> spo_instances:i1;
 
     spo_nginx -> spo_instances:i1;
     spo_instances:i1 -> spo_zeo;

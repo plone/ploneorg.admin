@@ -66,7 +66,7 @@ If you are an admin, you can deploy changes to staging and production servers.
 Staging
 '''''''
 
-Changes to production server should be tested at staging server available at http://staging.plone.org:6021/ that is variance of production buildout.
+Changes to production server should be tested at staging server available at http://staging.plone.org/ that is variance of production buildout.
 
 - Commit your changes to SVN and merge your changes into staging branch::
 
