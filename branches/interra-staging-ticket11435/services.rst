@@ -186,12 +186,13 @@ Other services
 Some services are not included in the buildout, including:
 
 - Varnish
+- nginx
 - Pound
 - LDAP
 - Postfix
 
 Generally speaking, these services are controlled "BSD-style" and are located in /usr/local.
-So for example to restart nginx, you can do the following::
+So for example to restart pound, you can do the following::
 
     $ /usr/local/etc/rc.d/pound restart
 
@@ -199,6 +200,42 @@ Note the configuration files for some of these services are version controlled, 
 http://svn.plone.org/svn/plone/plone01-pound/trunk/.
 
 All configuration files of interest are either created by buildout or included in version control.
+
+Varnish
+'''''''
+
+Configuration in ``/usr/local/etc/varnish`` under version control at 
+http://svn.plone.org/svn/plone/plone.org/plone01-varnish/trunk
+
+Updating Varnish cache configuration can be performed without varnish restart::
+
+     $ cd /usr/local/etc/varnish
+     $ sudo svn up
+     U    default.vcl
+     Updated to revision 48218.
+     $ NOW=`date +%Y%m%d%H%M%S`
+     $ /usr/local/bin/varnishadm -T localhost:81 vcl.load reload$NOW /usr/local/etc/varnish/default.vcl
+     $ /usr/local/bin/varnishadm -T localhost:81 vcl.use  reload$NOW
+     $ /usr/local/bin/varnishadm -T localhost:81 vcl.list
+     available   4  default
+     active      11 reload20110324223618
+
+nginx
+'''''
+
+Configuration in ``/usr/local/etc/nginx``. ``vhosts/`` subfolder under version control at 
+http://svn.plone.org/svn/plone/plone.org/plone01-nginx/trunk
+
+Updating nginx configuration can be performed without nginx reatart::
+
+     $ cd /usr/local/etc/nginx/vhosts
+     $ sudo svn up
+     U    ssl-staging.plone.org.conf
+     Updated to revision 48218.
+     $ sudo /usr/local/sbin/nginx -t -c ../nginx.conf
+     2011/03/24 15:38:48 [info] 94610#0: the configuration file ../nginx.conf syntax is ok
+     2011/03/24 15:38:48 [info] 94610#0: the configuration file ../nginx.conf was tested successfully
+     $ sudo kill -HUP `cat /var/run/nginx.pid`
 
 .. _`admins team`: mailto:admins@lists.plone.org
 
