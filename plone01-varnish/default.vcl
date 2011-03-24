@@ -10,6 +10,11 @@ backend ploneorg {
     .port = "5021";
 }
 
+backend stagingploneorg {
+    .host = "127.0.0.1";
+    .port = "6021";
+}
+
 acl purge {
     "localhost";
     "127.0.0.1";
@@ -51,7 +56,10 @@ sub rewrite_s_maxage {
 
 sub vcl_recv {
     set req.grace = 120s;
-    if (!req.http.host || req.http.host ~ "(^manage\.|^old\.|^)plone.org") {
+    if (!req.http.host || req.http.host ~ "(^media\.|^dist\.|^manage\.|^old\.|^www\.|^)staging.plone.org") {
+        set req.backend = stagingploneorg;
+        return(pipe);
+    } else if (!req.http.host || req.http.host ~ "(^manage\.|^old\.|^)plone.org") {
         set req.backend = ploneorg;
     } else {
         set req.backend = default;
