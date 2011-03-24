@@ -36,7 +36,7 @@ product located here: http://dev.plone.org/plone/browser/Products.PloneOrg/trunk
 
 To develop locally, follow these steps::
 
-    $ svn co https://svn.plone.org/svn/plone/Products.PloneOrg/trunk Products.PloneOrg
+    $ svn co https://svn.plone.org/svn/plone/plone.org/Products.PloneOrg/trunk Products.PloneOrg
     (edit buildout.cfg to make it extend the develop.cfg configuration instead of production)
     $ python2.6 bootstrap.py
     $ bin/buildout
@@ -197,7 +197,7 @@ So for example to restart pound, you can do the following::
     $ /usr/local/etc/rc.d/pound restart
 
 Note the configuration files for some of these services are version controlled, e.g.
-http://svn.plone.org/svn/plone/plone01-pound/trunk/.
+http://svn.plone.org/svn/plone/plone.org/plone01-pound/trunk/.
 
 All configuration files of interest are either created by buildout or included in version control.
 
@@ -379,12 +379,12 @@ Details
 ~~~~~~~
 
 - Available via https://hudson.plone.org. 
-    - sites-enabled directory contents managed in svn (http://svn.plone.org/svn/plone/muse-apache/trunk/hudson-ssl)
+    - sites-enabled directory contents managed in svn (http://svn.plone.org/svn/plone/plone.org/muse-apache/trunk/hudson-ssl)
 
 - "Installed" in /srv/hudson (which means that is where hudson.war lives).
 
 - Run via OS vendor installed supervisor
-    - conf.d directory contents managed in svn (http://svn.plone.org/svn/plone/muse-supervisor/trunk/hudson.conf)
+    - conf.d directory contents managed in svn (http://svn.plone.org/svn/plone/plone.org/muse-supervisor/trunk/hudson.conf)
 
 - Configured to allow core devs to login (via ldap).
 
@@ -402,7 +402,7 @@ The Plone planet runs Venus planet software (http://intertwingly.net/code/venus/
 
 Its configuration is version controlled here::
 
-    https://svn.plone.org/svn/plone/planet/trunk
+    https://svn.plone.org/svn/plone/plone.org/planet/trunk
 
 And it is updated via a cron job on deus.plone.org here::
 
@@ -420,7 +420,7 @@ Deploy changes
 
 You can deploy changes like so:
 
-    - Deploy changes commited to https://svn.plone.org/svn/plone/planet/trunk via::
+    - Deploy changes commited to https://svn.plone.org/svn/plone/plone.org/planet/trunk via::
 
         $ cd /srv/planet.plone.org/venus/plone
         $ sudo -u planet svn up 
