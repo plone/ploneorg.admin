@@ -1,10 +1,24 @@
-.. Diazo documentation master file, created by
-   sphinx-quickstart on Tue Nov  2 18:58:07 2010.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Diazo - We Write XSLT, So You Don't Have To™
+============================================
 
-Welcome to Diazo's documentation!
-=================================
+.. image:: images/diazo-concept.png
+    :align: right  
+
+| *di-az-o (also di-az-o-type)*
+|   *noun*
+|   *a copying or coloring process using a diazo compound decomposed by ultraviolet light*
+  
+Diazo allows you to apply a theme contained in a static HTML web page to a
+dynamic website created using any server-side technology. With Diazo, you can
+take an HTML wireframe created by a web designer and turn it into a theme for
+your favourite CMS, redesign the user interface of a legacy web application
+without even having access to the original source code, or build a unified
+user experience across multiple disparate systems, all in a matter of hours,
+not weeks.
+
+When using Diazo, you will work with syntax and concepts familiar from working
+with HTML and CSS. And by allowing you seamlessly integrate XSLT into your
+rule files, Diazo makes common cases simple and complex requirements possible.
 
 Contents:
 
@@ -12,7 +26,13 @@ Contents:
    :maxdepth: 2
    :glob:
 
-   *
+   introduction
+   installation
+   basic
+   advanced
+   compiler
+   deployment
+   contributing
 
 Indices and tables
 ==================
