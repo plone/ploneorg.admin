@@ -23,7 +23,7 @@ rule files, Diazo makes common cases simple and complex requirements possible.
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :glob:
 
    introduction

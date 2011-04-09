@@ -16,28 +16,16 @@ Plone
 -----
 
 If you are working with Plone, the easiest way to use Diazo is via the
-collective.diazo_ add-on. This provides a control panel for configuring the Diazo
-rules file, theme and other options, and hooks into a transformation chain
-that executes after Plone has rendered the final page to apply the Diazo
+plone.app.theming_ add-on. This provides a control panel for configuring the
+Diazo rules file, theme and other options, and hooks into a transformation
+chain that executes after Plone has rendered the final page to apply the Diazo
 transform.
 
 Even if you intend to deploy the compiled theme to another web server,
-collective.diazo_ is a useful development tool: so long as Zope is in
+``plone.app.theming`` is a useful development tool: so long as Zope is in
 "development mode", it will re-compile the theme on the fly, allowing you to
 make changes to theme and rules on the fly. It also provides some tools for
 packaging up your theme and deploying it to different sites.
-
-WSGI
-----
-
-If you are using a WSGI stack, you can use the dv.diazoserver_ middleware to
-apply an Diazo theme. This supports all the core Diazo options, and can be
-configured to either re-compile the theme on the fly (useful for development),
-or compile it only once (useful for deployment.)
-
-It is also possible to use this with the Paste ``proxy`` middleware to
-create a standalone Diazo proxy for any site. See the dv.diazoserver_
-documentation for details.
 
 Nginx
 -----
@@ -93,6 +81,11 @@ configuration as follows::
         xslt_html_parser on;
         xslt_types text/html;
     }
+
+Notice how we pass the ``path`` parameter, which will enable ``if-path``
+expressions to work. It is possible to pass additional parameters to use in
+an ``if`` condition, provided the compiled theme is aware of these. See the
+previous section about the compiler for more details.
 
 Nginx may also be configured as a transforming proxy server::
 
@@ -204,12 +197,12 @@ To enable ESI in Varnish simply add the following to your VCL file::
         }
     }
 
-An example buildout is available in ``varnish.cfg``.
+An example buildout is available in ``varnish.cfg`` in the Diazo distribution.
 
 Apache
 ------
 
-Diazo requires a version of mod_transform with html parsing support.
+Diazo requires a version of ``mod_transform`` with html parsing support.
 The latest compatible version may be downloaded from the html-xslt_ project
 page.
 
@@ -254,4 +247,5 @@ Found page) with Apache as these do not pass through the filter chain.
 
 As parameters are not currently supported, path expression are unavailable.
 
+.. _plone.app.theming: http://pypi.python.org/pypi/plone.app.theming
 .. _html-xslt: http://code.google.com/p/html-xslt/

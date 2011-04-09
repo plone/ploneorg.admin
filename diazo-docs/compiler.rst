@@ -3,13 +3,13 @@ Compilation
 
 Once you have written your rules file, you need to compile it to an XSLT for
 deployment. In some cases, you may have an application server that does this
-on the fly, e.g. if you are using the collective.diazo_ package with Plone.
-For deployment to a web server like Apache or Nginx, however, you will need
-to perform this step manually.
+on the fly, e.g. if you are using the ``plone.app.theming`` package with
+Plone. For deployment to a web server like Apache or Nginx, however, you will
+need to perform this step manually.
 
-The easiest way to invoke the Diazo compiler is via the ``diazocompiler`` command
-line script which is installed with the ``diazo`` egg. To see its help output,
-do::
+The easiest way to invoke the Diazo compiler is via the ``diazocompiler``
+command line script which is installed with the ``diazo`` egg. To see its help
+output, do::
 
     $ bin/diazocompiler --help
 
@@ -31,6 +31,7 @@ The following command line options are available:
 * Use ``-a`` to set an absolute prefix - see below.
 * Use ``-i`` to set the default external file inclusion mode to one of
   ``document``, ``ssi`` or ``esi``.
+* Use ``-n`` to permit fetching resources over a network.
 * Use ``--trace`` to output trace logging during the compilation step. This
   can be helpful in debugging rules.
 
@@ -56,6 +57,11 @@ and made available under the directory ``/static``. In this case, we can
 set an absolute prefix of ``/static``. This will modify the ``<img />`` tag
 in the compiled theme so that it becomes an absolute path that will work for
 any URL: ``<img src="/static/images/foo.jpg"`` />
+
+Custom parameters
+-----------------
+
+TODO
 
 Testing the compiled theme
 --------------------------
@@ -87,36 +93,8 @@ function::
 
     >>> from diazo.compiler import compile_theme
 
-This method takes the following arguments:
-
-* ``rules`` is the rules file, given either as a file name or a string with
-  the file contents.
-* ``theme`` is the theme file, given either as a file name or a string with
-  the file contents (deprecated, use inline <theme> instead.)
-* ``extra`` is an optional XSLT file with Diazo extensions, given as a URI
-  (depracated, use inline xsl in the rules instead)
-* ``css``   can be set to False to disable CSS syntax support (providing a
-  moderate speed gain)
-* ``xinclude`` can be set to ``False`` to enable XInclude support (at a
-  moderate speed cost). If enabled, XInclude syntax can be used to split the
-  rules file into multiple, re-usable fragments.
-* ``absolute_prefix`` can be set an string to be used as the "absolute prefix"
-  for relative URLs - see above.
-* ``update`` can be set to ``False`` to disable the automatic update support
-  for the old Deliverance 0.2 namespace (for a moderate speed gain)
-* ``trace`` can be set to True to enable compiler trace information
-* ``includemode`` can be set to 'document', 'esi' or 'ssi' to change the way
-  in which includes are processed
-* ``parser`` can be set to an lxml parser instance; the default is an
-  HTMLParser
-* ``compiler_parser``` can be set to an lxml parser instance; the default is a
-  XMLParser
-* ``rules_parser`` can be set to an lxml parser instance; the default is a
-  XMLParse.
-
-The parser parameters may be used to add custom resolvers for external content
-if required. See the `lxml <http://codespeak.net/lxml>`_ documentation for
-details.
+Please see the docstring for this function for more details about the parameters
+it takes.
 
 ``compile_theme()`` returns an XSLT document in ``lxml``'s ``ElementTree``
 format. To set up a transform representing the theme and rules, you can do::
