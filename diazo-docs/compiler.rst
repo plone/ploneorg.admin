@@ -61,7 +61,22 @@ any URL: ``<img src="/static/images/foo.jpg"`` />
 Custom parameters
 -----------------
 
-TODO
+Custom parameters may be passed in at runtime to enable advanced ``if``
+conditions for rules and theme selection. For this to work, however, the
+compiled theme needs to be aware of the possible parameters.
+
+Use the ``-c`` / ``--custom-parameters`` option to ``diazocompiler`` and
+``diazorun`` to list the parameter names that should be known to the theme.
+Multiple names should be separated by spaces. For example::
+
+    $ bin/diazocompiler -o theme.xsl -r rules.xml -c mode=test,preview
+
+Here, the compiled theme will be aware of the parameters ``$mode`` and
+``$test``. The default for ``mode`` will be the string value ``test``.
+
+Using this ``theme.xsl``, it is now possible to pass these parameters. See
+the section on Nginx deployment for more details about how to do this with
+Nginx, or the next section for how to test it with ``diazorun``.
 
 Testing the compiled theme
 --------------------------
@@ -81,6 +96,13 @@ For testing, you can also compile and run the theme in one go, by supplying the
 
     $ bin/diazorun -o output.html -r rules.xml content.html
 
+If you are using any custom parameters, you can specify string values for
+them on the command line:
+
+    $ bin/diazorun -o output.html -r rules.xml \
+        -c mode=test,preview --parameters mode=live,preview=off \
+        content.html
+
 To see the built-in help for this command, run::
     
     $ bin/diazorun --help
@@ -93,8 +115,8 @@ function::
 
     >>> from diazo.compiler import compile_theme
 
-Please see the docstring for this function for more details about the parameters
-it takes.
+Please see the docstring for this function for more details about the
+parameters it takes.
 
 ``compile_theme()`` returns an XSLT document in ``lxml``'s ``ElementTree``
 format. To set up a transform representing the theme and rules, you can do::
