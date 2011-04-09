@@ -41,3 +41,27 @@ Contributing to this documentation is easy, just follow these steps*:
     - http://dev.plone.org/plone/
 
 (**) If you don't have access to deus.plone.org, please send a request to admins@plone.org.
+
+Contributing to Diazo
+=====================
+
+Diazo is maintained by the Plone project. The canonical source code
+repository can be found at::
+
+    https://svn.plone.org/svn/plone/diazo/
+    
+Note that commit rights require a signed Plone contributor agreement. Patches
+are received with thanks.
+
+Discussion about the development of Diazo happens mainly on the
+``plone-developers`` mailing list.
+
+If you have questions as a user of Diazo, please see http://plone.org/support.
+
+Some important ground rules:
+
+* Please do all new features on a branch and ask for review before
+  merging.
+* Keep the tests passing and write new tests (simply create a new directory
+  in the ``tests/`` directory following the convention of the existing
+  tests).
