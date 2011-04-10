@@ -354,10 +354,10 @@ in which rules are applied.
 4. ``<strip />`` rules are executed next. Note that ``<strip />`` rules do
    not prevent other rules from firing, even if the content or theme node
    is going to be stripped.
-4. ``<before />`` and ``<replace />`` and ``<after />`` rules using
+5. ``<before />`` and ``<replace />`` and ``<after />`` rules using
    ``theme-children`` execute next, provided no ``<replace />`` rule using
    ``theme`` was applied to the same theme node previously.
-5. ``<after />`` rules using ``theme`` (but not ``theme-children``) are
+6. ``<after />`` rules using ``theme`` (but not ``theme-children``) are
    executed last.
 
 Behaviour if theme or content is not matched
