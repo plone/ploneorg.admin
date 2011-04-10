@@ -1,5 +1,5 @@
-Diazo - We Write XSLT, So You Don't Have To™
-============================================
+We Write XSLT, So You Don't Have To™
+====================================
 
 .. image:: images/diazo-concept.png
     :align: right  
