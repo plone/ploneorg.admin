@@ -52,3 +52,6 @@ you can compile a static ``lxml`` egg using the following buildout recipe::
 
 Once installed, you should find ``diazocompiler`` and ``diazorun`` in your
 ``bin`` directory.
+
+If you want to use the WSGI middleware filter, you should use the ``[wsgi]`` 
+extra when installing the Diazo egg. See :doc:`quickstart` for an example.

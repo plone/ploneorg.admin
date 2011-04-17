@@ -27,6 +27,7 @@ Contents:
    :glob:
 
    introduction
+   quickstart
    installation
    basic
    advanced

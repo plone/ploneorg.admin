@@ -27,6 +27,110 @@ Even if you intend to deploy the compiled theme to another web server,
 make changes to theme and rules on the fly. It also provides some tools for
 packaging up your theme and deploying it to different sites.
 
+WSGI
+----
+
+Diazo ships with two WSGI middleware filters that can be used to apply
+the theme:
+
+* ``XSLTMiddleware``, which can apply a compiled theme created with
+  ``diazocompiler``
+* ``DiazoMiddleware``, which can be used to compile a theme on the fly and
+  apply it.
+
+In most cases, you will want to use ``DiazoMiddleware``, since it will cache
+the compiled theme. In fact, it uses the ``XSLTMiddleware`` internally.
+
+See :doc:`quickstart` for an example of how to set up a WSGI pipeline using
+the ``DiazoMiddleware`` filter, which is exposed to Paste Deploy as
+``egg:diazo``. You can use ``egg:diazo#xslt`` for the XSLT filter.
+
+The following options can be passed to ``XSLTMiddleware``:
+
+``filename``
+    A filename from which to read the XSLT file
+``tree``
+    A pre-parsed lxml tree representing the XSLT file
+
+``filename`` and ``tree`` are mutually exclusive. One is required.
+
+``read_network``
+    Set this to True to allow resolving resources from the network. Defaults
+    to False.
+``update_content_length``
+    Can be set to False to avoid calculating an updated ``Content-Length``
+    header when applying the transformation. This is only a good idea if some
+    middleware higher up the chain is going to set the content length instead.
+    Defaults to True.
+``ignored_extensions``
+    Can be set to a list of filename extensions for which the transformation
+    should never be applied. Defaults to a list of common file extensions for
+    images and binary files.
+``environ_param_map``
+    Can be set to a dict of ``environ`` keys to parameter names. The
+    corresponding values in the WSGI ``environ`` will then be sent to the
+    transformation as parameters with the given names.
+
+Additional arguments will be passed to the transformation as parameters. When
+using Paste Deploy, they will always be passed as strings.
+
+The following options can be passed to ``DiazoMiddleware``:
+
+``rules``
+    Path to the rules file
+``theme``
+    Path to the theme, if not specified using a ``<theme />`` directive in
+    the rules file. May also be a URL to a theme served over the network.
+``debug``
+    If set to True, the theme will be recompiled on every request, allowing
+    changes to the rules to be made on the fly. Defaults to False.
+``prefix``
+    Can be set to a string that will be prefixed to any *relative* URL
+    referenced in an image, link or stylesheet in the theme HTML file before
+    the theme is passed to the compiler.
+    
+    This allows a theme to be written so that it can be opened and views
+    standalone on the filesystem, even if at runtime its static resources are
+    going to be served from some other location. For example, an
+    ``<img src="images/foo.jpg" />`` can be turned into
+    ``<img src="/static/images/foo.jpg" />`` with a ``prefix`` of "/static".
+``includemode``
+    Can be set to 'document', 'esi' or 'ssi' to change the way in which
+    includes are processed
+``read_network``
+    Set this to True to allow resolving resources from the network. Defaults
+    to False.
+``update_content_length``
+    Can be set to False to avoid calculating an updated ``Content-Length``
+    header when applying the transformation. This is only a good idea if some
+    middleware higher up the chain is going to set the content length instead.
+    Defaults to True.
+``ignored_extensions``
+    Can be set to a list of filename extensions for which the transformation
+    should never be applied. Defaults to a list of common file extensions for
+    images and binary files.
+``environ_param_map``
+    Can be set to a dict of ``environ`` keys to parameter names. The
+    corresponding values in the WSGI ``environ`` will then be sent to the
+    transformation as parameters with the given names.
+
+When using ``DiazoMiddleware``, the following keys will be added to the
+WSGI ``environ``::
+
+``diazo.rules``
+    The path to the rules file.
+``diazo.absolute_prefix``
+    The absolute prefix as set with the ``prefix`` argument
+``diazo.path``
+    The path portion of the inbound request, which will be mapped to the the
+    ``$path`` rules variable and so enables ``if-path`` expressions.
+``diazo.host``
+    The inbound hostname, which will be available in the rules file as the
+    variable ``$host``.
+``diazo.scheme``
+    The request scheme (usually ``http`` or ``https``), which will be
+    available in the rules file as the variable ``$scheme``.
+
 Nginx
 -----
 
