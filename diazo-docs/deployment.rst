@@ -115,7 +115,7 @@ The following options can be passed to ``DiazoMiddleware``:
     transformation as parameters with the given names.
 
 When using ``DiazoMiddleware``, the following keys will be added to the
-WSGI ``environ``::
+WSGI ``environ``:
 
 ``diazo.rules``
     The path to the rules file.
