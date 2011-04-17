@@ -35,10 +35,8 @@ Contents:
    deployment
    contributing
 
-Indices and tables
-==================
+Search
+======
 
-* :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
