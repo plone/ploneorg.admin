@@ -126,7 +126,7 @@ tag::
 
     <rules
         xmlns="http://namespaces.plone.org/diazo"
-        xmlns:css="http://namespaces.plone.org/diazo+css"
+        xmlns:css="http://namespaces.plone.org/diazo/css"
         xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
         <rules css:if-content="#personal-bar">
@@ -276,7 +276,7 @@ Inclusions use standard XInclude syntax. For example::
 
     <rules
         xmlns="http://namespaces.plone.org/diazo"
-        xmlns:css="http://namespaces.plone.org/diazo+css"
+        xmlns:css="http://namespaces.plone.org/diazo/css"
         xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
         xmlns:xi="http://www.w3.org/2001/XInclude">
         

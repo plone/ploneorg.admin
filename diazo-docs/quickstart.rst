@@ -122,7 +122,7 @@ To set up the proxy, we will use `Buildout`_.
    
     <rules
         xmlns="http://namespaces.plone.org/diazo"
-        xmlns:css="http://namespaces.plone.org/diazo+css"
+        xmlns:css="http://namespaces.plone.org/diazo/css"
         xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     
         <theme href="theme/theme.html" />

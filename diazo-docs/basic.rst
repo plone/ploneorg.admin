@@ -9,7 +9,7 @@ The rules file contains an XML document that is is rooted in a tag called
 
     <rules
         xmlns="http://namespaces.plone.org/diazo"
-        xmlns:css="http://namespaces.plone.org/diazo+css"
+        xmlns:css="http://namespaces.plone.org/diazo/css"
         xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
            
            ...
