@@ -225,6 +225,27 @@ Notice how we used ``css:select`` to select a node to operate on in the
 for anything that specifies an XPath expression, and the Diazo pre-processor
 will turn it into the equivalent XPath for you.
 
+Inline markup and XSLT may be combined with conditions::
+
+    <before css:theme"#content-wrapper" css:if-content="body.blog-page">
+        <div class="notice">Welcome to our new blog</div>
+    </before>
+
+Modifying the content on the fly
+--------------------------------
+
+It is possible to modify the included content using ``<replace />``.
+
+For example::
+
+    <replace css:content="div#portal-searchbox input.searchButton">
+        <button type="submit">
+            <img src="images/search.png" alt="Search" />
+        </button>
+    </replace>
+
+This may be combined with conditions and inline XSLT.
+
 Inline XSL directives
 ---------------------
 
@@ -235,14 +256,8 @@ For instance to strip space from the output document use::
 
 (Note: this may effect the rendering of the page on the browser.)
 
-You can even define your own ``<xsl:template />``'s anywhere in the rules
-file. For example::
-
-    <replace css:theme="#target">
-        <xsl:apply-templates css:select="#content"/>
-    </replace>
-    
-    <xsl:template match="h2/text()"><xsl:copy /> - Some extra text</xsl:template> 
+Inline XSL directives must be placed directly inside the root ``<rules>`` tag
+and are applied unconditionally.
 
 Doctypes
 --------

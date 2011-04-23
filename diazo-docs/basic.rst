@@ -155,6 +155,8 @@ The following attributes are allowed:
     Used to specify an element that must be present in the content for the
     replacement to be performed.
 
+For more advanced usage of ``<replace>``, see `Modifying the theme on the
+fly`_ and `Modifying the content on the fly`_.
 
 ``<before />`` and ``<after />``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -354,10 +356,11 @@ in which rules are applied.
 4. ``<strip />`` rules are executed next. Note that ``<strip />`` rules do
    not prevent other rules from firing, even if the content or theme node
    is going to be stripped.
-5. ``<before />`` and ``<replace />`` and ``<after />`` rules using
+5. Rules that operate on attributes.
+6. ``<before />`` and ``<replace />`` and ``<after />`` rules using
    ``theme-children`` execute next, provided no ``<replace />`` rule using
    ``theme`` was applied to the same theme node previously.
-6. ``<after />`` rules using ``theme`` (but not ``theme-children``) are
+7. ``<after />`` rules using ``theme`` (but not ``theme-children``) are
    executed last.
 
 Behaviour if theme or content is not matched
