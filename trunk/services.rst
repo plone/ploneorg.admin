@@ -19,6 +19,15 @@ one for https. The https nginx is a FreeBSD port install and is configured and
 controlled in the standard /usr/local/etc area. The http server config is
 deployed via a buildout configuration in /srv/plone.org.
 
+.. figure:: plone.org.gv.png
+   :width: 100 %
+   :alt: Diagram of services powering plone.org and their interconnections
+   
+   Diagram of services powering plone.org and their interconnections (validated on 11th of March, 2011)
+
+   Varnish running on port 80 (http), nginx running on port 443 (https) and 
+   pound running on port 5020 are FreeBSD port installs. 
+
 Development
 ~~~~~~~~~~~
 
@@ -27,7 +36,7 @@ product located here: http://dev.plone.org/plone/browser/Products.PloneOrg/trunk
 
 To develop locally, follow these steps::
 
-    $ svn co https://svn.plone.org/svn/plone/Products.PloneOrg/trunk Products.PloneOrg
+    $ svn co https://svn.plone.org/svn/plone/plone.org/Products.PloneOrg/trunk Products.PloneOrg
     (edit buildout.cfg to make it extend the develop.cfg configuration instead of production)
     $ python2.6 bootstrap.py
     $ bin/buildout
@@ -52,7 +61,55 @@ can read about that here: http://plone.org/documentation/manual/plone-core-devel
 Contact the `admins team`_ or join #plone.org on irc.freenode.net to discuss deployment of
 your changes!
 
-If you are an admin, you can deploy changes like this::
+If you are an admin, you can deploy changes to staging and production servers.
+
+Staging
+'''''''
+
+Changes to production server should be tested at staging server available at http://staging.plone.org/ that is variance of production buildout.
+
+- Commit your changes to SVN::
+
+    $ cd Products.PloneOrg
+    $ svn ci
+
+- Deploy to staging server from working copy of PloneOrg buildout (with conf/deploy-snip.conf included)::
+
+    $ bin/fab staging deploy
+    [staging.plone.org] Executing task 'deploy'
+    [staging.plone.org] sudo: nice svn up
+    [staging.plone.org] out: U    src/Products/PloneOrg/skins/ploneorg/login.js
+    [staging.plone.org] out: U    src/Products/PloneOrg/skins/ploneorg/newplone.css
+    [staging.plone.org] out: U    static/plone.html
+    [staging.plone.org] out: U    static/plone-wide.html
+    [staging.plone.org] out:  U   .
+    [staging.plone.org] out: Updated to revision 48188.
+    [staging.plone.org] out: 
+    [staging.plone.org] sudo: nice bin/buildout
+    [staging.plone.org] out: ---------------------------------------------------------
+    [staging.plone.org] out: The current global buildout threat level is:   HIGH  
+    [staging.plone.org] out: ---------------------------------------------------------
+    [staging.plone.org] out: mr.developer: Queued 'Products.ExternalStorage' for checkout.
+    [staging.plone.org] out: mr.developer: Queued 'Products.FoundationMember' for checkout.
+    ...
+    [staging.plone.org] out: static/plone-wide.html
+    [staging.plone.org] out: *************** PICKED VERSIONS ****************
+    [staging.plone.org] out: [versions]
+    [staging.plone.org] out: 
+    [staging.plone.org] out: *************** /PICKED VERSIONS ***************
+    [staging.plone.org] out: 
+    [staging.plone.org] sudo: nice bin/supervisorctl reload
+    [staging.plone.org] out: Restarted supervisord
+    [staging.plone.org] out: 
+
+    Done.
+    Disconnecting from staging.plone.org... done.
+
+
+Production
+''''''''''
+
+You can deploy changes to production server like this::
 
     $ ssh plone.org
     $ cd /srv/plone.org
@@ -62,7 +119,7 @@ If you are an admin, you can deploy changes like this::
 Then restart the instances as instructed below.
 
 Restarting
-~~~~~~~~~~
+''''''''''
 
 If you are a member of the admins team, you may be occasionally asked to login, svn up, run buildout, and restart the instances.
 To do that, you can use the following commands::
@@ -110,19 +167,56 @@ Other services
 Some services are not included in the buildout, including:
 
 - Varnish
+- nginx
 - Pound
 - LDAP
 - Postfix
 
 Generally speaking, these services are controlled "BSD-style" and are located in /usr/local.
-So for example to restart nginx, you can do the following::
+So for example to restart pound, you can do the following::
 
     $ /usr/local/etc/rc.d/pound restart
 
 Note the configuration files for some of these services are version controlled, e.g.
-http://svn.plone.org/svn/plone/plone01-pound/trunk/.
+http://svn.plone.org/svn/plone/plone.org/plone01-pound/trunk/.
 
 All configuration files of interest are either created by buildout or included in version control.
+
+Varnish
+'''''''
+
+Configuration in ``/usr/local/etc/varnish`` under version control at 
+http://svn.plone.org/svn/plone/plone.org/plone01-varnish/trunk
+
+Updating Varnish cache configuration can be performed without varnish restart::
+
+     $ cd /usr/local/etc/varnish
+     $ sudo svn up
+     U    default.vcl
+     Updated to revision 48218.
+     $ NOW=`date +%Y%m%d%H%M%S`
+     $ /usr/local/bin/varnishadm -T localhost:81 vcl.load reload$NOW /usr/local/etc/varnish/default.vcl
+     $ /usr/local/bin/varnishadm -T localhost:81 vcl.use  reload$NOW
+     $ /usr/local/bin/varnishadm -T localhost:81 vcl.list
+     available   4  default
+     active      11 reload20110324223618
+
+nginx
+'''''
+
+Configuration in ``/usr/local/etc/nginx``. ``vhosts/`` subfolder under version control at 
+http://svn.plone.org/svn/plone/plone.org/plone01-nginx/trunk
+
+Updating nginx configuration can be performed without nginx reatart::
+
+     $ cd /usr/local/etc/nginx/vhosts
+     $ sudo svn up
+     U    ssl-staging.plone.org.conf
+     Updated to revision 48218.
+     $ sudo /usr/local/sbin/nginx -t -c ../nginx.conf
+     2011/03/24 15:38:48 [info] 94610#0: the configuration file ../nginx.conf syntax is ok
+     2011/03/24 15:38:48 [info] 94610#0: the configuration file ../nginx.conf was tested successfully
+     $ sudo kill -HUP `cat /var/run/nginx.pid`
 
 .. _`admins team`: mailto:admins@lists.plone.org
 
@@ -266,12 +360,12 @@ Details
 ~~~~~~~
 
 - Available via https://hudson.plone.org. 
-    - sites-enabled directory contents managed in svn (http://svn.plone.org/svn/plone/muse-apache/trunk/hudson-ssl)
+    - sites-enabled directory contents managed in svn (http://svn.plone.org/svn/plone/plone.org/muse-apache/trunk/hudson-ssl)
 
 - "Installed" in /srv/hudson (which means that is where hudson.war lives).
 
 - Run via OS vendor installed supervisor
-    - conf.d directory contents managed in svn (http://svn.plone.org/svn/plone/muse-supervisor/trunk/hudson.conf)
+    - conf.d directory contents managed in svn (http://svn.plone.org/svn/plone/plone.org/muse-supervisor/trunk/hudson.conf)
 
 - Configured to allow core devs to login (via ldap).
 
@@ -289,7 +383,7 @@ The Plone planet runs Venus planet software (http://intertwingly.net/code/venus/
 
 Its configuration is version controlled here::
 
-    https://svn.plone.org/svn/plone/planet/trunk
+    https://svn.plone.org/svn/plone/plone.org/planet/trunk
 
 And it is updated via a cron job on deus.plone.org here::
 
@@ -307,7 +401,7 @@ Deploy changes
 
 You can deploy changes like so:
 
-    - Deploy changes commited to https://svn.plone.org/svn/plone/planet/trunk via::
+    - Deploy changes commited to https://svn.plone.org/svn/plone/plone.org/planet/trunk via::
 
         $ cd /srv/planet.plone.org/venus/plone
         $ sudo -u planet svn up 
