@@ -68,31 +68,12 @@ Staging
 
 Changes to production server should be tested at staging server available at http://staging.plone.org/ that is variance of production buildout.
 
-- Commit your changes to SVN and merge your changes into staging branch::
+- Commit your changes to SVN::
 
     $ cd Products.PloneOrg
     $ svn ci
-    $ cd ..
-    $ svn co https://svn.plone.org/svn/plone/plone.org/Products.PloneOrg/branches/interra-staging-ticket11435 Products.PloneOrg-staing
-    ...
-    $ cd Products.PloneOrg-staing
-    $ svn merge https://svn.plone.org/svn/plone/plone.org/Products.PloneOrg/trunk
-    --- Merging r48153 through r48187 into '.':
-    U    src/Products/PloneOrg/skins/ploneorg/login.js
-    U    src/Products/PloneOrg/skins/ploneorg/newplone.css
-    U    static/plone.html
-    U    static/plone-wide.html
 
-    $ svn ci -m "Merged from [log:/plone.org/Products.PloneOrg/trunk#48153:48187 trunk]"
-    Sending        .
-    Sending        src/Products/PloneOrg/skins/ploneorg/login.js
-    Sending        src/Products/PloneOrg/skins/ploneorg/newplone.css
-    Sending        static/plone-wide.html
-    Sending        static/plone.html
-    Transmitting file data ....
-    Committed revision 48188.
-
-- Deploy to staging server from working copy of PloneOrg buildout (staging branch)::
+- Deploy to staging server from working copy of PloneOrg buildout (with conf/deploy-snip.conf included)::
 
     $ bin/fab staging deploy
     [staging.plone.org] Executing task 'deploy'
