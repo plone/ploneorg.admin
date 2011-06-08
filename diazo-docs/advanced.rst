@@ -275,8 +275,9 @@ libxml2's XML serializer. This ensures ``<br/>`` is rendered as ``<br />`` and
 ``<div/>`` as ``<div></div>``, which is necessary for browsers to correctly
 parse the document as HTML.
 
-The HTML5 specification lists XHTML 1.0 Strict as as `obsolete permitted
-doctype string`_, so this doctype is recommended when HTML5 output is desired.
+It's not possible to set the HTML5 doctype from XSLT, so plone.app.theming and
+the included WSGI middleware include a ``doctype`` option which may be set to
+"<!DOCTYPE html>".
 
 XInclude
 --------
