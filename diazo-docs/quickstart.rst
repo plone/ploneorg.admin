@@ -177,6 +177,7 @@ To set up the proxy, we will use `Buildout`_.
     [app:content]
     use = egg:Paste#proxy
     address = http://diazo.org/
+    suppress_http_headers = accept-encoding
 
 9. Run the proxy::
 
