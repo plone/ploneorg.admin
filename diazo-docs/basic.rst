@@ -176,7 +176,7 @@ wanted the box below the content instead, we could do::
 To insert the box immediately inside the ``#content`` node, before any of its
 existing children, we could do::
 
-    <before css:theme="#content" css:content="#info-box" />
+    <before css:theme-children="#content" css:content="#info-box" />
 
 ``<before />`` and ``<after />`` have the same required and optional
 attributes as ``<replace />``, except for ``attributes``, which is not
