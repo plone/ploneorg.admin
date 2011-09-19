@@ -63,7 +63,7 @@ BrowserMatch setuptools setuptools
 	RewriteEngine	On
 #	RewriteRule	^/$		http://plone.org/development/info/subversion
 	CustomLog	/var/log/apache2/svn.plone.org/access.log combined
-    ErrorLog	/var/log/apache2/svn.plone.org/error.log
+        ErrorLog	/var/log/apache2/svn.plone.org/error.log
 
 	MultiViewsMatch	Any
 	Options		+MultiViews +IncludesNoExec
@@ -119,6 +119,19 @@ BrowserMatch setuptools setuptools
                 Require valid-user
         </Location>
 
+# The following packages have been moved to github, so are read-only.
+
+        <LocationMatch "^/svn/plone/plone\.(directives\.tiles|formwidget\.multifile|formwidget\.querystring|resource|subrequest|tiles)">
+                <LimitExcept GET PROPFIND OPTIONS REPORT>
+			deny from all
+		</LimitExcept>
+	</LocationMatch>
+
+        <LocationMatch "^/svn/plone/plone\.app\.(blocks|deco|page|drafts|querystring|standardtiles|tiles|tinymce)">
+                <LimitExcept GET PROPFIND OPTIONS REPORT>
+			deny from all
+		</LimitExcept>
+	</LocationMatch>
 
 </VirtualHost>
 
