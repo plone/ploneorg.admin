@@ -121,17 +121,29 @@ BrowserMatch setuptools setuptools
 
 # The following packages have been moved to github, so are read-only.
 
-        <LocationMatch "^/svn/plone/plone\.(directives\.tiles|formwidget\.multifile|formwidget\.querystring|resource|subrequest|tiles)">
+        <LocationMatch "^/svn/plone/plone\.(alterego|autoform|behavior|cachepurging|caching|dexterity|directives\.dexterity|directives\.form|directives\.tiles|fieldsets|folder|formwidget\.autocomplete|formwidget\.contenttree|formwidget\.multifile|formwidget\.querystring|formwidget\.namedfile|indexer|intelligenttext|keyring|locking|multilingual|multilingualbehavior|namedfile|openid|outputfilters|portlet\.collection|portlet\.static|protect|registry|resource|rfc822|scale|schemaeditor|session|stringinterp|subrequest|supermodel|synchronize|testing|tiles|transformchain|uuid)">
                 <LimitExcept GET PROPFIND OPTIONS REPORT>
 			deny from all
 		</LimitExcept>
 	</LocationMatch>
 
-        <LocationMatch "^/svn/plone/plone\.app\.(blocks|deco|page|drafts|querystring|standardtiles|tiles|tinymce)">
+        <LocationMatch "^/svn/plone/plone\.app\.(blocks|content|contentmenu|deco|dexterity|drafts|folder|form|i18n|imaging|intid|iterate|jquerytools|linkintegrity|lockingbehavior|openid|page|querystring|redirector|registry|relationfield|search|stagingbehavior|standardtiles|textfield|tiles|tinymce|uuid|versioningbehavior|z3cform)">
                 <LimitExcept GET PROPFIND OPTIONS REPORT>
 			deny from all
 		</LimitExcept>
 	</LocationMatch>
+
+        <LocationMatch "^/svn/archetypes/(archetypes\.(kss|referencebrowserwidget)|Products\.Marshall)">
+                <LimitExcept GET PROPFIND OPTIONS REPORT>
+			deny from all
+		</LimitExcept>
+        </LocationMatch>
+
+        <LocationMatch "^/svn/collective/buildout/(plone\.recipe\.(alltests|zeoserver|zope2install|zope2instance|zope2zeoserver)|borg\.localrole|Products\.(PasswordResetTool|PlonePAS))">
+                <LimitExcept GET PROPFIND OPTIONS REPORT>
+			deny from all
+		</LimitExcept>
+        </LocationMatch>
 
 </VirtualHost>
 
