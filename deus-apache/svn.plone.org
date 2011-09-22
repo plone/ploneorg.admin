@@ -121,7 +121,7 @@ BrowserMatch setuptools setuptools
 
 # The following packages have been moved to github, so are read-only.
 
-        <LocationMatch "^/svn/plone/plone\.(alterego|autoform|behavior|cachepurging|caching|dexterity|directives\.dexterity|directives\.form|directives\.tiles|fieldsets|folder|formwidget\.autocomplete|formwidget\.contenttree|formwidget\.multifile|formwidget\.querystring|formwidget\.namedfile|indexer|intelligenttext|keyring|locking|multilingual|multilingualbehavior|namedfile|openid|outputfilters|portlet\.collection|portlet\.static|protect|registry|resource|rfc822|scale|schemaeditor|session|stringinterp|subrequest|supermodel|synchronize|testing|tiles|transformchain|uuid)">
+        <LocationMatch "^/svn/plone/(plone\.(alterego|autoform|behavior|cachepurging|caching|dexterity|directives\.dexterity|directives\.form|directives\.tiles|fieldsets|folder|formwidget\.autocomplete|formwidget\.contenttree|formwidget\.multifile|formwidget\.querystring|formwidget\.namedfile|indexer|intelligenttext|keyring|locking|multilingual|multilingualbehavior|namedfile|openid|outputfilters|portlet\.collection|portlet\.static|protect|registry|resource|rfc822|scale|schemaeditor|session|stringinterp|subrequest|supermodel|synchronize|testing|tiles|transformchain|uuid)|ResourceRegistries)">
                 <LimitExcept GET PROPFIND OPTIONS REPORT>
 			deny from all
 		</LimitExcept>
