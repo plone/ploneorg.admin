@@ -377,13 +377,13 @@ Planet Plone (http://planet.plone.org) aggregates blog feeds of various communit
 Details
 ~~~~~~~
 
-The Plone planet runs Venus planet software (http://intertwingly.net/code/venus/) and is installed on deus.plone.org in::
+The Plone planet runs Venus planet software (http://intertwingly.net/code/venus/) and is installed on deus2.plone.org in::
 
     /srv/planet.plone.org/venus/plone
 
 Its configuration is version controlled here::
 
-    https://svn.plone.org/svn/plone/plone.org/planet/trunk
+    https://github.com/plone/planet.plone.org
 
 And it is updated via a cron job on deus.plone.org here::
 
@@ -401,14 +401,20 @@ Deploy changes
 
 You can deploy changes like so:
 
+    - Push changes to GitHub *git@github.com:plone/planet.plone.org.git*
+
+    - Connect to deus2.plone.org 
+
+        $ ssh deus2.osuosl.org
+
     - Deploy changes commited to https://svn.plone.org/svn/plone/plone.org/planet/trunk via::
 
-        $ cd /srv/planet.plone.org/venus/plone
-        $ sudo -u planet svn up 
+        $ cd /var/www/planet.plone.org
+        $ sudo git pull
 
     - Update manually by running the following command on deus.plone.org as the planet user::
 
-        $ sudo -u planet /srv/planet.plone.org/bin/update
+        $ sudo -u apache /bin/sh /var/www/planet.plone.org/bin/update.sh
 
 Trac
 ----
