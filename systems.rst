@@ -6,6 +6,205 @@ These are the community managed systems.
 
 .. contents::
 
+Host: aneka.plone.org (**DECOM**)
+---------------------------------
+
+*Provided by XS4ALL*
+
++---------------------------+----------------------+---------------+-----------+
+| Server/Hardware           | Services             | Owner/Location| Notes     |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+|  aneka.plone.org          | - backups.plone.org* | XS4ALL/       | See       |
+| (82.94.219.234)           | - lists.plone.org    | Amsterdam,    | mailman   |
+|                           |                      | Netherlands   | section.  |
+| - Linux                   |                      |               |           |
+| - 2.6.18-5-686            |                      |               |           |
+| - i686                    |                      |               |           |
+| - Mem:   2076408k total   |                      |               |           |
+| - Swap:   524280k total   |                      |               |           |
+| - CPU1:                   |                      |               |           |
+|                           |                      |               |           |
+|  - Speed: 2800 MHz        |                      |               |           |
+|  - Family: Pentium 4      |                      |               |           |
+|  - Core count: 1          |                      |               |           |
+|                           |                      |               |           |
+| - CPU2:                   |                      |               |           |
+|                           |                      |               |           |
+|  - Speed: 2800 MHz        |                      |               |           |
+|  - Family: Pentium 4      |                      |               |           |
+|  - Core count: 1          |                      |               |           |
+|                           |                      |               |           |
+| - Network:                |                      |               |           |
+|                           |                      |               |           |
+|  - Speed: 100Mbps         |                      |               |           |
+|  - Duplex: Full           |                      |               |           |
+|                           |                      |               |           |
+| - Backups: No             |                      |               |           |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+
+Host: antiloop.plone.org (**DECOM**)
+------------------------------------
+
+*Provided by XS4ALL*
+
++---------------------------+----------------------+---------------+-----------+
+| Server/Hardware           | Services             | Owner/Location| Notes     |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+| antiloop.plone.org        | - antiloop.plone.org | XS4ALL/       | svn.p.o is| 
+| (82.94.219.235)           | - dist.plone.org*    | Amsterdam,    | really    |
+| (82.94.219.236)           | - lists.plone.org*   | Netherlands   | svn-mirror|
+|                           | - media.plone.org*   |               |           |
+| - Linux                   | - planet.plone.org*  |               |           |
+| - 2.6.17-rc2              | - plone.hu           |               |           |
+| - i686                    | - plone.it           |               |           |
+| - Mem:   4150536k total   | - plone.net*         |               |           |
+| - Swap:  1048568k total   | - plone.net-backup*  |               |           |
+| - CPU1:                   | - plone.org*         |               |           |
+|                           | - proxy.plone.org*   |               |           |
+|  - Speed: 3200 MHz        | - stats.plone.org    |               |           |
+|  - Family: Pentium 4      | - svn.plone.org      |               |           |
+|  - Core count: 1          | - test.plone.org*    |               |           |
+|                           | - tests.plone.org*   |               |           |
+| - CPU2:                   | - trac.plone.org*    |               |           |
+|                           |                      |               |           |
+|  - Speed: 3200 MHz        |                      |               |           |
+|  - Family: Pentium 4      |                      |               |           |
+|  - Core count: 1          |                      |               |           |
+|                           |                      |               |           |
+| - Network:                |                      |               |           |
+|                           |                      |               |           |
+|  - Speed: 100Mbps         |                      |               |           |
+|  - Duplex: Full           |                      |               |           |
+|                           |                      |               |           |
+| - Backups: No             |                      |               |           |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+
+Host: deus.plone.org (**DECOM**)
+--------------------------------
+
+*Provided by OSUOSL*
+
++---------------------------+----------------------+---------------+-----------+
+| Server/Hardware           | Services             | Owner/Location| Notes     |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+|  deus.plone.org           | - api.plone.org      | Oregon State/ |           |
+| (140.211.166.62)          | - deus.plone.org     | Eugene, OR    |           |
+|                           | - dev.plone.org      | USA           |           |
+| - Linux                   | - paste.plone.org*   |               |           |
+| - 2.6.26-2-686            | - planet.plone.org   |               |           |
+| - i686                    | - svn.plone.org      |               |           |
+| - Mem:   2076244k total   | - admin.plone.org    |               |           |
+| - Swap:  1048568k total   | - collective-docs.   |               |           |
+| - CPU1:                   |   plone.org          |               |           |
+|                           |                      |               |           |
+|  - Speed: 3066 MHz        |                      |               |           |
+|  - Family: Xeon           |                      |               |           |
+|  - Core count: 1          |                      |               |           |
+|                           |                      |               |           |
+| - CPU2:                   |                      |               |           |
+|                           |                      |               |           |
+|  - Speed: 3066 MHz        |                      |               |           |
+|  - Family: Xeon           |                      |               |           |
+|  - Core count: 1          |                      |               |           |
+|                           |                      |               |           |
+| - Network:                |                      |               |           |
+|                           |                      |               |           |
+| - Backups: Yes            |                      |               |           |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+
+Host: deus2.plone.org
+---------------------
+
+*Provided by OSUOSL*
+
++---------------------------+----------------------+---------------+-----------+
+| Server/Hardware           | Services             | Owner/Location| Notes     |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+| XXX Finish me             |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+
+Host: jenkins.plone.org
+-----------------------
+
+*Provided by `Devaus Oy`_*
+
++---------------------------+----------------------+---------------+-----------+
+| Server/Hardware           | Services             | Owner/Location| Notes     |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+| XXX Finish me             |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+
+Host: muse.plone.org (**DECOM**)
+--------------------------------
+
+*Provided by `Devaus Oy`_*
+
++---------------------------+----------------------+---------------+-----------+
+| Server/Hardware           | Services             | Owner/Location| Notes     |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+|  muse.plone.org           | - hudson.plone.org   | Citum/Finland |           |
+| (91.216.77.14)            |                      |               |           |
+|                           |                      |               |           |
+| - Linux                   |                      |               |           |
+| - 2.6.18-194…5            |                      |               |           |
+| - x86_64                  |                      |               |           |
+| - Mem:   6,656,000k total |                      |               |           |
+|   (Up to 16GB avail)      |                      |               |           |
+| - Swap:        0k total   |                      |               |           |
+| - CPU1:                   |                      |               |           |
+|                           |                      |               |           |
+|  - Speed: 2211.367 MHz    |                      |               |           |
+|  - Family: 15             |                      |               |           |
+|  - Core count: 1          |                      |               |           |
+|                           |                      |               |           |
+| - CPU2:                   |                      |               |           |
+|                           |                      |               |           |
+|  - Speed: 2211.367 MHz    |                      |               |           |
+|  - Family: 15             |                      |               |           |
+|  - Core count: 2          |                      |               |           |
+|                           |                      |               |           |
+| - CPU3:                   |                      |               |           |
+|                           |                      |               |           |
+|  - Speed: 2211.367 MHz    |                      |               |           |
+|  - Family: 15             |                      |               |           |
+|  - Core count: 1          |                      |               |           |
+|                           |                      |               |           |
+| - CPU4:                   |                      |               |           |
+|                           |                      |               |           |
+|  - Speed: 2211.367 MHz    |                      |               |           |
+|  - Family: 15             |                      |               |           |
+|  - Core count: 2          |                      |               |           |
+|                           |                      |               |           |
+| - Network:                |                      |               |           |
+|                           |                      |               |           |
+|  - Speed:                 |                      |               |           |
+|  - Duplex:                |                      |               |           |
+|                           |                      |               |           |
+| - Backups:                |                      |               |           |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+
+Host: placebo.plone.org (**DECOM**)
+-----------------------------------
+
+*Provided by `Devaus Oy`_*
+
++---------------------------+----------------------+---------------+-----------+
+| Server/Hardware           | Services             | Owner/Location| Notes     |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+
 Host: plone01.sixfeetup.com
 ---------------------------
 
@@ -86,207 +285,6 @@ Host: plonenet.pilotsystems.net (**DECOM**)
 |  - /dev/shm 1001M            |                      |               |           |
 |                              |                      |               |           |
 +------------------------------+----------------------+---------------+-----------+
-
-Host: deus.plone.org (**DECOM**)
---------------------------------
-
-*Provided by OSUOSL*
-
-+---------------------------+----------------------+---------------+-----------+
-| Server/Hardware           | Services             | Owner/Location| Notes     |
-|                           |                      |               |           |
-+---------------------------+----------------------+---------------+-----------+
-|  deus.plone.org           | - api.plone.org      | Oregon State/ |           |
-| (140.211.166.62)          | - deus.plone.org     | Eugene, OR    |           |
-|                           | - dev.plone.org      | USA           |           |
-| - Linux                   | - paste.plone.org*   |               |           |
-| - 2.6.26-2-686            | - planet.plone.org   |               |           |
-| - i686                    | - svn.plone.org      |               |           |
-| - Mem:   2076244k total   | - admin.plone.org    |               |           |
-| - Swap:  1048568k total   | - collective-docs.   |               |           |
-| - CPU1:                   |   plone.org          |               |           |
-|                           |                      |               |           |
-|  - Speed: 3066 MHz        |                      |               |           |
-|  - Family: Xeon           |                      |               |           |
-|  - Core count: 1          |                      |               |           |
-|                           |                      |               |           |
-| - CPU2:                   |                      |               |           |
-|                           |                      |               |           |
-|  - Speed: 3066 MHz        |                      |               |           |
-|  - Family: Xeon           |                      |               |           |
-|  - Core count: 1          |                      |               |           |
-|                           |                      |               |           |
-| - Network:                |                      |               |           |
-|                           |                      |               |           |
-| - Backups: Yes            |                      |               |           |
-|                           |                      |               |           |
-+---------------------------+----------------------+---------------+-----------+
-
-Host: deus2.plone.org
----------------------
-
-*Provided by OSUOSL*
-
-+---------------------------+----------------------+---------------+-----------+
-| Server/Hardware           | Services             | Owner/Location| Notes     |
-|                           |                      |               |           |
-+---------------------------+----------------------+---------------+-----------+
-| XXX Finish me             |                      |               |           |
-+---------------------------+----------------------+---------------+-----------+
-
-
-Host: antiloop.plone.org (**DECOM**)
-------------------------------------
-
-*Provided by XS4ALL*
-
-+---------------------------+----------------------+---------------+-----------+
-| Server/Hardware           | Services             | Owner/Location| Notes     |
-|                           |                      |               |           |
-+---------------------------+----------------------+---------------+-----------+
-| antiloop.plone.org        | - antiloop.plone.org | XS4ALL/       | svn.p.o is| 
-| (82.94.219.235)           | - dist.plone.org*    | Amsterdam,    | really    |
-| (82.94.219.236)           | - lists.plone.org*   | Netherlands   | svn-mirror|
-|                           | - media.plone.org*   |               |           |
-| - Linux                   | - planet.plone.org*  |               |           |
-| - 2.6.17-rc2              | - plone.hu           |               |           |
-| - i686                    | - plone.it           |               |           |
-| - Mem:   4150536k total   | - plone.net*         |               |           |
-| - Swap:  1048568k total   | - plone.net-backup*  |               |           |
-| - CPU1:                   | - plone.org*         |               |           |
-|                           | - proxy.plone.org*   |               |           |
-|  - Speed: 3200 MHz        | - stats.plone.org    |               |           |
-|  - Family: Pentium 4      | - svn.plone.org      |               |           |
-|  - Core count: 1          | - test.plone.org*    |               |           |
-|                           | - tests.plone.org*   |               |           |
-| - CPU2:                   | - trac.plone.org*    |               |           |
-|                           |                      |               |           |
-|  - Speed: 3200 MHz        |                      |               |           |
-|  - Family: Pentium 4      |                      |               |           |
-|  - Core count: 1          |                      |               |           |
-|                           |                      |               |           |
-| - Network:                |                      |               |           |
-|                           |                      |               |           |
-|  - Speed: 100Mbps         |                      |               |           |
-|  - Duplex: Full           |                      |               |           |
-|                           |                      |               |           |
-| - Backups: No             |                      |               |           |
-|                           |                      |               |           |
-+---------------------------+----------------------+---------------+-----------+
-
-Host: aneka.plone.org (**DECOM**)
----------------------------------
-
-*Provided by XS4ALL*
-
-+---------------------------+----------------------+---------------+-----------+
-| Server/Hardware           | Services             | Owner/Location| Notes     |
-|                           |                      |               |           |
-+---------------------------+----------------------+---------------+-----------+
-|  aneka.plone.org          | - backups.plone.org* | XS4ALL/       | See       |
-| (82.94.219.234)           | - lists.plone.org    | Amsterdam,    | mailman   |
-|                           |                      | Netherlands   | section.  |
-| - Linux                   |                      |               |           |
-| - 2.6.18-5-686            |                      |               |           |
-| - i686                    |                      |               |           |
-| - Mem:   2076408k total   |                      |               |           |
-| - Swap:   524280k total   |                      |               |           |
-| - CPU1:                   |                      |               |           |
-|                           |                      |               |           |
-|  - Speed: 2800 MHz        |                      |               |           |
-|  - Family: Pentium 4      |                      |               |           |
-|  - Core count: 1          |                      |               |           |
-|                           |                      |               |           |
-| - CPU2:                   |                      |               |           |
-|                           |                      |               |           |
-|  - Speed: 2800 MHz        |                      |               |           |
-|  - Family: Pentium 4      |                      |               |           |
-|  - Core count: 1          |                      |               |           |
-|                           |                      |               |           |
-| - Network:                |                      |               |           |
-|                           |                      |               |           |
-|  - Speed: 100Mbps         |                      |               |           |
-|  - Duplex: Full           |                      |               |           |
-|                           |                      |               |           |
-| - Backups: No             |                      |               |           |
-|                           |                      |               |           |
-+---------------------------+----------------------+---------------+-----------+
-
-Host: muse.plone.org (**DECOM**)
---------------------------------
-
-*Provided by `Devaus Oy`_*
-
-+---------------------------+----------------------+---------------+-----------+
-| Server/Hardware           | Services             | Owner/Location| Notes     |
-|                           |                      |               |           |
-+---------------------------+----------------------+---------------+-----------+
-|  muse.plone.org           | - hudson.plone.org   | Citum/Finland |           |
-| (91.216.77.14)            |                      |               |           |
-|                           |                      |               |           |
-| - Linux                   |                      |               |           |
-| - 2.6.18-194…5            |                      |               |           |
-| - x86_64                  |                      |               |           |
-| - Mem:   6,656,000k total |                      |               |           |
-|   (Up to 16GB avail)      |                      |               |           |
-| - Swap:        0k total   |                      |               |           |
-| - CPU1:                   |                      |               |           |
-|                           |                      |               |           |
-|  - Speed: 2211.367 MHz    |                      |               |           |
-|  - Family: 15             |                      |               |           |
-|  - Core count: 1          |                      |               |           |
-|                           |                      |               |           |
-| - CPU2:                   |                      |               |           |
-|                           |                      |               |           |
-|  - Speed: 2211.367 MHz    |                      |               |           |
-|  - Family: 15             |                      |               |           |
-|  - Core count: 2          |                      |               |           |
-|                           |                      |               |           |
-| - CPU3:                   |                      |               |           |
-|                           |                      |               |           |
-|  - Speed: 2211.367 MHz    |                      |               |           |
-|  - Family: 15             |                      |               |           |
-|  - Core count: 1          |                      |               |           |
-|                           |                      |               |           |
-| - CPU4:                   |                      |               |           |
-|                           |                      |               |           |
-|  - Speed: 2211.367 MHz    |                      |               |           |
-|  - Family: 15             |                      |               |           |
-|  - Core count: 2          |                      |               |           |
-|                           |                      |               |           |
-| - Network:                |                      |               |           |
-|                           |                      |               |           |
-|  - Speed:                 |                      |               |           |
-|  - Duplex:                |                      |               |           |
-|                           |                      |               |           |
-| - Backups:                |                      |               |           |
-|                           |                      |               |           |
-+---------------------------+----------------------+---------------+-----------+
-
-Host: placebo.plone.org (**DECOM**)
------------------------------------
-
-*Provided by `Devaus Oy`_*
-
-+---------------------------+----------------------+---------------+-----------+
-| Server/Hardware           | Services             | Owner/Location| Notes     |
-|                           |                      |               |           |
-+---------------------------+----------------------+---------------+-----------+
-|                           |                      |               |           |
-+---------------------------+----------------------+---------------+-----------+
-
-Host: jenkins.plone.org
------------------------
-
-*Provided by `Devaus Oy`_*
-
-+---------------------------+----------------------+---------------+-----------+
-| Server/Hardware           | Services             | Owner/Location| Notes     |
-|                           |                      |               |           |
-+---------------------------+----------------------+---------------+-----------+
-| XXX Finish me             |                      |               |           |
-+---------------------------+----------------------+---------------+-----------+
-
 
 About this report
 -----------------
