@@ -48,8 +48,8 @@ Host: plone01.sixfeetup.com
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
-Host: plonenet.pilotsystems.net
--------------------------------
+Host: plonenet.pilotsystems.net (**DECOM**)
+-------------------------------------------
 
 *Provided by Pilot Systems*
 
@@ -87,8 +87,8 @@ Host: plonenet.pilotsystems.net
 |                              |                      |               |           |
 +------------------------------+----------------------+---------------+-----------+
 
-Host: deus.plone.org
---------------------
+Host: deus.plone.org (**DECOM**)
+--------------------------------
 
 *Provided by OSUOSL*
 
@@ -121,6 +121,19 @@ Host: deus.plone.org
 | - Backups: Yes            |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
+
+Host: deus2.plone.org
+---------------------
+
+*Provided by OSUOSL*
+
++---------------------------+----------------------+---------------+-----------+
+| Server/Hardware           | Services             | Owner/Location| Notes     |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+| XXX Finish me             |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+
 
 Host: antiloop.plone.org (**DECOM**)
 ------------------------------------
@@ -281,6 +294,7 @@ Hardware information gathered via:
 .. _`antiloop.plone.org`: http://antiloop.plone.org
 .. _`aneka.plone.org`: http://aneka.plone.org
 .. _`deus.plone.org`: http://deus.plone.org
+.. _`deus2.plone.org`: http://deus2.plone.org
 .. _`plonenet.pilotsystems.net`: http://plonenet.pilotsystems.net
 .. _`plone01.sixfeetup.com`: http://plone01.sixfeetup.com
 .. _`lists.plone.org`: http://lists.plone.org
