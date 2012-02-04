@@ -9,7 +9,7 @@ These are the community managed systems.
 Host: plone01.sixfeetup.com
 ---------------------------
 
-*Provided by Six Feet Up*
+*Provided by `Six Feet Up`_*
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
@@ -56,7 +56,7 @@ Host: plonenet.pilotsystems.net (**DECOM**)
 +------------------------------+----------------------+---------------+-----------+
 | Server/Hardware              | Services             | Owner/Location| Notes     |
 +------------------------------+----------------------+---------------+-----------+
-| `plonenet.pilotsystems.net`_ | - plone.net          | Pilot Systems/|           |
+|  plonenet.pilotsystems.net   | - plone.net          | Pilot Systems/|           |
 | (85.118.46.41)               |                      | Marseille,    |           |
 |                              |                      | France        |           |
 | - Linux                      |                      |               |           |
@@ -96,7 +96,7 @@ Host: deus.plone.org (**DECOM**)
 | Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
-| `deus.plone.org`_         | - api.plone.org      | Oregon State/ |           |
+|  deus.plone.org           | - api.plone.org      | Oregon State/ |           |
 | (140.211.166.62)          | - deus.plone.org     | Eugene, OR    |           |
 |                           | - dev.plone.org      | USA           |           |
 | - Linux                   | - paste.plone.org*   |               |           |
@@ -144,7 +144,7 @@ Host: antiloop.plone.org (**DECOM**)
 | Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
-| `antiloop.plone.org`_     | - antiloop.plone.org | XS4ALL/       | svn.p.o is| 
+| antiloop.plone.org        | - antiloop.plone.org | XS4ALL/       | svn.p.o is| 
 | (82.94.219.235)           | - dist.plone.org*    | Amsterdam,    | really    |
 | (82.94.219.236)           | - lists.plone.org*   | Netherlands   | svn-mirror|
 |                           | - media.plone.org*   |               |           |
@@ -155,7 +155,7 @@ Host: antiloop.plone.org (**DECOM**)
 | - Swap:  1048568k total   | - plone.net-backup*  |               |           |
 | - CPU1:                   | - plone.org*         |               |           |
 |                           | - proxy.plone.org*   |               |           |
-|  - Speed: 3200 MHz        | - `stats.plone.org`_ |               |           |
+|  - Speed: 3200 MHz        | - stats.plone.org    |               |           |
 |  - Family: Pentium 4      | - svn.plone.org      |               |           |
 |  - Core count: 1          | - test.plone.org*    |               |           |
 |                           | - tests.plone.org*   |               |           |
@@ -183,8 +183,8 @@ Host: aneka.plone.org (**DECOM**)
 | Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
-| `aneka.plone.org`_        | - backups.plone.org* | XS4ALL/       | See       |
-| (82.94.219.234)           | - `lists.plone.org`_ | Amsterdam,    | mailman   |
+|  aneka.plone.org          | - backups.plone.org* | XS4ALL/       | See       |
+| (82.94.219.234)           | - lists.plone.org    | Amsterdam,    | mailman   |
 |                           |                      | Netherlands   | section.  |
 | - Linux                   |                      |               |           |
 | - 2.6.18-5-686            |                      |               |           |
@@ -212,16 +212,16 @@ Host: aneka.plone.org (**DECOM**)
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
-Host: muse.plone.org
---------------------
+Host: muse.plone.org (**DECOM**)
+--------------------------------
 
-*Provided by Devaus*
+*Provided by `Devaus Oy`_*
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
-| `muse.plone.org`_         | - hudson.plone.org   | Citum/Finland |           |
+|  muse.plone.org           | - hudson.plone.org   | Citum/Finland |           |
 | (91.216.77.14)            |                      |               |           |
 |                           |                      |               |           |
 | - Linux                   |                      |               |           |
@@ -263,18 +263,30 @@ Host: muse.plone.org
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
 
-Host: placebo.plone.org
------------------------
+Host: placebo.plone.org (**DECOM**)
+-----------------------------------
 
-*Provided by Devaus*
+*Provided by `Devaus Oy`_*
 
 +---------------------------+----------------------+---------------+-----------+
 | Server/Hardware           | Services             | Owner/Location| Notes     |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
-| `placebo.plone.org`_      |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
+
+Host: jenkins.plone.org
+-----------------------
+
+*Provided by `Devaus Oy`_*
+
++---------------------------+----------------------+---------------+-----------+
+| Server/Hardware           | Services             | Owner/Location| Notes     |
+|                           |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+| XXX Finish me             |                      |               |           |
++---------------------------+----------------------+---------------+-----------+
+
 
 About this report
 -----------------
@@ -289,15 +301,9 @@ Hardware information gathered via:
 - dmidecode | grep -i core
 - df
 
-.. _`muse.plone.org`: http://muse.plone.org
-.. _`placebo.plone.org`: http://placebo.plone.org
-.. _`antiloop.plone.org`: http://antiloop.plone.org
-.. _`aneka.plone.org`: http://aneka.plone.org
-.. _`deus.plone.org`: http://deus.plone.org
 .. _`deus2.plone.org`: http://deus2.plone.org
-.. _`plonenet.pilotsystems.net`: http://plonenet.pilotsystems.net
 .. _`plone01.sixfeetup.com`: http://plone01.sixfeetup.com
-.. _`lists.plone.org`: http://lists.plone.org
-.. _`stats.plone.org`: http://stats.plone.org
+
+.. _`Devaus Oy`: http://devaus.net
 .. _`Pilot Systems`: http://pilotsystems.net
 .. _`Six Feet Up`: http://sixfeetup.com
