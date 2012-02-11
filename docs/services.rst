@@ -1,4 +1,3 @@
-
 Services
 ========
 
@@ -403,18 +402,18 @@ You can deploy changes like so:
 
     - Push changes to GitHub *git@github.com:plone/planet.plone.org.git*
 
-    - Connect to deus2.plone.org 
+    - Connect to deus2.plone.org::
 
-        $ ssh deus2.osuosl.org
+        ssh -A deus2.osuosl.org # Use SSH agent for GitHub
 
     - Deploy changes commited to https://svn.plone.org/svn/plone/plone.org/planet/trunk via::
 
-        $ cd /var/www/planet.plone.org
-        $ sudo git pull
+        cd /var/www/planet.plone.org
+        sudo git pull
 
     - Update manually by running the following command on deus.plone.org as the planet user::
 
-        $ sudo -u apache /bin/sh /var/www/planet.plone.org/bin/update.sh
+        sudo -u apache /bin/sh /var/www/planet.plone.org/bin/update.sh
 
 Trac
 ----
