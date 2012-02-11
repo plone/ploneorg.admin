@@ -376,7 +376,7 @@ Planet Plone (http://planet.plone.org) aggregates blog feeds of various communit
 Details
 ~~~~~~~
 
-The Plone planet runs Venus planet software (http://intertwingly.net/code/venus/) and is installed on deus2.plone.org in::
+The Plone planet runs Venus planet software http://intertwingly.net/code/venus/ and is installed on deus2.plone.org in::
 
     /srv/planet.plone.org/venus/plone
 
