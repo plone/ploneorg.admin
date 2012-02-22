@@ -413,6 +413,7 @@ You can deploy changes like so:
 
     - Update manually by running the following command on deus.plone.org as the planet user::
 
+        sudo -u apache bin/buildout 
         sudo -u apache /bin/sh /var/www/planet.plone.org/bin/update.sh
 
 Trac
