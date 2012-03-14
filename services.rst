@@ -395,7 +395,7 @@ The Plone planet runs Venus planet software (http://intertwingly.net/code/venus/
 
 Its configuration is version controlled here::
 
-    https://svn.plone.org/svn/plone/plone.org/planet/trunk
+    https://github.com/plone/planet.plone.org
 
 And it is updated via a cron job on deus.plone.org here::
 
@@ -411,9 +411,12 @@ That file looks like this::
 Deploy changes
 ''''''''''''''
 
+.. note::
+   This section needs to be updated with the current git commands. --davisagli 2012-03-13
+
 You can deploy changes like so:
 
-    - Deploy changes commited to https://svn.plone.org/svn/plone/plone.org/planet/trunk via::
+    - Deploy changes commited to https://github.com/plone/planet.plone.org via::
 
         $ cd /srv/planet.plone.org/venus/plone
         $ sudo -u planet svn up 
