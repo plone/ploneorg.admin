@@ -118,6 +118,10 @@ You can deploy changes to production server like this::
     $ sudo -u zope svn up
     $ sudo -u zope bin/buildout
 
+.. warning::
+   Now that the code is managed on github, the production site needs to be
+   updated to use a git clone rather than an svn checkout.
+
 Then restart the instances as instructed below.
 
 Restarting
@@ -180,7 +184,7 @@ So for example to restart pound, you can do the following::
     $ /usr/local/etc/rc.d/pound restart
 
 Note the configuration files for some of these services are version controlled, e.g.
-http://svn.plone.org/svn/plone/plone.org/plone01-pound/trunk/.
+https://github.com/plone/ploneorg.admin/tree/master/plone01-pound.
 
 All configuration files of interest are either created by buildout or included in version control.
 
@@ -188,7 +192,7 @@ Varnish
 '''''''
 
 Configuration in ``/usr/local/etc/varnish`` under version control at 
-http://svn.plone.org/svn/plone/plone.org/plone01-varnish/trunk
+https://github.com/plone/ploneorg.admin/tree/master/plone01-varnish
 
 Updating Varnish cache configuration can be performed without varnish restart::
 
@@ -207,9 +211,12 @@ nginx
 '''''
 
 Configuration in ``/usr/local/etc/nginx``. ``vhosts/`` subfolder under version control at 
-http://svn.plone.org/svn/plone/plone.org/plone01-nginx/trunk
+https://github.com/plone/ploneorg.admin/tree/master/plone01-nginx
 
-Updating nginx configuration can be performed without nginx reatart::
+(This is the nginx which is used for HTTPS. The one for HTTP is within the
+plone.org buildout and managed run via supervisor.)
+
+Updating nginx configuration can be performed without nginx restart::
 
      $ cd /usr/local/etc/nginx/vhosts
      $ sudo svn up
@@ -360,6 +367,9 @@ Jenkins provides continuous integration services for the Plone core software.
 
 Details
 ~~~~~~~
+
+.. note::
+   I think this section is out of date. --davisagli 2012-03-13
 
 - Available via https://jenkins.plone.org. 
     - sites-enabled directory contents managed in svn (http://svn.plone.org/svn/plone/plone.org/muse-apache/trunk/hudson-ssl)
