@@ -2,7 +2,8 @@
 Services
 ========
 
-These are (some of) the services that the Plone.org infrastructure team is currently responsible for:
+These are (some of) the services that the Plone.org infrastructure team is
+currently responsible for:
 
 Plone.org
 ---------
@@ -14,7 +15,7 @@ major upgrades (e.g. Plone 3 → Plone 4), and monitoring system performance.
 http vs https
 ~~~~~~~~~~~~~
 
-There are two http server configs running on plone.org: one nginx instance for ssl and
+There are two http server configs running on plone.org: one nginx instance for http and
 one for https. The https nginx is a FreeBSD port install and is configured and
 controlled in the standard /usr/local/etc area. The http server config is
 deployed via a buildout configuration in /srv/plone.org.
@@ -32,11 +33,12 @@ Development
 ~~~~~~~~~~~
 
 To get started, you should familiarize yourself with the combined buildout and policy 
-product located here: http://dev.plone.org/plone/browser/Products.PloneOrg/trunk.
+product located here: https://github.com/plone/Products.PloneOrg.
 
 To develop locally, follow these steps::
 
-    $ svn co https://svn.plone.org/svn/plone/plone.org/Products.PloneOrg/trunk Products.PloneOrg
+    $ git clone git@github.com:plone/Products.PloneOrg.git
+    $ cd Products.PloneOrg
     (edit buildout.cfg to make it extend the develop.cfg configuration instead of production)
     $ python2.6 bootstrap.py
     $ bin/buildout
@@ -56,7 +58,7 @@ Deployment
 ~~~~~~~~~~
 
 You will need core developer access to commit your changes to the PloneOrg package. You 
-can read about that here: http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing.
+can read about that here: https://dev.plone.org/wiki/ContributePlone.
 
 Contact the `admins team`_ or join #plone.org on irc.freenode.net to discuss deployment of
 your changes!
@@ -351,15 +353,15 @@ Replication occurs periodically and each of the servers are configured to receiv
 
 plone01.sixfeetup.com sends data via ssl but does not listen on that port and will not respond to connection requests.
 
-Hudson
-------
+Jenkins
+-------
 
-Hudson provides continuous integration services for the Plone core software.
+Jenkins provides continuous integration services for the Plone core software.
 
 Details
 ~~~~~~~
 
-- Available via https://hudson.plone.org. 
+- Available via https://jenkins.plone.org. 
     - sites-enabled directory contents managed in svn (http://svn.plone.org/svn/plone/plone.org/muse-apache/trunk/hudson-ssl)
 
 - "Installed" in /srv/hudson (which means that is where hudson.war lives).
@@ -414,18 +416,6 @@ Trac
 ----
 
 This section contains information about the community managed trac instances located at dev.plone.org.
-
-
-Theme
-~~~~~
-
-By default, trac is themed along with the rest of plone.org. If you prefer the default Trac theme, visit this url (which sets a cookie):
-
-- http://dev.plone.org/trac-theme
-
-To go back to the Plone theme, visit this url:
-
-- http://dev.plone.org/plone-theme
 
 
 SSL Certificates

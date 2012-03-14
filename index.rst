@@ -9,9 +9,8 @@ Welcome to the ``Plone.org systems`` documentation!
 This is the Plone.org systems documentation, to be used
 by the `Infrastructure Team`_ and **you** if you would like to help.
 Please send email to `admins@plone.org`_ to request a task, or you can
-subscribe to the admins mailing list here: http://lists.plone.org/mailman/listinfo/admins.
-You may also find the admins team hanging out in the #plone.org channel
-on the irc.freenode.net IRC network.
+find the admins team hanging out in the #plone.org channel on the
+irc.freenode.net IRC network.
 
 Table of Contents
 -----------------
