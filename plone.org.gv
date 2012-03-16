@@ -1,18 +1,17 @@
 digraph G{
     Internet      [shape="plaintext"];
+    ports_pound [label="pound\n:5020", shape="egg"];
     ports_varnish [label="varnish\n:80", shape="invtrapezium"];
-    ports_nginx   [label="ngingx\n:443", shape="hexagon"];
     subgraph cluster_srv_plone_org {
         node         [style="filled", fillcolor="white"];
-        po_nginx     [label="nginx\n:5021", shape="hexagon"];
-        po_instances [shape="record", label="<i1> :5011|<i2> :5012|<i3> :5013|<i4> :5014|<i5> :5015|<i6> :5016|<i7> :5017|<i8> :5018|<debug> debug\n:5019|<bot> bot\n:5022"];
+        po_nginx     [label="nginx", shape="hexagon"];
+        po_instances [shape="record", label="<i1> :5011|<i2> :5012|<i3> :5013|<i4> :5014|<i5> :5015|<i6> :5016|<i7> :5017|<i8> :5018|<bot> bot\n:5022"];
         po_zeo       [label="ZEO\n:5010"];
         po_supervisord [label="supervisord", shape="doubleoctagon"];
 
         label="/srv/plone.org"; labelloc="b"; labeljust="l";
         style="filled"; fillcolor="aliceblue";
     };
-    ports_pound [label="pound\n:5020", shape="egg"];
     subgraph cluster_srv_staging_plone_org {
         node         [style="filled", fillcolor="white"];
         spo_nginx     [label="nginx\n:6021", shape="hexagon"];
@@ -24,10 +23,9 @@ digraph G{
     };
 
     Internet -> ports_varnish;
-    Internet -> ports_nginx;
-    ports_varnish -> po_nginx;
+    Internet -> po_nginx [label=":443"];
+    ports_varnish -> po_nginx [label=":5021"];
     po_nginx -> ports_pound;
-    ports_nginx -> ports_pound;
     ports_pound -> po_instances:i1;
     ports_pound -> po_instances:i2;
     ports_pound -> po_instances:i3;
@@ -36,7 +34,6 @@ digraph G{
     ports_pound -> po_instances:i6;
     ports_pound -> po_instances:i7;
     ports_pound -> po_instances:i8;
-    ports_nginx -> po_instances:bot;
     po_instances:i1 -> po_zeo;
     po_instances:i2 -> po_zeo;
     po_instances:i3 -> po_zeo;
@@ -45,11 +42,9 @@ digraph G{
     po_instances:i6 -> po_zeo;
     po_instances:i7 -> po_zeo;
     po_instances:i8 -> po_zeo;
-    po_instances:debug -> po_zeo;
     po_instances:bot -> po_zeo;
 
     ports_varnish -> spo_nginx;
-    ports_nginx-> spo_instances:i1;
 
     spo_nginx -> spo_instances:i1;
     spo_instances:i1 -> spo_zeo;

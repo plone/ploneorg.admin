@@ -15,19 +15,20 @@ major upgrades (e.g. Plone 3 → Plone 4), and monitoring system performance.
 http vs https
 ~~~~~~~~~~~~~
 
-There are two http server configs running on plone.org: one nginx instance for http and
-one for https. The https nginx is a FreeBSD port install and is configured and
-controlled in the standard /usr/local/etc area. The http server config is
-deployed via a buildout configuration in /srv/plone.org.
+HTTP and HTTPS are both served by an nginx run by the buildout's supervisor,
+with configuration in /srv/plone.org/etc/nginx.
+
+HTTP first passes through varnish on port 80 which is a FreeBSD port install.
+The load balancer, pound (port 5020), is also a FreeBSD install.
 
 .. figure:: plone.org.gv.png
    :width: 100 %
    :alt: Diagram of services powering plone.org and their interconnections
    
-   Diagram of services powering plone.org and their interconnections (validated on 11th of March, 2011)
+   Diagram of services powering plone.org and their interconnections (validated on 16th of March, 2012)
 
-   Varnish running on port 80 (http), nginx running on port 443 (https) and 
-   pound running on port 5020 are FreeBSD port installs. 
+   Varnish running on port 80 (http) and pound running on port 5020 are
+   FreeBSD port installs. 
 
 Development
 ~~~~~~~~~~~
@@ -43,6 +44,9 @@ To develop locally, follow these steps::
     $ python2.6 bootstrap.py
     $ bin/buildout
     $ bin/instance fg
+
+.. note::
+   As of 2012-03-16, production is using the ``prodution`` branch.
 
 See the README in this package for more information on running a themed copy
 of the site with real data.
@@ -115,12 +119,8 @@ You can deploy changes to production server like this::
 
     $ ssh plone.org
     $ cd /srv/plone.org
-    $ sudo -u zope svn up
+    $ sudo -u zope git pull --rebase
     $ sudo -u zope bin/buildout
-
-.. warning::
-   Now that the code is managed on github, the production site needs to be
-   updated to use a git clone rather than an svn checkout.
 
 Then restart the instances as instructed below.
 
@@ -132,7 +132,7 @@ To do that, you can use the following commands::
 
     $ ssh plone.org
     $ cd /srv/plone.org
-    $ sudo -u zope svn up 
+    $ sudo -u zope git pull --rebase
     $ sudo -u zope bin/buildout
     $ sudo -u zope bin/supervisorctl restart plone.org-client-{1,2,3,4} ; sleep 120 ; sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}
 
@@ -173,7 +173,6 @@ Other services
 Some services are not included in the buildout, including:
 
 - Varnish
-- nginx
 - Pound
 - LDAP
 - Postfix
@@ -206,26 +205,6 @@ Updating Varnish cache configuration can be performed without varnish restart::
      $ /usr/local/bin/varnishadm -T localhost:81 vcl.list
      available   4  default
      active      11 reload20110324223618
-
-nginx
-'''''
-
-Configuration in ``/usr/local/etc/nginx``. ``vhosts/`` subfolder under version control at 
-https://github.com/plone/ploneorg.admin/tree/master/plone01-nginx
-
-(This is the nginx which is used for HTTPS. The one for HTTP is within the
-plone.org buildout and managed run via supervisor.)
-
-Updating nginx configuration can be performed without nginx restart::
-
-     $ cd /usr/local/etc/nginx/vhosts
-     $ sudo svn up
-     U    ssl-staging.plone.org.conf
-     Updated to revision 48218.
-     $ sudo /usr/local/sbin/nginx -t -c ../nginx.conf
-     2011/03/24 15:38:48 [info] 94610#0: the configuration file ../nginx.conf syntax is ok
-     2011/03/24 15:38:48 [info] 94610#0: the configuration file ../nginx.conf was tested successfully
-     $ sudo kill -HUP `cat /var/run/nginx.pid`
 
 .. _`admins team`: mailto:admins@lists.plone.org
 
