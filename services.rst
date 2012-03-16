@@ -27,9 +27,6 @@ The load balancer, pound (port 5020), is also a FreeBSD install.
    
    Diagram of services powering plone.org and their interconnections (validated on 16th of March, 2012)
 
-   Varnish running on port 80 (http) and pound running on port 5020 are
-   FreeBSD port installs. 
-
 Development
 ~~~~~~~~~~~
 
@@ -46,7 +43,7 @@ To develop locally, follow these steps::
     $ bin/instance fg
 
 .. note::
-   As of 2012-03-16, production is using the ``prodution`` branch.
+   As of 2012-03-16, production is using the ``production`` branch.
 
 See the README in this package for more information on running a themed copy
 of the site with real data.
