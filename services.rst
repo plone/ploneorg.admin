@@ -25,7 +25,7 @@ The load balancer, pound (port 5020), is also a FreeBSD install.
    :width: 100 %
    :alt: Diagram of services powering plone.org and their interconnections
    
-   Diagram of services powering plone.org and their interconnections (validated on 16th of March, 2012)
+   Diagram of services powering plone.org and their interconnections (validated on 2012-03-20)
 
 Development
 ~~~~~~~~~~~
@@ -42,11 +42,8 @@ To develop locally, follow these steps::
     $ bin/buildout
     $ bin/instance fg
 
-.. note::
-   As of 2012-03-16, production is using the ``production`` branch.
-
-See the README in this package for more information on running a themed copy
-of the site with real data.
+See the README in this package for more information on getting a copy
+of the real data.
 
 Issues
 ~~~~~~
@@ -69,14 +66,17 @@ If you are an admin, you can deploy changes to staging and production servers.
 Staging
 '''''''
 
-Changes to production server should be tested at staging server available at http://staging.plone.org/ that is variance of production buildout.
+Changes to the production server should be tested at the staging server
+available at http://staging.plone.org/, which uses a variation of the
+production buildout.
 
-- Commit your changes to SVN::
+- Commit and push your local changes::
 
     $ cd Products.PloneOrg
-    $ svn ci
+    $ git ci
+    $ git push
 
-- Deploy to staging server from working copy of PloneOrg buildout (with conf/deploy-snip.conf included)::
+- Deploy to staging server from working copy of PloneOrg buildout (with conf/fabric.conf included)::
 
     $ bin/fab staging deploy
     [staging.plone.org] Executing task 'deploy'
@@ -117,20 +117,21 @@ You can deploy changes to production server like this::
     $ ssh plone.org
     $ cd /srv/plone.org
     $ sudo -u zope git pull --rebase
-    $ sudo -u zope bin/buildout
+    $ sudo -u zope bin/buildout -Nv
 
 Then restart the instances as instructed below.
 
 Restarting
 ''''''''''
 
-If you are a member of the admins team, you may be occasionally asked to login, svn up, run buildout, and restart the instances.
-To do that, you can use the following commands::
+If you are a member of the admins team, you may be occasionally asked to login,
+update, run buildout, and restart the instances. To do that, you can use the
+following commands::
 
     $ ssh plone.org
     $ cd /srv/plone.org
     $ sudo -u zope git pull --rebase
-    $ sudo -u zope bin/buildout
+    $ sudo -u zope bin/buildout -Nv
     $ sudo -u zope bin/supervisorctl restart plone.org-client-{1,2,3,4} ; sleep 120 ; sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}
 
 Clearing the cache

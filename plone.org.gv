@@ -1,10 +1,10 @@
 digraph G{
     Internet      [shape="plaintext"];
     ports_pound [label="pound\n:5020", shape="egg"];
-    ports_varnish [label="varnish\n:80", shape="invtrapezium"];
+    ports_varnish [label="varnish", shape="invtrapezium"];
     subgraph cluster_srv_plone_org {
         node         [style="filled", fillcolor="white"];
-        po_nginx     [label="nginx", shape="hexagon"];
+        po_nginx     [label="nginx\n:5021", shape="hexagon"];
         po_instances [shape="record", label="<i1> :5011|<i2> :5012|<i3> :5013|<i4> :5014|<i5> :5015|<i6> :5016|<i7> :5017|<i8> :5018|<bot> bot\n:5022"];
         po_zeo       [label="ZEO\n:5010"];
         po_supervisord [label="supervisord", shape="doubleoctagon"];
@@ -22,10 +22,10 @@ digraph G{
         style="filled"; fillcolor="floralwhite";
     };
 
-    Internet -> ports_varnish;
+    Internet -> ports_varnish [label=":80"];
     Internet -> po_nginx [label=":443"];
-    ports_varnish -> po_nginx [label=":5021"];
-    po_nginx -> ports_pound;
+    ports_varnish -> po_nginx [label="http://plone.org"];
+    po_nginx -> ports_pound [label="http://plone.org\nhttps://plone.org"];
     ports_pound -> po_instances:i1;
     ports_pound -> po_instances:i2;
     ports_pound -> po_instances:i3;
@@ -44,7 +44,8 @@ digraph G{
     po_instances:i8 -> po_zeo;
     po_instances:bot -> po_zeo;
 
-    ports_varnish -> spo_nginx;
+    ports_varnish -> spo_nginx [label="http://staging.plone.org"];
+    po_nginx -> spo_instances:i1 [label="https://staging.plone.org"]
 
     spo_nginx -> spo_instances:i1;
     spo_instances:i1 -> spo_zeo;
