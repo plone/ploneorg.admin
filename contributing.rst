@@ -1,7 +1,11 @@
 Contributing to this documentation 
 ==================================
 
-Contributing to this documentation is easy. Just follow these steps:
+The source for this documentation is here:
+
+* https://github.com/plone/admin-docs
+
+Contributing is easy. Just follow these steps:
 
 * Install Sphinx_.
 
