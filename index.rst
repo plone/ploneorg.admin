@@ -6,11 +6,7 @@
 Welcome to the ``Plone.org systems`` documentation!
 ===================================================
 
-This is the Plone.org systems documentation, to be used
-by the `Infrastructure Team`_ and **you** if you would like to help.
-Please send email to `admins@plone.org`_ to request a task, or you can
-find the admins team hanging out in the #plone.org channel on the
-irc.freenode.net IRC network.
+This is Plone Community Systems documentation, to be used by the `AI Team`_ and **you** if you would like to help. Please send email to `admins@plone.org`_ to request a task, or you can find the AI team hanging out in the #plone.org channel on the irc.freenode.net IRC network.
 
 Table of Contents
 -----------------
@@ -30,5 +26,5 @@ Table of Contents
     services
     *
 
-.. _`Infrastructure Team`: http://plone.org/team/InfrastructureTeam
+.. _`AI Team`: http://plone.org/team/InfrastructureTeam
 .. _admins@plone.org: mailto:admins@plone.org?subject='Request a task'
