@@ -398,6 +398,10 @@ That file looks like this::
 Deploy changes
 ''''''''''''''
 
+Short version::
+
+     cd /var/www/planet.plone.org && sudo -u apache git pull && sudo -u apache  bin/buildout && sudo -u apache /bin/sh /var/www/planet.plone.org/bin/update.sh
+
 You can deploy changes like so:
 
     - Push changes to GitHub *git@github.com:plone/planet.plone.org.git*
