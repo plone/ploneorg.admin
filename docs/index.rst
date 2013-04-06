@@ -29,6 +29,7 @@ Table of Contents
     contributing
     systems
     services
+    localcopy
     *
 
 .. _`Infrastructure Team`: http://plone.org/team/InfrastructureTeam
