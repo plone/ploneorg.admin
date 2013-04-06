@@ -5,7 +5,7 @@ Instructions.
 
 Clone::
 
-    git clone git@github.com:plone/ploneorg.admin.git
+    git clone git@github.com:plone/Products.PloneOrg.git
 
 Create b.out::
 
@@ -23,6 +23,9 @@ Run buildout::
 
     python bootstrap.py -v 1.6.3
     bin/buildout
+
+This will create p.org configuration and rsync cleaned ``Data.fs``
+from p.org for your local computer.
 
 TODO
 
