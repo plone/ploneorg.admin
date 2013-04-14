@@ -21,16 +21,16 @@ deployed via a buildout configuration in /srv/plone.org.
 .. figure:: plone.org.gv.png
    :width: 100 %
    :alt: Diagram of services powering plone.org and their interconnections
-   
+
    Diagram of services powering plone.org and their interconnections (validated on 11th of March, 2011)
 
-   Varnish running on port 80 (http), nginx running on port 443 (https) and 
-   pound running on port 5020 are FreeBSD port installs. 
+   Varnish running on port 80 (http), nginx running on port 443 (https) and
+   pound running on port 5020 are FreeBSD port installs.
 
 Development
 ~~~~~~~~~~~
 
-To get started, you should familiarize yourself with the combined buildout and policy 
+To get started, you should familiarize yourself with the combined buildout and policy
 product located here: http://dev.plone.org/plone/browser/Products.PloneOrg/trunk.
 
 To develop locally, follow these steps::
@@ -54,7 +54,7 @@ You can find a list of things that need to be fixed here::
 Deployment
 ~~~~~~~~~~
 
-You will need core developer access to commit your changes to the PloneOrg package. You 
+You will need core developer access to commit your changes to the PloneOrg package. You
 can read about that here: http://plone.org/documentation/manual/plone-core-developer-reference/overview/contributing.
 
 Contact the `admins team`_ or join #plone.org on irc.freenode.net to discuss deployment of
@@ -83,10 +83,10 @@ Changes to production server should be tested at staging server available at htt
     [staging.plone.org] out: U    static/plone-wide.html
     [staging.plone.org] out:  U   .
     [staging.plone.org] out: Updated to revision 48188.
-    [staging.plone.org] out: 
+    [staging.plone.org] out:
     [staging.plone.org] sudo: nice bin/buildout
     [staging.plone.org] out: ---------------------------------------------------------
-    [staging.plone.org] out: The current global buildout threat level is:   HIGH  
+    [staging.plone.org] out: The current global buildout threat level is:   HIGH
     [staging.plone.org] out: ---------------------------------------------------------
     [staging.plone.org] out: mr.developer: Queued 'Products.ExternalStorage' for checkout.
     [staging.plone.org] out: mr.developer: Queued 'Products.FoundationMember' for checkout.
@@ -94,12 +94,12 @@ Changes to production server should be tested at staging server available at htt
     [staging.plone.org] out: static/plone-wide.html
     [staging.plone.org] out: *************** PICKED VERSIONS ****************
     [staging.plone.org] out: [versions]
-    [staging.plone.org] out: 
+    [staging.plone.org] out:
     [staging.plone.org] out: *************** /PICKED VERSIONS ***************
-    [staging.plone.org] out: 
+    [staging.plone.org] out:
     [staging.plone.org] sudo: nice bin/supervisorctl reload
     [staging.plone.org] out: Restarted supervisord
-    [staging.plone.org] out: 
+    [staging.plone.org] out:
 
     Done.
     Disconnecting from staging.plone.org... done.
@@ -125,7 +125,7 @@ To do that, you can use the following commands::
 
     $ ssh plone.org
     $ cd /srv/plone.org
-    $ sudo -u zope svn up 
+    $ sudo -u zope svn up
     $ sudo -u zope bin/buildout
     $ sudo -u zope bin/supervisorctl restart plone.org-client-{1,2,3,4} ; sleep 120 ; sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}
 
@@ -184,7 +184,7 @@ All configuration files of interest are either created by buildout or included i
 Varnish
 '''''''
 
-Configuration in ``/usr/local/etc/varnish`` under version control at 
+Configuration in ``/usr/local/etc/varnish`` under version control at
 http://svn.plone.org/svn/plone/plone.org/plone01-varnish/trunk
 
 Updating Varnish cache configuration can be performed without varnish restart::
@@ -203,7 +203,7 @@ Updating Varnish cache configuration can be performed without varnish restart::
 nginx
 '''''
 
-Configuration in ``/usr/local/etc/nginx``. ``vhosts/`` subfolder under version control at 
+Configuration in ``/usr/local/etc/nginx``. ``vhosts/`` subfolder under version control at
 http://svn.plone.org/svn/plone/plone.org/plone01-nginx/trunk
 
 Updating nginx configuration can be performed without nginx reatart::
@@ -240,7 +240,7 @@ These are the details of the Mailman service running on aneka.plone.org (CNAME l
 Specs
 ~~~~~
 
-- Version = 2.1.6 (source build) 
+- Version = 2.1.6 (source build)
 - Location = /srv/lists.plone.org/mailman
 - Path = /Applications/mailman (symlinked Applications = /srv/lists.plone.org)
 
@@ -259,11 +259,11 @@ Postfix
 Specs
 ~~~~~
 
-- Postfix: Version = 2.3.8 
-- Location = /usr/lib/postfix 
-- relay domains = lists.plone.org 
+- Postfix: Version = 2.3.8
+- Location = /usr/lib/postfix
+- relay domains = lists.plone.org
 - Allowed domains = aneka.plone.org, localhost.plone.org, localhost
-- Spamassassin: Version = 3.2.3 
+- Spamassassin: Version = 3.2.3
 - Perl version = 5.8.8
 
 Notes
@@ -286,7 +286,7 @@ repositories:
 Servers
 ~~~~~~~
 
-The primary server is OSU's deus.plone.org with a mirror to XS4ALL's 
+The primary server is OSU's deus.plone.org with a mirror to XS4ALL's
 antiloop.plone.org.
 
 Users
@@ -358,7 +358,7 @@ Hudson provides continuous integration services for the Plone core software.
 Details
 ~~~~~~~
 
-- Available via https://hudson.plone.org. 
+- Available via https://hudson.plone.org.
     - sites-enabled directory contents managed in svn (http://svn.plone.org/svn/plone/plone.org/muse-apache/trunk/hudson-ssl)
 
 - "Installed" in /srv/hudson (which means that is where hudson.war lives).
@@ -396,7 +396,11 @@ That file looks like this::
 
 
 Deploy changes
-''''''''''''''
+~~~~~~~~~~~~~~
+
+.. note ::
+
+    Cron should automatically deploy changes when pushed to Github
 
 Short version::
 
@@ -417,8 +421,16 @@ You can deploy changes like so:
 
     - Update manually by running the following command on deus.plone.org as the planet user::
 
-        sudo -u apache bin/buildout 
+        sudo -u apache bin/buildout
         sudo -u apache /bin/sh /var/www/planet.plone.org/bin/update.sh
+
+
+developer.plone.org
+---------------------
+
+See
+
+* https://github.com/collective/collective.developermanual/blob/master/source/reference_manuals/active/writing/crosslinking.rst
 
 Trac
 ----
@@ -447,9 +459,8 @@ on dev.plone.org and svn.plone.org.
 
 The certificate and key files are at
 /srv/deus.plone.org/etc/ssl . Please exercise all
-care in handling of the key file: it should be treated as a secret, 
+care in handling of the key file: it should be treated as a secret,
 highly confidential and protected from unintended disclosure.
 
 We also have a non-wildcard certificate for www.plone.org/plone.org.
 The key and cert files are on plone.org in /usr/local/etc/nginx/vhosts/ssl.*
-
