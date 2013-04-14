@@ -1,4 +1,3 @@
-
 Plone.org systems
 =================
 
@@ -105,8 +104,8 @@ Host: deus.plone.org
 | - Mem:   2076244k total   | - admin.plone.org    |               |           |
 | - Swap:  1048568k total   | - collective-docs.   |               |           |
 | - CPU1:                   |   plone.org          |               |           |
-|                           |                      |               |           |
-|  - Speed: 3066 MHz        |                      |               |           |
+|                           | - developer.plone.   |               |           |
+|  - Speed: 3066 MHz        |   org                |               |           |
 |  - Family: Xeon           |                      |               |           |
 |  - Core count: 1          |                      |               |           |
 |                           |                      |               |           |
@@ -121,6 +120,9 @@ Host: deus.plone.org
 | - Backups: Yes            |                      |               |           |
 |                           |                      |               |           |
 +---------------------------+----------------------+---------------+-----------+
+
+**Note**: Changes in /etc directory are not persistent. Contact support at
+osuosl.org to update these files.
 
 Host: antiloop.plone.org (**DECOM**)
 ------------------------------------
