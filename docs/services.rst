@@ -62,72 +62,7 @@ your changes!
 
 If you are an admin, you can deploy changes to staging and production servers.
 
-Staging
-'''''''
-
-Changes to production server should be tested at staging server available at http://staging.plone.org/ that is variance of production buildout.
-
-- Commit your changes to SVN::
-
-    $ cd Products.PloneOrg
-    $ svn ci
-
-- Deploy to staging server from working copy of PloneOrg buildout (with conf/deploy-snip.conf included)::
-
-    $ bin/fab staging deploy
-    [staging.plone.org] Executing task 'deploy'
-    [staging.plone.org] sudo: nice svn up
-    [staging.plone.org] out: U    src/Products/PloneOrg/skins/ploneorg/login.js
-    [staging.plone.org] out: U    src/Products/PloneOrg/skins/ploneorg/newplone.css
-    [staging.plone.org] out: U    static/plone.html
-    [staging.plone.org] out: U    static/plone-wide.html
-    [staging.plone.org] out:  U   .
-    [staging.plone.org] out: Updated to revision 48188.
-    [staging.plone.org] out:
-    [staging.plone.org] sudo: nice bin/buildout
-    [staging.plone.org] out: ---------------------------------------------------------
-    [staging.plone.org] out: The current global buildout threat level is:   HIGH
-    [staging.plone.org] out: ---------------------------------------------------------
-    [staging.plone.org] out: mr.developer: Queued 'Products.ExternalStorage' for checkout.
-    [staging.plone.org] out: mr.developer: Queued 'Products.FoundationMember' for checkout.
-    ...
-    [staging.plone.org] out: static/plone-wide.html
-    [staging.plone.org] out: *************** PICKED VERSIONS ****************
-    [staging.plone.org] out: [versions]
-    [staging.plone.org] out:
-    [staging.plone.org] out: *************** /PICKED VERSIONS ***************
-    [staging.plone.org] out:
-    [staging.plone.org] sudo: nice bin/supervisorctl reload
-    [staging.plone.org] out: Restarted supervisord
-    [staging.plone.org] out:
-
-    Done.
-    Disconnecting from staging.plone.org... done.
-
-
-Production
-''''''''''
-
-You can deploy changes to production server like this::
-
-    $ ssh plone.org
-    $ cd /srv/plone.org
-    $ sudo -u zope svn up
-    $ sudo -u zope bin/buildout
-
-Then restart the instances as instructed below.
-
-Restarting
-''''''''''
-
-If you are a member of the admins team, you may be occasionally asked to login, svn up, run buildout, and restart the instances.
-To do that, you can use the following commands::
-
-    $ ssh plone.org
-    $ cd /srv/plone.org
-    $ sudo -u zope svn up
-    $ sudo -u zope bin/buildout
-    $ sudo -u zope bin/supervisorctl restart plone.org-client-{1,2,3,4} ; sleep 120 ; sudo -u zope bin/supervisorctl restart plone.org-client-{5,6,7,8}
+See `Products.PloneOrg for more information <https://github.com/plone/Products.PloneOrg>`_.
 
 Clearing the cache
 ~~~~~~~~~~~~~~~~~~
