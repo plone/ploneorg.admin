@@ -7,11 +7,11 @@ Contributing to this documentation is easy. Just follow these steps:
 
 * Check out the documentation::
 
-    $ svn co https://svn.plone.org/svn/plone/plone.org/admin-docs/trunk admin-docs
+    $ git clone https://github.com/plone/ploneorg.admin
 
 * Change directories:: 
 
-    $ cd admin-docs
+    $ cd ploneorg.admin/docs
 
 * Make your changes. If you don't know Sphinx or reStructuredText yet, you can read about them respectively here_, `and here`_.
 
@@ -21,16 +21,9 @@ Contributing to this documentation is easy. Just follow these steps:
 
 * Commit your changes::
 
-    $ svn commit -m 'Added documentation to make the world a better place'
+    $ git commit -a -m 'Added documentation to make the world a better place'
 
-* Login to deus.plone.org to synchronize your changes**::
-
-    $ ssh deus.plone.org
-    $ cd /srv/admin.plone.org
-    $ sudo svn up
-    $ sudo make html
-
-You will need core contributor access, you can read about that here: http://dev.plone.org/plone/. If you don't have access to deus.plone.org, please send a request to admins@plone.org.
+Your changes should eventually show up here: http://developer.plone.org/reference_manuals/external/ploneorg.admin/index.html
 
 .. _Sphinx: http://pypi.python.org/pypi/Sphinx
 .. _here: http://sphinx.pocoo.org/
