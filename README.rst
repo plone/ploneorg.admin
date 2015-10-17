@@ -1,3 +1,5 @@
+.. note:: Configuration for the *current* (17 October 2015) plone.org infrastructure. For the *new* plone.org, look at `ploneorg.core`
+
 AI Team
 =======
 
